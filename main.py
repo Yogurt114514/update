@@ -2420,45 +2420,6 @@ temp = {
     "Type": 100,
 }
 Monster.append(temp)
-"""评论区"""
-comments_dir = PLUGIN_BASE_DIR / "评论区"
-comments_dir.mkdir(parents=True, exist_ok=True)
-for i in Monster:
-    try:
-        # 连接数据库（文件不存在则自动创建）
-        conn = sqlite3.connect(str(comments_dir / f"{i['ID']}.db"))
-        cursor = conn.cursor()
-
-        create_table_sql = """
-        CREATE TABLE IF NOT EXISTS comment (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            head INTEGER NOT NULL,     -- 头像
-            name TEXT,                 -- 昵称
-            mimi INTEGER NOT NULL,     -- 米米号
-            m_hide TEXT NOT NULL,      -- 米米号是否隐藏
-            title TEXT NOT NULL,       -- 头衔
-            rank TEXT NOT NULL,        -- 竞技段位
-            r_hide TEXT NOT NULL,      -- 段位是否隐藏
-            text TEXT NOT NULL,        -- 评论内容
-            pic TEXT,                  -- 图片
-            time TEXT NOT NULL,        -- 评论时间（ISO 8601）
-            label INTEGER NOT NULL,    -- 评论类型
-            floor INTEGER NOT NULL,    -- 楼层
-            room INTEGER NOT NULL,     -- 楼中楼下标
-            reply INTEGER NOT NULL,    -- 回复的对象
-            red INTEGER NOT NULL,      -- 点红
-            yellow INTEGER NOT NULL,   -- 点黄
-            green INTEGER NOT NULL     -- 点绿
-        );
-        """
-        cursor.execute(create_table_sql)
-        conn.commit()
-    except sqlite3.Error as e:
-        print(f"❌ 数据库创建失败：{e}")
-    finally:
-        # 确保连接关闭
-        if conn:
-            conn.close()
 
 
 """刻印"""
@@ -2817,58 +2778,6 @@ parse_and_dump_sp_hide_moves(
     (data_path / "sp_hide_moves.bytes"),
     (data_path / "sp_hide_moves.json"),
 )
-
-# 头像 立绘
-pethead_path = Path(os.path.join(LOCAL_BASE, "pethead"))
-pet_path = Path(os.path.join(LOCAL_BASE, "pet"))
-for i in Monster:
-    if 5000 < i["ID"] < 1400000:
-        continue
-    msg = str(i["ID"]) + ".png"
-    if not os.path.exists(pethead_path / msg):
-        url = 'https://newseer.61.com/web/monster/head/' + msg
-        r = requests.get(url)
-        if r.status_code != 404:
-            with open(pethead_path / msg, "wb") as file:
-                file.write(r.content)
-            print(f"下载头像成功：{msg}")
-        else:
-            print(f"下载头像失败：{msg}")
-    if not os.path.exists(pet_path / msg):
-        url = 'https://newseer.61.com/web/monster/body/' + msg
-        r = requests.get(url)
-        if r.status_code != 404:
-            with open(pet_path / msg, "wb") as file:
-                file.write(r.content)
-            print(f"下载立绘成功：{msg}")
-        else:
-            print(f"下载立绘失败：{msg}")
-# 刻印
-ctmk_path = Path(os.path.join(LOCAL_BASE, "赛尔号刻印图片"))
-for i in MintMark:
-    msg = str(i["ID"]) + ".png"
-    if not os.path.exists(ctmk_path / msg):
-        url = 'https://newseer.61.com/web/countermark/icon/' + msg
-        r = requests.get(url)
-        if r.status_code != 404:
-            with open(ctmk_path / msg, "wb") as file:
-                file.write(r.content)
-            print(f"下载刻印成功：{msg}")
-        else:
-            print(f"下载刻印失败：{msg}")
-# 属性
-type_path = Path(os.path.join(LOCAL_BASE, "属性"))
-for i in stitem:
-    msg = str(i["id"]) + ".png"
-    if not os.path.exists(type_path / msg):
-        url = 'https://newseer.61.com/web/PetType/' + msg
-        r = requests.get(url)
-        if r.status_code != 404:
-            with open(type_path / msg, "wb") as file:
-                file.write(r.content)
-            print(f"下载属性成功：{msg}")
-        else:
-            print(f"下载属性失败：{msg}")
 
 
 

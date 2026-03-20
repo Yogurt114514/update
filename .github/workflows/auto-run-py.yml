@@ -22,17 +22,31 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          echo "PWD:"
+          pwd
+          echo "Root files:"
+          ls -la
+          echo "Update dir files (if exists):"
+          ls -la update || true
+
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          elif [ -f update/requirements.txt ]; then
+            pip install -r update/requirements.txt
+          else
+            echo "ERROR: requirements.txt not found in repo root or update/ subdir"
+            exit 1
+          fi
 
       - name: Run Python script
-        run: python main.py
+        run: python update/main.py
 
       - name: Commit and push files
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           # 替换为你实际的生成文件路径
-          git add ./generated_files/*
+          git add ./update/generated_files/*
           if git diff --quiet; then
             echo "No files changed, skip commit"
           else
