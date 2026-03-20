@@ -22,16 +22,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -V
-          which python
-          if [ ! -f requirements.txt ]; then
-            echo "ERROR: requirements.txt not found in repository root"
-            ls -la
+          echo "PWD:"
+          pwd
+          echo "Root files:"
+          ls -la
+          echo "Update dir files (if exists):"
+          ls -la update || true
+
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          elif [ -f update/requirements.txt ]; then
+            pip install -r update/requirements.txt
+          else
+            echo "ERROR: requirements.txt not found in repo root or update/ subdir"
             exit 1
           fi
-          python -m pip install -r requirements.txt
-          python -m pip show httpx
-          python -c "import httpx; print('httpx ok:', httpx.__version__)"
 
       - name: Run Python script
         run: python main.py
