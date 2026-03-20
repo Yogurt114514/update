@@ -465,27 +465,51 @@ def parse_package_manifest(buf: bytes):
 
 def get_remote_version() -> str:
     url = REMOTE_BASE + f"PackageManifest_{PACKAGE_NAME}.version?t={int(time.time() * 1000)}"
-    res = requests.get(url, timeout=20)
-    res.raise_for_status()
-    return res.text.strip()
+    for attempt in range(1, 5):
+        try:
+            res = requests.get(url, timeout=20)
+            res.raise_for_status()
+            return res.text.strip()
+        except requests.RequestException:
+            if attempt == 4:
+                raise
+            time.sleep(attempt * 1.5)
 
 def img_get_remote_version() -> str:
     url = IMG_REMOTE_BASE + f"PackageManifest_{IMG_PACKAGE_NAME}.version?t={int(time.time() * 1000)}"
-    res = requests.get(url, timeout=20)
-    res.raise_for_status()
-    return res.text.strip()
+    for attempt in range(1, 5):
+        try:
+            res = requests.get(url, timeout=20)
+            res.raise_for_status()
+            return res.text.strip()
+        except requests.RequestException:
+            if attempt == 4:
+                raise
+            time.sleep(attempt * 1.5)
 
 def get_remote_manifest_bytes(version: str) -> bytes:
     url = REMOTE_BASE + f"PackageManifest_{PACKAGE_NAME}_{version}.bytes"
-    res = requests.get(url, timeout=30)
-    res.raise_for_status()
-    return res.content
+    for attempt in range(1, 5):
+        try:
+            res = requests.get(url, timeout=30)
+            res.raise_for_status()
+            return res.content
+        except requests.RequestException:
+            if attempt == 4:
+                raise
+            time.sleep(attempt * 1.5)
 
 def img_get_remote_manifest_bytes(version: str) -> bytes:
     url = IMG_REMOTE_BASE + f"PackageManifest_{IMG_PACKAGE_NAME}_{version}.bytes"
-    res = requests.get(url, timeout=30)
-    res.raise_for_status()
-    return res.content
+    for attempt in range(1, 5):
+        try:
+            res = requests.get(url, timeout=30)
+            res.raise_for_status()
+            return res.content
+        except requests.RequestException:
+            if attempt == 4:
+                raise
+            time.sleep(attempt * 1.5)
 
 def resolve_bundles_for_targets(manifest: dict, targets: list[str]) -> set[int]:
     # 目标名是 TextAsset 的 m_Name（导出时命名为 name.bytes）
