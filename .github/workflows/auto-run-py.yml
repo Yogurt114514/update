@@ -39,14 +39,14 @@ jobs:
           fi
 
       - name: Run Python script
-        run: python update/main.py
+        run: python main.py
 
       - name: Commit and push files
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           # 替换为你实际的生成文件路径
-          git add ./update/generated_files/*
+          git add ./generated_files/*
           if git diff --quiet; then
             echo "No files changed, skip commit"
           else
