@@ -184,6 +184,26 @@ def get_file_hash(data: bytes) -> str:
 	return hashlib.sha256(data).hexdigest()
 
 class Flash(Platform):
+    def _download_swf_with_retry(self, url: str, max_retries: int = 4) -> bytes:
+        """下载 SWF（网络抖动时做有限重试，避免 CI 因瞬时断流失败）。"""
+        last_error: Exception | None = None
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = httpx.get(
+                    url=url,
+                    params={"t": random.uniform(0.01, 0.09)},
+                    timeout=30.0,
+                )
+                response.raise_for_status()
+                return response.content
+            except httpx.HTTPError as exc:
+                last_error = exc
+                if attempt == max_retries:
+                    break
+                # 线性退避，给对端连接恢复时间
+                time.sleep(attempt * 1.5)
+        raise RuntimeError(f"下载失败（已重试 {max_retries} 次）：{url}") from last_error
+
     @staticmethod
     def extract_configs_from_swf(swf: bytes) -> dict[str, bytes]:
         decompressed = zlib.decompress(swf[7:])
@@ -191,20 +211,10 @@ class Flash(Platform):
         return extract_binary_data(swf_data)
 
     def _get_coredll_swf(self) -> bytes:
-        response = httpx.get(
-            url="https://seer.61.com/dll/RobotCoreDLL.swf",
-            params={"t": random.uniform(0.01, 0.09)}
-        )
-        response.raise_for_status()
-        return response.content
+        return self._download_swf_with_retry("https://seer.61.com/dll/RobotCoreDLL.swf")
 
     def _get_prexml_swf(self) -> bytes:
-        response = httpx.get(
-            url="https://seer.61.com/resource/xml/prexml.swf",
-            params={"t": random.uniform(0.01, 0.09)}
-        )
-        response.raise_for_status()
-        return response.content
+        return self._download_swf_with_retry("https://seer.61.com/resource/xml/prexml.swf")
 
     @override
     def get_remote_version(self) -> str:
