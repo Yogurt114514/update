@@ -2560,12 +2560,6 @@ with open((data_path / "effectIcon.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
 effect = root["effect"]
-for i in effect:    # 导出魂印图标
-    export_swf_to_svg(
-        ffdec_jar_path=str(FFDEC_JAR_PATH),
-        input_swf_path=i["icon_id"],  # SWF文件名（数字）
-        export_type="sprite"  # 导出精灵（frame=导出帧，sprite=导出精灵）
-    )
 parse_and_dump_effect_tag( # 魂印标签
     (data_path / "effectag.bytes"),
     (data_path / "effectag.json"),

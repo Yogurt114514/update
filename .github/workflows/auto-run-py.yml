@@ -41,11 +41,18 @@ jobs:
       - name: Run Python script
         run: python main.py
 
+      - name: Collect generated db files
+        run: |
+          mkdir -p ./generated_files/db
+          find ./generated_files -type f -name "*.db" -exec cp -f {} ./generated_files/db/ \;
+          echo "Collected DB files:"
+          ls -la ./generated_files/db || true
+
       - name: Commit and push files
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          # 替换为你实际的生成文件路径
+          git config --global user.name "Yogurt114514"
+          git config --global user.email "1157733847@qq.com"
+          # 提交生成文件（包含集中收集的 db）
           git add ./generated_files/*
           if git diff --quiet; then
             echo "No files changed, skip commit"
