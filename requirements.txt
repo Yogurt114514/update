@@ -1,0 +1,10 @@
+# 运行 main.py 所需的第三方依赖
+httpx
+requests
+UnityPy
+Pillow
+pytz
+typing-extensions
+xmltodict
+simplejson
+
