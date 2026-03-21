@@ -3533,7 +3533,6 @@ def db_effectag():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -3598,7 +3597,6 @@ def db_effectbuff():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -3669,7 +3667,6 @@ def db_effectDes():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -3755,7 +3752,6 @@ def db_effectIcon():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -3849,7 +3845,6 @@ def db_effectInfo():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -3936,7 +3931,6 @@ def db_gems():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4023,7 +4017,6 @@ def db_items():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4128,7 +4121,6 @@ def db_mintmark():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4265,7 +4257,6 @@ def db_moves():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4356,7 +4347,6 @@ def db_pet_skin():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4469,7 +4459,6 @@ def db_pets():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4611,7 +4600,6 @@ def db_pvp():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4715,7 +4703,6 @@ def db_rich_text_tree():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4790,7 +4777,6 @@ def db_skill_effect():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4867,7 +4853,6 @@ def db_skillTypes():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4954,7 +4939,6 @@ def db_sp_hide_moves():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
-            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
