@@ -4419,7 +4419,7 @@ def db_pets():
     root3 = data["root"]["Task"]
     pro = []
     for i in root2:
-        race = [int(n) for n in i["Advances"]["Race"]["NewRace"].split(' ')]
+        race = i["Advances"]["Race"]["NewRace"]
         pro.append([i["Advances"]["MonsterId"], race])
     for i in root3:
         race = i["Advances"]["Race"]["NewRace"]
