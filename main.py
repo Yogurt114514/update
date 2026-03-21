@@ -332,6 +332,7 @@ TARGET_TEXTASSET_NAMES = [
     "pvp_ban",
     "pvp_ban_expert",
     "pvp_vote",
+    "pet_advance",
     "pet_skin",
     "gems",
     "itemsOptimizeCat",
@@ -631,6 +632,102 @@ def write_json(output_json_path: str, result: dict) -> None:
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
     print(f"导出: {output_json_path}")
+
+def parse_and_dump_pet_advance(input_bytes_path, output_json_path):
+    def _read_task(r):
+        task = {}
+        if r.read_bool():
+            advances = {}
+            if r.read_bool():
+                advances["AdvEffect"] = {
+                    "Des": r.ReadUTFBytesWithLength(),
+                    "Id": r.ReadSignedInt(),
+                }
+            advances["AdvType"] = r.ReadSignedInt()
+            advances["MonsterId"] = r.ReadSignedInt()
+            if r.read_bool():
+                race = {}
+                if r.read_bool():
+                    a = r.ReadSignedInt()
+                    race["NewRace"] = [r.ReadSignedInt() for _ in range(a)]
+                if r.read_bool():
+                    b = r.ReadSignedInt()
+                    race["OldRace"] = [r.ReadSignedInt() for _ in range(b)]
+                advances["Race"] = race
+            if r.read_bool():
+                exmove = {"ExtraMoves": r.ReadSignedInt()}
+                advances["exMove"] = exmove
+            if r.read_bool():
+                spmove = {}
+                if r.read_bool():
+                    c = r.ReadSignedInt()
+                    spmove["SpMoves"] = [r.ReadSignedInt() for _ in range(c)]
+                advances["spMove"] = spmove
+            task["Advances"] = advances
+        task["AllProgress"] = r.ReadSignedInt()
+        if r.read_bool():
+            task["Battle"] = _read_battle(r)
+        task["BattleBoss"] = r.ReadSignedInt()
+        task["Desc"] = r.ReadUTFBytesWithLength()
+        if r.read_bool():
+            temp = {}
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["ItemID"] = [r.ReadSignedInt() for _ in range(a)]
+            if r.read_bool():
+                b = r.ReadSignedInt()
+                temp["ProductID"] = [r.ReadSignedInt() for _ in range(b)]
+            task["Exchange"] = temp
+        task["ID"] = r.ReadSignedInt()
+        task["OutItemKey"] = r.ReadSignedInt()
+        task["PerCostCoinA"] = r.ReadSignedInt()
+        return task
+    
+    def _read_battle(r):
+        battle = {}
+        battle["FreeBattleKey"] = r.ReadSignedInt()
+        tasks = []
+        if r.read_bool():
+            n = r.ReadSignedInt()
+            for _ in range(n):
+                tasks.append(_read_task(r))
+        battle["Task"] = tasks
+        return battle
+    
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": {"BackMonsters": {}, "Task": []}}
+
+    if r.read_bool():
+        if r.read_bool():
+            backmonsters = {}
+            if r.read_bool():
+                n = r.ReadSignedInt()
+                back = []
+                for _ in range(n):
+                    temp = {}
+                    temp["ID"] = r.ReadSignedInt()
+                    temp["IsBack"] = r.ReadSignedInt()
+                    temp["MonsterId"] = r.ReadSignedInt()
+                    temp["PerNeedCoinB"] = r.ReadSignedInt()
+                    temp["TaskId"] = r.ReadSignedInt()
+                    temp["desc"] = r.ReadUTFBytesWithLength()
+                    back.append(temp)
+                backmonsters["Back"] = back
+            backmonsters["free_cnt"] = r.ReadSignedInt()
+            backmonsters["refresh_add_cost"] = r.ReadSignedInt()
+            backmonsters["refresh_base_cost"] = r.ReadSignedInt()
+            backmonsters["refresh_max_cost"] = r.ReadSignedInt()
+            result["root"]["BackMonsters"] = backmonsters
+        if r.read_bool():
+            n = r.ReadSignedInt()
+            task = []
+            for _ in range(n):
+                task.append(_read_task(r))
+            result["root"]["Task"] = task
+    write_json(output_json_path, result)
 
 def parse_and_dump_awakendetail(input_bytes_path, output_json_path):
     # 结构（根据样例十六进制推断）：
@@ -2300,6 +2397,10 @@ export_selected_textassets(TARGET_TEXTASSET_NAMES)
 # url1 = "http://seerh5.61.com/resource/config/xml/"+xml["pet_advance.json"]
 # response = urllib.request.urlopen(url1)
 # data = json.load(response)
+parse_and_dump_pet_advance(
+    (data_path / "pet_advance.bytes"),
+    (data_path / "pet_advance.json"),
+)
 parse_and_dump_awakendetail(
     (data_path / "awakendetail.bytes"),
     (data_path / "awakendetail.json"),

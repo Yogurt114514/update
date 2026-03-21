@@ -54,7 +54,9 @@ jobs:
           git config --global user.email "1157733847@qq.com"
           # 提交生成文件（包含集中收集的 db）
           git add ./generated_files/*
-          if git diff --quiet; then
+           # 显式提交版本文件，确保这两个文本一定被纳入提交
+           git add ./generated_files/plugins/新数据/version1.txt ./generated_files/plugins/新数据/version2.txt
+           if git diff --cached --quiet; then
             echo "No files changed, skip commit"
           else
             git commit -m "Auto update: Generate files at $(date +'%Y-%m-%d %H:%M:%S')"
