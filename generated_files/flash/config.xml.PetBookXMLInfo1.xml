@@ -2453,7 +2453,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2123" hasSound="1" DefName="星星" Type="超能" Height="37" Weight="11" Features="星星是星太白的第一形态，腾云驾雾的星星具有强大的超能力，可以使自己的身体随着自己的意念随意四处腾飞。" mapID="0"/>
 	<Monster ID="2124" hasSound="1" DefName="星太白" Type="超能" Height="101" Weight="31" Features="嘻游天团的第三只精灵，星太白是一位慈祥年长的精灵，但是因为年纪太大，它经常会忘记一些东西。" mapID="0" jumptarget="110/3_3/1" Target="111111"/>
 	<Monster ID="2125" hasSound="1" DefName="卡洛特" Type="机械" Height="101" Weight="62" Features="卡希尔的第一形态，机械构造的他拥有最结实的身体，让他在战斗中从未收到过一丝一毫的伤害" mapID="0"/>
-	<Monster ID="2126" hasSound="1" DefName="卡希尔" Type="机械" Height="213" Weight="112" Features="圣甲之灵卡希尔，在创世六神兵中象征着最强的特防，是创世六神兵中性格憨厚最乐于助人的一位，强大的防守能力使它的躯体从未收到过伤害" mapID="0"/>
+	<Monster ID="2126" hasSound="1" DefName="卡希尔" Type="机械" Height="213" Weight="112" Features="圣甲之灵戈麦斯，在创世六神兵中象征着最强的特防，是创世六神兵中性格憨厚最乐于助人的一位，强大的防守能力使它的躯体从未收到过伤害" mapID="0"/>
 	<Monster ID="2127" hasSound="1" DefName="纳达克" Type="战斗 火" Height="79" Weight="27" Features="纳达克和云泽战骑一直都在接受着大自然严酷的考验，凡是能存活下来并练就一身高超能力的战骑都将成为云泽一族最高的骄傲" mapID="0"/>
 	<Monster ID="2128" hasSound="1" DefName="纳达尔" Type="战斗 火" Height="165" Weight="55" Features="火云战骑纳达尔，身为云泽四战骑的成员之一他代表着火焰的力量，强健的肌肉和燃烧着烈焰的盔甲与鬃毛让他在战场上总能成为最耀眼的明星" mapID="0"/>
 	<Monster ID="2129" hasSound="1" DefName="塔克西姆" Type="龙" Height="530" Weight="1120" Features="愤怒的塔克林在霸王龙的激励下超进化成功！因为体重过于巨大而难以直立的塔克林终于站起来了！他就是塔克西姆，塔克林超进化！" mapID="0"/>

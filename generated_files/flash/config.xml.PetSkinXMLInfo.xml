@@ -13,7 +13,7 @@ SkinKind Type:  1:限时皮肤  2:永久皮肤
 LifeTime:限时天数
 Jumptarget：unity跳转，读jumptarget表
 
-SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园）
+SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案）
 Year：该皮肤所属的年份（当前仅面向巅峰时装）
 
 -->
@@ -2717,19 +2717,19 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="808" MonID="4622" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="风纪监察·希拓" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114053">
+	<Skin ID="808" MonID="4622" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="风纪监察·希拓" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="18"/>
 	</Skin>
 
-	<Skin ID="809" MonID="4816" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="文墨风吟·伊芙" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114054">
+	<Skin ID="809" MonID="4816" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="文墨风吟·伊芙" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="18"/>
 	</Skin>
 
-	<Skin ID="810" MonID="4712" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="任性法则·龙琰" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114056">
+	<Skin ID="810" MonID="4712" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="9" Name="任性法则·龙琰" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="18"/>
 	</Skin>
 
-	<Skin ID="811" MonID="3716" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="死神镰刀·该洛西斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="811" MonID="3716" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="死神镰刀·该洛西斯" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
@@ -2737,6 +2737,30 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="13"/>
 	</Skin>
     <Skin ID="813" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="燕归青野·莫妮卡" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114058">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+	
+	<Skin ID="814" MonID="3541" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="巨樽之灵·斯摩亚蒂" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
+	</Skin>
+	
+	<Skin ID="815" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="怪盗气球·尤纳斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
+	</Skin>
+	
+	<Skin ID="816" MonID="4462" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="月圆之夜·月华" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
+	</Skin>
+	
+	<Skin ID="817" MonID="4808" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="捣蛋魅影·米修莉" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
+	</Skin>
+	
+	<Skin ID="818" MonID="3516" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="了不起的莱茵哈特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
+	</Skin>
+	
+	<Skin ID="819" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="莫妮卡" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 

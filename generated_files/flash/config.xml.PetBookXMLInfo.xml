@@ -213,7 +213,7 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4885" ImageID= "4885" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4886" ImageID= "4886" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4883" ImageID= "4883" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4884" ImageID= "4884" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4869" ImageID= "4869" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,12 +255,12 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="812" monID="3437" ImageID= "1400812" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="813" monID="3711" ImageID= "1400813" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "1" ID="791" monID="4510" ImageID= "1400791" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "1" ID="769" monID="4822" ImageID= "1400769" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-      <!-- <place type= "1" ID="749" monID="4805" ImageID= "1400749" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "1" ID="750" monID="4069" ImageID= "1400750" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="814" monID="3541" ImageID= "1400814" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="815" monID="4717" ImageID= "1400815" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="816" monID="4462" ImageID= "1400816" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="747" monID="4676" ImageID= "1400747" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="748" monID="4421" ImageID= "1400748" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="746" monID="4753" ImageID= "1400746" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3729,7 +3729,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3419" DefName="蛮荒之息" Type="远古 地面" Height="193" Weight="86" Features="来自蛮荒时期的远古巨兽，却同时拥有着过人的头脑，手中的双刃挥舞起来威力无比！" mapID="1"/>
 	<Monster ID="3420" DefName="梦·赫尔墨斯" Type="超能" Height="180" Weight="80" Features="梦境之神的完全体形态，在索伦森掌握真正混沌力量后，梦境之神赫尔墨斯的能力也得到了提升！" mapID="1239" jumptarget="119" Target="150045"/>
 	<Monster ID="3421" DefName="圣灵之魂迈尔斯" Type="圣灵 战斗" Height="178" Weight="87" Features="迈尔斯的完全体形态，响应谱尼的召唤而成为完全体，圣灵的力量极大的增强！" mapID="1244"/>
-	<Monster ID="3422" DefName="蒂亚斯" Type="暗影 战斗" Height="180" Weight="80" Features="第二位混沌领军者，和埃兰一同带领混沌教派，试图建立宇宙的新秩序！" mapID="1245"/>
+	<Monster ID="3422" DefName="蒂亚斯" Type="暗影 战斗" Height="180" Weight="80" Features="第二位混沌领军者，和埃兰一同带领混沌教派，试图建立宇宙的新秩序！" mapID="1245" Target="150109"/>
 	<Monster ID="3423" DefName="鬼藏" Type="神秘 超能" Height="180" Weight="80" Features="禁忌之忍，是传闻中的忍者，拥有一身神秘的忍术力量，不容小视！" mapID="103"/>
 	<Monster ID="3424" DefName="拉奥里特" Type="普通" Height="180" Weight="80" Features="随着命运之轮未来命运的开启，拉里特进化成了拉奥里特，舍弃了盾牌，却拥有了一往无前的力量！" Redirect="map|module" Go="1147;app/PveRewardMallMainPanel" jumptarget="18/4_5" Target="164510"/>
 	<Monster ID="3425" DefName="圣灵守护奥斯卡" Type="圣灵 次元" Height="186" Weight="77" Features="奥斯卡的完全体形态，和圣灵之魂迈尔斯一同响应谱尼的召唤而成为完全体，是对抗混沌教派的核心力量！" mapID="1245"/>
@@ -3753,7 +3753,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3443" DefName="万神寂灭·克罗诺斯" Type="暗影 神秘" Height="198" Weight="88" Features="克罗诺斯的完全体形态，他的力量是诸神的黄昏，是终末的降临！" mapID="103"/>
 	<Monster ID="3444" DefName="伊芙莉" Type="自然" Height="170" Weight="55" Features="伊诺美的妹妹，在姐姐加入混沌教派后，留在星域之间继续进行抵抗！" mapID="1249"/>
 	<Monster ID="3445" DefName="赫里斯" Type="光" Height="180" Weight="80" Features="星域之中的抵抗者，险些堕入混沌教派，后幡然醒悟，投入了圣光联军！" mapID="1251"/>
-	<Monster ID="3446" DefName="混沌蒂亚斯" Type="混沌 暗影" Height="187" Weight="78" Features="获得了魔君力量赐福的蒂亚斯，如今的他更加危险，也肩负了扩散混沌之力的使命！" mapID="1241"/>
+	<Monster ID="3446" DefName="混沌蒂亚斯" Type="混沌 暗影" Height="187" Weight="78" Features="获得了魔君力量赐福的蒂亚斯，如今的他更加危险，也肩负了扩散混沌之力的使命！" mapID="1241" Target="150110"/>
 	<Monster ID="3447" DefName="克拉卡" Type="机械 邪灵" Height="180" Weight="80" Features="视谱尼为一生宿敌，竭尽全力去与之争锋，最后终于意识到，人生有时不能想太多！" mapID="1"/>
 	<Monster ID="3448" DefName="炼狱刃龙兽" Type="地面 机械" Height="392" Weight="324" Features="由秘宝车队在地底发现的全新精灵，拥有超强的破坏力和战斗能力！" mapID="103"/>
 	<Monster ID="3449" DefName="洛皮" Type="光" Height="150" Weight="50" Features="和皮洛本为一体，后受到圣灵的洗礼变为光属性的可爱精灵！" mapID="1250"/>
@@ -5183,5 +5183,6 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4883" DefName="薇奥莱特" Type="混沌 超能" Height="174" Weight="51" Features="一位神秘的魔女，以恐惧为乐的她散发的邪恶气场难以让人靠近。" Redirect="module" Go="app/FinalActivityPanel" Target="114055"/>
 	<Monster ID="4884" DefName="拓本-ε" Type="机械" Height="45" Weight="17" Features="拓本-ε是自在天的清洁机器人，据说它在最高功率下可以在一天内清洁完整个自在天。" Redirect="module" Go="app/FinalActivityPanel" Target="400021"/>
 	<Monster ID="4885" DefName="灰蛾" Type="虫" Height="155" Weight="45" Features="薇星上出现的神秘虫族，被小精灵们称之为“天魔”。灰蛾拥有强大的力量，却总是迷失在虚无的愿望之中……" Redirect="module" Go="app/FinalActivityPanel" Target="153201/872"/>
+	<Monster ID="4886" DefName="阿华华" Type="草" Height="70" Weight="22" Features="阿华华是继承了人族基因的小精灵，性格开朗，富有好奇心。它拥有强大的学习能力和思辨能力，最喜欢做的事情是画画。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/875"/>
 
 </root>
