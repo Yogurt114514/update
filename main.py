@@ -4409,7 +4409,7 @@ def db_pets():
     root3 = data["root"]["Task"]
     pro = []
     for i in root2:
-        race = i["Advances"]["Race"]["NewRace"]
+        race = [int(n) for n in i["Advances"]["Race"]["NewRace"].split(' ')]
         pro.append([i["Advances"]["MonsterId"], race])
     for i in root3:
         race = i["Advances"]["Race"]["NewRace"]
@@ -4445,6 +4445,8 @@ def db_pets():
                 HP INTEGER NOT NULL,  -- 
                 LearnableMoves TEXT NOT NULL,  -- 
                 ExtraMoves TEXT NOT NULL,  -- 
+                SpExtraMoves TEXT NOT NULL,  -- 
+                ShowExtraMoves TEXT NOT NULL,  -- 
                 des TEXT NOT NULL,  -- 
                 RealId INTEGER NOT NULL,  -- 
                 NewAtk INTEGER,  -- 
@@ -4459,6 +4461,7 @@ def db_pets():
             conn.commit()
 
             print(f"✅ 数据库创建成功：{db_path}")
+            print("✅ 数据表创建成功（字段结构完全匹配要求）")
 
         except sqlite3.Error as e:
             print(f"❌ 数据库创建失败：{e}")
@@ -4467,7 +4470,7 @@ def db_pets():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "pets.db")  # CI 输出路径
+    DB_PATH = data_path / "pets.db"  # 使用相对路径
 
     try:
         os.remove(DB_PATH)
@@ -4497,6 +4500,8 @@ def db_pets():
             HP = i.get("HP", 0)
             LearnableMoves = str(i.get("LearnableMoves", {}))
             ExtraMoves = str(i.get("ExtraMoves", {}))
+            SpExtraMoves = str(i.get("SpExtraMoves", {}))
+            ShowExtraMoves = str(i.get("ShowExtraMoves", {}))
             des = ''
             RealId = i.get("RealId", 0)
             if ID in book:
@@ -4515,18 +4520,18 @@ def db_pets():
                     NewSpd = j[1][5]
                     NewHP = j[1][0]
                     cursor.execute("""
-                        INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                        """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
+                        INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
                     )
                     flag = True
                     break
             if flag:
                 continue
             cursor.execute("""
-                INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, des, RealId)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, des, RealId)
+                INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
