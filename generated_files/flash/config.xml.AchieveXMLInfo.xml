@@ -300,6 +300,7 @@
 				<Rule ID="21" Threshold="21" AchievementPoint="10" icon="1" achName="卡布达与朋友" proicon="1447" SpeNameBonus="558" title="卡布达与朋友" Desc="完成剧情【和平星争霸赛】获得" titleColor="0xFFFFFF" />
 				<Rule ID="22" Threshold="22" AchievementPoint="10" icon="1" achName="天人之证" proicon="1456" SpeNameBonus="565" title="天人之证" Desc="完成主线【行于沙海】获得" titleColor="0xFFFFFF" />
 				<Rule ID="23" Threshold="23" AchievementPoint="10" icon="1" achName="白皑迷踪" proicon="1466" SpeNameBonus="570" title="白皑迷踪" Desc="完成主线【白皑迷踪】获得" titleColor="0xFFFFFF" />
+				<Rule ID="24" Threshold="24" AchievementPoint="10" icon="1" achName="乐园放逐" proicon="1477" SpeNameBonus="579" title="乐园放逐" Desc="完成主线【乐园放逐】获得" titleColor="0xFFFFFF"/>
 			</Branch>
 
 		</Branches>
@@ -889,6 +890,7 @@
 				<Rule ID="6" Threshold="6" AchievementPoint="10" icon="1" achName="感性之化身" proicon="1467" SpeNameBonus="571" title="感性之化身" Desc="通关S-康迪亚克【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="7" Threshold="7" AchievementPoint="10" icon="1" achName="光佑四方" proicon="1472" SpeNameBonus="575" title="光佑四方" Desc="通关S-方术悠悠【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="乐园的天魔" proicon="1475" SpeNameBonus="577" title="乐园的天魔" Desc="通关S-灰蛾【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="和谐之化身" proicon="1480" SpeNameBonus="582" title="和谐之化身" Desc="通关S-托勒斯【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 
@@ -1853,6 +1855,10 @@
 				<Rule ID="14" Threshold="14" AchievementPoint="10" achName="运动无极限" Desc="达成运动时光系列皮肤收集进度" proicon="1474" icon="1" />
 				
 
+			</Branch>
+			<Branch ID="176" Type="0" Desc="限定分类10" isShowPro="0">
+				<Rule ID="1" Threshold="1" AchievementPoint="5" icon="1" achName="果实品鉴家" proicon="1478" SpeNameBonus="580" title="品鉴达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
+				<Rule ID="2" Threshold="2" AchievementPoint="5" icon="1" achName="知晓故事之人" proicon="1479" SpeNameBonus="581" title="故事达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
 			</Branch>
 
 			</Branches>

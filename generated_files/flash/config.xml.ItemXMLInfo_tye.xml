@@ -498,7 +498,10 @@
 		<Item ID="301013" Name="玫瑰星云" />
 		<Item ID="301014" Name="陨石生椰" />
 		<Item ID="301015" Name="玛瑙森林" />
-		<Item ID="301016" Name="黑洞拿铁" />			
+		<Item ID="301016" Name="黑洞拿铁" />	
+		<Item ID="301057" Name="精灵道具占位1" />	
+		<Item ID="301058" Name="精灵道具占位2" />	
+		<Item ID="301059" Name="精灵道具占位3" />			
 	</list>	
 	<list name="药剂" type="19">
 		<Item ID="300011" Name="初级体力药剂"/>

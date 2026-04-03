@@ -296,58 +296,58 @@
 	<item id="429" activityid="26" activityname="薇星起航计划" describe="累计完成5局游戏" value="5" time="0" timelimit="1" timestart="1773367200" timeend="1773972000" rewardinfo="1_2500004_1" userinfo="152031" userbitbuf2="152032_1" />
 	<item id="430" activityid="26" activityname="薇星起航计划" describe="累计完成10局游戏" value="10" time="0" timelimit="1" timestart="1773367200" timeend="1773972000" rewardinfo="1_2500004_2" userinfo="152031" userbitbuf2="152032_2" />
 	<item id="431" activityid="26" activityname="薇星起航计划" describe="累计完成15局游戏" value="15" time="0" timelimit="1" timestart="1773367200" timeend="1773972000" rewardinfo="1_2500004_2" userinfo="152031" userbitbuf2="152032_3" />
-	<item id="432" activityid="27" activityname="0403" describe="0403" value="1" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="433" activityid="27" activityname="0403" describe="0403" value="2" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="434" activityid="27" activityname="0403" describe="0403" value="3" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="435" activityid="27" activityname="0403" describe="0403" value="4" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="436" activityid="27" activityname="0403" describe="0403" value="5" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="437" activityid="27" activityname="0403" describe="0403" value="6" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="438" activityid="27" activityname="0403" describe="0403" value="7" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="439" activityid="27" activityname="0403" describe="0403" value="8" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="440" activityid="27" activityname="0403" describe="0403" value="9" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="441" activityid="27" activityname="0403" describe="0403" value="10" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="442" activityid="27" activityname="0403" describe="0403" value="11" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="443" activityid="27" activityname="0403" describe="0403" value="12" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="444" activityid="27" activityname="0403" describe="0403" value="13" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="445" activityid="27" activityname="0403" describe="0403" value="14" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="446" activityid="27" activityname="0403" describe="0403" value="15" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="447" activityid="27" activityname="0403" describe="0403" value="16" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="448" activityid="27" activityname="0403" describe="0403" value="17" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="449" activityid="27" activityname="0403" describe="0403" value="18" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="450" activityid="27" activityname="0403" describe="0403" value="19" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="451" activityid="27" activityname="0403" describe="0403" value="20" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="452" activityid="27" activityname="0403" describe="0403" value="21" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="453" activityid="27" activityname="0403" describe="0403" value="22" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="454" activityid="27" activityname="0403" describe="0403" value="23" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="455" activityid="27" activityname="0403" describe="0403" value="24" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="456" activityid="27" activityname="0403" describe="0403" value="25" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="457" activityid="27" activityname="0403" describe="0403" value="26" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="458" activityid="27" activityname="0403" describe="0403" value="27" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="459" activityid="27" activityname="0403" describe="0403" value="28" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="460" activityid="27" activityname="0403" describe="0403" value="29" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="461" activityid="27" activityname="0403" describe="0403" value="30" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="462" activityid="27" activityname="0403" describe="0403" value="31" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="463" activityid="27" activityname="0403" describe="0403" value="32" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="464" activityid="27" activityname="0403" describe="0403" value="33" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="465" activityid="27" activityname="0403" describe="0403" value="34" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="466" activityid="27" activityname="0403" describe="0403" value="35" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="467" activityid="27" activityname="0403" describe="0403" value="36" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="468" activityid="27" activityname="0403" describe="0403" value="37" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="469" activityid="27" activityname="0403" describe="0403" value="38" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="470" activityid="27" activityname="0403" describe="0403" value="39" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="471" activityid="27" activityname="0403" describe="0403" value="40" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="472" activityid="27" activityname="0403" describe="0403" value="3" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="473" activityid="27" activityname="0403" describe="0403" value="5" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="474" activityid="27" activityname="0403" describe="0403" value="100" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="475" activityid="27" activityname="0403" describe="0403" value="200" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="476" activityid="27" activityname="0403" describe="0403" value="300" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="477" activityid="27" activityname="0403" describe="0403" value="350" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="478" activityid="27" activityname="0403" describe="0403" value="400" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" />
-	<item id="479" activityid="27" activityname="0403" describe="0403" value="100" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="480" activityid="27" activityname="0403" describe="0403" value="200" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="481" activityid="27" activityname="0403" describe="0403" value="300" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="482" activityid="27" activityname="0403" describe="0403" value="350" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
-	<item id="483" activityid="27" activityname="0403" describe="0403" value="400" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" />
+	<item id="432" activityid="27" activityname="噗啾“棋”" describe="完成第1关" value="1" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="433" activityid="27" activityname="噗啾“棋”" describe="完成第2关" value="2" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="434" activityid="27" activityname="噗啾“棋”" describe="完成第3关" value="3" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="435" activityid="27" activityname="噗啾“棋”" describe="完成第4关" value="4" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="436" activityid="27" activityname="噗啾“棋”" describe="完成第5关" value="5" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="437" activityid="27" activityname="噗啾“棋”" describe="完成第6关" value="6" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="438" activityid="27" activityname="噗啾“棋”" describe="完成第7关" value="7" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="439" activityid="27" activityname="噗啾“棋”" describe="完成第8关" value="8" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="440" activityid="27" activityname="噗啾“棋”" describe="完成第9关" value="9" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="441" activityid="27" activityname="噗啾“棋”" describe="完成第10关" value="10" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="442" activityid="27" activityname="噗啾“棋”" describe="完成第11关" value="11" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="443" activityid="27" activityname="噗啾“棋”" describe="完成第12关" value="12" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="444" activityid="27" activityname="噗啾“棋”" describe="完成第13关" value="13" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="445" activityid="27" activityname="噗啾“棋”" describe="完成第14关" value="14" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="446" activityid="27" activityname="噗啾“棋”" describe="完成第15关" value="15" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="447" activityid="27" activityname="噗啾“棋”" describe="完成第16关" value="16" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="448" activityid="27" activityname="噗啾“棋”" describe="完成第17关" value="17" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="449" activityid="27" activityname="噗啾“棋”" describe="完成第18关" value="18" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_5" />
+	<item id="450" activityid="27" activityname="噗啾“棋”" describe="完成第19关" value="19" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="451" activityid="27" activityname="噗啾“棋”" describe="完成第20关" value="20" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="452" activityid="27" activityname="噗啾“棋”" describe="完成第21关" value="21" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="453" activityid="27" activityname="噗啾“棋”" describe="完成第22关" value="22" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="454" activityid="27" activityname="噗啾“棋”" describe="完成第23关" value="23" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="455" activityid="27" activityname="噗啾“棋”" describe="完成第24关" value="24" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="456" activityid="27" activityname="噗啾“棋”" describe="完成第25关" value="25" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="457" activityid="27" activityname="噗啾“棋”" describe="完成第26关" value="26" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="458" activityid="27" activityname="噗啾“棋”" describe="完成第27关" value="27" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="459" activityid="27" activityname="噗啾“棋”" describe="完成第28关" value="28" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="460" activityid="27" activityname="噗啾“棋”" describe="完成第29关" value="29" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="461" activityid="27" activityname="噗啾“棋”" describe="完成第30关" value="30" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="462" activityid="27" activityname="噗啾“棋”" describe="完成第31关" value="31" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="463" activityid="27" activityname="噗啾“棋”" describe="完成第32关" value="32" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="464" activityid="27" activityname="噗啾“棋”" describe="完成第33关" value="33" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="465" activityid="27" activityname="噗啾“棋”" describe="完成第34关" value="34" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="466" activityid="27" activityname="噗啾“棋”" describe="完成第35关" value="35" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="467" activityid="27" activityname="噗啾“棋”" describe="完成第36关" value="36" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_5" />
+	<item id="468" activityid="27" activityname="噗啾“棋”" describe="完成第37关" value="37" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="469" activityid="27" activityname="噗啾“棋”" describe="完成第38关" value="38" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="470" activityid="27" activityname="噗啾“棋”" describe="完成第39关" value="39" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="471" activityid="27" activityname="噗啾“棋”" describe="完成第40关" value="40" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300066_1" />
+	<item id="472" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得150分" value="150" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="473" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得300分" value="300" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_1" />
+	<item id="474" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得450分" value="450" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="475" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得600分" value="600" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="476" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得700分" value="700" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="477" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得200分" value="200" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="478" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得400分" value="400" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_1" />
+	<item id="479" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得600分" value="600" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="480" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得750分" value="750" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="481" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得900分" value="900" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="482" activityid="27" activityname="噗啾“棋”" describe="游玩5次无尽模式" value="5" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_4" />
+	<item id="483" activityid="27" activityname="噗啾“棋”" describe="游玩10次无尽模式" value="10" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_1" />
 	<item id="484" activityid="28" activityname="0417" describe="0417" value="1" time="1" timelimit="1" timestart="1776391200" timeend="1776996000" />
 	<item id="485" activityid="28" activityname="0417" describe="0417" value="2" time="1" timelimit="1" timestart="1776391200" timeend="1776996000" />
 	<item id="486" activityid="28" activityname="0417" describe="0417" value="3" time="1" timelimit="1" timestart="1776391200" timeend="1776996000" />
@@ -360,4 +360,12 @@
 	<item id="493" activityid="28" activityname="0417" describe="0417" value="5" time="0" timelimit="1" timestart="1776391200" timeend="1776996000" />
 	<item id="494" activityid="28" activityname="0417" describe="0417" value="10" time="0" timelimit="1" timestart="1776391200" timeend="1776996000" />
 	<item id="495" activityid="28" activityname="0417" describe="0417" value="15" time="0" timelimit="1" timestart="1776391200" timeend="1776996000" />
+	<item id="500" activityid="29" activityname="拓本-ε大进攻" describe="首次获取300分" value="300" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_1706927_300" userinfo="108952" userbitbuf2="108953_1" />
+	<item id="501" activityid="29" activityname="拓本-ε大进攻" describe="首次获取500分" value="500" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_1" userinfo="108952" userbitbuf2="108953_2" />
+	<item id="502" activityid="29" activityname="拓本-ε大进攻" describe="首次获取800分" value="800" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_1706928_300" userinfo="108952" userbitbuf2="108953_3" />
+	<item id="503" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏1天（至少获取100分）" value="1" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_1" userinfo="108951" userbitbuf2="108953_4" />
+	<item id="504" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏2天（至少获取100分）" value="2" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500005_20" userinfo="108951" userbitbuf2="108953_5" />
+	<item id="505" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏3天（至少获取100分）" value="3" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_1" userinfo="108951" userbitbuf2="108953_6" />
+	<item id="506" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏4天（至少获取100分）" value="4" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_1706926_5" userinfo="108951" userbitbuf2="108953_7" />
+	<item id="507" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏5天（至少获取100分）" value="5" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_2" userinfo="108951" userbitbuf2="108953_8" />
 </root>

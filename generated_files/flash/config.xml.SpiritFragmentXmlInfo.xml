@@ -560,5 +560,8 @@
 	<Fragment ID="2400561" show="1" Name="阿波波因子" MonsterID="4882" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6371" effectId="2069" NewseConsume="200" MoveID="38308" MovesConsume="100" NeedmonID="0" NewMsglogId="2603120700" SeMsglog="2603120701" EffectMsglog="2603120702"/>
     <Fragment ID="2400562" show="1" Name="灰蛾因子" MonsterID="4885" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6372" effectId="2071" NewseConsume="270" MoveID="38316" MovesConsume="108" NeedmonID="0" NewMsglogId="2603190800" SeMsglog="2603190801" EffectMsglog="2603190802"/>
 	<Fragment ID="2400563" show="1" Name="阿华华因子" MonsterID="4886" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6374" effectId="2073" NewseConsume="200" MoveID="38324" MovesConsume="100" NeedmonID="0" NewMsglogId="2603260500" SeMsglog="2603260501" EffectMsglog="2603260502"/>
-   
+    <Fragment ID="2400564" show="1" Name="托勒斯因子" MonsterID="4887" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6375" effectId="2074" NewseConsume="270" MoveID="38327" MovesConsume="108" NeedmonID="0" NewMsglogId="2604020600" SeMsglog="2604020601" EffectMsglog="2604020602"/>
+	<Fragment ID="2400565" show="1" Name="初诞之薇因子" MonsterID="4889" Rarity="1" PetLimit="1" PetConsume="200" NewSeIdx="6377" effectId="2076" NewseConsume="100" MoveID="38332" MovesConsume="50" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	<Fragment ID="2400566" show="1" Name="阿特洛波斯因子" MonsterID="4278" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="5772" effectId="1502" NewseConsume="270" MoveID="35394" MovesConsume="108" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	
 </Root>
