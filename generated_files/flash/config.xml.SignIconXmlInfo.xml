@@ -191,9 +191,9 @@ sort标记展示序列 1为自己给自己的效果 2为队友给自己的效果
 	<item id="154" dec="暖雪" tips="暖雪" className="*" sort="4" isShowNum="1" NumDes="剩余片数" Des="己方免疫受到的烧伤、焚烬、冻伤、冰封，免疫成功则减少50片"/>
 	<item id="155" dec="宁界之律" tips="宁界之律" className="*" sort="1" isShowNum="1" NumDes="剩余道数" frame="0_0 1_1 2_2 3_3 4_4 5_5" Des="每有1道，自身25%免疫受到的异常状态、对手非同系攻击技能且受到的攻击伤害减少8%、攻击技能先制+1；最高5道，达到5道时道数不再变化，己方在场精灵按最优系别计算克制系数，场下精灵的体力、PP值均不会减少" showmonster="3711"/>
 	<item id="156" dec="琼华之庇" tips="琼华之庇" className="*" sort="4" isShowNum="1" NumDes="剩余道数" Des="每有1道自身的PP值被清除时保留1点，触发成功则对手直到下回合结束先制效果失效；自身每有1个技能PP值为0，造成的攻击伤害额外提升8%，受到的攻击额外伤害减少4%；最高4层"/>
-	<item id="157" dec="天之门" tips="天之门" className="*" sort="4" isShowNum="0" NumDes="" Des="自身造成的非真实伤害额外减少60%"/>
-	<item id="158" dec="地之门" tips="地之门" className="*" sort="4" isShowNum="0" NumDes="" Des="自身造成的非真实伤害额外减少60%"/>
-	<item id="159" dec="神之门" tips="神之门" className="*" sort="4" isShowNum="0" NumDes="" Des="自身造成的非真实伤害额外减少60%"/>
+	<item id="157" dec="天之门" tips="天之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予天繁星的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外为己方场下所有精灵恢复1点PP值"/>
+	<item id="158" dec="地之门" tips="地之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予地繁花的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外为己方场下所有精灵恢复等量的体力"/>
+	<item id="159" dec="神之门" tips="神之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予神繁祉的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外对对方场下所有精灵附加等量的真实伤害"/>
 
 
 

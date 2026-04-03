@@ -316,36 +316,36 @@
 	<item id="449" activityid="27" activityname="噗啾“棋”" describe="完成第18关" value="18" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_5" />
 	<item id="450" activityid="27" activityname="噗啾“棋”" describe="完成第19关" value="19" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
 	<item id="451" activityid="27" activityname="噗啾“棋”" describe="完成第20关" value="20" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
-	<item id="452" activityid="27" activityname="噗啾“棋”" describe="完成第21关" value="21" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="453" activityid="27" activityname="噗啾“棋”" describe="完成第22关" value="22" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="454" activityid="27" activityname="噗啾“棋”" describe="完成第23关" value="23" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="455" activityid="27" activityname="噗啾“棋”" describe="完成第24关" value="24" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_40" />
-	<item id="456" activityid="27" activityname="噗啾“棋”" describe="完成第25关" value="25" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
-	<item id="457" activityid="27" activityname="噗啾“棋”" describe="完成第26关" value="26" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
-	<item id="458" activityid="27" activityname="噗啾“棋”" describe="完成第27关" value="27" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="459" activityid="27" activityname="噗啾“棋”" describe="完成第28关" value="28" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="460" activityid="27" activityname="噗啾“棋”" describe="完成第29关" value="29" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
-	<item id="461" activityid="27" activityname="噗啾“棋”" describe="完成第30关" value="30" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
-	<item id="462" activityid="27" activityname="噗啾“棋”" describe="完成第31关" value="31" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_3" />
-	<item id="463" activityid="27" activityname="噗啾“棋”" describe="完成第32关" value="32" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
-	<item id="464" activityid="27" activityname="噗啾“棋”" describe="完成第33关" value="33" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
-	<item id="465" activityid="27" activityname="噗啾“棋”" describe="完成第34关" value="34" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_40" />
-	<item id="466" activityid="27" activityname="噗啾“棋”" describe="完成第35关" value="35" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
-	<item id="467" activityid="27" activityname="噗啾“棋”" describe="完成第36关" value="36" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1726992_5" />
-	<item id="468" activityid="27" activityname="噗啾“棋”" describe="完成第37关" value="37" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_2" />
-	<item id="469" activityid="27" activityname="噗啾“棋”" describe="完成第38关" value="38" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727739_20" />
-	<item id="470" activityid="27" activityname="噗啾“棋”" describe="完成第39关" value="39" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_2500004_1" />
-	<item id="471" activityid="27" activityname="噗啾“棋”" describe="完成第40关" value="40" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300066_1" />
+	<item id="452" activityid="27" activityname="噗啾“棋”" describe="完成第21关" value="21" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="453" activityid="27" activityname="噗啾“棋”" describe="完成第22关" value="22" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="454" activityid="27" activityname="噗啾“棋”" describe="完成第23关" value="23" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="455" activityid="27" activityname="噗啾“棋”" describe="完成第24关" value="24" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="456" activityid="27" activityname="噗啾“棋”" describe="完成第25关" value="25" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="457" activityid="27" activityname="噗啾“棋”" describe="完成第26关" value="26" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="458" activityid="27" activityname="噗啾“棋”" describe="完成第27关" value="27" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="459" activityid="27" activityname="噗啾“棋”" describe="完成第28关" value="28" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="460" activityid="27" activityname="噗啾“棋”" describe="完成第29关" value="29" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="461" activityid="27" activityname="噗啾“棋”" describe="完成第30关" value="30" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="462" activityid="27" activityname="噗啾“棋”" describe="完成第31关" value="31" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_3" />
+	<item id="463" activityid="27" activityname="噗啾“棋”" describe="完成第32关" value="32" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="464" activityid="27" activityname="噗啾“棋”" describe="完成第33关" value="33" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="465" activityid="27" activityname="噗啾“棋”" describe="完成第34关" value="34" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_40" />
+	<item id="466" activityid="27" activityname="噗啾“棋”" describe="完成第35关" value="35" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="467" activityid="27" activityname="噗啾“棋”" describe="完成第36关" value="36" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_5" />
+	<item id="468" activityid="27" activityname="噗啾“棋”" describe="完成第37关" value="37" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_2" />
+	<item id="469" activityid="27" activityname="噗啾“棋”" describe="完成第38关" value="38" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727739_20" />
+	<item id="470" activityid="27" activityname="噗啾“棋”" describe="完成第39关" value="39" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="471" activityid="27" activityname="噗啾“棋”" describe="完成第40关" value="40" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300066_1" />
 	<item id="472" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得150分" value="150" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
 	<item id="473" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得300分" value="300" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_1" />
 	<item id="474" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得450分" value="450" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
 	<item id="475" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得600分" value="600" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
 	<item id="476" activityid="27" activityname="噗啾“棋”" describe="简单无尽模式\n最高获得700分" value="700" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
-	<item id="477" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得200分" value="200" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_20" />
-	<item id="478" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得400分" value="400" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300065_1" />
-	<item id="479" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得600分" value="600" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_300063_1" />
-	<item id="480" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得750分" value="750" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_2500004_1" />
-	<item id="481" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得900分" value="900" time="0" timelimit="1" timestart="1775786400" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="477" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得200分" value="200" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
+	<item id="478" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得400分" value="400" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_1" />
+	<item id="479" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得600分" value="600" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300063_1" />
+	<item id="480" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得750分" value="750" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_2500004_1" />
+	<item id="481" activityid="27" activityname="噗啾“棋”" describe="困难无尽模式\n最高获得900分" value="900" time="0" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1727738_20" />
 	<item id="482" activityid="27" activityname="噗啾“棋”" describe="游玩5次无尽模式" value="5" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_1726992_4" />
 	<item id="483" activityid="27" activityname="噗啾“棋”" describe="游玩10次无尽模式" value="10" time="1" timelimit="1" timestart="1775181600" timeend="1776391200" rewardinfo="1_300065_1" />
 	<item id="484" activityid="28" activityname="0417" describe="0417" value="1" time="1" timelimit="1" timestart="1776391200" timeend="1776996000" />
