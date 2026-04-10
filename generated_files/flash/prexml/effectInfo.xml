@@ -2215,7 +2215,7 @@
 	<Effect id="2377" argsNum="1" info="对手每处于1种能力下降威力提升{0}点" analyze="[sprite name=iconHit]对手每处于1种能力下降[color=#52a5f2]威力[/color]提升{0}点"/>
 	<Effect id="2378" argsNum="0" info="随机获得1句自身未获得过的唱词" key="1_唱词_1_300" analyze="[sprite name=iconHit]随机获得1句自身未获得过的[color=#f35555]唱词[/color]"/>
 	<Effect id="2379" argsNum="1" info="自身下次被击败后，下只精灵所有伤害抗性提升{0}%" analyze="[sprite name=iconHit]自身下次[color=#57c975]被击败[/color]后，下只精灵所有伤害抗性提升{0}%"/>
-	<Effect id="2380" argsNum="1" info="自身下{0}次致命一击视为命中并强制执行命中效果" analyze="[sprite name=iconHit]自身下{0}次[color=#57c975]致命一击[/color]视为命中并制[color=#52a5f2]执行[/color]命中效果"/>
+	<Effect id="2380" argsNum="1" info="自身下{0}次致命一击视为命中并强制执行命中效果" analyze="[sprite name=iconHit]自身下{0}次[color=#57c975]致命一击[/color]视为命中并强制[color=#52a5f2]执行[/color]命中效果"/>
 	<Effect id="2381" argsNum="1" info="吸取对手最大体力的{0}%，自身拥有护盾、护罩时全部消耗并改为汲取" key="2_吸取_1_117 2_护盾_1_111 2_护罩_1_112" analyze="[sprite name=iconComp][color=#52a5f2]吸取[/color]对手最大体力的{0}%，自身拥有[color=#57c975]护盾[/color]、[color=#57c975]护罩[/color]时全部消耗并改为汲取" type="2"/>
 	<Effect id="2382" argsNum="0" info="对手拥有曝时此技能先制+1且必定命中" analyze="[sprite name=iconInherent]对手拥有[color=#f35555]曝[/color]时此技能[color=#52a5f2]先制[/color]+1且[color=#52a5f2]必定命中[/color]" type="1"/>
 	<Effect id="2383" argsNum="2" info="无视对手护盾承伤效果，每无视{0}点自身下次攻击造成的伤害提升{1}%" analyze="[sprite name=iconHit]无视对手[color=#57c975]护盾[/color]承伤效果，每无视{0}点自身下次攻击造成的伤害提升{1}%"/>
