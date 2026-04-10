@@ -213,11 +213,11 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4887" ImageID= "4887" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4888" ImageID= "4888" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4889" ImageID= "4889" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4892" ImageID= "4892" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4890" ImageID= "4890" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4891" ImageID= "4891" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "0" ID="4889" ImageID= "4889" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "0" ID="4892" ImageID= "4892" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4804" ImageID= "4804" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4805" ImageID= "4805" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,7 +255,7 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="820" monID="4888" ImageID= "1400820" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="821" monID="3729" ImageID= "1400821" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
       <!-- <place type= "1" ID="815" monID="4717" ImageID= "1400815" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="816" monID="4462" ImageID= "1400816" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4654,7 +4654,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4351" DefName="米欧" Type="飞行 龙" Height="76" Weight="29" Features="赛尔们在晶龙洞窟又发现了一只新的龙宝宝，这次它又会为我们带来什么有趣的故事呢？" Redirect="map|module" Go="1430;app/PeripheralExplorationMainPanel"/>
 	<Monster ID="4352" DefName="艾瑞丽尔" Type="水" Height="149" Weight="43" Features="2022年4月包月精灵，十二冠灵之一，能够掌控水之元素，沧流唤灵，碧浪圣冕！" Target="295007"/>
 	<Monster ID="4353" DefName="花寅" Type="圣灵 战斗" Height="156" Weight="46" Features="2022年4月巅峰圣战精灵，虎之一族的神秘女孩，可不要因为她长相甜美可爱就对她掉以轻心哦，她的战斗力可不容小觑！"/>
-	<Monster ID="4354" DefName="狂沙之主·萨特" Type="地面 神秘" Height="230" Weight="114" Features="盖伦星系的守护者，军队出身的他身经百战，拥有着深不可测的实力，面对黑夜的侵袭，萨特有着自己特别的计划和手段，但这一切都随着尘沙起舞，难以捉摸…" Redirect="map|module" Go="1544;app/S105SaTeMainPanel"/>
+	<Monster ID="4354" DefName="狂沙之主·萨特" Type="地面 神秘" Height="230" Weight="114" Features="盖伦星系的守护者，军队出身的他身经百战，拥有着深不可测的实力，面对黑夜的侵袭，萨特有着自己特别的计划和手段，但这一切都随着尘沙起舞，难以捉摸…" Redirect="map|module" Go="1544;app/S105SaTeMainPanel" Target="150112"/>
 	<Monster ID="4355" DefName="终末大天使" Type="光 暗影" Height="248" Weight="115" Features="当波拉克斯的光明之力与卡斯托尔的黑暗元素融合至极致，真正的终末之神将随着天使羽翼的盛放莅临于时之彼端，届时一切是非对错都将失去意义，化为神罚之下的齑粉......" Redirect="map|module" Go="103;app/DaantiaoHunDunDaTianShiMainPanel"/>
 	<Monster ID="4356" DefName="斯科尔" Type="草 战斗" Height="175" Weight="76" Features="在桑谷的申请下来到向阳村的稻草人，别看它长相乖巧，可是干农活的一把好手！" Redirect="map|module" Go="1545;app/SpetSiKeErPanel" jumptarget="151/69" Target="153201/69"/>
 	<Monster ID="4357" DefName="呼叶叶" Type="机械 超能" Height="56" Weight="39" Features="杰特洛的好伙伴，别看它尺寸不大，小小的风扇可是能有着强劲的马力，能够轻松吹散风沙！" Redirect="map|module" Go="1546;app/SCSFJHPanel"/>
@@ -5187,6 +5187,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4887" DefName="托勒斯" Type="自然" Height="174" Weight="57" Features="立于薇星之上的黄金圣徒，托勒斯奉行和谐的理念，在这里打造了一座乐园，并以此汇聚收集教廷所需之物。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/877"/>
 	<Monster ID="4888" DefName="慈辉永颂·瑞亚" Type="光" Height="167" Weight="45" Features="掌握时光流逝的女神，瑞亚现身之时，世界的光辉将在此汇聚！" Redirect="module" Go="app/FinalActivityPanel" Target="114062"/>
 	<Monster ID="4889" DefName="初诞之薇" Type="自然" Height="92" Weight="31" Features="神秘的少女“薇”再度现身，不过在薇星的她，形态似乎又和此前有所差异。关于她的秘密正在一点一点地揭开……" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
+	<Monster ID="4890" DefName="B-12" Type="机械 地面" Height="164" Weight="52" Features="波卢卡星中少数的具有自我意识的居民，为了能够胜任“解放波卢卡星”这个可能长达数百年的工作，B-12放弃了肉身。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/884"/>
+	<Monster ID="4891" DefName="灰烬之灵" Type="地面" Height="19" Weight="4" Features="在波卢卡星地表的土堆里躲着的小小精灵，轻轻一拍就会变成一堆灰尘，但是只要把灰尘收集起来再搓一搓就会复原。" Redirect="module" Go="app/FinalActivityPanel" Target="400022"/>
 	<Monster ID="4892" DefName="迪利吉" Type="光 神秘" Height="179" Weight="58" Features="2026年包月精灵，万象录之《兢兢业业之人》。迪利吉是基层的公务人员，他在通关口岸勤勤恳恳地为大家服务。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
 	<Monster ID="4893" DefName="摩耶" Type="普通" Height="52" Weight="16" Features="摩耶和化乐天林海中的其他小精灵十分相似，可爱的它还在不断学习中。" Redirect="module" Go="app/FinalActivityPanel" Target="400020"/>
 

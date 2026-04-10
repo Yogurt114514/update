@@ -2736,35 +2736,39 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
     <Skin ID="812" MonID="3437" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="星际领航员·艾欧丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114057">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="13"/>
 	</Skin>
-    <Skin ID="813" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="燕归青野·莫妮卡" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114058">
+    <Skin ID="813" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="燕归青野·莫妮卡" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	
-	<Skin ID="814" MonID="3541" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="巨樽之灵·斯摩亚蒂" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+	<Skin ID="814" MonID="3541" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="巨樽之灵·斯摩亚蒂" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 	
-	<Skin ID="815" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="怪盗气球·尤纳斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+	<Skin ID="815" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="怪盗气球·尤纳斯" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 	
-	<Skin ID="816" MonID="4462" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="月圆之夜·月华" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+	<Skin ID="816" MonID="4462" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="月圆之夜·月华" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 	
-	<Skin ID="817" MonID="4808" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="捣蛋魅影·米修莉" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+	<Skin ID="817" MonID="4808" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="捣蛋魅影·米修莉" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 	
-	<Skin ID="818" MonID="3516" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="了不起的莱茵哈特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114060">
+	<Skin ID="818" MonID="3516" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="了不起的莱茵哈特" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 	
-	<Skin ID="819" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="莫妮卡" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="819" MonID="3711" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="莫妮卡" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
 	<Skin ID="820" MonID="4888" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="花间晴昼·瑞亚" Go="" GoType="module" Jumptarget="114063">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+	
+	<Skin ID="821" MonID="3729" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="侠影之道·浩瀚昆仑" Go="" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	

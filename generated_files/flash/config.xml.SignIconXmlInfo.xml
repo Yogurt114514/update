@@ -162,7 +162,7 @@ sort标记展示序列 1为自己给自己的效果 2为队友给自己的效果
 	<item id="125" dec="封邪之嶂" tips="封邪之嶂" className="*" sort="1" isShowNum="1" NumDes="当前层数" frame="0_0 1_1 2_2 3_3 4_4" Des="自身每次受到攻击后，若对手的护盾值高于自身则消除对手的护盾；每有1层己方其他精灵的护盾提升10%的承伤量且被无视时恢复在场精灵护盾值40%的体力；最高4层，下场保留" showmonster="3516"/>
 	<item id="126" dec="留魂之蛊" tips="留魂之蛊" className="*" sort="5" isShowNum="1" NumDes="当前只数" Des="每有1只每回合限1次，自身恢复体力后留魂之蛊将汲取自身四十点体力，莱茵哈特在场时汲取的体力值将恢复至莱茵哈特，莱茵哈特死亡时只数-1；最高4只，下场保留"/>
 	<item id="127" dec="算力" tips="算力" className="*" sort="1" isShowNum="1" NumDes="当前点数" Des="每回合开始时消耗50点以提高自身的触发概率不高于20%的特性效果触发概率"/>
-	<item id="128" dec="灼阳之焰" tips="灼阳之焰" className="*" sort="1" isShowNum="0" NumDes="" frame="0_0 1_1" Des="天敌对自身使用攻击时若自身不处于能力提升状态则自身全属性+1；自身的攻击技能先制+1、必定打出致命一击且技能命中时消耗灼阳之焰并全属性+1" showmonster="4219"/>
+	<item id="128" dec="灼阳之焰" tips="灼阳之焰" className="*" sort="1" isShowNum="0" NumDes="" frame="0_0 1_1" Des="天敌对自身使用攻击时，若自身不处于能力提升状态则全属性+1；自身的攻击技能先制+1，必定打出致命一击，命中时消耗灼阳之焰并使自身全属性+1" showmonster="4219"/>
 	<item id="129" dec="入魅" tips="入魅" className="*" sort="1" isShowNum="0" NumDes="" Des="所有技能转化为了摸摸"/>
 	<item id="130" dec="逆命之威" tips="逆命之威" className="*" sort="1" isShowNum="1" NumDes="" frame="0_0 1_1 2_2 3_3 4_4 5_5" Des="自身的能力下降效果视为能力提升效果，提升等级至少为当前层数，最高5层，下场保留"/>
 	<item id="131" dec="荒古之慑" tips="荒古之慑" className="*" sort="5" isShowNum="1" NumDes="" Des="自身下场时每有1层下只出战精灵受到90点固定伤害，此伤害至少为其最大体力的9%，最高5道"/>
@@ -194,6 +194,9 @@ sort标记展示序列 1为自己给自己的效果 2为队友给自己的效果
 	<item id="157" dec="天之门" tips="天之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予天繁星的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外为己方场下所有精灵恢复1点PP值"/>
 	<item id="158" dec="地之门" tips="地之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予地繁花的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外为己方场下所有精灵恢复等量的体力"/>
 	<item id="159" dec="神之门" tips="神之门" className="*" sort="4" isShowNum="0" NumDes="" Des="己方予神繁祉的选择使用不受PP值限制；己方附加的固定伤害、百分比伤害被免疫时，额外对对方场下所有精灵附加等量的真实伤害"/>
+	<item id="160" dec="黯穹之尘" tips="暗穹之尘" className="*" sort="1" isShowNum="0" NumDes="" frame="0_0 1_1" Des="获得时，若自身体力低于最大体力的50%则消除对手回合类效果；自身的攻击技能先制增加自身对对手的克制系数的级数，使用时恢复自身所有技能2点PP值，命中时消耗黯穹之尘并使自身当回合造成的攻击伤害额外提升80%"/>
+	<item id="161" dec="群芳加护" tips="群芳加护" className="*" sort="1" isShowNum="1" NumDes="当前层数" frame="0_0 1_1 2_2 3_3 4_4 5_5" Des="自身被击败时消耗；消耗时每消耗1层，己方所有不在场精灵所有技能恢复1点PP且下只精灵登场后首次技能附加群辉加护消耗后所记录伤害20%的百分比伤害"/>
+	<item id="162" dec="群辉加护" tips="群辉加护" className="*" sort="1" isShowNum="0" NumDes="" frame="0_0 1_1" Des="自身被攻击技能命中后消耗；消耗时己方记录当回合自身受到的技能伤害，对手下回合先制效果失效且以回合类效果形式下回合无法主动切换精灵"/>
 
 
 

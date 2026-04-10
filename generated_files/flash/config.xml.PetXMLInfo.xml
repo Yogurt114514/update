@@ -89385,6 +89385,9 @@
 <ExtraMoves>
 		  <Move ID="35793" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38348" LearningLv="76"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="4355" DefName="终末大天使" Type="69" GrowthType="5" HP="175" Atk="70" Def="110" SpAtk="140" SpDef="110" Spd="135" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3015" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
@@ -101927,6 +101930,51 @@
 		</ExtraMoves>
 	</Monster>
 
+	<Monster ID="4890" DefName="B-12" Type="37" GrowthType="4" HP="175" Atk="130" Def="117" SpAtk="70" SpDef="117" Spd="126" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3551" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10128" LearningLv="1"/>
+			<Move ID="20135" LearningLv="5"/>
+			<Move ID="10313" LearningLv="9"/>
+			<Move ID="20631" LearningLv="13"/>
+			<Move ID="10137" LearningLv="17"/>
+			<Move ID="38343" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="20365" LearningLv="25"/>
+			<Move ID="12560" LearningLv="29"/>
+			<Move ID="21477" LearningLv="33"/>
+			<Move ID="16937" LearningLv="37"/>
+			<Move ID="27257" LearningLv="41"/>
+			<Move ID="16938" LearningLv="45"/>
+			<Move ID="29317" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="19954" LearningLv="53"/>
+			<Move ID="29318" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38344" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38345" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+
+	<Monster ID="4891" DefName="灰烬之灵" Type="7" GrowthType="4" HP="160" Atk="70" Def="105" SpAtk="130" SpDef="105" Spd="130" YieldingExp="70" CatchRate="10" YieldingEV="0 0 0 0 0 0" FreeForbidden="0" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3552" FormParam="0" CharacterAttrParam="4" GradeParam="1" AddSeParam="0">
+		<LearnableMoves>
+			<Move ID="10006" LearningLv="1"/>
+			<Move ID="20030" LearningLv="5"/>
+			<Move ID="10518" LearningLv="9"/>
+			<Move ID="21747" LearningLv="13"/>
+			<Move ID="10245" LearningLv="17"/>
+			<Move ID="38346" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="21658" LearningLv="25"/>
+			<Move ID="12276" LearningLv="29"/>
+			<Move ID="22841" LearningLv="33"/>
+			<Move ID="11731" LearningLv="37"/>
+			<Move ID="22842" LearningLv="41"/>
+			<Move ID="15198" LearningLv="45"/>
+			<Move ID="29319" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="22843" LearningLv="53"/>
+			<Move ID="29320" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38347" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+	</Monster>
+
 	<Monster ID="4892" DefName="迪利吉" Type="49" GrowthType="4" HP="168" Atk="70" Def="107" SpAtk="137" SpDef="107" Spd="131" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3553" FormParam="0" CharacterAttrParam="4" GradeParam="3" AddSeParam="1" Resist="1">
 		<LearnableMoves>
 			<Move ID="10250" LearningLv="1"/>
@@ -101971,6 +102019,31 @@
 			<Move ID="38337" LearningLv="61" Rec="1" Tag="4"/>
 		</LearnableMoves>
 	</Monster>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <Monster ID="5000" DefName="圣灵谱尼" Type="223" GrowthType="5" HP="180" Atk="110" Def="120" SpAtk="150" SpDef="120" Spd="140" YieldingExp="130" CatchRate="0" YieldingEV="0 0 0 1 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3780" FormParam="0" CharacterAttrParam="4" GradeParam="5" AddSeParam="1" Resist="1">
@@ -115215,6 +115288,7 @@
   <Monster ID="1400818" DefName="了不起的莱茵哈特" RealId=""/>
   <Monster ID="1400819" DefName="莫妮卡" RealId="3355"/>
   <Monster ID="1400820" DefName="花间晴昼·瑞亚" RealId=""/>
+  <Monster ID="1400821" DefName="侠影之道·浩瀚昆仑" RealId=""/>
 
 </Monsters>
 

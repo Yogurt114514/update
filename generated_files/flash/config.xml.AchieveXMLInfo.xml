@@ -1859,6 +1859,7 @@
 			<Branch ID="176" Type="0" Desc="限定分类10" isShowPro="0">
 				<Rule ID="1" Threshold="1" AchievementPoint="5" icon="1" achName="果实品鉴家" proicon="1478" SpeNameBonus="580" title="品鉴达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
 				<Rule ID="2" Threshold="2" AchievementPoint="5" icon="1" achName="知晓故事之人" proicon="1479" SpeNameBonus="581" title="故事达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
+				<Rule ID="3" Threshold="3" AchievementPoint="10" icon="1" achName="潜入达人" proicon="1481" SpeNameBonus="583" title="潜入达人" Desc="在波卢卡星地表完成探索解密" titleColor="0xFFFFFF"/>
 			</Branch>
 
 			</Branches>

@@ -215,6 +215,7 @@
 	</menu>	
 	<menu name="赛尔套装" id="5" isContainBody="0">
 		<menu name="套装推荐" cls="com.robot.module.app.newShop.vo.ShopSubMenuVo" viewClass="com.robot.module.app.newShop.view.ShopSubView3_1" pageSize="4" countID="0x0521205B">
+			<item name="圣芒佑界" productID="262355" itemID="1301154|1301155|1301156|1301157" price="398" vip="1" gold="0" productType="1" type="26" usenew="55" checkown="1301154|1301155|1301156|1301157"/>
 			<item name="漆黑天使" productID="261631" itemID="1301043|1301044|1301045|1301046" price="298" vip="1" gold="0" productType="1" type="26" usenew="54" checkown="1301043|1301044|1301045|1301046"/>
 			<item name="影翼裁决" productID="261590" itemID="1301099|1301100|1301101|1301102" price="398" vip="1" gold="0" productType="1" type="26" usenew="53" checkown="1301099|1301100|1301101|1301102"/>
 			<item name="晨曦之星战甲" productID="260888" itemID="1301035|1301036|1301037|1301038" price="398" vip="1" gold="0" productType="2" type="26" usenew="49" checkown="1301035|1301036|1301037|1301038"/>
@@ -272,6 +273,7 @@
 			<item name="刺蜂套装M" productID="200854" itemID="100346|100347|100348|100349" price="15" vip="1" gold="0" type="26" checkown="100346|100347|100348|100349"/>
 		</menu>	
 		<menu name="能力加成套装" cls="com.robot.module.app.newShop.vo.ShopSubMenuVo" viewClass="com.robot.module.app.newShop.view.ShopSubView3_1" pageSize="4" countID="0x05212059">
+			<item name="圣芒佑界" productID="262355" itemID="1301154|1301155|1301156|1301157" price="398" vip="1" gold="0" productType="1" type="26" usenew="55" checkown="1301154|1301155|1301156|1301157"/>
 			<item name="漆黑天使" productID="261631" itemID="1301043|1301044|1301045|1301046" price="298" vip="1" gold="0" productType="1" type="26" usenew="54" checkown="1301043|1301044|1301045|1301046"/>
 			<item name="影翼裁决" productID="261590" itemID="1301099|1301100|1301101|1301102" price="398" vip="1" gold="0" productType="1" type="26" usenew="53" checkown="1301099|1301100|1301101|1301102"/>
 			<item name="晨曦之星战甲" productID="260888" itemID="1301035|1301036|1301037|1301038" price="398" vip="1" gold="0" productType="2" type="26" usenew="49" checkown="1301035|1301036|1301037|1301038"/>

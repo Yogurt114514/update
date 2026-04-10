@@ -121,6 +121,7 @@
 	<SpMoves id="107" monster="4657" monstername="浮掠双刃·卓尔布" moves="38296" movesname="日月轮·着天" item="1727841" itemname="霜焱之谛" itemnumber="1" itemtips="使用后可为浮掠双刃·卓尔布开启全新第五技能：日月轮·着天" movetype="1"/>
 	<SpMoves id="108" monster="3907" monstername="缚影·炼狱魔神" moves="38295" movesname="炼·死镜冥啼" item="1727842" itemname="死海之锢" itemnumber="1" itemtips="使用后可为缚影·炼狱魔神开启全新第五技能：炼·死镜冥啼" movetype="1"/>
 	<SpMoves id="109" monster="4024" monstername="地葬界神" moves="38294" movesname="苍笼尘井" item="1727843" itemname="地葬神颂" itemnumber="1" itemtips="使用后可为地葬界神开启全新技能：苍笼尘井" movetype="2"/>
+	<SpMoves id="110" monster="4354" monstername="狂沙之主·萨特" moves="38348" movesname="天驳百洲禁" item="1727966" itemname="丹心影" itemnumber="1" itemtips="使用后可为狂沙之主·萨特开启全新技能：天驳百洲禁" movetype="1"/>
 
 
 

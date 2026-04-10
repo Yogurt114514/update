@@ -68,7 +68,9 @@
 	<item name="星钻" productID="200064" itemID="1727555" price="0.1" vip="1" gold="1" type="-1"/> 
 	<item name="限时秒杀辰坤星魂史诗皮肤" productID="200065" itemID="1727569" price="8.8" vip="1" gold="1" type="-1"/> 	
 	<item name="种植新春招财树" productID="200066" itemID="1727757" price="10" vip="1" gold="1" type="-1"/> 		
-	<item name="购买【卡托娜的宝箱钥匙】" productID="200067" itemID="1727815" price="6" vip="1" gold="1" type="-1"/> 	
+	<item name="购买【卡托娜的宝箱钥匙】" productID="200067" itemID="1727815" price="6" vip="1" gold="1" type="-1"/> 		
+	<item name="4月风尚月历" productID="200068" itemID="1727974" price="30" vip="1" gold="1" type="-1"/> 	
+	<item name="5月风尚月历" productID="200069" itemID="1727975" price="30" vip="1" gold="1" type="-1"/> 		
 	
 	<!-- <item name="废弃" productID="200061" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
 	<!-- <item name="废弃" productID="200062" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
