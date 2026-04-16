@@ -67360,6 +67360,7 @@
 	      <Move ID="31403" LearningLv="73"/>
 	      <Move ID="25811" LearningLv="74" Rec="1"/>
 	      <Move ID="31404" LearningLv="75" Rec="1"/>
+          <SpMove ID="29330"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="31405" LearningLv="76"/>
@@ -77287,6 +77288,7 @@
           <Move ID="33326" LearningLv="53"/>
           <Move ID="26745" LearningLv="57" Rec="1"/>
           <Move ID="33327" LearningLv="61" Rec="1"/>
+          <SpMove ID="29329"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="33328" LearningLv="70"/>
@@ -79873,6 +79875,8 @@
 		  <Move ID="33833" LearningLv="73"/>
 		  <Move ID="26991" LearningLv="74" Rec="1"/>
 		  <Move ID="33834" LearningLv="75" Rec="1"/>
+		  <SpMove ID="38356"/>
+		  
 </LearnableMoves>
 <ExtraMoves>
 		 <Move ID="33835" LearningLv="76"/>
@@ -88827,6 +88831,9 @@
 <ExtraMoves>
 	      <Move ID="35683" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38357" LearningLv="76"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="4333" DefName="哀·拉伯克" Type="110" GrowthType="5" HP="178" Atk="70" Def="111" SpAtk="141" SpDef="113" Spd="137" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="2993" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
@@ -89489,6 +89496,9 @@
 <ExtraMoves>
 		  <Move ID="35814" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38358" LearningLv="76"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="4359" DefName="隙之门·基卢" Type="17" GrowthType="4" HP="173" Atk="70" Def="109" SpAtk="138" SpDef="109" Spd="136" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3019" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
@@ -102020,7 +102030,74 @@
 		</LearnableMoves>
 	</Monster>
 
+	<Monster ID="4894" DefName="安瑟伦" Type="13" GrowthType="4" HP="170" Atk="147" Def="109" SpAtk="70" SpDef="109" Spd="135" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3555" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10250" LearningLv="1"/>
+			<Move ID="20270" LearningLv="5"/>
+			<Move ID="10120" LearningLv="9"/>
+			<Move ID="10396" LearningLv="13"/>
+			<Move ID="20816" LearningLv="17"/>
+			<Move ID="38349" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="13300" LearningLv="25"/>
+			<Move ID="20679" LearningLv="29"/>
+			<Move ID="35160" LearningLv="33"/>
+			<Move ID="14409" LearningLv="37"/>
+			<Move ID="29322" LearningLv="41"/>
+			<Move ID="35834" LearningLv="45"/>
+			<Move ID="29321" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="37534" LearningLv="53"/>
+			<Move ID="29323" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38350" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38351" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4895" DefName="喧云" Type="104" GrowthType="4" HP="162" Atk="70" Def="110" SpAtk="154" SpDef="110" Spd="139" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3556" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="38359" LearningLv="1"/>
+			<Move ID="29331" LearningLv="5"/>
+			<Move ID="38360" LearningLv="9"/>
+			<Move ID="38361" LearningLv="13"/>
+			<Move ID="29332" LearningLv="17"/>
+			<Move ID="38354" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="38362" LearningLv="25"/>
+			<Move ID="29333" LearningLv="29"/>
+			<Move ID="38363" LearningLv="33"/>
+			<Move ID="38364" LearningLv="37"/>
+			<Move ID="29334" LearningLv="41"/>
+			<Move ID="38365" LearningLv="45"/>
+			<Move ID="29326" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="38366" LearningLv="53"/>
+			<Move ID="29327" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38355" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="29328" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+
+	<Monster ID="4896" DefName="朝圣者" Type="6" GrowthType="4" HP="160" Atk="135" Def="105" SpAtk="70" SpDef="105" Spd="125" YieldingExp="70" CatchRate="10" YieldingEV="0 0 0 0 0 0" FreeForbidden="0" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3557" FormParam="0" CharacterAttrParam="0" GradeParam="1" AddSeParam="0">
+		<LearnableMoves>
+			<Move ID="10234" LearningLv="1"/>
+			<Move ID="20192" LearningLv="5"/>
+			<Move ID="10019" LearningLv="9"/>
+			<Move ID="10640" LearningLv="13"/>
+			<Move ID="21021" LearningLv="17"/>
+			<Move ID="38352" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="10452" LearningLv="25"/>
+			<Move ID="22219" LearningLv="29"/>
+			<Move ID="11212" LearningLv="33"/>
+			<Move ID="15460" LearningLv="37"/>
+			<Move ID="22996" LearningLv="41"/>
+			<Move ID="15458" LearningLv="45"/>
+			<Move ID="29324" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="15461" LearningLv="53"/>
+			<Move ID="29325" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38353" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+	</Monster>
 
 
 
@@ -115289,6 +115366,9 @@
   <Monster ID="1400819" DefName="莫妮卡" RealId="3355"/>
   <Monster ID="1400820" DefName="花间晴昼·瑞亚" RealId=""/>
   <Monster ID="1400821" DefName="侠影之道·浩瀚昆仑" RealId=""/>
+  <Monster ID="1400822" DefName="霜垣圣骑・苍月影" RealId=""/>
+  <Monster ID="1400823" DefName="数典追源·兰蒂斯" RealId=""/>
+  <Monster ID="1400824" DefName="四音希声·喧云" RealId=""/>
 
 </Monsters>
 

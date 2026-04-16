@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4890" ImageID= "4890" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4891" ImageID= "4891" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4889" ImageID= "4889" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4894" ImageID= "4894" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4895" ImageID= "4895" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4896" ImageID= "4896" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4892" ImageID= "4892" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="821" monID="3729" ImageID= "1400821" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <!-- <place type= "1" ID="815" monID="4717" ImageID= "1400815" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "1" ID="816" monID="4462" ImageID= "1400816" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="822" monID="3507" ImageID= "1400822" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="823" monID="3686" ImageID= "1400823" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="824" monID="4895" ImageID= "1400824" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -2974,7 +2974,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2649" DefName="年君" Type="地面 战斗" Height="154" Weight="78" Features="羊年第一只年兽，会给小赛尔们带来一年的好运！" mapID="1063"/>
 	<Monster ID="2650" DefName="圣耀天龙" Type="光 火" Height="156" Weight="188" Features="上古神龙，克洛伊只要与它登场就能发挥无穷的威力，是克洛伊的守护精灵!" mapID="1053"/>
 	<Monster ID="2651" DefName="剑皇" Type="普通" Height="178" Weight="128" Features="远征之路最强势力的见证者，凡夫俗子都无法看到剑皇之剑出鞘的一刻！" mapID="503"/>
-	<Monster ID="2652" DefName="天邪龙王" Type="邪灵 龙" Height="178" Weight="98" Features="暗夜邪龙的大形态，全身散发着令人胆战心惊的邪恶气息，是新的暗夜王者！" mapID="1061"/>
+	<Monster ID="2652" DefName="天邪龙王" Type="邪灵 龙" Height="178" Weight="98" Features="暗夜邪龙的大形态，全身散发着令人胆战心惊的邪恶气息，是新的暗夜王者！" mapID="1061" Target="150113"/>
 	<Monster ID="2653" DefName="白小虎" Type="电 战斗" Height="138" Weight="58" Features="四大神兽之白虎的萌系形态，好动的不安分子！" mapID="10812"/>
 	<Monster ID="2654" DefName="喵奇" Type="地面" Height="136" Weight="38" Features="超萌的人气精灵喵奇是小赛尔们人手必备的一只精灵！"/>
 	<Monster ID="2655" DefName="神谕军师" Type="超能" Height="158" Weight="66" Features="神谕军团幕后运筹帷幄的军师，是神谕军团必不可少的成员！" mapID="1"/>
@@ -3473,7 +3473,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3159" DefName="闪光达拉克" Type="地面" Height="80" Weight="30" Features="是闪光达比拉的进化形态，光芒更加耀眼，更加神奇！" mapID="77"/>
 	<Monster ID="3160" DefName="闪光卡斯达克" Type="地面" Height="120" Weight="50" Features="是闪光达比拉的进化形态，地面系的神奇精灵，身上的光芒即使在夜晚都能照亮周围！" mapID="77"/>
 	<Monster ID="3161" DefName="踏云乌骓" Type="火 神秘" Height="180" Weight="100" Features="项羽的超级坐骑，和项羽一样，霸气之极！" mapID="103"/>
-	<Monster ID="3162" DefName="天邪龙皇" Type="邪灵 龙" Height="180" Weight="80" Features="大暗黑天长老之一，拥有绝对的黑暗霸主之力，本次超进化，堪称逆世出击，绝对是能够与王之战联与元素之祖一战的王者级神宠！" mapID="1197"/>
+	<Monster ID="3162" DefName="天邪龙皇" Type="邪灵 龙" Height="180" Weight="80" Features="大暗黑天长老之一，拥有绝对的黑暗霸主之力，本次超进化，堪称逆世出击，绝对是能够与王之战联与元素之祖一战的王者级神宠！" mapID="1197" Target="150113"/>
 	<Monster ID="3163" DefName="小沃" Type="电 冰" Height="120" Weight="50" Features="银月狼王的小形态，是暑期专属神宠哦！" mapID="1"/>
 	<Monster ID="3164" DefName="霸王项羽" Type="远古 火" Height="180" Weight="100" Features="超级强大的项羽如今骑上踏云乌骓再次袭来！超强的技能！超酷的外形！不愧是霸王再临！！" mapID="103"/>
 	<Monster ID="3165" DefName="贝希摩斯" Type="地面 战斗" Height="180" Weight="100" Features="神秘异界强欲荒野的守护兽，轻易的击退了光之子，是前所未有的强敌！" Redirect="map|module" Go="1147;app/PveRewardMallMainPanel" jumptarget="18/4_5" Target="164510"/>
@@ -5158,7 +5158,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4858" DefName="灯蛾" Type="冰 光" Height="32" Weight="11" Features="灯蛾是虫族中的旁系个体，它的绒羽能够帮助它们抵御严寒，腹部的发光体也能帮助它们识别周围的环境。" Redirect="module" Go="app/FinalActivityPanel" Target="400018"/>
 	<Monster ID="4859" DefName="闪光灯蛾" Type="冰 光" Height="32" Weight="11" Features="闪光灯蛾是灯蛾族群中的稀有个体，你可以在族群中轻易发现闪闪发光的它。" Redirect="module" Go="app/FinalActivityPanel" Target="400018"/>
 	<Monster ID="4860" DefName="希尔瑟拉" Type="远古 邪灵" Height="165" Weight="43" Features="希尔瑟拉是一位勇敢的侦察战士，她秘密潜伏在虫族之中，将收集到的情报传递回后方，用另一种方式帮助大家对抗敌人。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/827"/>
-	<Monster ID="4861" DefName="涂蝶" Type="神秘 超能" Height="169" Weight="49" Features="雨巷中偶然的擦肩，她看见了“色彩”。再后来，庸人无法理解她对纯黑的狂热，也无法察觉他们眼中的漆黑，却在她眼中斑斓。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
+	<Monster ID="4861" DefName="涂蝶" Type="神秘 超能" Height="169" Weight="49" Features="雨巷中偶然的擦肩，她看见了“色彩”。再后来，庸人无法理解她对纯黑的狂热，也无法察觉他们眼中的漆黑，却在她眼中斑斓。" Redirect="module" Go="app/FinalActivityPanel" />
 	<Monster ID="4862" DefName="纷争之薇" Type="冰" Height="156" Weight="38" Features="在犹尔尼斯星再度现身的神秘幽灵，相比此前，她似乎长得更成熟了一些。但同样再次朝小梅发出了警告……" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
 	<Monster ID="4863" DefName="艾莉安娜" Type="虫" Height="167" Weight="44" Features="艾莉安娜降生于犹尔尼斯星的虫族，成为被大家寄予厚望的“主母”。在与赛尔一同经历冒险之后，她决定换一种方式带领大家走向崭新的未来。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/836"/>
 	<Monster ID="4864" DefName="格拉西恩" Type="冰 龙" Height="176" Weight="72" Features="一位行走四方维护正义的神秘骑士，身上的特征表明了他与众不同的种族身份。" Redirect="module" Go="app/FinalActivityPanel" Target="113026"/>
@@ -5185,11 +5185,14 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4885" DefName="灰蛾" Type="虫" Height="155" Weight="45" Features="薇星上出现的神秘虫族，被小精灵们称之为“天魔”。灰蛾拥有强大的力量，却总是迷失在虚无的愿望之中……" Redirect="module" Go="app/FinalActivityPanel" Target="153201/872"/>
 	<Monster ID="4886" DefName="阿华华" Type="草" Height="70" Weight="22" Features="阿华华是继承了人族基因的小精灵，性格开朗，富有好奇心。它拥有强大的学习能力和思辨能力，最喜欢做的事情是画画。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/875"/>
 	<Monster ID="4887" DefName="托勒斯" Type="自然" Height="174" Weight="57" Features="立于薇星之上的黄金圣徒，托勒斯奉行和谐的理念，在这里打造了一座乐园，并以此汇聚收集教廷所需之物。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/877"/>
-	<Monster ID="4888" DefName="慈辉永颂·瑞亚" Type="光" Height="167" Weight="45" Features="掌握时光流逝的女神，瑞亚现身之时，世界的光辉将在此汇聚！" Redirect="module" Go="app/FinalActivityPanel" Target="114062"/>
+	<Monster ID="4888" DefName="慈辉永颂·瑞亚" Type="光" Height="167" Weight="45" Features="掌握时光流逝的女神，瑞亚现身之时，世界的光辉将在此汇聚！" />
 	<Monster ID="4889" DefName="初诞之薇" Type="自然" Height="92" Weight="31" Features="神秘的少女“薇”再度现身，不过在薇星的她，形态似乎又和此前有所差异。关于她的秘密正在一点一点地揭开……" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
 	<Monster ID="4890" DefName="B-12" Type="机械 地面" Height="164" Weight="52" Features="波卢卡星中少数的具有自我意识的居民，为了能够胜任“解放波卢卡星”这个可能长达数百年的工作，B-12放弃了肉身。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/884"/>
 	<Monster ID="4891" DefName="灰烬之灵" Type="地面" Height="19" Weight="4" Features="在波卢卡星地表的土堆里躲着的小小精灵，轻轻一拍就会变成一堆灰尘，但是只要把灰尘收集起来再搓一搓就会复原。" Redirect="module" Go="app/FinalActivityPanel" Target="400022"/>
 	<Monster ID="4892" DefName="迪利吉" Type="光 神秘" Height="179" Weight="58" Features="2026年包月精灵，万象录之《兢兢业业之人》。迪利吉是基层的公务人员，他在通关口岸勤勤恳恳地为大家服务。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
 	<Monster ID="4893" DefName="摩耶" Type="普通" Height="52" Weight="16" Features="摩耶和化乐天林海中的其他小精灵十分相似，可爱的它还在不断学习中。" Redirect="module" Go="app/FinalActivityPanel" Target="400020"/>
+	<Monster ID="4894" DefName="安瑟伦" Type="暗影" Height="175" Weight="49" Features="原本在维茨洛奇坦星行动的黄金圣徒，通过百年的努力塑造了一个近乎永续的传说……然而当那个信仰系统彻底被小梅破坏之后就回到了教廷。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/886"/>
+	<Monster ID="4895" DefName="喧云" Type="电 飞行" Height="164" Weight="52" Features="云端的天使终将吹奏毁灭的号角，为叛逆而荒诞的世界带来审判的休止符；不过闲暇时间，凡间的音乐节倒也是一种不错的余兴。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
+	<Monster ID="4896" DefName="朝圣者" Type="机械" Height="44" Weight="22" Features="朝圣者型机械哨兵，是黄金教廷在波卢卡星部署数量最大的机械哨兵。虽然这个型号已经好几十年没有更新过了，但是凭借着好生产好维护的特点一直都是最热门的机型。" Redirect="module" Go="app/FinalActivityPanel" Target="400023"/>
 
 </root>

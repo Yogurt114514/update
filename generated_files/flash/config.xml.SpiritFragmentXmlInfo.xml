@@ -566,6 +566,8 @@
 	<Fragment ID="2400566" show="1" Name="阿特洛波斯因子" MonsterID="4278" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="5772" effectId="1502" NewseConsume="270" MoveID="35394" MovesConsume="108" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
 	<!--2400566废弃，以后用2400035-->
 	<Fragment ID="2400567" show="1" Name="B-12因子" MonsterID="4890" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6378" effectId="2078" NewseConsume="200" MoveID="38345" MovesConsume="100" NeedmonID="0" NewMsglogId="2604090400" SeMsglog="2604090401" EffectMsglog="2604090402"/>
-    
+    <Fragment ID="2400568" show="1" Name="安瑟伦因子" MonsterID="4894" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6382" effectId="2081" NewseConsume="270" MoveID="38351" MovesConsume="108" NeedmonID="0" NewMsglogId="2604160500" SeMsglog="2604160501" EffectMsglog="2604160502"/>
+	<Fragment ID="2400569" show="1" Name="鬼面阎罗因子" MonsterID="4238" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="5728" effectId="1457" NewseConsume="500" MoveID="35176" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	
 	
 </Root>

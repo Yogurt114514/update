@@ -891,6 +891,7 @@
 				<Rule ID="7" Threshold="7" AchievementPoint="10" icon="1" achName="光佑四方" proicon="1472" SpeNameBonus="575" title="光佑四方" Desc="通关S-方术悠悠【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="乐园的天魔" proicon="1475" SpeNameBonus="577" title="乐园的天魔" Desc="通关S-灰蛾【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="和谐之化身" proicon="1480" SpeNameBonus="582" title="和谐之化身" Desc="通关S-托勒斯【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="10" Threshold="10" AchievementPoint="10" icon="1" achName="信仰之化身" proicon="1482" SpeNameBonus="584" title="信仰之化身" Desc="通关S-安瑟伦【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 
@@ -1338,12 +1339,6 @@
 				<Rule ID="31" Threshold="31" AchievementPoint="0" achName="S8赛季王者" Desc="S8赛季竞技/狂野模式中首次达到王者段位时获得" proicon="1444" icon="1" />
 				<Rule ID="32" Threshold="32" AchievementPoint="0" achName="S8赛季圣皇" Desc="S8赛季竞技/狂野模式中首次达到圣皇段位时获得" proicon="1445" icon="1" />
 
-				<Rule ID="33" Threshold="33" AchievementPoint="0" achName="S9赛季猛将" Desc="S9赛季竞技/狂野模式中首次达到猛将段位时获得" proicon="1460" icon="1" />
-				<Rule ID="34" Threshold="34" AchievementPoint="0" achName="S9赛季天骄" Desc="S9赛季竞技/狂野模式中首次达到天骄段位时获得" proicon="1461" icon="1" />
-				<Rule ID="35" Threshold="35" AchievementPoint="0" achName="S9赛季王者" Desc="S9赛季竞技/狂野模式中首次达到王者段位时获得" proicon="1462" icon="1" />
-				<Rule ID="36" Threshold="36" AchievementPoint="0" achName="S9赛季圣皇" Desc="S9赛季竞技/狂野模式中首次达到圣皇段位时获得" proicon="1463" icon="1" />
-
-
 
 			</Branch>
 			<Branch ID="174" Desc="赛季成就2" introl="" proicon=""  type="2" isShowPro="0">
@@ -1351,9 +1346,11 @@
 				<Rule ID="2" Threshold="2" AchievementPoint="0" achName="S9赛季天骄" Desc="S9赛季竞技/狂野模式中首次达到天骄段位时获得" proicon="1461" icon="1" />
 				<Rule ID="3" Threshold="3" AchievementPoint="0" achName="S9赛季王者" Desc="S9赛季竞技/狂野模式中首次达到王者段位时获得" proicon="1462" icon="1" />
 				<Rule ID="4" Threshold="4" AchievementPoint="0" achName="S9赛季圣皇" Desc="S9赛季竞技/狂野模式中首次达到圣皇段位时获得" proicon="1463" icon="1" />
-
-
-
+				<Rule ID="5" Threshold="5" AchievementPoint="0" achName="S10赛季猛将" Desc="S10赛季竞技/狂野模式中首次达到猛将段位时获得" proicon="1483" icon="1" />
+				<Rule ID="6" Threshold="6" AchievementPoint="0" achName="S10赛季天骄" Desc="S10赛季竞技/狂野模式中首次达到天骄段位时获得" proicon="1484" icon="1" />
+				<Rule ID="7" Threshold="7" AchievementPoint="0" achName="S10赛季王者" Desc="S10赛季竞技/狂野模式中首次达到王者段位时获得" proicon="1485" icon="1" />
+				<Rule ID="8" Threshold="8" AchievementPoint="0" achName="S10赛季圣皇" Desc="S10赛季竞技/狂野模式中首次达到圣皇段位时获得" proicon="1486" icon="1" />
+				
 			</Branch>
 
 		</Branches>
@@ -1791,7 +1788,7 @@
 				<Rule ID="21" Threshold="21" AchievementPoint="10" icon="1" achName="冰原战略家" proicon="1283" SpeNameBonus="447" title="冰原战略家" Desc="参与【冰原遭遇战】活动获得" titleColor="0xFFFFFF" />
 				<Rule ID="22" Threshold="22" AchievementPoint="10" icon="1" achName="七色花的传说" proicon="1287" SpeNameBonus="451" title="七色花的传说" Desc="参与【灵鹿归来】活动获得" titleColor="0xFFFFFF" />
 				<Rule ID="23" Threshold="23" AchievementPoint="10" icon="1" achName="百战军师" proicon="1291" SpeNameBonus="455" title="百战军师" Desc="参与PVP活动军团之争获得" titleColor="0xFFFFFF" />
-				<Rule ID="24" Threshold="24" AchievementPoint="20" icon="1" achName="沧吟星海" proicon="1293" SpeNameBonus="457" title="沧吟星海" Desc="收集“沧吟星海”系列皮肤获得" titleColor="0xFFFFFF" />
+				<Rule ID="24" Threshold="24" AchievementPoint="20" icon="1" achName="沧吟星海" proicon="1293" SpeNameBonus="457" title="沧吟星海" Desc="收集“瓏域传说”系列皮肤获得" titleColor="0xFFFFFF" />
 				<Rule ID="25" Threshold="25" AchievementPoint="10" icon="1" achName="观星学者" proicon="1303" SpeNameBonus="467" title="观星学者" Desc="参与“蒂朵的观星礼盒”活动获得" titleColor="0xFFFFFF" AbilityTitle="1" abtext="背包内所有精灵攻击+50，特攻+50"/>
 				<Rule ID="26" Threshold="26" AchievementPoint="10" icon="1" achName="费尤领航员" proicon="1304" SpeNameBonus="468" title="费尤领航员" Desc="参与“费尤巡游航线”活动获得" titleColor="0xFFFFFF"  AbilityTitle="1" abtext="背包内所有精灵防御+50，特防+50"/>
 				<Rule ID="27" Threshold="27" AchievementPoint="50" icon="1" achName="十二年之约" proicon="1308" SpeNameBonus="472" title="十二年之约" Desc="完成【十二年之约】活动获得" titleColor="0xFFFFFF"  AbilityTitle="1" abtext="体力+72，攻击+12，特攻+12，防御+12，特防+12，速度+12"/>

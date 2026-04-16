@@ -122,6 +122,11 @@
 	<SpMoves id="108" monster="3907" monstername="缚影·炼狱魔神" moves="38295" movesname="炼·死镜冥啼" item="1727842" itemname="死海之锢" itemnumber="1" itemtips="使用后可为缚影·炼狱魔神开启全新第五技能：炼·死镜冥啼" movetype="1"/>
 	<SpMoves id="109" monster="4024" monstername="地葬界神" moves="38294" movesname="苍笼尘井" item="1727843" itemname="地葬神颂" itemnumber="1" itemtips="使用后可为地葬界神开启全新技能：苍笼尘井" movetype="2"/>
 	<SpMoves id="110" monster="4354" monstername="狂沙之主·萨特" moves="38348" movesname="天驳百洲禁" item="1727966" itemname="丹心影" itemnumber="1" itemtips="使用后可为狂沙之主·萨特开启全新技能：天驳百洲禁" movetype="1"/>
+	<SpMoves id="111" monster="4358" monstername="杰特洛" moves="38358" movesname="极影绘风岚" item="1727994" itemname="平衡装置" itemnumber="1" itemtips="使用后可为杰特洛开启全新技能：极影绘风岚" movetype="1"/>
+	<SpMoves id="112" monster="4332" monstername="鲍尔斯" moves="38357" movesname="霆辉烬天野" item="1727995" itemname="燃火手指" itemnumber="1" itemtips="使用后可为鲍尔斯开启全新技能：霆辉烬天野" movetype="1"/>
+	<SpMoves id="113" monster="3870" monstername="暗瞳·魔眼凯兮" moves="29329" movesname="胧月黑甜" item="1727996" itemname="奥法魔刃" itemnumber="1" itemtips="使用后可为暗瞳·魔眼凯兮开启全新技能：胧月黑甜" movetype="2"/>
+	<SpMoves id="114" monster="3971" monstername="蛮荒之鳄" moves="38356" movesname="古神长嚎" item="1727997" itemname="狂蛮之角" itemnumber="1" itemtips="使用后可为蛮荒之鳄开启全新技能：古神长嚎" movetype="2"/>
+	<SpMoves id="115" monster="3491" monstername="梦天睡神·修普诺斯" moves="29330" movesname="零时诳语" item="1727998" itemname="夜呓之镜" itemnumber="1" itemtips="使用后可为梦天睡神·修普诺斯开启全新技能：零时诳语" movetype="2"/>
 
 
 

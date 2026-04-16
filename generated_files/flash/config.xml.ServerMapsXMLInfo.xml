@@ -15486,6 +15486,17 @@ eg:
     </Map>
 
 	<Map ID="2168" Name="化乐天林海" InitX="580" InitY="440">
+	   <Monsters>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+			<Monster ID="4893" Lv="17 17"/>
+		</Monsters>
     </Map>
 	
 	<Map ID="2169" Name="自在天飞船" InitX="580" InitY="440">
@@ -15510,6 +15521,26 @@ eg:
 			</Boss>
 		</Bosses>
 	</Map>		
+	
+	<Map ID="2171" Name="宗座宫内廷" InitX="400" InitY="360">
+	    <Monsters>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+			<Monster ID="4896" Lv="17 17"/>
+		</Monsters>
+		<Bosses>
+			<!-- Unity场景野怪-朝圣者 参数0-->
+			<Boss BossCatchable="1" AppearTime="0 23" Name="朝圣者·plus" >
+				<BossMon MonID="4896" Hp="500" Lv="100" />
+			</Boss>
+		</Bosses>
+	</Map>	
 
 
 	<!--以下号段为H5场景专用) -->
@@ -18522,6 +18553,6 @@ eg:
 		<DefaultMap ID="3" RandMaps="1224" Desc="新手登录场景"/>
 	</DefaultMaps>
 	<VersionNumber>
-		<Version ID="20260410" Desc="每次发版需同步更新版本号"/>
+		<Version ID="20260417" Desc="每次发版需同步更新版本号"/>
 	</VersionNumber>
 </Maps>

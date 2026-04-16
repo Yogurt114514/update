@@ -499,9 +499,9 @@
 		<Item ID="301014" Name="陨石生椰" />
 		<Item ID="301015" Name="玛瑙森林" />
 		<Item ID="301016" Name="黑洞拿铁" />	
-		<Item ID="301057" Name="精灵道具占位1" />	
-		<Item ID="301058" Name="精灵道具占位2" />	
-		<Item ID="301059" Name="精灵道具占位3" />			
+		<Item ID="301057" Name="太阳神的余温" />	
+		<Item ID="301058" Name="暴风雪的残晶" />	
+		<Item ID="301059" Name="大森林的萤火" />			
 	</list>	
 	<list name="药剂" type="19">
 		<Item ID="300011" Name="初级体力药剂"/>
