@@ -2362,13 +2362,9 @@ def export_swf_to_svg(ffdec_jar_path, input_swf_path, export_type="frame"):
 
 ensure_dir(LOCAL_BASE)
 version1 = get_remote_version()
-with open(data_path/'version1.txt', "r", encoding="utf-8") as file:
-    v1 = file.read()
 
 ensure_dir(IMG_LOCAL_BASE)
 version2 = img_get_remote_version()
-with open(data_path/'version2.txt', "r", encoding="utf-8") as file:
-    v2 = file.read()
 
 platforms: list[tuple[str, Platform]] = [("flash", Flash(FLASH_DIR))]
 for name, platform in platforms:
@@ -3541,7 +3537,7 @@ def db_effectag():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "effectag.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"effectag_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -3605,7 +3601,7 @@ def db_effectbuff():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "effectbuff.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"effectbuff_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -3675,7 +3671,7 @@ def db_effectDes():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "effectDes.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"effectDes_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -3760,7 +3756,7 @@ def db_effectIcon():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "effectIcon.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"effectIcon_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -3853,7 +3849,7 @@ def db_effectInfo():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "effectInfo.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"effectInfo_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -3939,7 +3935,7 @@ def db_gems():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "gems.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"gems_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4025,7 +4021,7 @@ def db_items():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "items.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"items_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4129,7 +4125,7 @@ def db_mintmark():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "mintmark.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"mintmark_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4265,7 +4261,7 @@ def db_moves():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "moves.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"moves_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4355,7 +4351,7 @@ def db_pet_skin():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "pet_skin.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"pet_skin_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4613,7 +4609,7 @@ def db_pvp():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "pvp.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"pvp_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4716,7 +4712,7 @@ def db_rich_text_tree():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "rich_text_tree.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"rich_text_tree_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4790,7 +4786,7 @@ def db_skill_effect():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "skill_effect.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"skill_effect_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4866,7 +4862,7 @@ def db_skillTypes():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "skillTypes.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"skillTypes_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4952,7 +4948,7 @@ def db_sp_hide_moves():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / "sp_hide_moves.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"sp_hide_moves_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
