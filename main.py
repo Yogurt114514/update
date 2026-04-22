@@ -4466,7 +4466,7 @@ def db_pets():
             if conn:
                 conn.close()
 
-    DB_PATH = data_path / "pets.db"  # 使用相对路径
+    DB_PATH = data_path / f"pets_{version1}.db"  # 使用相对路径
 
     try:
         os.remove(DB_PATH)
