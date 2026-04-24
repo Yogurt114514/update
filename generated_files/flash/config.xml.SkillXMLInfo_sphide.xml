@@ -127,8 +127,11 @@
 	<SpMoves id="113" monster="3870" monstername="暗瞳·魔眼凯兮" moves="29329" movesname="胧月黑甜" item="1727996" itemname="奥法魔刃" itemnumber="1" itemtips="使用后可为暗瞳·魔眼凯兮开启全新技能：胧月黑甜" movetype="2"/>
 	<SpMoves id="114" monster="3971" monstername="蛮荒之鳄" moves="38356" movesname="古神长嚎" item="1727997" itemname="狂蛮之角" itemnumber="1" itemtips="使用后可为蛮荒之鳄开启全新技能：古神长嚎" movetype="2"/>
 	<SpMoves id="115" monster="3491" monstername="梦天睡神·修普诺斯" moves="29330" movesname="零时诳语" item="1727998" itemname="夜呓之镜" itemnumber="1" itemtips="使用后可为梦天睡神·修普诺斯开启全新技能：零时诳语" movetype="2"/>
-
-
+	<SpMoves id="116" monster="3541" monstername="魔灵王·斯摩亚蒂" moves="38372" movesname="夜·天魔逆相" item="1728013" itemname="不逝狂念" itemnumber="1" itemtips="使用后可为魔灵王·斯摩亚蒂开启全新技能：夜·天魔逆相" movetype="1"/>
+	<SpMoves id="117" monster="3791" monstername="邪魂大祭司" moves="38370" movesname="混沌邪魂祭" item="1728014" itemname="灭神魔石" itemnumber="1" itemtips="使用后可为邪魂大祭司开启全新技能：混沌邪魂祭" movetype="1"/>
+	<SpMoves id="118" monster="3575" monstername="终末之灭·天邪龙王" moves="29338" movesname="祸龑煌啼" item="1728015" itemname="朽念龙鳞" itemnumber="1" itemtips="使用后可为终末之灭·天邪龙王开启全新技能：祸龑煌啼" movetype="2"/>
+	<SpMoves id="119" monster="3924" monstername="凛戾·寂灭魔神" moves="38371" movesname="寂·妖胧天鸣" item="1728016" itemname="撕雷之牙" itemnumber="1" itemtips="使用后可为凛戾·寂灭魔神开启全新技能：寂·妖胧天鸣" movetype="1"/>
+	<SpMoves id="120" monster="4030" monstername="瀚海界神" moves="29337" movesname="逆浪分洲" item="1728017" itemname="瀚海神颂" itemnumber="1" itemtips="使用后可为瀚海界神开启全新技能：逆浪分洲" movetype="2"/>
 
 
 

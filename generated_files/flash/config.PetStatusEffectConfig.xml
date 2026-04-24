@@ -8,7 +8,7 @@ dependent：附属类异常状态
 Restriction：限制类异常状态
 Derivation:衍化类异常状态
 Un前缀代表非xxx异常状态
-以上：0=检测、随机时均不包含，1=检测时包含，随机时不包含，2=检测、随机时均包含（游戏设定，附属类异常状态无法在非指名情况下随机出）
+以上：0=检测、随机时均不包含，1=检测时包含，随机时不包含，2=检测、随机时均包含（游戏设定，附属类异常状态无法在非指名情况下随机出，但可以被计数，包括山神守护、两种免疫也作为附属类遵循此规则）
 
 
 
@@ -56,6 +56,7 @@ Un前缀代表非xxx异常状态
 		<SubEffect ID="38" Name="星赎" Efftype="2" Ctrl="0" Unctrl="1" Weaken="0" Unweaken="1" Dependent="1" Undependent="0" Restriction="0" Unrestriction="1" Derivation="0" Underivation="1"/>
 		<SubEffect ID="39" Name="神游" Efftype="0" Ctrl="2" Unctrl="0" Weaken="0" Unweaken="2" Dependent="0" Undependent="2" Restriction="0" Unrestriction="2" Derivation="2" Underivation="0"/>
 		<SubEffect ID="40" Name="空定" Efftype="0" Ctrl="2" Unctrl="0" Weaken="0" Unweaken="2" Dependent="0" Undependent="2" Restriction="0" Unrestriction="2" Derivation="2" Underivation="0"/>
+		<SubEffect ID="41" Name="XX" Efftype="0" Ctrl="2" Unctrl="0" Weaken="0" Unweaken="2" Dependent="0" Undependent="2" Restriction="0" Unrestriction="2" Derivation="0" Underivation="2"/>
 	</BattleEffect>
 	<BattleEffect Type="1" Name="战斗能力变化">
 		<!-- 参数n 以6为基准  n-6为负数表示能力减弱了多少，为正数表示提升了多少 -->

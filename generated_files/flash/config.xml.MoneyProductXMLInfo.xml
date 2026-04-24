@@ -71,6 +71,7 @@
 	<item name="购买【卡托娜的宝箱钥匙】" productID="200067" itemID="1727815" price="6" vip="1" gold="1" type="-1"/> 		
 	<item name="4月风尚月历" productID="200068" itemID="1727974" price="30" vip="1" gold="1" type="-1"/> 	
 	<item name="5月风尚月历" productID="200069" itemID="1727975" price="30" vip="1" gold="1" type="-1"/> 		
+	<item name="0430占位米币商品1" productID="200070" itemID="1728027" price="6" vip="1" gold="1" type="-1"/> 	
 	
 	<!-- <item name="废弃" productID="200061" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
 	<!-- <item name="废弃" productID="200062" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
