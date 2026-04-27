@@ -4987,7 +4987,7 @@ def db_sp_hide_moves():
     conn.commit()
 db_sp_hide_moves()
 def db_achievements():
-    with open(data_path / "sp_hide_moves.json", 'r', encoding='utf-8') as f:
+    with open(data_path / "achievements.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     achievements = data["root"]
 
@@ -5053,44 +5053,38 @@ def db_achievements():
     cursor = conn.cursor()
 
     for i in achievements:
-        try:
-            desc1 = i.get("Desc", '')
-            bid = i.get("ID", 0)
-            Branches = i.get("Branches", [])
-            for j in Branches:
-                for k in j:
+        desc1 = i.get("Desc", '')
+        bid = i.get("ID", 0)
+        Branches = i.get("Branches", [])
+        for j in Branches:
+            for k in j:
+                desc2 = k.get("Desc", '')
+                rid = k.get("ID", 0)
+                is_single = k.get("IsSingle", 0)
+                _text = k.get("_text", '')
+                is_show_pro = k.get("isShowPro", 0)
+                Rule = k.get("Rule", [])
+                for l in Rule:
                     try:
-                        desc2 = k.get("Desc", '')
-                        rid = k.get("ID", 0)
-                        is_single = k.get("IsSingle", 0)
-                        _text = k.get("_text", '')
-                        is_show_pro = k.get("isShowPro", 0)
-                        Rule = k.get("Rule", [])
-                        for l in Rule:
-                            try:
-                                ability_title = l.get("AbilityTitle", 0)
-                                achievement_point = l.get("AchievementPoint", 0)
-                                desc = l.get("Desc", '')
-                                id = l.get("ID", 0)
-                                spe_name_bonus = l.get("SpeNameBonus", 0)
-                                threshold = l.get("Threshold", '')
-                                abtext = l.get("abtext", '')
-                                ach_name = l.get("achName", '')
-                                hide = l.get("hide", 0)
-                                proicon = l.get("proicon", 0)
-                                title = l.get("title", '')
-                                title_color = l.get("titleColor", '')
-                                cursor.execute("""
-                                    INSERT INTO achievements (desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
-                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                                    """,(desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
-                                )
-                            except Exception as e:
-                                print(f"❌ 插入数据失败：{e}，数据内容：{l}")
+                        ability_title = l.get("AbilityTitle", 0)
+                        achievement_point = l.get("AchievementPoint", 0)
+                        desc = l.get("Desc", '')
+                        id = l.get("ID", 0)
+                        spe_name_bonus = l.get("SpeNameBonus", 0)
+                        threshold = l.get("Threshold", '')
+                        abtext = l.get("abtext", '')
+                        ach_name = l.get("achName", '')
+                        hide = l.get("hide", 0)
+                        proicon = l.get("proicon", 0)
+                        title = l.get("title", '')
+                        title_color = l.get("titleColor", '')
+                        cursor.execute("""
+                            INSERT INTO achievements (desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """,(desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                        )
                     except Exception as e:
-                        print(f"❌ 插入数据失败：{e}，数据内容：{k}")
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+                        print(f"❌ 插入数据失败：{e}，数据内容：{l}")
     conn.commit()
 db_achievements()
 def db_cloth():
