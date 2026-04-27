@@ -337,6 +337,9 @@ TARGET_TEXTASSET_NAMES = [
     "gems",
     "itemsOptimizeCat",
     "itemsTip",
+    "achievements",
+    "suit",
+    "equip",
 ]  # 只导出这些 TextAsset 名（导出为 moves.bytes 等）
 
 # === 可配置参数 ===
@@ -396,6 +399,9 @@ class BytesReader:
     def ulong(self) -> int:
         # TS 里 long 为 8 字节整型；Python 用有符号 64 位读取
         return struct.unpack("<q", self._read(8))[0]
+
+    def ReadFloat(self) -> float:
+        return struct.unpack("<f", self._read(4))[0]
 
     def text(self) -> str:
         ln = self.ushort()
@@ -2063,6 +2069,120 @@ def parse_and_dump_item(input_bytes_path, output_json_path):
             resu["root"] = item
     write_json(data_path / f"itemsTip.json", resu)
 
+def parse_and_dump_achievements(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    if r.read_bool():
+        if r.read_bool():
+            n = r.ReadSignedInt()
+            type = []
+            for _ in range(n):
+                temp = {}
+                branches = []
+                if r.read_bool():
+                    a = r.ReadSignedInt()
+                    for _ in range(a):
+                        branch = []
+                        if r.read_bool():
+                            b = r.ReadSignedInt()
+                            for _ in range(b):
+                                t = {}
+                                t["Desc"] = r.ReadUTFBytesWithLength()
+                                t["ID"] = r.ReadSignedInt()
+                                t["IsSingle"] = r.ReadSignedInt()
+                                rule = []
+                                if r.read_bool():
+                                    c = r.ReadSignedInt()
+                                    for _ in range(c):
+                                        tt = {}
+                                        tt["AbilityTitle"] = r.ReadSignedInt()
+                                        tt["AchievementPoint"] = r.ReadSignedInt()
+                                        tt["Desc"] = r.ReadUTFBytesWithLength()
+                                        tt["ID"] = r.ReadSignedInt()
+                                        tt["SpeNameBonus"] = r.ReadSignedInt()
+                                        tt["Threshold"] = r.ReadUTFBytesWithLength()
+                                        tt["abtext"] = r.ReadUTFBytesWithLength()
+                                        tt["achName"] = r.ReadUTFBytesWithLength()
+                                        tt["hide"] = r.ReadSignedInt()
+                                        tt["proicon"] = r.ReadSignedInt()
+                                        tt["title"] = r.ReadUTFBytesWithLength()
+                                        tt["titleColor"] = r.ReadUTFBytesWithLength()
+                                        rule.append(tt)
+                                t["Rule"] = rule
+                                t["_text"] = r.ReadUTFBytesWithLength()
+                                t["isShowPro"] = r.ReadSignedInt()
+                                branch.append(t)
+                            branches.append(branch)
+                temp["Branches"] = branches
+                temp["Desc"] = r.ReadUTFBytesWithLength()
+                temp["ID"] = r.ReadSignedInt()
+                type.append(temp)
+            result["root"] = type
+    write_json(output_json_path, result)
+
+def parse_and_dump_suit(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    if r.read_bool():
+        if r.read_bool():
+            n = r.ReadSignedInt()
+            item = []
+            for _ in range(n):
+                temp = {}
+                cloths = []
+                if r.read_bool():
+                    nn = r.ReadSignedInt()
+                    for _ in range(nn):
+                        cloths.append(r.ReadSignedInt())
+                temp["cloths"] = cloths
+                temp["id"] = r.ReadSignedInt()
+                temp["name"] = r.ReadUTFBytesWithLength()
+                temp["suitdes"] = r.ReadUTFBytesWithLength()
+                temp["tranSpeed"] = r.ReadFloat()
+                temp["transform"] = r.ReadSignedInt()
+                item.append(temp)
+            result["root"] = item
+    write_json(output_json_path, result)
+
+def parse_and_dump_equip(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    if r.read_bool():
+        if r.read_bool():
+            n = r.ReadSignedInt()
+            equip = []
+            for _ in range(n):
+                temp = {}
+                temp["Desc"] = r.ReadUTFBytesWithLength()
+                temp["ItemID"] = r.ReadSignedInt()
+                temp["Name"] = r.ReadUTFBytesWithLength()
+                temp["Quality"] = r.ReadSignedInt()
+                rank = []
+                if r.read_bool():
+                    nn = r.ReadSignedInt()
+                    for _ in range(nn):
+                        tt = {}
+                        tt["Desc"] = r.ReadUTFBytesWithLength()
+                        tt["Lv"] = r.ReadSignedInt()
+                        rank.append(tt)
+                temp["Rank"] = rank
+                temp["SuitID"] = r.ReadSignedInt()
+                equip.append(temp)
+            result["root"] = equip
+    write_json(output_json_path, result)
+
 def xml_to_json7(xml_file_path, output_json_path=None):
     """
     将Monster XML文件转换为指定格式的JSON
@@ -2879,18 +2999,18 @@ parse_and_dump_pet_skin(
     (data_path / "pet_skin.bytes"),
     (data_path / "pet_skin.json"),
 )
-parse_and_dump_pvp_vote(
-    (data_path / "pvp_vote.bytes"),
-    (data_path / "pvp_vote.json"),
-)
-parse_and_dump_pvp_ban(
-    (data_path / "pvp_ban.bytes"),
-    (data_path / "pvp_ban.json"),
-)
-parse_and_dump_pvp_ban_expert(
-    (data_path / "pvp_ban_expert.bytes"),
-    (data_path / "pvp_ban_expert.json"),
-)
+# parse_and_dump_pvp_vote(
+#     (data_path / "pvp_vote.bytes"),
+#     (data_path / "pvp_vote.json"),
+# )
+# parse_and_dump_pvp_ban(
+#     (data_path / "pvp_ban.bytes"),
+#     (data_path / "pvp_ban.json"),
+# )
+# parse_and_dump_pvp_ban_expert(
+#     (data_path / "pvp_ban_expert.bytes"),
+#     (data_path / "pvp_ban_expert.json"),
+# )
 parse_and_dump_gem(
     (data_path / "gems.bytes"),
     (data_path / "gems.json"),
@@ -2902,6 +3022,18 @@ parse_and_dump_item(
 parse_and_dump_sp_hide_moves(
     (data_path / "sp_hide_moves.bytes"),
     (data_path / "sp_hide_moves.json"),
+)
+parse_and_dump_achievements(
+    (data_path / "achievements.bytes"),
+    (data_path / "achievements.json"),
+)
+parse_and_dump_suit(
+    (data_path / "suit.bytes"),
+    (data_path / "suit.json"),
+)
+parse_and_dump_equip(
+    (data_path / "equip.bytes"),
+    (data_path / "equip.json"),
 )
 
 
@@ -4533,148 +4665,6 @@ def db_pets():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_pets()
-def db_pvp():
-    with open(data_path / "pvp_ban.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root1 = data["root"]
-    with open(data_path / "pvp_ban_expert.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root2 = data["root"]
-    with open(data_path / "pvp_vote.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root3 = data["root"]
-
-
-    def create_scheme_database(db_path):
-        # 确保数据库所在目录存在
-        db_dir = os.path.dirname(db_path)
-        if db_dir and not os.path.exists(db_dir):
-            os.makedirs(db_dir)
-
-        try:
-            # 连接数据库（文件不存在则自动创建）
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
-
-            create_table_sql = """
-            CREATE TABLE IF NOT EXISTS pvp_ban (
-                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                id INTEGER NOT NULL,        -- 
-                name TEXT NOT NULL,        -- 
-                quantity INTEGER NOT NULL,        -- 
-                subkey INTEGER NOT NULL,        -- 
-                type INTEGER NOT NULL        -- 
-            );
-            """
-            cursor.execute(create_table_sql)
-            create_table_sql = """
-            CREATE TABLE IF NOT EXISTS pvp_ban_expert (
-                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                id INTEGER NOT NULL,        -- 
-                name TEXT NOT NULL,        -- 
-                quantity INTEGER NOT NULL,        -- 
-                reward TEXT NOT NULL,        -- 
-                seasonopen INTEGER NOT NULL,        -- 
-                subkey_month INTEGER NOT NULL,        -- 
-                subkey_total INTEGER NOT NULL,        -- 
-                type INTEGER NOT NULL        -- 
-            );
-            """
-            cursor.execute(create_table_sql)
-            create_table_sql = """
-            CREATE TABLE IF NOT EXISTS pvp_vote (
-                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                id INTEGER NOT NULL,        -- 
-                name TEXT NOT NULL,        -- 
-                number INTEGER NOT NULL,        -- 
-                oldresult TEXT NOT NULL,        -- 
-                ranklimit1 INTEGER NOT NULL,        -- 
-                ranklimit2 INTEGER NOT NULL,        -- 
-                result TEXT NOT NULL,        -- 
-                subkey INTEGER NOT NULL,        -- 
-                time1 INTEGER NOT NULL,        -- 
-                time2 INTEGER NOT NULL,        -- 
-                type INTEGER NOT NULL        -- 
-            );
-            """
-            cursor.execute(create_table_sql)
-            conn.commit()
-
-            print(f"✅ 数据库创建成功：{db_path}")
-
-        except sqlite3.Error as e:
-            print(f"❌ 数据库创建失败：{e}")
-        finally:
-            # 确保连接关闭
-            if conn:
-                conn.close()
-
-    DB_PATH = str(data_path / f"pvp_{version1}.db")  # CI 输出路径
-
-    try:
-        os.remove(DB_PATH)
-    except:
-        pass
-
-    create_scheme_database(DB_PATH)
-
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row  # 设置为字典格式
-    cursor = conn.cursor()
-
-    for i in root1:
-        try:
-            id = i.get("id", 0)
-            name = str(i.get("name", []))
-            quantity = i.get("quantity", 0)
-            subkey = i.get("subkey", 0)
-            type = i.get("type", 0)
-            cursor.execute("""
-                INSERT INTO pvp_ban (id, name, quantity, subkey, type)
-                VALUES (?, ?, ?, ?, ?)
-                """, (id, name, quantity, subkey, type)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    for i in root2:
-        try:
-            id = i.get("id", 0)
-            name = i.get("name", "")
-            quantity = i.get("quantity", 0)
-            reward = i.get("reward", "")
-            seasonopen = i.get("seasonopen", 0)
-            subkey_month = i.get("subkey_month", 0)
-            subkey_total = i.get("subkey_total", 0)
-            type = i.get("type", 0)
-            cursor.execute("""
-                INSERT INTO pvp_ban_expert (id, name, quantity, reward, seasonopen, subkey_month, subkey_total, type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                """, (id, name, quantity, reward, seasonopen, subkey_month, subkey_total, type)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    for i in root3:
-        try:
-            id = i.get("id", 0)
-            name = i.get("name", "")
-            number = i.get("number", 0)
-            oldresult = i.get("oldresult", "")
-            ranklimit1 = i.get("ranklimit1", 0)
-            ranklimit2 = i.get("ranklimit2", 0)
-            result = i.get("result", "")
-            subkey = i.get("subkey", 0)
-            time1 = i.get("time1", 0)
-            time2 = i.get("time2", 0)
-            type = i.get("type", 0)
-            cursor.execute("""
-                INSERT INTO pvp_vote (id, name, number, oldresult, ranklimit1, ranklimit2, result, subkey, time1, time2, type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (id, name, number, oldresult, ranklimit1, ranklimit2, result, subkey, time1, time2, type)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    conn.commit()
-db_pvp()
 def db_rich_text_tree():
     with open(data_path / "rich_text_tree.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -4997,6 +4987,199 @@ def db_sp_hide_moves():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_sp_hide_moves()
+def db_achievements():
+    with open(data_path / "sp_hide_moves.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    achievements = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS achievements (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                desc1 TEXT NOT NULL,        -- 
+                bid INTEGER NOT NULL,  -- 
+                desc2 TEXT NOT NULL,  -- 
+                rid INTEGER NOT NULL,  -- 
+                is_single INTEGER NOT NULL,  -- 
+                _text TEXT NOT NULL,  -- 
+                is_show_pro INTEGER NOT NULL,  -- 
+                ability_title INTEGER NOT NULL,  -- 
+                achievement_point INTEGER NOT NULL,  -- 
+                desc TEXT NOT NULL,  -- 
+                id INTEGER NOT NULL,  -- 
+                spe_name_bonus INTEGER NOT NULL,  -- 
+                threshold TEXT NOT NULL,  -- 
+                abtext TEXT NOT NULL,  -- 
+                ach_name TEXT NOT NULL,  -- 
+                hide INTEGER NOT NULL,  -- 
+                proicon INTEGER NOT NULL,  -- 
+                title TEXT NOT NULL,  -- 
+                title_color TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"achievements_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in achievements:
+        desc1 = i.get("Desc", '')
+        bid = i.get("ID", 0)
+        Branches = i.get("Branches", [])
+        for j in Branches:
+            for k in j:
+                desc2 = k.get("Desc", '')
+                rid = k.get("ID", 0)
+                is_single = k.get("IsSingle", 0)
+                _text = k.get("_text", '')
+                is_show_pro = k.get("isShowPro", 0)
+                Rule = k.get("Rule", [])
+                for l in Rule:
+                    try:
+                        ability_title = l.get("AbilityTitle", 0)
+                        achievement_point = l.get("AchievementPoint", 0)
+                        desc = l.get("Desc", '')
+                        id = l.get("ID", 0)
+                        spe_name_bonus = l.get("SpeNameBonus", 0)
+                        threshold = l.get("Threshold", '')
+                        abtext = l.get("abtext", '')
+                        ach_name = l.get("achName", '')
+                        hide = l.get("hide", 0)
+                        proicon = l.get("proicon", 0)
+                        title = l.get("title", '')
+                        title_color = l.get("titleColor", '')
+                        cursor.execute("""
+                            INSERT INTO achievements (desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """,(desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                        )
+                    except Exception as e:
+                        print(f"❌ 插入数据失败：{e}，数据内容：{l}")
+    conn.commit()
+db_achievements()
+def db_cloth():
+    with open(data_path / "suit.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root1 = data["root"]
+    with open(data_path / "equip.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS cloth (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                is_suit INTEGER NOT NULL,        -- 
+                name TEXT NOT NULL,  -- 
+                id INTEGER NOT NULL,  -- 
+                suitdes TEXT NOT NULL,  -- 
+                item_id INTEGER NOT NULL,  -- 
+                desc TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"cloth_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root1:
+        try:
+            name = i.get("name", '')
+            id = i.get("id", 0)
+            suitdes = i.get("suitdes", '')
+            item_id = 0
+            desc = ''
+            for j in root2:
+                if j.get("SuitID", 0) == id:
+                    desc = j.get("Desc", '')
+                    break
+            cursor.execute("""
+                INSERT INTO cloth (is_suit, name, id, suitdes, item_id, desc)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """, (1, name, id, suitdes, item_id, desc)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root2:
+        suit_id = i.get("SuitID", 0)
+        if suit_id == 0:
+            try:
+                name = i.get("Name", '')
+                id = 0
+                suitdes = ''
+                item_id = i.get("ItemID", 0)
+                desc = i.get("Desc", '')
+                cursor.execute("""
+                    INSERT INTO cloth (is_suit, name, id, suitdes, item_id, desc)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                    """, (0, name, id, suitdes, item_id, desc)
+                )
+            except Exception as e:
+                print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_cloth()
 
 
 
