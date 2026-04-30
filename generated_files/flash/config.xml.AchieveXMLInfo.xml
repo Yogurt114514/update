@@ -301,6 +301,7 @@
 				<Rule ID="22" Threshold="22" AchievementPoint="10" icon="1" achName="天人之证" proicon="1456" SpeNameBonus="565" title="天人之证" Desc="完成主线【行于沙海】获得" titleColor="0xFFFFFF" />
 				<Rule ID="23" Threshold="23" AchievementPoint="10" icon="1" achName="白皑迷踪" proicon="1466" SpeNameBonus="570" title="白皑迷踪" Desc="完成主线【白皑迷踪】获得" titleColor="0xFFFFFF" />
 				<Rule ID="24" Threshold="24" AchievementPoint="10" icon="1" achName="乐园放逐" proicon="1477" SpeNameBonus="579" title="乐园放逐" Desc="完成主线【乐园放逐】获得" titleColor="0xFFFFFF"/>
+				<Rule ID="25" Threshold="25" AchievementPoint="10" icon="1" achName="波卢卡的火炬" proicon="1487" SpeNameBonus="585" title="自由之潮" Desc="完成主线【自由之潮】获得" titleColor="0xFFFFFF"/>
 			</Branch>
 
 		</Branches>
@@ -346,6 +347,9 @@
 				<Rule ID="4" Threshold="4" AchievementPoint="30" achName="起航3000天纪念"  Desc="参与循星之旅-累积航行3000天获得" proicon="1449" icon="1" SpeNameBonus="560"  title="起航3000天纪念" titleColor="0xFFFFFF"/>
 			</Branch>
 		</Branches>
+
+
+
 
 	</type>
 	
@@ -1804,7 +1808,7 @@
 				<Rule ID="3" Threshold="3" AchievementPoint="15" icon="1" achName="星光之旅" proicon="1349" SpeNameBonus="494" title="星光之旅" Desc="15年前的星光，我又看到了。" titleColor="0xFFFFFF" AbilityTitle="1" abtext="攻击+30，特攻+30，防御+30，特防+30，速度+25，体力+40"  />
 				<Rule ID="4" Threshold="4" AchievementPoint="10" icon="1" achName="储匿有方" proicon="1350" SpeNameBonus="495" title="储匿有方" Desc="参与【阿浣的坚果转移计划】活动获得" titleColor="0xFFFFFF" />
 				<Rule ID="5" Threshold="5" AchievementPoint="20" icon="1" achName="群星的复调" proicon="1354" SpeNameBonus="499" title="群星的复调" Desc="15周年庆活动中，收集“群星的复调”系列周年皮肤获得" titleColor="0xFFFFFF" />
-				<Rule ID="6" Threshold="6" AchievementPoint="20" icon="1" achName="时空战警" proicon="1356" SpeNameBonus="501" title="时空战警" Desc="2024年春节活动中，收集“异元时空”系列限定皮肤获得" titleColor="0xFFFFFF" />
+				<Rule ID="6" Threshold="6" AchievementPoint="20" icon="1" achName="时空战警" proicon="1356" SpeNameBonus="501" title="时空战警" Desc="收集“异元时空”系列皮肤获得" titleColor="0xFFFFFF" />
 				<Rule ID="7" Threshold="7" AchievementPoint="10" icon="1" achName="乞巧心语" proicon="1362" SpeNameBonus="503" title="乞巧心语" Desc="参与2024七夕主题活动获得" titleColor="0xFFFFFF" />
 				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="星缘咖语" proicon="1366" SpeNameBonus="507" title="星缘咖语" Desc="参与星缘咖啡厅主题活动获得" titleColor="0xFFFFFF" />
 				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="千年赫尔卡" proicon="1382" SpeNameBonus="522" title="千年赫尔卡" Desc="成为2025年费VIP" titleColor="0xFFFFFF" AbilityTitle="1" abtext="攻击+35，特攻+35，防御+25，特防+25，体力+50"/>
@@ -1857,6 +1861,7 @@
 				<Rule ID="1" Threshold="1" AchievementPoint="5" icon="1" achName="果实品鉴家" proicon="1478" SpeNameBonus="580" title="品鉴达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
 				<Rule ID="2" Threshold="2" AchievementPoint="5" icon="1" achName="知晓故事之人" proicon="1479" SpeNameBonus="581" title="故事达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
 				<Rule ID="3" Threshold="3" AchievementPoint="10" icon="1" achName="潜入达人" proicon="1481" SpeNameBonus="583" title="潜入达人" Desc="在波卢卡星地表完成探索解密" titleColor="0xFFFFFF"/>
+				<Rule ID="4" Threshold="4" AchievementPoint="10" icon="1" achName="活干完了" proicon="1488" SpeNameBonus="586" title="活干完了" Desc="完成9527的奥朗金属熔炼任务获得" titleColor="0xFFFFFF"/>
 			</Branch>
 
 			</Branches>

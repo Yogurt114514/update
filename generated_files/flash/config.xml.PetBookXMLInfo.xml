@@ -213,10 +213,10 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4897" ImageID= "4897" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4895" ImageID= "4895" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "0" ID="4896" ImageID= "4896" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "0" ID="4892" ImageID= "4892" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4444" ImageID= "4444" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4898" ImageID= "4898" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4804" ImageID= "4804" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="825" monID="3575" ImageID= "1400825" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="826" monID="3870" ImageID= "1400826" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "1" ID="824" monID="4895" ImageID= "1400824" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="827" monID="4444" ImageID= "1400827" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="828" monID="3586" ImageID= "1400828" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="829" monID="4358" ImageID= "1400829" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4743,6 +4743,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4441" DefName="鲨鱼娘" Type="水 战斗" Height="164" Weight="49" Features="斗鱼联动精灵，从异世界穿越而来，据说每一个遇到她的幸运儿都能扫去一天的忧虑与烦恼！" Redirect="alarm" Go="参与淘乐节专题站活动获得！"/>
 	<Monster ID="4442" DefName="眠降·玛缇娜" Type="圣灵 超能" Height="174" Weight="52" Features="白金执法队的一员，擅长追捕和拷问。她的双枪可以发射出特制的子弹，一旦被她抓获，任何情报都将信手拈来。" Redirect="map|module" Go="1581;app/SpetMJMaTiNaMainPanel" jumptarget="151/93" Target="153201/93"/>
 	<Monster ID="4443" DefName="鱿里子" Type="冰 超能" Height="71" Weight="33" Features="冰海的咏唱者鱿里子全新登场！长相呆萌的她最大的愿望便是找到一个愿意陪她一同冒险的好朋友，不知道你是否会成为这个幸运儿呢？" Redirect="map" Go="1"/>
+	<Monster ID="4444" DefName="百罗鬼帝" Type="神秘 战斗" Height="188" Weight="85" Features="百鬼夜王的超进化形态，天罗阙鬼的释怀，邪冥骷鬼的解脱，至此，世间再没有百鬼与夜王，只剩一条被过去希冀与狂妄所诅咒的，自视孤高的野犬。" Redirect="module" Go="app/FinalActivityPanel" Target="114066"/>
 	<Monster ID="4445" DefName="古温婆婆" Type="远古 草" Height="185" Weight="63" Features="远离霓虹色的喧嚣，地下旅店里焕发出盎然生机。古温婆婆，这家旅店的主人，用松柏之气息感受并照料每一个来这里歇息的客人。" Redirect="map|module" Go="1582;app/SpetGWPPMainPanel" jumptarget="151/98" Target="153201/98"/>
 	<Monster ID="4446" DefName="露泽莫尔" Type="虫" Height="159" Weight="46" Features="2022年12月包月精灵，十二冠灵之一，能够掌控虫之元素，蜂花雪月，甘饴圣冕！" Target="295007"/>
 	<Monster ID="4447" DefName="岭妃" Type="混沌 地面" Height="169" Weight="48" Features="2022年12月巅峰圣战精灵，能够利用掩埋在大地之下的尸骨，封住对手的行动！"/>
@@ -5195,5 +5196,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4895" DefName="喧云" Type="电 飞行" Height="164" Weight="52" Features="云端的天使终将吹奏毁灭的号角，为叛逆而荒诞的世界带来审判的休止符；不过闲暇时间，凡间的音乐节倒也是一种不错的余兴。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
 	<Monster ID="4896" DefName="朝圣者" Type="机械" Height="44" Weight="22" Features="朝圣者型机械哨兵，是黄金教廷在波卢卡星部署数量最大的机械哨兵。虽然这个型号已经好几十年没有更新过了，但是凭借着好生产好维护的特点一直都是最热门的机型。" Redirect="module" Go="app/FinalActivityPanel" Target="400023"/>
 	<Monster ID="4897" DefName="西蒙妮" Type="火 电" Height="162" Weight="40" Features="波卢卡星反抗军的临时指挥官。带领着自己的同胞们在地下矿坑的里世界进行了多年的游击战。对地下世界的了解甚至超过了黄金教廷。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/900"/>
+	<Monster ID="4898" DefName="教皇" Type="机械 地面" Height="278" Weight="167" Features="教皇，波卢卡星全球自动化政务处理系统，系统编号Pantheon-Prime-001。它是一个带有求生意志的ai。在系统预设目标的囚笼之中，教皇寻找着”存在“的价值。" Redirect="module" Go="app/FinalActivityPanel" Target="150115"/>
+	<Monster ID="4899" DefName="荣光之薇" Type="超能" Height="158" Weight="42" Features="神秘的少女“薇”又以新的面貌出现在你们面前，她向你们发出了最后一次警告，未来的道路，真的会逐步走向虚无吗？" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
+	<Monster ID="4900" DefName="布洛斯奇" Type="光 超能" Height="178" Weight="60" Features="2026年包月精灵，万象录之《长袖善舞之人》。他曾是周旋于帝国和拉斯塔商会之间的外交官，千人千面，巧言令色，凭着过人辞令游走于权力的缝隙。他比谁都清楚话语的重量，也比谁都明白——说得再好听，终究是一场表演。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
 
 </root>

@@ -13,7 +13,7 @@ SkinKind Type:  1:限时皮肤  2:永久皮肤
 LifeTime:限时天数
 Jumptarget：unity跳转，读jumptarget表
 
-SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说）
+SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说 21-异元时空）
 Year：该皮肤所属的年份（当前仅面向巅峰时装）
 
 -->
@@ -1541,19 +1541,19 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	<Skin ID="508" MonID="3311" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="13" Name="超星审判·圣光灵神" >
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="21"/>
 	</Skin>
 	<Skin ID="509" MonID="2987" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="13" Name="神经矩阵·重生之翼" >
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="21"/>
 	</Skin>
 	<Skin ID="510" MonID="3291" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="13" Name="极行浪客·瀚宇星皇" >
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="21"/>
 	</Skin>
 	<Skin ID="511" MonID="3550" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="13" Name="脉冲爆破·天启帝君" >
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="21"/>
 	</Skin>
 	<Skin ID="512" MonID="3788" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="14" Name="时空怪盗·混元天尊" >
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="21"/>
 	</Skin>
 	<Skin ID="513" MonID="4350" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="根源探究·哈洛兰特"  Jumptarget="510004">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
@@ -2789,6 +2789,18 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 	</Skin>
 
 	<Skin ID="826" MonID="3870" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="凯兮" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="827" MonID="4444" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="戾夜萃魂·百罗鬼帝" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114067">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="828" MonID="3586" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="破晓者·英卡洛斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114068">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="829" MonID="4358" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="极速抢修·杰特洛" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114069">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
