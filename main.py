@@ -4137,6 +4137,7 @@ def db_items():
                 Name TEXT NOT NULL,  -- 
                 Max INTEGER NOT NULL,  -- 
                 catName TEXT NOT NULL,  -- 
+                url TEXT NOT NULL,  -- 
                 LimitPetClass TEXT NOT NULL,  -- 
                 des TEXT NOT NULL  -- 
             );
@@ -4180,6 +4181,7 @@ def db_items():
                 if Max == -294967296:
                     Max = 4000000000
                 catName = i.get("Name", '')
+                url = i.get("url", 'undefined').lower()
                 LimitPetClass = j.get("LimitPetClass", '')
                 des = ''
                 for k in roots:
@@ -4187,9 +4189,9 @@ def db_items():
                         des = k.get("des", '')
                         break
                 cursor.execute("""
-                    INSERT INTO items (ID, Name, Max, catName, LimitPetClass, des)
-                    VALUES (?, ?, ?, ?, ?, ?)
-                    """,(ID, Name, Max, catName, LimitPetClass, des)
+                    INSERT INTO items (ID, Name, Max, catName, url, LimitPetClass, des)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """,(ID, Name, Max, catName, url, LimitPetClass, des)
                 )
             except Exception as e:
                 print(f"❌ 插入数据失败：{e}，数据内容：{i}")
