@@ -4584,7 +4584,8 @@ def db_pets():
                 NewDef INTEGER,  -- 
                 NewSpDef INTEGER,  -- 
                 NewSpd INTEGER,  -- 
-                NewHP INTEGER  -- 
+                NewHP INTEGER,  -- 
+                PetClass INTEGER  -- 
             );
             """
             cursor.execute(create_table_sql)
@@ -4639,6 +4640,7 @@ def db_pets():
                 Height = str(root1[ind].get("Height", 0))
                 Weight = str(root1[ind].get("Weight", 0))
                 des = root1[ind].get("Features", '')
+            PetClass = i.get("PetClass", 0)
             flag = False
             for j in pro:
                 if j[0] == ID:
@@ -4649,18 +4651,18 @@ def db_pets():
                     NewSpd = j[1][5]
                     NewHP = j[1][0]
                     cursor.execute("""
-                        INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                        """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP)
+                        INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP, PetClass)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, NewAtk, NewSpAtk, NewDef, NewSpDef, NewSpd, NewHP, PetClass)
                     )
                     flag = True
                     break
             if flag:
                 continue
             cursor.execute("""
-                INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId)
+                INSERT INTO pets (isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, PetClass)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,(isBook, ID, Name, Type, Height, Weight, Gender, Atk, SpAtk, Def, SpDef, Spd, HP, LearnableMoves, ExtraMoves, SpExtraMoves, ShowExtraMoves, des, RealId, PetClass)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
