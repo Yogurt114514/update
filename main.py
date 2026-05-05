@@ -5118,6 +5118,7 @@ def db_cloth():
                 name TEXT NOT NULL,  -- 
                 id INTEGER NOT NULL,  -- 
                 suitdes TEXT NOT NULL,  -- 
+                cloths TEXT NOT NULL,  -- 
                 item_id INTEGER NOT NULL,  -- 
                 desc TEXT NOT NULL  -- 
             );
@@ -5152,6 +5153,7 @@ def db_cloth():
             name = i.get("name", '')
             id = i.get("id", 0)
             suitdes = i.get("suitdes", '')
+            cloths = str(i.get("cloths", ''))
             item_id = 0
             desc = ''
             for j in root2:
@@ -5159,9 +5161,9 @@ def db_cloth():
                     desc = j.get("Desc", '')
                     break
             cursor.execute("""
-                INSERT INTO cloth (is_suit, name, id, suitdes, item_id, desc)
-                VALUES (?, ?, ?, ?, ?, ?)
-                """, (1, name, id, suitdes, item_id, desc)
+                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """, (1, name, id, suitdes, cloths, item_id, desc)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
@@ -5172,12 +5174,13 @@ def db_cloth():
                 name = i.get("Name", '')
                 id = 0
                 suitdes = ''
+                cloths = ''
                 item_id = i.get("ItemID", 0)
                 desc = i.get("Desc", '')
                 cursor.execute("""
-                    INSERT INTO cloth (is_suit, name, id, suitdes, item_id, desc)
-                    VALUES (?, ?, ?, ?, ?, ?)
-                    """, (0, name, id, suitdes, item_id, desc)
+                    INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """, (0, name, id, suitdes, cloths, item_id, desc)
                 )
             except Exception as e:
                 print(f"❌ 插入数据失败：{e}，数据内容：{i}")
