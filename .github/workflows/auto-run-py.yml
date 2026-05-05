@@ -2,8 +2,8 @@ name: Auto Run Python Script and Upload Files
 
 on:
   schedule:
-    # 每隔半小时触发一次（UTC时间）
-    - cron: '0,30 * * * *'
+    # 每隔15分钟触发一次
+    - cron: '*/15 * * * *'
   # 保留手动触发，方便测试
   workflow_dispatch:
 
