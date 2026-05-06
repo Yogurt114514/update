@@ -5098,6 +5098,12 @@ def db_cloth():
     with open(data_path / "equip.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root2 = data["root"]
+    with open(data_path / "itemsOptimizeCatItems1.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root3 = data["root"]
+    with open(data_path / "itemsOptimizeCatItems13.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root4 = data["root"]
 
 
     def create_scheme_database(db_path):
@@ -5120,7 +5126,10 @@ def db_cloth():
                 suitdes TEXT NOT NULL,  -- 
                 cloths TEXT NOT NULL,  -- 
                 item_id INTEGER NOT NULL,  -- 
-                desc TEXT NOT NULL  -- 
+                desc TEXT NOT NULL,  -- 
+                rank_desc TEXT NOT NULL,  -- 
+                type TEXT NOT NULL,  -- 
+                suit_id INTEGER NOT NULL  -- 
             );
             """
             cursor.execute(create_table_sql)
@@ -5156,34 +5165,44 @@ def db_cloth():
             cloths = str(i.get("cloths", ''))
             item_id = 0
             desc = ''
+            rank_desc = ''
+            type = ''
+            suit_id = 0
             for j in root2:
                 if j.get("SuitID", 0) == id:
                     desc = j.get("Desc", '')
                     break
             cursor.execute("""
-                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-                """, (1, name, id, suitdes, cloths, item_id, desc)
+                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (1, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     for i in root2:
-        suit_id = i.get("SuitID", 0)
-        if suit_id == 0:
-            try:
-                name = i.get("Name", '')
-                id = 0
-                suitdes = ''
-                cloths = ''
-                item_id = i.get("ItemID", 0)
-                desc = i.get("Desc", '')
-                cursor.execute("""
-                    INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc)
-                    VALUES (?, ?, ?, ?, ?, ?, ?)
-                    """, (0, name, id, suitdes, cloths, item_id, desc)
-                )
-            except Exception as e:
-                print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+        try:
+            name = i.get("Name", '')
+            id = 0
+            suitdes = ''
+            cloths = ''
+            item_id = i.get("ItemID", 0)
+            desc = i.get("Desc", '')
+            rank_desc = i.get("Rank", [])[0]["Desc"]
+            if rank_desc == desc:
+                rank_desc = ''
+            type = ''
+            for j in root3 + root4:
+                if j.get("ID", 0) == item_id:
+                    type = j.get("type", '')
+                    break
+            suit_id = i.get("SuitID", 0)
+            cursor.execute("""
+                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (0, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_cloth()
 
