@@ -66,6 +66,12 @@
 	</Menu>
 	
 	<Menu  name="s级"  Level="4">
+		<MintMark ID="42458" Des="古堡记忆·猎魔" Level="4" puton="3"/>
+		<MintMark ID="42459" Des="古堡记忆·蝶语" Level="4" puton="3"/>
+		<MintMark ID="42460" Des="古堡记忆·入梦" Level="4" puton="3"/>
+		<MintMark ID="42461" Des="古堡记忆·炼狱" Level="4" puton="3"/>
+		<MintMark ID="42462" Des="古堡记忆·幻兽" Level="4" puton="3"/>		
+		
 	    <MintMark ID="42153" Des="焰火·万木苍翠" Level="4" puton="3"/>
 		<MintMark ID="42154" Des="焰火·湛蓝星河" Level="4" puton="3"/>
 		<MintMark ID="42155" Des="焰火·炎舞九天" Level="4" puton="3"/>
@@ -84,11 +90,11 @@
 		<MintMark ID="42285" Des="珍宝·尘封战甲" Level="4" puton="3"/>
 		<MintMark ID="42286" Des="珍宝·异维晶核" Level="4" puton="3"/>
 		
-		<MintMark ID="42330" Des="异元之铭·判" Level="4" puton="2"/>
-		<MintMark ID="42331" Des="异元之铭·阵" Level="4" puton="2"/>
-		<MintMark ID="42332" Des="异元之铭·极" Level="4" puton="2"/>
-		<MintMark ID="42333" Des="异元之铭·破" Level="4" puton="2"/>
-		<MintMark ID="42334" Des="异元之铭·堕" Level="4" puton="2"/>		
+		<MintMark ID="42330" Des="异元之铭·判" Level="4" puton="3"/>
+		<MintMark ID="42331" Des="异元之铭·阵" Level="4" puton="3"/>
+		<MintMark ID="42332" Des="异元之铭·极" Level="4" puton="3"/>
+		<MintMark ID="42333" Des="异元之铭·破" Level="4" puton="3"/>
+		<MintMark ID="42334" Des="异元之铭·堕" Level="4" puton="3"/>		
 		
 		<MintMark ID="40757" Des="圣·虚无" Level="4" puton="3"/>
 		<MintMark ID="40758" Des="圣·元素" Level="4" puton="3"/>
@@ -279,6 +285,16 @@
 		<MintMark ID="41933" Des="晓·净化之心" Level="3"/>
 		<MintMark ID="41934" Des="晓·誓言之约" Level="3"/>
 		<MintMark ID="41935" Des="晓·永恒之月" Level="3"/>
+		<MintMark ID="42269" Des="月光·灵羽风暴" Level="3"/>
+		<MintMark ID="42270" Des="月光·闪耀祝福" Level="3"/>
+		<MintMark ID="42271" Des="月影·幽冥疾行" Level="3"/>
+		<MintMark ID="42272" Des="月影·暗魂诅咒" Level="3"/>
+		<MintMark ID="41959" Des="地葬印记" Level="3"/>
+		<MintMark ID="41960" Des="瀚海印记" Level="3"/>
+		<MintMark ID="41961" Des="天玄印记" Level="3"/>
+		<MintMark ID="41962" Des="幻境印记" Level="3"/>
+		<MintMark ID="41963" Des="时空印记" Level="3"/>
+		<MintMark ID="41964" Des="混沌印记" Level="3"/>
 	</Menu>
 	
 	<Menu name="B"  Level="2">

@@ -213,10 +213,10 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4444" ImageID= "4444" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4898" ImageID= "4898" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4901" ImageID= "4901" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "0" ID="4898" ImageID= "4898" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4804" ImageID= "4804" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="827" monID="4444" ImageID= "1400827" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="828" monID="3586" ImageID= "1400828" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="829" monID="4358" ImageID= "1400829" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <!-- <place type= "1" ID="827" monID="4444" ImageID= "1400827" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <!-- <place type= "1" ID="828" monID="3586" ImageID= "1400828" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "1" ID="829" monID="4358" ImageID= "1400829" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3169,22 +3169,22 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2848" DefName="暗翼魔圣" Type="战斗 暗影" Height="178" Weight="78" Features="尤尼卡超进化形态！双翼代表着更加强大的力量，无谓正邪，只有信仰指引前进的道路!" mapID="722"/>
 	<Monster ID="2849" DefName="昊希娜" Type="飞行 神秘" Height="168" Weight="44" Features="邪恶五帝之一！虽然美若天仙，但却帮助威斯克进行着邪恶的勾当！拥有堪比精灵王的力量!" mapID="1103"/>
 	<Monster ID="2850" DefName="苏比萨塔" Type="飞行 光" Height="198" Weight="0" Features="苏亚雷斯超进化形态！对光之力量的运用更加纯属，在他心中，除了光精灵王，没有人对光的理解可以超过他!" mapID="103"/>
-	<Monster ID="2851" DefName="斯蒂丽亚" Type="飞行 超能" Height="169" Weight="73" Features="斯蒂亚超进化形态！通过汲取“风岚”宝石的力量，对风的力量的掌控至臻化境!" mapID="0"/>
+	<Monster ID="2851" DefName="斯蒂丽亚" Type="飞行 超能" Height="169" Weight="73" Features="斯蒂亚超进化形态！通过汲取“风岚”宝石的力量，对风的力量的掌控至臻化境!" mapID="0" Target="150116"/>
 	<Monster ID="2852" DefName="赤瞳缪斯" Type="超能" Height="171" Weight="49.9" Features="将圣剑的力量和瞳之神能完美融合之后的超进化体，上诛天邪下灭魔神，天蛇星新的传说!" mapID="10617" jumptarget="218" Target="150021"/>
 	<Monster ID="2853" DefName="圣能·元素" Type="自然" Height="143" Weight="42" Features="曾经和谱尼是挚友，因为某些不知名的原因站到了谱尼的对立面!" mapID="1105"/>
 	<Monster ID="2854" DefName="珀妮" Type="光" Height="128" Weight="18" Features="光王身边的光元素幻化而成的萌萌的精灵。头上的角上似乎凝聚了无穷无尽的光之能力!" mapID="1099"/>
 	<Monster ID="2855" DefName="暴食龙" Type="龙" Height="155" Weight="115" Features="贪食龙的超进化形态！力量更强，骨骼更加坚硬！当然，食欲也更大了!" mapID="1"/>
-	<Monster ID="2856" DefName="萨瑞罗斯" Type="地面 战斗" Height="250" Weight="300" Features="萨瑞卡超进化！所有力量得到了全面的提升，X战队的团战中坚力量!" mapID="0"/>
+	<Monster ID="2856" DefName="萨瑞罗斯" Type="地面 战斗" Height="250" Weight="300" Features="萨瑞卡超进化！所有力量得到了全面的提升，X战队的团战中坚力量!" mapID="0" Target="150117"/>
 	<Monster ID="2857" DefName="达克斯特" Type="暗影 神秘" Height="172" Weight="54" Features="混元黑帝！出生于虚无和黑暗之中，能够随意操控来自于远古黑暗的神秘力量!" mapID="1104"/>
 	<Monster ID="2858" DefName="萌伊优" Type="水" Height="126" Weight="20" Features="萌萌的伊尤，喜欢出没于夏日的海边，给来往的人们带来清凉!" mapID="1099"/>
 	<Monster ID="2859" DefName="圣能·能量" Type="电" Height="146" Weight="45" Features="能量圣殿的守卫，使用强大的封印将谱尼的力量封住，掌控能量圣殿全部能量的神秘精灵!" mapID="1106"/>
 	<Monster ID="2860" DefName="冰凰兽" Type="冰" Height="163" Weight="68" Features="急冻兽的超进化形态，外观发生了巨大的变化，令人瞠目结舌。实力因为受到冰精灵王的影响也得到了巨大的提升!" Redirect="module" Go="app/FrozenMonsterMainPanel"/>
-	<Monster ID="2861" DefName="托鲁克尔" Type="飞行" Height="168" Weight="77" Features="托鲁克超进化！拥有令所有精灵都望尘莫及的速度，并把这种逆天般的速度转化为强大的战斗力!" mapID="0"/>
+	<Monster ID="2861" DefName="托鲁克尔" Type="飞行" Height="168" Weight="77" Features="托鲁克超进化！拥有令所有精灵都望尘莫及的速度，并把这种逆天般的速度转化为强大的战斗力!" mapID="0" Target="150118"/>
 	<Monster ID="2862" DefName="苏希斯" Type="战斗 自然" Height="170" Weight="46" Features="五帝之一，罗刹青帝！虽外表美丽，但是冷血无情，残忍嗜血，宛若修罗地狱诞生的青面罗刹!" mapID="1107"/>
 	<Monster ID="2863" DefName="焰魂·金斯特" Type="战斗 火" Height="169" Weight="97" Features="金斯特超进化！将自身的实力提升了一个档次，是神兽战团一个超进化的精灵!" mapID="103"/>
 	<Monster ID="2864" DefName="雷小锘" Type="电" Height="138" Weight="28" Features="小雷锘，从小就怀揣正义之心的精灵!" mapID="10941"/>
 	<Monster ID="2865" DefName="纳瓦雷多" Type="地面" Height="157" Weight="156" Features="纳多雷超进化形态！更加熟悉地面和岩石的力量！让他更加的强大!" Redirect="module" Go="app/NadoreyMainPanel"/>
-	<Monster ID="2866" DefName="赛伯斯塔" Type="机械 超能" Height="155" Weight="126" Features="赛伯斯特超进化形态！超强炮台重组完成，机械核心整装待发！正义炮台，即将发射!" mapID="0"/>
+	<Monster ID="2866" DefName="赛伯斯塔" Type="机械 超能" Height="155" Weight="126" Features="赛伯斯特超进化形态！超强炮台重组完成，机械核心整装待发！正义炮台，即将发射!" mapID="0" Target="150119"/>
 	<Monster ID="2867" DefName="森林弓骑兵" Type="光 战斗" Height="170" Weight="56" Features="感悟自然力量的神秘类人精灵！与百兽为伴，风餐饮露，感悟天地神秘力量!" mapID="1" Target="295001"/>
 	<Monster ID="2868" DefName="斗魂·拉塞尔" Type="地面 战斗" Height="175" Weight="96" Features="神兽战团超进化在开启！更强的力量，更加沸腾的战斗之血在心中汹涌翻滚!" mapID="103"/>
 	<Monster ID="2869" DefName="弗雷姆" Type="神秘 火" Height="175" Weight="66" Features="赤火炎帝！上古之战，和精灵王艾恩斯平分秋色的恐怖存在!" mapID="1108"/>
@@ -3209,14 +3209,14 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2888" DefName="威斯克" Type="邪灵 神秘" Height="155" Weight="50" Features="长大后的威斯克善于使用幽灵控制诅咒对手，一旦对手被控制住就再也无法逃脱!" mapID="1113"/>
 	<Monster ID="2889" DefName="圣能·圣洁" Type="光" Height="165" Weight="58" Features="圣洁圣殿的守护者。怀中之球充满着巨大的圣洁能量，能激发圣灵的绝对潜能!" mapID="1124"/>
 	<Monster ID="2890" DefName="娜娜" Type="光 神秘" Height="133" Weight="33" Features="月光一族新的传人，从小就在月光的照耀下长大。能感受丛林深处的寂静和月光带来的神秘能量!" mapID="950"/>
-	<Monster ID="2891" DefName="凯普斯特" Type="战斗" Height="180" Weight="150" Features="先锋队长为了正义而蜕变出全新的能量。圣盾经过重新的锻造，更加的坚实，绝对是正义的守护者!" mapID="0"/>
+	<Monster ID="2891" DefName="凯普斯特" Type="战斗" Height="180" Weight="150" Features="先锋队长为了正义而蜕变出全新的能量。圣盾经过重新的锻造，更加的坚实，绝对是正义的守护者!" mapID="0" Target="150120"/>
 	<Monster ID="2892" DefName="希尔妮妮" Type="自然" Height="168" Weight="44" Features="出生在自然的神秘精灵！在文明的演化中，学会了对枪支炉火纯青的运用！并把自然的力量加以融合!" mapID="103"/>
 	<Monster ID="2893" DefName="邪皇威斯克" Type="邪灵 神秘" Height="175" Weight="80" Features="邪皇驾临！威斯克的进化形态！掌控了邪灵组织的终极奥秘，把邪恶的力量汇集自身！让精灵王都畏惧的存在!" mapID="1113"/>
 	<Monster ID="2894" DefName="戴斯特" Type="暗影" Height="165" Weight="65" Features="死亡的化身！本来是圣灵精灵的一员，因误入魔道而黑化！后改邪归正，保留黑暗形态以警示自己!" mapID="1125"/>
 	<Monster ID="2895" DefName="阿尔莫莫" Type="飞行 光" Height="156" Weight="88" Features="月光一族的神奇精灵，每在月圆之夜能获得巨大的力量!" mapID="950"/>
 	<Monster ID="2896" DefName="迪斯" Type="电 战斗" Height="133" Weight="23" Features="另一次元中的雷神，刚来到这个世界，便与雷伊成为好友，拥有控制雷电的力量!" mapID="950"/>
 	<Monster ID="2897" DefName="亚迪斯" Type="电 战斗" Height="154" Weight="77" Features="迪斯进化！另一次元中的雷神，刚来到这个世界，便与雷伊成为好友，拥有控制雷电的力量!" mapID="950"/>
-	<Monster ID="2898" DefName="英普力亚" Type="飞行 光" Height="178" Weight="108" Features="英普瑞斯超进化！为了守卫最终的正义而开启的更强进化，拥有更加强悍的消耗能力!" mapID="0"/>
+	<Monster ID="2898" DefName="英普力亚" Type="飞行 光" Height="178" Weight="108" Features="英普瑞斯超进化！为了守卫最终的正义而开启的更强进化，拥有更加强悍的消耗能力!" mapID="0" Target="150121"/>
 	<Monster ID="2899" DefName="爆炎莱茵" Type="火 飞行" Height="154" Weight="100" Features="在一次太阳黑子的剧烈活动中，伴随耀斑出现的精灵。在烈日的炙烤中诞生恐怖的日光力量!" Redirect="map|module" Go="103;app/NewVIPEquityPanel"/>
 	<Monster ID="2900" DefName="夜魔龙战" Type="暗影 龙" Height="169" Weight="150" Features="夜魔出世！龙血战魂！友谊的并肩，诞生出伟大的力量！夜魔龙战惊天诞生!"/>
 	<Monster ID="2901" DefName="月之女骑士" Type="光 神秘" Height="153" Weight="53" Features="被月光祝福的月之一族的守护者！以黑豹为坐骑，能够熟练使用月光的力量!" mapID="950"/>
@@ -5199,5 +5199,6 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4898" DefName="教皇" Type="机械 地面" Height="278" Weight="167" Features="教皇，波卢卡星全球自动化政务处理系统，系统编号Pantheon-Prime-001。它是一个带有求生意志的ai。在系统预设目标的囚笼之中，教皇寻找着”存在“的价值。" Redirect="module" Go="app/FinalActivityPanel" Target="150115"/>
 	<Monster ID="4899" DefName="荣光之薇" Type="超能" Height="158" Weight="42" Features="神秘的少女“薇”又以新的面貌出现在你们面前，她向你们发出了最后一次警告，未来的道路，真的会逐步走向虚无吗？" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
 	<Monster ID="4900" DefName="布洛斯奇" Type="光 超能" Height="178" Weight="60" Features="2026年包月精灵，万象录之《长袖善舞之人》。他曾是周旋于帝国和拉斯塔商会之间的外交官，千人千面，巧言令色，凭着过人辞令游走于权力的缝隙。他比谁都清楚话语的重量，也比谁都明白——说得再好听，终究是一场表演。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
+	<Monster ID="4901" DefName="战斗" Type="战斗" Height="166" Weight="45" Features="特维耶，波卢卡反抗军侦查连队的队长。性格轻浮的他不厌其烦的“骚扰”每一个战友，但那也成为了反抗军艰难生活中的小小调味剂。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/906"/>
 
 </root>

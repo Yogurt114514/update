@@ -569,9 +569,9 @@
     <Fragment ID="2400568" show="1" Name="安瑟伦因子" MonsterID="4894" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6382" effectId="2081" NewseConsume="270" MoveID="38351" MovesConsume="108" NeedmonID="0" NewMsglogId="2604160500" SeMsglog="2604160501" EffectMsglog="2604160502"/>
 	<Fragment ID="2400569" show="1" Name="鬼面阎罗因子" MonsterID="4238" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="5728" effectId="1457" NewseConsume="500" MoveID="35176" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
 	<Fragment ID="2400570" show="1" Name="西蒙妮因子" MonsterID="4897" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6384" effectId="2083" NewseConsume="200" MoveID="38369" MovesConsume="100" NeedmonID="0" NewMsglogId="2604230500" SeMsglog="2604230501" EffectMsglog="2604230502"/>
-    
 	<Fragment ID="2400571" show="1" Name="暮月之弦因子" MonsterID="4178" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5673" effectId="1403" NewseConsume="200" MoveID="34862" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
     <Fragment ID="2400572" show="1" Name="月牙之刃因子" MonsterID="4096" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5607" effectId="1336" NewseConsume="200" MoveID="34444" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
     <Fragment ID="2400573" show="1" Name="荣光之薇因子" MonsterID="4899" Rarity="1" PetLimit="1" PetConsume="200" NewSeIdx="6386" effectId="2086" NewseConsume="100" MoveID="38378" MovesConsume="50" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
-	
+	<Fragment ID="2400574" show="1" Name="特维耶因子" MonsterID="4901" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6389" effectId="2088" NewseConsume="200" MoveID="38387" MovesConsume="100" NeedmonID="0" NewMsglogId="2605070600" SeMsglog="2605070601" EffectMsglog="2605070602"/>
+    
 </Root>
