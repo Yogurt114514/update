@@ -5179,23 +5179,30 @@ def db_cloth():
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    for i in root2:
+    for i in root3 + root4:
         try:
             name = i.get("Name", '')
             id = 0
             suitdes = ''
             cloths = ''
-            item_id = i.get("ItemID", 0)
-            desc = i.get("Desc", '')
-            rank_desc = i.get("Rank", [])[0]["Desc"]
-            if rank_desc == desc:
-                rank_desc = ''
-            type = ''
-            for j in root3 + root4:
-                if j.get("ID", 0) == item_id:
-                    type = j.get("type", '')
+            item_id = i.get("ID", 0)
+            desc = ''
+            rank_desc = ''
+            type = i.get("type", '')
+            suit_id = 0
+            for j in root2:
+                if j.get("ItemID", 0) == item_id:
+                    desc = j.get("Desc", '')
+                    rank_desc = j.get("Rank", [])[0]["Desc"]
+                    if rank_desc == desc:
+                        rank_desc = ''
+                    suit_id = j.get("SuitID", 0)
                     break
-            suit_id = i.get("SuitID", 0)
+            if suit_id == 0:
+                for j in root1:
+                    if item_id in j.get("cloths", []):
+                        suit_id = j.get("id", 0)
+                        break
             cursor.execute("""
                 INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
