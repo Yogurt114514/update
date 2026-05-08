@@ -5210,8 +5210,8 @@ db_cloth()
 
 
 
-with open(data_path/'version1.txt', "w", encoding="utf-8") as file:
+with open(data_path/f'version1_{version1}.txt', "w", encoding="utf-8") as file:
     file.write(version1)
-with open(data_path/'version2.txt', "w", encoding="utf-8") as file:
+with open(data_path/f'version2_{version2}.txt', "w", encoding="utf-8") as file:
     file.write(version2)
 print("数据更新完成！", version1, version2)

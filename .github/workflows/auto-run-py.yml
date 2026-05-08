@@ -53,15 +53,77 @@ jobs:
           echo "Collected DB files:"
           ls -la ./generated_files/db || true
 
+      - name: Prune stale version1 / version2 artifacts
+        run: |
+          python << 'PY'
+          from pathlib import Path
+
+
+          def resolve_version(data_dir: Path, prefix: str) -> str | None:
+              """读取 prefix_<版本>.txt 中修改时间最新的一份内容。"""
+              if not data_dir.is_dir():
+                  return None
+              candidates = []
+              for p in data_dir.glob(f"{prefix}_*.txt"):
+                  try:
+                      candidates.append((p.stat().st_mtime, p.read_text(encoding="utf-8").strip()))
+                  except OSError:
+                      continue
+              if not candidates:
+                  return None
+              return max(candidates, key=lambda x: x[0])[1]
+
+
+          data_dir = Path("generated_files/plugins/新数据")
+          v1 = resolve_version(data_dir, "version1")
+          v2 = resolve_version(data_dir, "version2")
+          if not v1 or not v2:
+              print("Cannot resolve version1 and/or version2 from version1_*.txt / version2_*.txt:", v1, v2)
+              print("Skip prune")
+              raise SystemExit(0)
+
+          keep_versions = {v1, v2}
+          root = Path("generated_files")
+          removed = []
+
+          for legacy in (data_dir / "version1.txt", data_dir / "version2.txt"):
+              if legacy.is_file():
+                  legacy.unlink()
+                  removed.append(str(legacy))
+
+          for p in root.rglob("*.db"):
+              stem = p.stem
+              if "_" not in stem:
+                  continue
+              suf = stem.rsplit("_", 1)[-1]
+              if suf in keep_versions:
+                  continue
+              if not suf.isdigit():
+                  continue
+              if len(suf) == len(v1) or len(suf) == len(v2):
+                  p.unlink(missing_ok=True)
+                  removed.append(str(p))
+
+          for prefix, v in (("version1", v1), ("version2", v2)):
+              keep_name = f"{prefix}_{v}.txt"
+              if data_dir.is_dir():
+                  for p in data_dir.glob(f"{prefix}_*.txt"):
+                      if p.name != keep_name:
+                          p.unlink(missing_ok=True)
+                          removed.append(str(p))
+
+          for line in removed:
+              print("Pruned:", line)
+          print("Pruned", len(removed), "path(s); version1:", v1, "version2:", v2)
+          PY
+
       - name: Commit and push files
         run: |
           git config --global user.name "Yogurt114514"
           git config --global user.email "1157733847@qq.com"
-          # 提交生成文件（包含集中收集的 db）
-          git add ./generated_files/*
-           # 显式提交版本文件，确保这两个文本一定被纳入提交
-           git add ./generated_files/plugins/新数据/version1.txt ./generated_files/plugins/新数据/version2.txt
-           if git diff --cached --quiet; then
+          # -A：新增/修改/删除（含旧 db、version1_*.txt / version2_*.txt、遗留 version1.txt / version2.txt）
+          git add -A ./generated_files/
+          if git diff --cached --quiet; then
             echo "No files changed, skip commit"
           else
             git commit -m "Auto update: Generate files at $(date +'%Y-%m-%d %H:%M:%S')"
