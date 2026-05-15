@@ -896,6 +896,7 @@
 				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="乐园的天魔" proicon="1475" SpeNameBonus="577" title="乐园的天魔" Desc="通关S-灰蛾【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="和谐之化身" proicon="1480" SpeNameBonus="582" title="和谐之化身" Desc="通关S-托勒斯【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="10" Threshold="10" AchievementPoint="10" icon="1" achName="信仰之化身" proicon="1482" SpeNameBonus="584" title="信仰之化身" Desc="通关S-安瑟伦【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="11" Threshold="11" AchievementPoint="10" icon="1" achName="自由之化身" proicon="1489" SpeNameBonus="587" title="自由之化身" Desc="通关S-莱布缇【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 

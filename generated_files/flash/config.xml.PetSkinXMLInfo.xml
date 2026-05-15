@@ -2768,7 +2768,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="821" MonID="3729" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="侠影之道·浩瀚昆仑" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="821" MonID="3729" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="侠影之道·浩瀚昆仑" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	
@@ -2784,23 +2784,31 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="1" Year="2026"/>
 	</Skin>
 	
-	<Skin ID="825" MonID="3575" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="烬灭之灾·天邪龙王" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114065">
+	<Skin ID="825" MonID="3575" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="烬灭之灾·天邪龙王" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="826" MonID="3870" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="凯兮" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="826" MonID="3870" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="凯兮" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="827" MonID="4444" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="戾夜萃魂·百罗鬼帝" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114067">
+	<Skin ID="827" MonID="4444" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="戾夜萃魂·百罗鬼帝" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="828" MonID="3586" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="破晓者·英卡洛斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114068">
+	<Skin ID="828" MonID="3586" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="破晓者·英卡洛斯" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="829" MonID="4358" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="极速抢修·杰特洛" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114069">
+	<Skin ID="829" MonID="4358" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="极速抢修·杰特洛" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="830" MonID="3886" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="凛夜将至·柯尔德" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114071">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="831" MonID="4629" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="荣光之约·蒙鲁特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 

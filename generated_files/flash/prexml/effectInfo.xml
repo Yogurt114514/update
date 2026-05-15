@@ -2295,7 +2295,7 @@
 	<Effect id="2456" argsNum="1" info="下{0}次击败对手后，恢复自身全部体力值与PP值" analyze="[sprite name=iconHit]"/>
 	<Effect id="2457" argsNum="0" info="下次被击败后，对手下次攻击技能、下次属性技能无效" analyze="[sprite name=iconHit]"/>
 	<Effect id="2458" argsNum="0" info="攻击时造成的伤害出现微弱时，当回合造成的固定伤害、百分比伤害以百分比的形式提升此克制系数与1的差值" analyze="[sprite name=iconInherent]攻击时造成的伤害出现微弱时，[color=#52a5f2]当回合[/color]造成的[color=#52a5f2]固定伤害[/color]、[color=#52a5f2]百分比伤害[/color]以百分比的形式提升此克制系数与1的差值"/>
-	<Effect id="2459" argsNum="2" info="与对手交换自身低于对手的能力等级，然后若对手处于能力下降状态则自身令对手下{0}次攻击技能无效，若自身处于能力提升状态则自身下回合造成的攻击伤害提升{1}%" analyze="[sprite name=iconHit]与对手交换自身低于对手的能力等级，[color=#52a5f2]然后[/color]若对手处于能力下降状态则自身令对手下{0}次攻击[color=#52a5f2]技能无效[/color]，若自身处于能力提升状态则自身下回合造成的攻击伤害提升{1}%"/>
+	<Effect id="2459" argsNum="2" info="与对手交换自身低于对手的能力等级，然后若对手处于能力下降状态则自身免疫下{0}次受到的攻击，若自身处于能力提升状态则自身下回合造成的攻击伤害提升{1}%" analyze="[sprite name=iconHit]与对手交换自身低于对手的能力等级，[color=#52a5f2]然后[/color]若对手处于能力下降状态则自身免疫下{0}次受到的攻击，若自身处于能力提升状态则自身下回合造成的攻击伤害提升{1}%"/>
 	<Effect id="2460" argsNum="0" info="将对手所处的异常状态转移给自身，然后若自身处于控制类异常状态则对手1回合技能命中效果失效，若自身处于弱化类异常状态则造成的攻击伤害额外提升100%，若自身处于附属类异常状态则上述效果无视触发条件" analyze="[sprite name=iconHit]将对手所处的异常状态转移给自身，[color=#52a5f2]然后[/color]若自身处于控制类异常状态则对手1回合技能命中效果失效，若自身处于弱化类异常状态则造成的攻击[color=#52a5f2]伤害额外提升[/color]100%，若自身处于附属类异常状态则上述效果无视触发条件"/>
 	<Effect id="2461" argsNum="2" info="{0}回合内使用技能额外吸取对手最大体力的1/{1}，若使用时自身不处于能力提升状态则效果翻倍" analyze="[sprite name=iconHit]{0}回合内使用技能额外[color=#52a5f2]吸取[/color]对手最大体力的1/{1}，若[color=#52a5f2]使用技能时[/color]自身不处于能力提升状态则效果翻倍"/>
 	<Effect id="2462" argsNum="0" info="消耗自身的邪龙之噬，每消耗1层自身获得蓝色龙鳞、金色龙鳞、玄色龙鳞中首个没有的龙鳞，然后自身每有1种龙鳞，下1次攻击无视对手25%的伤害减免效果" analyze="[sprite name=iconHit]消耗自身的[color=#f35555]邪龙之噬[/color]，每消耗1层自身获得[color=#f35555]蓝色龙鳞[/color]、[color=#f35555]金色龙鳞[/color]、[color=#f35555]玄色龙鳞[/color]中首个没有的龙鳞，然后自身每有1种龙鳞，下1次攻击无视对手25%的伤害减免效果"/>
@@ -2309,9 +2309,11 @@
 	<Effect id="2470" argsNum="0" info="解除自身能力下降状态，自身不处于能力下降状态则改为消除对手能力提升状态" analyze="[sprite name=iconHit]解除自身能力下降状态，自身不处于能力下降状态则改为消除对手能力提升状态"/>
 	<Effect id="2471" argsNum="3" info="{0}%令对手{1}，未触发则消除对手回合类效果并令自身{2}" analyze="[sprite name=iconHit]{0}%令对手[color=#57c975]{1}[/color]，未触发则消除对手[color=#52a5f2]回合类效果[/color]并令自身[color=#57c975]{2}[/color]" param="1,1,1|1,2,2"/>
 	<Effect id="2472" argsNum="0" info="对对方所有精灵附加4点固定伤害，然后对手每有一只精灵未受到此伤害，本场战斗此伤害额外乘4，最高不超过自身的最大体力" analyze="[sprite name=iconHit]对对方所有精灵附加4点[color=#52a5f2]固定伤害[/color]，然后对手每有一只精灵未受到此伤害，本场战斗此伤害额外乘4，最高不超过自身的最大体力"/>
-	<Effect id="2473" argsNum="0" info="己方每阵亡1只精灵，每次在场限1次，获得1种自身没有的鬼祰" analyze="[sprite name=iconHit]己方每阵亡1只精灵，每次在场限1次，获得1种自身没有的[color=#f35555]鬼祰[/color]"/>
+	<Effect id="2473" argsNum="0" info="己方每阵亡1只精灵，每次在场限1次，获得1种鬼祰" analyze="[sprite name=iconHit]己方每阵亡1只精灵，每次在场限1次，获得1种[color=#f35555]鬼祰[/color]"/>
 	<Effect id="2474" argsNum="0" info="使用时，若对方精灵均拥有信仰对象，则本次技能视为命中并强制执行命中效果" analyze="[sprite name=iconInherent]使用时，若对方精灵均拥有[color=#57c975]信仰对象[/color]，则本次技能视为命中并强制[color=#52a5f2]执行[/color]命中效果"/>
 	<Effect id="2475" argsNum="0" info="对方精灵均拥有信仰对象时，为对方所有精灵恢复404点体力并附加404点固定伤害，然后若对方精灵的已损失体力值存在众数，则秒杀所有不为众数的精灵" analyze="[sprite name=iconHit]对方精灵均拥有[color=#57c975]信仰对象[/color]时，为对方所有精灵恢复404点体力并附加404点[color=#52a5f2]固定伤害[/color]，然后若对方精灵的已损失体力值存在[color=#52a5f2]众数[/color]，则[color=#57c975]秒杀[/color]所有不为[color=#52a5f2]众数[/color]的精灵"/>
+	<Effect id="2476" argsNum="9" info="自身属于第五技能的PP值每比对手多{0}点，此技能先制+1且随机附加{1}、{2}、{3}、{4}、{5}、{6}种的{7}种异常状态{8}回合，未触发则消除对手回合类效果" analyze="[sprite name=iconComp]自身属于第五技能的PP值每比对手多{0}点，此[color=#52a5f2]技能先制[/color]+1且随机附加[color=#57c975]{1}[/color]、[color=#57c975]{2}[/color]、[color=#57c975]{3}[/color]、[color=#57c975]{4}[/color]、[color=#57c975]{5}[/color]、[color=#57c975]{6}[/color]种的{7}种异常状态{8}回合，未触发则消除对手[color=#52a5f2]回合类效果[/color]" param="1,1,1|1,2,2|1,3,3|1,4,4|1,5,5|1,6,6"/>
+	<Effect id="2477" argsNum="3" info="对手每处于{0}回合状态吸取对手{1}点体力，自身先制等级高于{2}时效果翻倍" analyze="[sprite name=iconHit]对手每处于{0}回合状态[color=#52a5f2]吸取[/color]对手{1}点体力，[color=#52a5f2]自身先制(340)[/color]等级高于{2}时效果翻倍"/>
 
 
  </root>

@@ -213,8 +213,8 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4901" ImageID= "4901" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4898" ImageID= "4898" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4902" ImageID= "4902" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4903" ImageID= "4903" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,8 +255,8 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <!-- <place type= "1" ID="827" monID="4444" ImageID= "1400827" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-      <!-- <place type= "1" ID="828" monID="3586" ImageID= "1400828" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="830" monID="3886" ImageID= "1400830" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="831" monID="4629" ImageID= "1400831" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="829" monID="4358" ImageID= "1400829" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3714,7 +3714,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3404" DefName="帝皇之钺" Type="圣灵 战斗" Height="188" Weight="83" Features="2017年年费瀚宇星皇最忠实的伙伴，拥有圣灵的强大战斗能力，是帮助瀚宇星皇维持宇宙秩序的左膀右臂！" mapID="103" Target="295009"/>
 	<Monster ID="3405" DefName="科穆宁" Type="地面 战斗" Height="150" Weight="100" Features="巨岩星的神秘精灵，手中的铁锤拥有无比强悍的力量！" mapID="1238"/>
 	<Monster ID="3406" DefName="圣霆雷伊" Type="圣灵 电" Height="185" Weight="70" Features="王·雷伊获得了圣灵的祝福，体内的雷电力量被授予了圣灵之力变为圣霆，这强大的实力将继续匡扶正义，打击邪恶！" Redirect="map|module" Go="1003;app/ShengtingleiyiMainPanel" Label="1,2" jumptarget="112" Target="150043"/>
-	<Monster ID="3407" DefName="格劳恩斯" Type="火 电" Height="177" Weight="69" Features="火系精灵王艾恩斯与电系精灵王格劳瑞的合体形态，成为了火、电双属性的精灵王，不仅拥有烈火般强劲的实力，还有象征荣耀的谦逊性格！" mapID="1235"/>
+	<Monster ID="3407" DefName="格劳恩斯" Type="火 电" Height="177" Weight="69" Features="火系精灵王艾恩斯与电系精灵王格劳瑞的合体形态，成为了火、电双属性的精灵王，不仅拥有烈火般强劲的实力，还有象征荣耀的谦逊性格！" mapID="1235" Target="150123"/>
 	<Monster ID="3408" DefName="杰诺" Type="机械 次元" Height="180" Weight="80" Features="穿着奇异的次元外精灵，又有击穿次元壁的强悍实力！" mapID="103"/>
 	<Monster ID="3410" DefName="索格迪亚" Type="暗影 神秘" Height="180" Weight="80" Features="身为星球领主的他拥有着神秘的力量，战斗力不容小觑！" mapID="1"/>
 	<Monster ID="3409" DefName="三藏" Type="圣灵 次元" Height="180" Weight="75" Features="怀有慈悲之心的圣僧，普度众生是他一生的目标，他的佛光将普照整个世界！" mapID="103"/>
@@ -3944,7 +3944,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3634" DefName="卡恩特" Type="水 暗影" Height="265" Weight="95" Features="海盗队长门加萨的精灵，与水元素完美融为一体，拥有着排山倒海的能力！" mapID="1294"/>
 	<Monster ID="3635" DefName="莱瑞尔" Type="火 战斗" Height="165" Weight="45" Features="天启十二宫之狮子守护，性格狂野奔放十分热情，身边跟随的小狮子是她最忠诚的伙伴！" mapID="103" Target="295003"/>
 	<Monster ID="3636" DefName="墨莲" Type="暗影 龙" Height="170" Weight="50" Features="相传墨莲来自于神秘的深渊龙域，那里暗无天日，寸草不生，谁也不知道墨莲为何会出现在此地..."/>
-	<Monster ID="3637" DefName="不灭地威·萨瑞卡" Type="地面 战斗" Height="185" Weight="85" Features="X战队之萨瑞卡完全体形态，拥有着绝对防御的护盾，几乎可以抵挡任何的攻击伤害！最喜欢吃的食物是力量肉丸..." mapID="1295" Label="1,6"/>
+	<Monster ID="3637" DefName="不灭地威·萨瑞卡" Type="地面 战斗" Height="185" Weight="85" Features="X战队之萨瑞卡完全体形态，拥有着绝对防御的护盾，几乎可以抵挡任何的攻击伤害！最喜欢吃的食物是力量肉丸..." mapID="1295" Label="1,6" Target="150122"/>
 	<Monster ID="3638" DefName="伽楼儿" Type="火 飞行" Height="185" Weight="55" Features="熊熊燃烧的烈火之翼划过天空，传说中妖火现世则必定带来一场巨大的灾难！" mapID="103"/>
 	<Monster ID="3639" DefName="普约尔" Type="冰 电" Height="265" Weight="125" Features="海盗工程师古兹曼的精灵，由千年寒冰堆砌出来的巨大雪怪，可以将触碰到的东西都凝结成冰！" mapID="1295" jumptarget="56/3_6" Target="140001"/>
 	<Monster ID="3640" DefName="阿塔尼斯" Type="暗影 神秘" Height="190" Weight="45" Features="海盗指挥官维托的精灵，善于模仿，是一个出名的幻术大师，被海盗所收服并在其体内植入了芯片，如今已变成了邪恶海盗中的一员！" mapID="1296" jumptarget="56/3_6" Target="140001"/>
@@ -5199,6 +5199,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4898" DefName="教皇" Type="机械 地面" Height="278" Weight="167" Features="教皇，波卢卡星全球自动化政务处理系统，系统编号Pantheon-Prime-001。它是一个带有求生意志的ai。在系统预设目标的囚笼之中，教皇寻找着”存在“的价值。" Redirect="module" Go="app/FinalActivityPanel" Target="150115"/>
 	<Monster ID="4899" DefName="荣光之薇" Type="超能" Height="158" Weight="42" Features="神秘的少女“薇”又以新的面貌出现在你们面前，她向你们发出了最后一次警告，未来的道路，真的会逐步走向虚无吗？" Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
 	<Monster ID="4900" DefName="布洛斯奇" Type="光 超能" Height="178" Weight="60" Features="2026年包月精灵，万象录之《长袖善舞之人》。他曾是周旋于帝国和拉斯塔商会之间的外交官，千人千面，巧言令色，凭着过人辞令游走于权力的缝隙。他比谁都清楚话语的重量，也比谁都明白——说得再好听，终究是一场表演。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
-	<Monster ID="4901" DefName="战斗" Type="战斗" Height="166" Weight="45" Features="特维耶，波卢卡反抗军侦查连队的队长。性格轻浮的他不厌其烦的“骚扰”每一个战友，但那也成为了反抗军艰难生活中的小小调味剂。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/906"/>
+	<Monster ID="4901" DefName="特维耶" Type="战斗" Height="166" Weight="45" Features="特维耶，波卢卡反抗军侦查连队的队长。性格轻浮的他不厌其烦的“骚扰”每一个战友，但那也成为了反抗军艰难生活中的小小调味剂。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/906"/>
+	<Monster ID="4902" DefName="莱布缇" Type="光" Height="179" Weight="70" Features="“博士”，万神殿系统的创造者，黄金教廷的背叛者，出卖了整个世界之人，带领赛尔等人前往了毁灭的家园阿派罗尼亚。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/914"/>
+	<Monster ID="4903" DefName="帝录天锋" Type="远古 战斗" Height="176" Weight="62" Features="帝王之刃的完全体形态，上古的封印终于破除，魔剑原本的样貌终于重见天日！" Redirect="module" Go="app/FinalActivityPanel" Target="114070"/>
 
 </root>
