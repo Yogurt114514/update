@@ -13,7 +13,7 @@ SkinKind Type:  1:限时皮肤  2:永久皮肤
 LifeTime:限时天数
 Jumptarget：unity跳转，读jumptarget表
 
-SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说 21-异元时空）
+SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说 21-异元时空 22-莱卡的守望）
 Year：该皮肤所属的年份（当前仅面向巅峰时装）
 
 -->
@@ -1948,7 +1948,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="616" MonID="4636" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="熙风悠游·西塔伦" >
+	<Skin ID="616" MonID="4636" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="熙风悠游·西塔伦" Jumptarget="111800">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="6"/>
 	</Skin>
 
@@ -2513,15 +2513,15 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="6"/>
 	</Skin>
 
-	<Skin ID="757" MonID="4644" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="领衔·克雷弗德" >
+	<Skin ID="757" MonID="4644" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="领衔·克雷弗德" Jumptarget="111800">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="6"/>
 	</Skin>
 
-	<Skin ID="758" MonID="4643" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="朔星·蓓丽安特" >
+	<Skin ID="758" MonID="4643" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="朔星·蓓丽安特" Jumptarget="111800">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="6"/>
 	</Skin>
 
-	<Skin ID="759" MonID="4636" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="光阴十年·西塔伦" >
+	<Skin ID="759" MonID="4636" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="光阴十年·西塔伦" Jumptarget="111800">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="6"/>
 	</Skin>
 
@@ -2810,6 +2810,18 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 
 	<Skin ID="831" MonID="4629" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="荣光之约·蒙鲁特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="832" MonID="4344" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·潘克多斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
+	</Skin>
+
+	<Skin ID="833" MonID="4463" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·斯克鲁恩" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
+	</Skin>
+
+	<Skin ID="834" MonID="4606" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·加尔鲁特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
 	</Skin>
 
 	<!-- <Skin ID="000" MonID="000" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="复制模版"> -->

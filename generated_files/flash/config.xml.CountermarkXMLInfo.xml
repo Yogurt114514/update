@@ -3786,6 +3786,7 @@
 	<MintMark ID="42687" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 3 9" MaxAttriValue="0 30 46 30 34 95" MonsterID="4888" Level="100" Max="99" Des="慈辉永颂·瑞亚专属全能刻印" EffectDes="防御3/30,特攻4/46,特防3/30,速度3/34,体力9/95"/>
 	<MintMark ID="42688" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="4 3 0 3 4 8" MaxAttriValue="49 30 0 30 41 85" MonsterID="4444" Level="100" Max="99" Des="百罗鬼帝专属全能刻印" EffectDes="攻击4/49,防御3/30,特防3/30,速度4/41,体力8/85"/>
 	<MintMark ID="42689" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 4 8" MaxAttriValue="0 30 40 30 40 80" MonsterID="4903" Level="100" Max="99" Des="帝录天锋专属全能刻印" EffectDes="防御3/30,特攻4/40,特防3/30,速度4/40,体力8/80"/>
+	<MintMark ID="42690" Type="3" Rare="3" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 4 9" MaxAttriValue="0 30 42 30 41 92" MintmarkClass="28" Level="100" Max="99" Des="光年外的重逢" EffectDes="防御3/30,特攻4/42,特防3/30,速度4/41,体力9/92"/>
 
 
 
@@ -3826,7 +3827,7 @@
 	<MintmarkClass ID="25" ClassName="V8系列" />
 	<MintmarkClass ID="26" ClassName="军团之令系列" />
 	<MintmarkClass ID="27" ClassName="炫彩系列" />
-	<MintmarkClass ID="28" ClassName="星系守护系列" />
+	<MintmarkClass ID="28" ClassName="星空守护系列" />
 	<MintmarkClass ID="29" ClassName="星球系列" />
 	<MintmarkClass ID="30" ClassName="清系列" />
 	<MintmarkClass ID="31" ClassName="战争印记系列" />

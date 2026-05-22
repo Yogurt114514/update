@@ -574,5 +574,6 @@
     <Fragment ID="2400573" show="1" Name="荣光之薇因子" MonsterID="4899" Rarity="1" PetLimit="1" PetConsume="200" NewSeIdx="6386" effectId="2086" NewseConsume="100" MoveID="38378" MovesConsume="50" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
 	<Fragment ID="2400574" show="1" Name="特维耶因子" MonsterID="4901" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6389" effectId="2088" NewseConsume="200" MoveID="38387" MovesConsume="100" NeedmonID="0" NewMsglogId="2605070600" SeMsglog="2605070601" EffectMsglog="2605070602"/>
     <Fragment ID="2400575" show="1" Name="莱布缇因子" MonsterID="4902" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6391" effectId="2089" NewseConsume="270" MoveID="38390" MovesConsume="108" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
-	
+	<Fragment ID="2400576" show="1" Name="小珍妮因子" MonsterID="4904" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6393" effectId="2091" NewseConsume="200" MoveID="38396" MovesConsume="100" NeedmonID="0" NewMsglogId="2605210800" SeMsglog="2605210801" EffectMsglog="2605210802"/>
+   
 </Root>

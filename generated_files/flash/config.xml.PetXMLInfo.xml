@@ -102314,6 +102314,29 @@
 		</ExtraMoves>
 	</Monster>
 
+	<Monster ID="4904" DefName="小珍妮" Type="6" GrowthType="4" HP="165" Atk="143" Def="113" SpAtk="70" SpDef="113" Spd="131" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3565" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10193" LearningLv="1"/>
+			<Move ID="20234" LearningLv="5"/>
+			<Move ID="10530" LearningLv="9"/>
+			<Move ID="20692" LearningLv="13"/>
+			<Move ID="11134" LearningLv="17"/>
+			<Move ID="38394" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="20105" LearningLv="25"/>
+			<Move ID="10335" LearningLv="29"/>
+			<Move ID="21602" LearningLv="33"/>
+			<Move ID="13064" LearningLv="37"/>
+			<Move ID="21603" LearningLv="41"/>
+			<Move ID="13062" LearningLv="45"/>
+			<Move ID="29353" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="21604" LearningLv="53"/>
+			<Move ID="29354" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38395" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38396" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
 
 
@@ -115584,6 +115607,9 @@
   <Monster ID="1400829" DefName="极速抢修·杰特洛" RealId=""/>
   <Monster ID="1400830" DefName="凛夜将至·柯尔德" RealId=""/>
   <Monster ID="1400831" DefName="荣光之约·蒙鲁特" RealId=""/>
+  <Monster ID="1400832" DefName="莱卡的守望·潘克多斯" RealId=""/>
+  <Monster ID="1400833" DefName="莱卡的守望·斯克鲁恩" RealId=""/>
+  <Monster ID="1400834" DefName="莱卡的守望·加尔鲁特" RealId=""/>
 
 </Monsters>
 

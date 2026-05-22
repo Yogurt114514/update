@@ -213,8 +213,8 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4902" ImageID= "4902" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4903" ImageID= "4903" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4904" ImageID= "4904" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "0" ID="4903" ImageID= "4903" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="830" monID="3886" ImageID= "1400830" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="831" monID="4629" ImageID= "1400831" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "1" ID="829" monID="4358" ImageID= "1400829" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="832" monID="4344" ImageID= "1400832" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="833" monID="4463" ImageID= "1400833" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="834" monID="4606" ImageID= "1400834" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4098,7 +4098,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3794" DefName="混沌·洛拉菲德" Type="混沌 地面" Height="156" Weight="90" Features="洛拉菲德混沌化形态，混沌的力量侵蚀了他的思想，最悲悯不是无法呼吸之痛，而是丧失自我之殇！" mapID="1346" Target="140000"/>
 	<Monster ID="3795" DefName="丘" Type="飞行 神秘" Height="66" Weight="20" Features="上古十二荒兽——丘，羽翼申展九霄长鸣，飓风烈爪霸气无边！" mapID="103" Target="295004"/>
 	<Monster ID="3796" DefName="圣曦" Type="圣灵" Height="168" Weight="50" Features="来自神秘的天界，坐骑是一只汲取天地日月灵气孕育出来的独角兽，强大的圣灵气息使得任何邪恶都无法靠近！"/>
-	<Monster ID="3797" DefName="混沌魔眼耶里梅斯" Type="混沌 战斗" Height="185" Weight="80" Features="混沌之力沐浴贯彻，天蛇之瞳侵染混沌，黑暗正稳步前行，耶里梅斯正在逐渐沉沦..." mapID="1347"/>
+	<Monster ID="3797" DefName="混沌魔眼耶里梅斯" Type="混沌 战斗" Height="185" Weight="80" Features="混沌之力沐浴贯彻，天蛇之瞳侵染混沌，黑暗正稳步前行，耶里梅斯正在逐渐沉沦..." mapID="1347" Target="150124"/>
 	<Monster ID="3798" DefName="杰内" Type="普通" Height="55" Weight="20" Features="杰内原本拥有着和其他异能精灵一样独特的能力，但由于可怕的能量深渊导致他的异能消失了！" mapID="1347"/>
 	<Monster ID="3799" DefName="卡莱特斯" Type="火 电" Height="150" Weight="120" Features="卡罗特利的超进化形态，重重火焰激烈燃烧，奔雷之力足尖凝聚！" mapID="1347"/>
 	<Monster ID="3800" DefName="塔瑟玛" Type="火 战斗" Height="165" Weight="60" Features="塔瑟玛的脾气似乎十分暴躁，全身的火焰是她最强大的进攻武器！" mapID="103"/>
@@ -4644,7 +4644,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4341" DefName="熔钳蟹" Type="火" Height="69" Weight="24" Features="钳上汇聚了熔岩之力的小螃蟹，喜欢在赤熔之泉活动！" Redirect="map" Go="1540"/>
 	<Monster ID="4342" DefName="伊塔吉雅" Type="机械" Height="169" Weight="51" Features="2022年3月包月精灵，十二冠灵之一，能够掌控机械元素，刀影照芙，钢核圣冕！" Target="295007"/>
 	<Monster ID="4343" DefName="凛锋剑心" Type="冰 神秘" Height="184" Weight="74" Features="剑伏人去再无叱咤，冢伫心归回首天涯；豪之迈，侠之大，不过孩童痴话......" Redirect="map|module" Go="103;app/DaantiaoLinFengJianhaoMainPanel"/>
-	<Monster ID="4344" DefName="潘克多斯" Type="火" Height="176" Weight="0" Features="潘多斯的超进化形态，对鬼火元素的运用已经出神入化，任何妄想与其为敌的对手都将被无情焚毁，化为灰烬！" Redirect="alarm" Go="精灵已绝版！"/>
+	<Monster ID="4344" DefName="潘克多斯" Type="火" Height="176" Weight="0" Features="潘多斯的超进化形态，对鬼火元素的运用已经出神入化，任何妄想与其为敌的对手都将被无情焚毁，化为灰烬！" Redirect="alarm" Go="精灵已绝版！" Target="114074"/>
 	<Monster ID="4345" DefName="圣心女皇·卡托娜" Type="圣灵 地面" Height="170" Weight="54" Features="卡托娜的超进化形态，面对着逐渐崩坏的卡卡托斯之柱与生命垂危的哥哥，卡托娜于绝境中得到了卡卡托斯之神的眷顾，觉醒“女皇”塔罗牌之力实现了自我突破！" Redirect="map|module" Go="1541;app/SpetSXNHKaTuoNaPanel" jumptarget="151/66" Target="153201/66"/>
 	<Monster ID="4346" DefName="芽史莱姆" Type="草" Height="46" Weight="17" Features="史莱姆一族的新成员芽史莱姆登场！可爱的它会为赛尔们带来怎样的惊喜呢？" Redirect="map|module" Go="1;app/YaShiLaiMuGrowUpMainPanel"/>
 	<Monster ID="4347" DefName="裁罪魔剪·塞泽丝" Type="战斗 暗影" Height="176" Weight="56" Features="塞泽丝的超进化形态，当复仇的执念愈加浓烈，当心底的怒火熊熊燃烧......伴随着“正义”塔罗牌之力的加持，塞泽丝终于忍无可忍，将会为了自己的信念而战！" Redirect="map|module" Go="1542;app/SpetCZMJSaiZeSiPanel" jumptarget="151/67" Target="153201/67"/>
@@ -4743,7 +4743,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4441" DefName="鲨鱼娘" Type="水 战斗" Height="164" Weight="49" Features="斗鱼联动精灵，从异世界穿越而来，据说每一个遇到她的幸运儿都能扫去一天的忧虑与烦恼！" Redirect="alarm" Go="参与淘乐节专题站活动获得！"/>
 	<Monster ID="4442" DefName="眠降·玛缇娜" Type="圣灵 超能" Height="174" Weight="52" Features="白金执法队的一员，擅长追捕和拷问。她的双枪可以发射出特制的子弹，一旦被她抓获，任何情报都将信手拈来。" Redirect="map|module" Go="1581;app/SpetMJMaTiNaMainPanel" jumptarget="151/93" Target="153201/93"/>
 	<Monster ID="4443" DefName="鱿里子" Type="冰 超能" Height="71" Weight="33" Features="冰海的咏唱者鱿里子全新登场！长相呆萌的她最大的愿望便是找到一个愿意陪她一同冒险的好朋友，不知道你是否会成为这个幸运儿呢？" Redirect="map" Go="1"/>
-	<Monster ID="4444" DefName="百罗鬼帝" Type="神秘 战斗" Height="188" Weight="85" Features="百鬼夜王的超进化形态，天罗阙鬼的释怀，邪冥骷鬼的解脱，至此，世间再没有百鬼与夜王，只剩一条被过去希冀与狂妄所诅咒的，自视孤高的野犬。" Redirect="module" Go="app/FinalActivityPanel" Target="114066"/>
+	<Monster ID="4444" DefName="百罗鬼帝" Type="神秘 战斗" Height="188" Weight="85" Features="百鬼夜王的超进化形态，天罗阙鬼的释怀，邪冥骷鬼的解脱，至此，世间再没有百鬼与夜王，只剩一条被过去希冀与狂妄所诅咒的，自视孤高的野犬。" />
 	<Monster ID="4445" DefName="古温婆婆" Type="远古 草" Height="185" Weight="63" Features="远离霓虹色的喧嚣，地下旅店里焕发出盎然生机。古温婆婆，这家旅店的主人，用松柏之气息感受并照料每一个来这里歇息的客人。" Redirect="map|module" Go="1582;app/SpetGWPPMainPanel" jumptarget="151/98" Target="153201/98"/>
 	<Monster ID="4446" DefName="露泽莫尔" Type="虫" Height="159" Weight="46" Features="2022年12月包月精灵，十二冠灵之一，能够掌控虫之元素，蜂花雪月，甘饴圣冕！" Target="295007"/>
 	<Monster ID="4447" DefName="岭妃" Type="混沌 地面" Height="169" Weight="48" Features="2022年12月巅峰圣战精灵，能够利用掩埋在大地之下的尸骨，封住对手的行动！"/>
@@ -4762,7 +4762,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4460" DefName="兹拉特" Type="电 战斗" Height="123" Weight="37" Features="游荡于恶鬼斗技场的混混，性格如同脸上的表情一样并不好惹，最热衷的事情莫过于在八角笼外喝彩助威。" Redirect="map" Go="1589"/>
 	<Monster ID="4461" DefName="追光·兰可" Type="机械 龙" Height="166" Weight="57" Features="白金执法队的新晋成员，年龄尚小的他已经能够独立解决处理许多任务，而这一切的关键是他尾巴后特制的充能狙击枪。" Redirect="map|module" Go="1591;app/SpetZGLanKeMainPanel" jumptarget="151/113" Target="153201/113"/>
 	<Monster ID="4462" DefName="月华" Type="光 神秘" Height="165" Weight="50" Features="神秘的月光使者，相传能够获得她的小赛尔都会得到月光的指引，在未来的游戏旅程中一帆风顺！" Redirect="alarm" Go="请前往《赛尔号巅峰之战》参与活动获得！" Target="113018"/>
-	<Monster ID="4463" DefName="斯克鲁恩" Type="冰" Height="244" Weight="257" Features="斯克鲁的超进化形态，霜寒之力已经融入他的身躯，任何伤害到他的敌人都无法逃离他的封印！" Redirect="alarm" Go="精灵已绝版！"/>
+	<Monster ID="4463" DefName="斯克鲁恩" Type="冰" Height="244" Weight="257" Features="斯克鲁的超进化形态，霜寒之力已经融入他的身躯，任何伤害到他的敌人都无法逃离他的封印！" Redirect="alarm" Go="精灵已绝版！" Target="114074"/>
 	<Monster ID="4464" DefName="小丝" Type="邪灵" Height="124" Weight="39" Features="邪灵系精灵王的小形态，从小便觉醒了未知的力量，展现出沉稳的姿态。" Redirect="map|module" Go="1591;app/XieLingWangOfLaiLiMainPanel"/>
 	<Monster ID="4465" DefName="格塔丝" Type="邪灵" Height="175" Weight="56" Features="邪灵系精灵王的中形态，能够熟练掌握灵魂的力量，也正因为这种能量的存在，她被亡灵所眷顾。" Redirect="map|module" Go="1592;app/MainLineAdventureOverview"/>
 	<Monster ID="4466" DefName="格斯塔丝" Type="邪灵" Height="178" Weight="58" Features="最初的邪灵系精灵王，邪灵的力量能够引发亡魂的共鸣，能力愈发强大的她在某场实验后慢慢走向了不可控的状态，在早期的精灵王团队中一直是一个特殊的存在。" Redirect="map|module" Go="1592;app/SpetGeSiTaSiMainPanel" jumptarget="151/112" Target="153201/112"/>
@@ -4904,7 +4904,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4603" DefName="贾斯" Type="自然 神秘" Height="169" Weight="49" Features="文森特的伴侣，温柔知性，机敏开朗，最喜欢做的事情是在后院中欣赏花朵的摇曳。但她的生命也如花一般脆弱。" Redirect="map|module" Go="1662;app/SpetJiaSiMainPanel" jumptarget="151/193" Target="153201/193"/>
 	<Monster ID="4604" DefName="萨芙凯特" Type="次元 水" Height="176" Weight="52" Features="第二位序外执行者，坐落在远离都市的海面上负责应急响应，她性格外向，活泼爽朗，经常利用海洋的温度来进行自我冷却。" />
 	<Monster ID="4605" DefName="无限·欧根尼克" Type="圣灵 次元" Height="171" Weight="49" Features="「启明星」之孤星，欧根尼克的研究范围从浩瀚星辰覆盖到微观粒子。她认为宏观宇宙和微观世界都蕴含着无限的力量，而她要做的，就是将它们完全绽放。" Redirect="map|module" Go="1663;app/SpetWuXianMainPanel" jumptarget="151/194" Target="153201/194"/>
-	<Monster ID="4606" DefName="加尔鲁特" Type="草" Height="107" Weight="86" Features="加尔鲁什的进化形态，获得现任草系精灵王的认可后实力进一步提升，已经能熟练采用站立姿态进入战斗！" Redirect="alarm" Go="请前往《赛尔号巅峰之战》参与SPT限时活动获得！"/>
+	<Monster ID="4606" DefName="加尔鲁特" Type="草" Height="107" Weight="86" Features="加尔鲁什的进化形态，获得现任草系精灵王的认可后实力进一步提升，已经能熟练采用站立姿态进入战斗！" Redirect="alarm" Go="请前往《赛尔号巅峰之战》参与SPT限时活动获得！" Target="114074"/>
 	<Monster ID="4607" DefName="小灯龙" Type="光 超能" Height="57" Weight="28" Features="元宵时节遇到的精灵，喜欢藏在密集的人群中和大家一起闹腾！"/>
 	<Monster ID="4608" DefName="尘息巨像" Type="远古 地面" Height="2800" Weight="1800" Features="在创世古迹的沙丘上突然出现的巨大石像，手中的巨锤可以汇聚尘沙释放山岳之力。他们和尘息游龙一样，被击破后会化为尘沙融入土地，然后再次汇聚成形。" Redirect="map|module" Go="1664;app/SpetChenXiJuXiangMainPanel" jumptarget="151/195" Target="153201/195"/>
 	<Monster ID="4609" DefName="克罗恩" Type="光" Height="171" Weight="49" Features="2024年包月精灵，十二诗灵之三月的皇冠，知识的光辉带来指引，在无知的黑夜里。" />
@@ -4934,15 +4934,15 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4633" DefName="腐坏幽魔·克劳里菲" Type="邪灵 混沌" Height="201" Weight="86" Features="克劳里菲曾是里里维斯地区的最有威望的魔法师，能够使用变化多端的自然魔法，但誓要守护西叶的她却也在腐坏的侵袭下逐渐失去了自我。" Redirect="map|module" Go="1677;app/SpetKeLaoLiFeiMainPanel" jumptarget="151/208" Target="153201/208"/>
 	<Monster ID="4634" DefName="佩里德" Type="暗影 圣灵" Height="157" Weight="44" Features="2024年包月精灵，十二诗灵之六月的极昼，天光蔽目，暗言迷心，只有洞悉真相后，才能做出正确的判断。" />
 	<Monster ID="4635" DefName="枫落殇·西叶" Type="远古 草" Height="166" Weight="52" Features="里里维斯区域的领主，悠久的自然之心一直以来都守护着这片森林，只是腐坏在幽深之处低语，记忆也化为枫叶坠入了大地。" Redirect="map|module" Go="1678;app/SpetFLSXiYeMainPanel" jumptarget="151/209" Target="153201/209"/>
-	<Monster ID="4636" DefName="西塔伦" Type="草 超能" Height="155" Weight="39" Features="洛林卡星上遇到的新伙伴——想变成一朵绒绒菊，随风飘荡，永远也不停歇。" />
+	<Monster ID="4636" DefName="西塔伦" Type="草 超能" Height="155" Weight="39" Features="洛林卡星上遇到的新伙伴——想变成一朵绒绒菊，随风飘荡，永远也不停歇。" Target="111800"/>
 	<Monster ID="4637" DefName="绒绒菊" Type="自然" Height="77" Weight="8" Features="洛林卡星上的奇特生物，大多分布在奥瑞亚区，强风吹过后它的绒毛会随风飘扬。" />
 	<Monster ID="4638" DefName="阳光菊" Type="自然 超能" Height="79" Weight="10" Features="绒绒菊特殊的变种之一，在经过连续的阳光暴晒后，头部会生长出黄色花朵，巨大的花盘中会散发出阳光的气味。" />
 	<Monster ID="4639" DefName="蜜桃鸟" Type="飞行" Height="65" Weight="18" Features="洛林卡星上颜色酷似蜜桃的鸟类，会在树梢或灌木丛中将自己团成一团伪装成蜜桃，并散发果香来引诱昆虫。" />
 	<Monster ID="4640" DefName="黄桃鸟" Type="飞行 光" Height="67" Weight="20" Features="蜜桃鸟的稀有变种，通体金黄色，体内物质可以合成发光源，在黑夜中对昆虫有绝对吸引力。" />
 	<Monster ID="4641" DefName="米特拉异虫" Type="虫" Height="34" Weight="9" Features="在洛林卡星山谷禁区发现的奇异生命，远古时代曾是米特拉源虫的一支，因陨石的降临而产生异变，具有相当的智能。" />
 	<Monster ID="4642" DefName="逆世之瞳·哀目黑子" Type="邪灵 暗影" Height="168" Weight="53" Features="哀目黑子继承了「倒吊人」的力量，过去的牺牲并非毫无意义，逆世的蜕变终将迎来新生，她永远铭记，「吾心为哀」。" Redirect="map|module" Go="1682;app/SpetNSZTAiMuHeiZiMainPanel" jumptarget="151/210" Target="153201/210"/>
-	<Monster ID="4643" DefName="蓓丽安特" Type="圣灵 神秘" Height="178" Weight="53" Features="「群星之集」的指引者——群星与魔法，世界本源的回响。" />
-	<Monster ID="4644" DefName="克雷弗德" Type="电 机械" Height="187" Weight="64" Features="「工业学会」的领衔人——能源、技术， 文明演化的黄金螺旋。" />
+	<Monster ID="4643" DefName="蓓丽安特" Type="圣灵 神秘" Height="178" Weight="53" Features="「群星之集」的指引者——群星与魔法，世界本源的回响。" Target="111800"/>
+	<Monster ID="4644" DefName="克雷弗德" Type="电 机械" Height="187" Weight="64" Features="「工业学会」的领衔人——能源、技术， 文明演化的黄金螺旋。" Target="111800"/>
 	<Monster ID="4645" DefName="佩因尔" Type="超能 水" Height="84" Weight="39" Features="里里维斯皇宫藏书阁的负责人，他最喜欢研究远古魔法的知识，他可以在书阁里待一整天也不会厌倦。" Redirect="map" Go="1682"/>
 	<Monster ID="4646" DefName="时钟试炼官·极" Type="圣灵" Height="220" Weight="85" Features="在时钟领域消失许久后，又一位时钟试炼官出现在了光明腹地，在与光晶的共鸣之中，他感受到了宇宙的极限。" Redirect="map|module" Go="1683;app/SpetSZSLGJiMainPanel" jumptarget="151/211" Target="153201/211"/>
 	<Monster ID="4647" DefName="星光·丽莎布布" Type="草" Height="87.3" Weight="32" Features="丽莎布布星光蜕变！赛尔号十五周年，主宠伙伴，共赴盛典！" Redirect="module" Go="app/StarlightHiddenMainPanel" Target="111600"/>
@@ -5202,5 +5202,6 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4901" DefName="特维耶" Type="战斗" Height="166" Weight="45" Features="特维耶，波卢卡反抗军侦查连队的队长。性格轻浮的他不厌其烦的“骚扰”每一个战友，但那也成为了反抗军艰难生活中的小小调味剂。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/906"/>
 	<Monster ID="4902" DefName="莱布缇" Type="光" Height="179" Weight="70" Features="“博士”，万神殿系统的创造者，黄金教廷的背叛者，出卖了整个世界之人，带领赛尔等人前往了毁灭的家园阿派罗尼亚。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/914"/>
 	<Monster ID="4903" DefName="帝录天锋" Type="远古 战斗" Height="176" Weight="62" Features="帝王之刃的完全体形态，上古的封印终于破除，魔剑原本的样貌终于重见天日！" Redirect="module" Go="app/FinalActivityPanel" Target="114070"/>
+	<Monster ID="4904" DefName="小珍妮" Type="机械" Height="146" Weight="73" Features="全称为向导机器人珍妮999型，集家用、公用、助理、清洁等多功能于一身，阿派罗尼亚人的好帮手！" Redirect="module" Go="app/FinalActivityPanel" Target="153201/915"/>
 
 </root>
