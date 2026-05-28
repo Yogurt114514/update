@@ -253,4 +253,8 @@
 	<ShowMoves id="10083" monster="3711" monstername="圣光莫妮卡" moves="38318" movesname="王·鸾歌余音" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="2"/>
 	<ShowMoves id="10084" monster="3711" monstername="圣光莫妮卡" moves="38319" movesname="王·圣语空心" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="1"/>
 
+	<ShowMoves id="10085" monster="3407" monstername="格劳恩斯" moves="29361" movesname="雷之脉动" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="2"/>
+	<ShowMoves id="10086" monster="3407" monstername="格劳恩斯" moves="38407" movesname="云烨竭天" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="2"/>
+	<ShowMoves id="10087" monster="3407" monstername="格劳恩斯" moves="38408" movesname="王·祭炼昭灼" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="2"/>
+	<ShowMoves id="10088" monster="3407" monstername="格劳恩斯" moves="38409" movesname="王·焚罡九虺" item="0" itemname="完成精灵觉醒" itemnumber="0" itemtips="" movetype="1"/>
 </config>

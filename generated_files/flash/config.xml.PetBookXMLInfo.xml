@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4904" ImageID= "4904" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4903" ImageID= "4903" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "0" ID="4899" ImageID= "4899" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4905" ImageID= "4905" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4906" ImageID= "4906" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4907" ImageID= "4907" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4900" ImageID= "4900" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4893" ImageID= "4893" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="832" monID="4344" ImageID= "1400832" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="833" monID="4463" ImageID= "1400833" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="834" monID="4606" ImageID= "1400834" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="835" monID="3637" ImageID= "1400835" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="836" monID="4834" ImageID= "1400836" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "1" ID="834" monID="4606" ImageID= "1400834" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="817" monID="4808" ImageID= "1400817" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="818" monID="3516" ImageID= "1400818" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="819" monID="3711" ImageID= "1400819" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -2910,7 +2910,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2584" DefName="赫尔托罗克" Type="火" Height="148" Weight="155" Features="赫尔托克的进化形态，昔日的火系神宠在超进化之后，力量得到了进一步的提升，喷出的火球可以使其它精灵融化！" mapID="15" Target="140001"/>
 	<Monster ID="2585" DefName="净天云神" Type="飞行 光" Height="188" Weight="98" Features="云云的最终形态，进化到最终形态的云云拥有了能够与神灵媲美的惊世力量，成为了云之一族顶礼膜拜的英雄！" mapID="1045"/>
 	<Monster ID="2586" DefName="圣刃•神力号" Type="机械 超能" Height="328" Weight="300" Features="超进化后的神力号有着超强的攻击力，可以刺穿敌人的胸膛；又有着超强的防御力，可以抵挡住敌人的犀利攻击" mapID="103"/>
-	<Monster ID="2587" DefName="四九战将" Type="远古" Height="165" Weight="64" Features="四九战将，无比犀利！" mapID="1184"/>
+	<Monster ID="2587" DefName="四九战将" Type="远古" Height="165" Weight="64" Features="四九战将，无比犀利！" mapID="1184" Target="150126"/>
 	<Monster ID="2588" DefName="贝迪" Type="飞行" Height="138" Weight="28" Features="还记得昔日的小伙伴格林布鲁吗？原来还有第三只名叫贝迪的小精灵，她也是非常可爱的哦！" mapID="1"/>
 	<Monster ID="2589" DefName="贝塔" Type="冰 光" Height="136" Weight="38" Features="穿着厚厚的圣诞装，手拿着星辰棒，乘着魔法冰橇的圣诞精灵来给小赛尔们送祝福了，不知道哪个幸运儿可以拿到她的魔法礼物呢？" mapID="1"/>
 	<Monster ID="2590" DefName="奥杜萨" Type="超能" Height="105" Weight="72" Features="墨杜萨的超进化形态，进化后的奥杜萨石化敌人的能力得到了极大的提升，只要与其对视就不能避免石化的噩运！" mapID="438"/>
@@ -3413,7 +3413,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3096" DefName="毁世魔屠" Type="神秘" Height="180" Weight="100" Features="毁灭魔神的超进化形态，超进化之后，毁灭一切的欲望更加强烈了！" mapID="1185"/>
 	<Monster ID="3097" DefName="雷暴·利斯塔" Type="电 暗影" Height="180" Weight="100" Features="利斯塔的完全体形态，全新的雷电之力再次获得了升华，利斯塔会和伙伴们一起继续前进！" mapID="1184"/>
 	<Monster ID="3098" DefName="皮特萨拉罗" Type="飞行" Height="150" Weight="80" Features="皮特萨罗的超进化形态，所有的能力得到了非常大的提升，尤其是飞行的能力！" mapID="1155" jumptarget="56/3_1"/>
-	<Monster ID="3099" DefName="四九战王" Type="远古" Height="170" Weight="100" Features="四九战将的超进化形态，变得更加的犀利了！" mapID="1184"/>
+	<Monster ID="3099" DefName="四九战王" Type="远古" Height="170" Weight="100" Features="四九战将的超进化形态，变得更加的犀利了！" mapID="1184" Target="150127"/>
 	<Monster ID="3100" DefName="源力·劫" Type="机械" Height="180" Weight="100" Features="拥有一对无比锋利的机械镰刀，全新的机体降临！" mapID="103"/>
 	<Monster ID="3101" DefName="菜菜子" Type="草" Height="130" Weight="50" Features="可爱的菜菜子是劳动节出现的神秘精灵，希望让这个世界充满植物！" mapID="1186"/>
 	<Monster ID="3102" DefName="斗天武神·瑞尔斯" Type="战斗" Height="181" Weight="74" Features="斗神瑞尔斯的完全体形态，参破武道的极限力量，诠释真正的战斗，应该如何！" mapID="1186"/>
@@ -4233,7 +4233,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3929" DefName="夕颜" Type="圣灵 暗影" Height="168" Weight="45" Features="全新巅峰圣战月度精灵——夕颜！可爱俏皮的外表下，藏着的可是以屠杀为快感的可怕灵魂！"/>
 	<Monster ID="3930" DefName="窸" Type="草 暗影" Height="340" Weight="178" Features="丛林迷踪诡谲难料，隐秘出击疾袭无常。全新包月精灵登场，上古十二荒兽—窸。" mapID="103" Target="295004"/>
 	<Monster ID="3931" DefName="狇伐" Type="邪灵" Height="202" Weight="85" Features="魔界的精锐，试炼场的王者！杀伐是他永存不灭的信念......" mapID="1396"/>
-	<Monster ID="3932" DefName="墨影星魂" Type="战斗 暗影" Height="181" Weight="73" Features="凝魂炼影皆傲骨，挚怀笃情唯月照。纤纤情丝无绝尽，傲睨万物藏柔情。" mapID="1396"/>
+	<Monster ID="3932" DefName="墨影星魂" Type="战斗 暗影" Height="181" Weight="73" Features="凝魂炼影皆傲骨，挚怀笃情唯月照。纤纤情丝无绝尽，傲睨万物藏柔情。" mapID="1396" Target="150125"/>
 	<Monster ID="3933" DefName="离歌" Type="光 超能" Height="165" Weight="48" Features="衣帘轻沾，回首低眉。心亦欢喜，天见犹怜。专属神宠，离歌瑰丽现身！" mapID="103"/>
 	<Monster ID="3934" DefName="布可哆" Type="地面" Height="135" Weight="60" Features="据说背包里装着杀伤力极大的宝物，但手中的木棍杀伤力也不小！" mapID="1397"/>
 	<Monster ID="3935" DefName="极鳞魔兽" Type="混沌 龙" Height="1000" Weight="1600" Features="极恶凶残惧意生，鳞甲熠熠无可抵。魔血沸腾扬天啸，兽性一怒毁天地。" mapID="1397"/>
@@ -5203,5 +5203,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4902" DefName="莱布缇" Type="光" Height="179" Weight="70" Features="“博士”，万神殿系统的创造者，黄金教廷的背叛者，出卖了整个世界之人，带领赛尔等人前往了毁灭的家园阿派罗尼亚。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/914"/>
 	<Monster ID="4903" DefName="帝录天锋" Type="远古 战斗" Height="176" Weight="62" Features="帝王之刃的完全体形态，上古的封印终于破除，魔剑原本的样貌终于重见天日！" Redirect="module" Go="app/FinalActivityPanel" Target="114070"/>
 	<Monster ID="4904" DefName="小珍妮" Type="机械" Height="146" Weight="73" Features="全称为向导机器人珍妮999型，集家用、公用、助理、清洁等多功能于一身，阿派罗尼亚人的好帮手！" Redirect="module" Go="app/FinalActivityPanel" Target="153201/915"/>
+	<Monster ID="4905" DefName="西西弗" Type="冰" Height="176" Weight="57" Features="在毁灭的阿派罗尼亚上相遇的黄金圣徒，西西弗是希望之化身。他在成长，而且无比坚强。即便参透了生活的本质，也坚定地选择去面对。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/918"/>
+	<Monster ID="4906" DefName="阿西列维" Type="光 暗影" Height="159" Weight="76" Features="2026年包月精灵，万象录之《抛砖引玉之人》。他是阿派罗尼亚游历四方的吟游诗人，也是《万象录》的作者。他将见闻经历编纂成一片片华丽的诗篇，将过往的故事不断传唱下去。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
+	<Monster ID="4907" DefName="佩提" Type="自然 龙" Height="122" Weight="36" Features="拥有奇特力量的神秘小精灵，据说接近喜欢交朋友的它后可以短暂改变自己的画风呢！" Redirect="module" Go="app/FinalActivityPanel" Target="114075"/>
 
 </root>

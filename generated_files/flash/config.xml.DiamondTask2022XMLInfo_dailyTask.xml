@@ -1,5 +1,5 @@
 <root>
-	<item id="1" title="登录" describe="玩家当日成功登录游戏" tasktype="1" taskparam="0_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_10" />
+	<item id="1" title="登录" describe="今日登录游戏" tasktype="1" taskparam="0_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_10" />
 	<item id="2" title="泰坦矿洞" describe="成功完成任意难度泰坦矿洞" tasktype="2" taskparam="1_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_10" target="161500" />
 	<item id="3" title="经验训练场" describe="成功通关任意1层经验训练场" tasktype="3" taskparam="1_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_5" target="161100" />
 	<item id="4" title="学习力战场" describe="成功通关任意1层学习力战场" tasktype="4" taskparam="1_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_5" target="161200" />

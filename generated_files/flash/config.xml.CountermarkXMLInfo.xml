@@ -3769,8 +3769,7 @@
 	<MintMark ID="42671" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 2 4 2 3 10" MaxAttriValue="0 25 45 25 35 100" MonsterID="4871" Level="100" Max="99" Des="嘲风专属全能刻印" EffectDes="防御2/25,特攻4/45,特防2/25,速度3/35,体力10/100"/>
 	<MintMark ID="42672" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="4 2 0 2 3 10" MaxAttriValue="45 25 0 25 35 100" MonsterID="4875" Level="100" Max="99" Des="永烬劫炎·上古炎兽专属全能刻印" EffectDes="攻击4/45,防御2/25,特防2/25,速度3/35,体力10/100"/>
     <MintMark ID="42673" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 3 8" MaxAttriValue="0 30 44 30 35 81" MonsterID="4883" Level="100" Max="99" Des="薇奥莱特专属全能刻印" EffectDes="防御3/30,特攻4/44,特防3/30,速度3/35,体力8/81"/>
-
-	<MintMark ID="42674" Type="3" Rare="5" Quality="2" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="9 0 0 0 4 0" MaxAttriValue="90 0 0 0 43 0" Level="100" Max="99" Des="星辉·启程" EffectDes="攻击9/90,速度3/43" MintmarkClass="93"/>
+    <MintMark ID="42674" Type="3" Rare="5" Quality="2" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="9 0 0 0 4 0" MaxAttriValue="90 0 0 0 43 0" Level="100" Max="99" Des="星辉·启程" EffectDes="攻击9/90,速度3/43" MintmarkClass="93"/>
 	<MintMark ID="42675" Type="3" Rare="5" Quality="2" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="8 0 0 0 0 12" MaxAttriValue="85 0 0 0 0 120" Level="100" Max="99" Des="星辉·相遇" EffectDes="攻击8/85,体力12/120" MintmarkClass="93"/>
 	<MintMark ID="42676" Type="3" Rare="5" Quality="2" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="9 0 0 0 0 11" MaxAttriValue="95 0 0 0 0 110" Level="100" Max="99" Des="星辉·相伴" EffectDes="攻击9/95,体力11/110" MintmarkClass="93"/>
 	<MintMark ID="42677" Type="3" Rare="5" Quality="2" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="9 8 0 0 0 0" MaxAttriValue="90 85 0 0 0 0" Level="100" Max="99" Des="星辉·并肩" EffectDes="攻击9/90,防御8/85" MintmarkClass="93"/>
@@ -3787,6 +3786,7 @@
 	<MintMark ID="42688" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="4 3 0 3 4 8" MaxAttriValue="49 30 0 30 41 85" MonsterID="4444" Level="100" Max="99" Des="百罗鬼帝专属全能刻印" EffectDes="攻击4/49,防御3/30,特防3/30,速度4/41,体力8/85"/>
 	<MintMark ID="42689" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 4 8" MaxAttriValue="0 30 40 30 40 80" MonsterID="4903" Level="100" Max="99" Des="帝录天锋专属全能刻印" EffectDes="防御3/30,特攻4/40,特防3/30,速度4/40,体力8/80"/>
 	<MintMark ID="42690" Type="3" Rare="3" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 3 4 3 4 9" MaxAttriValue="0 30 42 30 41 92" MintmarkClass="28" Level="100" Max="99" Des="光年外的重逢" EffectDes="防御3/30,特攻4/42,特防3/30,速度4/41,体力9/92"/>
+    <!--42699-42700占用-->
 
 
 

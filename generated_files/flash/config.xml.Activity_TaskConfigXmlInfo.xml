@@ -368,4 +368,10 @@
 	<item id="505" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏3天（至少获取100分）" value="3" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_1" userinfo="108951" userbitbuf2="108953_6" />
 	<item id="506" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏4天（至少获取100分）" value="4" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_1706926_5" userinfo="108951" userbitbuf2="108953_7" />
 	<item id="507" activityid="29" activityname="拓本-ε大进攻" describe="累计参与游戏5天（至少获取100分）" value="5" time="0" timelimit="1" timestart="1775181600" timeend="1775786400" rewardinfo="1_2500003_2" userinfo="108951" userbitbuf2="108953_8" />
+	<item id="508" activityid="30" activityname="欢乐接宝藏" describe="今日累计获得20分" value="20" time="1" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="1_1723855_10000" userinfo="350026" userbitbuf2="350027_1" />
+	<item id="509" activityid="30" activityname="欢乐接宝藏" describe="今日累计获得50分" value="50" time="1" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="1_2300079_1" userinfo="350026" userbitbuf2="350027_2" />
+	<item id="510" activityid="30" activityname="欢乐接宝藏" describe="今日累计获得100分" value="100" time="1" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="1_1723855_10000" userinfo="350026" userbitbuf2="350027_3" />
+	<item id="511" activityid="30" activityname="欢乐接宝藏" describe="累计完成5局游戏" value="5" time="0" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="1_2500004_2" userinfo="400088" userbitbuf2="400089_4" />
+	<item id="512" activityid="30" activityname="欢乐接宝藏" describe="累计完成10局游戏" value="10" time="0" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="4_4907_1" userinfo="400088" userbitbuf2="400089_5" />
+	<item id="513" activityid="30" activityname="欢乐接宝藏" describe="累计完成15局游戏" value="15" time="0" timelimit="1" timestart="1780020000" timeend="1780624800" rewardinfo="1_2500004_2" userinfo="400088" userbitbuf2="400089_6" />
 </root>

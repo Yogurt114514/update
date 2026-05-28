@@ -73,7 +73,10 @@
 	<item name="5月风尚月历" productID="200069" itemID="1727975" price="30" vip="1" gold="1" type="-1"/> 		
 	<item name="购买【杰特洛的宝箱钥匙】" productID="200070" itemID="1728027" price="6" vip="1" gold="1" type="-1"/> 	
 	<item name="6月风尚月历" productID="200071" itemID="1728040" price="30" vip="1" gold="1" type="-1"/> 	
-	<item name="7月风尚月历" productID="200072" itemID="1728041" price="30" vip="1" gold="1" type="-1"/> 
+	<item name="7月风尚月历" productID="200072" itemID="1728041" price="30" vip="1" gold="1" type="-1"/>
+    <item name="购买【普通砸蛋锤】" productID="200073" itemID="1728124" price="10" vip="1" gold="1" type="-1"/>
+    <item name="购买【稀有砸蛋锤】" productID="200074" itemID="1728125" price="20" vip="1" gold="1" type="-1"/>
+    <item name="购买【珍贵砸蛋锤】" productID="200075" itemID="1728126" price="30" vip="1" gold="1" type="-1"/> 	
 	
 	<!-- <item name="废弃" productID="200061" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
 	<!-- <item name="废弃" productID="200062" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->

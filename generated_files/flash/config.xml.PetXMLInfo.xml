@@ -65179,10 +65179,16 @@
 	      <Move ID="30953" LearningLv="53"/>
 	      <Move ID="25585" LearningLv="57" Rec="1"/>
 	      <Move ID="30954" LearningLv="61" Rec="1"/>
+		  <AdvMove ID="38407" Tag="1"/>
+		  <AdvMove ID="29361" Tag="3"/>
+		  <AdvMove ID="38408" Tag="4"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="30955" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38409" LearningLv="76"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="3408" DefName="杰诺" Type="72" GrowthType="4" HP="150" Atk="130" Def="102" SpAtk="70" SpDef="106" Spd="126" YieldingExp="130" CatchRate="0" YieldingEV="0 1 0 0 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="2078" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
@@ -102338,9 +102344,77 @@
 		</ExtraMoves>
 	</Monster>
 
+	<Monster ID="4905" DefName="西西弗" Type="9" GrowthType="4" HP="176" Atk="70" Def="104" SpAtk="148" SpDef="104" Spd="138" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3566" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10211" LearningLv="1"/>
+			<Move ID="20177" LearningLv="5"/>
+			<Move ID="10361" LearningLv="9"/>
+			<Move ID="10216" LearningLv="13"/>
+			<Move ID="20150" LearningLv="17"/>
+			<Move ID="38397" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="10218" LearningLv="25"/>
+			<Move ID="20644" LearningLv="29"/>
+			<Move ID="13011" LearningLv="33"/>
+			<Move ID="30357" LearningLv="37"/>
+			<Move ID="25283" LearningLv="41"/>
+			<Move ID="30358" LearningLv="45"/>
+			<Move ID="29355" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="30359" LearningLv="53"/>
+			<Move ID="29356" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38398" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38399" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4906" DefName="阿西列维" Type="69" GrowthType="4" HP="169" Atk="70" Def="106" SpAtk="139" SpDef="106" Spd="130" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3567" FormParam="0" CharacterAttrParam="4" GradeParam="3" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10250" LearningLv="1"/>
+			<Move ID="20065" LearningLv="5"/>
+			<Move ID="10628" LearningLv="9"/>
+			<Move ID="20106" LearningLv="13"/>
+			<Move ID="10394" LearningLv="17"/>
+			<Move ID="38400" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="21698" LearningLv="25"/>
+			<Move ID="10424" LearningLv="29"/>
+			<Move ID="23729" LearningLv="33"/>
+			<Move ID="30649" LearningLv="37"/>
+			<Move ID="25430" LearningLv="41"/>
+			<Move ID="30650" LearningLv="45"/>
+			<Move ID="29357" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="38401" LearningLv="53"/>
+			<Move ID="29358" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38402" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38403" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
-
+	<Monster ID="4907" DefName="佩提" Type="83" GrowthType="4" HP="172" Atk="129" Def="109" SpAtk="70" SpDef="107" Spd="113" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3568" FormParam="0" CharacterAttrParam="0" GradeParam="2" AddSeParam="0" Resist="1">
+		<LearnableMoves>
+			<Move ID="10611" LearningLv="1"/>
+			<Move ID="20570" LearningLv="5"/>
+			<Move ID="11119" LearningLv="9"/>
+			<Move ID="11233" LearningLv="13"/>
+			<Move ID="20007" LearningLv="17"/>
+			<Move ID="38404" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="12738" LearningLv="25"/>
+			<Move ID="20716" LearningLv="29"/>
+			<Move ID="11444" LearningLv="33"/>
+			<Move ID="16061" LearningLv="37"/>
+			<Move ID="10352" LearningLv="41"/>
+			<Move ID="26405" LearningLv="45"/>
+			<Move ID="29359" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="29360" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="32619" LearningLv="57"/>
+			<Move ID="38405" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38406" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
 
 
@@ -115610,6 +115684,8 @@
   <Monster ID="1400832" DefName="莱卡的守望·潘克多斯" RealId=""/>
   <Monster ID="1400833" DefName="莱卡的守望·斯克鲁恩" RealId=""/>
   <Monster ID="1400834" DefName="莱卡的守望·加尔鲁特" RealId=""/>
+  <Monster ID="1400835" DefName="卡通玩具·萨瑞卡" RealId=""/>
+  <Monster ID="1400836" DefName="派鲁基达" RealId="73"/>
 
 </Monsters>
 

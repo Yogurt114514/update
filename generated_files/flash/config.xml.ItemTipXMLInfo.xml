@@ -5240,7 +5240,7 @@
 	<item id="1727468" level="0" color="#ffffff" des="参与银河斗技场获得，可以在【银河商行】中兑换奖励"/>	
 	<item id="1727469" level="0" color="#ffffff" des="参与银河斗技场获得，可以在【银河商行】中兑换奖励"/>		
 	<item id="1727470" level="0" color="#ffffff" des="斗技场挑战中的核心货币，非常稀有"/>	
-	<item id="1727471" level="0" color="#ffffff" des="参与银河星斗技场获得，可以在【星能回路】中激活和平星"/>		
+	<item id="1727471" level="0" color="#ffffff" des="参与银河星斗技场获得，可以在【星能回路】中激活天赋"/>		
 	<item id="1727473" level="0" color="#ffffff" des="在火山星的探索中，战胜贝尔恩克获得的战利品。"/>	
 	<item id="1727474" level="0" color="#ffffff" des="在火山星的探索中，战胜炽翼火龙获得的战利品。"/>	
 	<item id="1727475" level="0" color="#ffffff" des="在火山星的探索中，战胜赤西格获得的战利品。"/>	
@@ -5389,6 +5389,11 @@
 	<item id="1727978" level="0" color="#ffffff" des="这些神秘的高能矿石不断的向外释放着某种未知辐射。"/>
 	<item id="1727979" level="0" color="#ffffff" des="奥朗矿石经过熔炼之后的成品金属锭，是黄金教廷最基础的工业资源。"/>
 	<item id="1727980" level="0" color="#ffffff" des="破坏物理后门之后弹出的神秘装置，暂时还不知道有什么用。"/>
+	<item id="1728111" level="0" color="#ffffff" des="在精灵觉醒中挑战获得，可用于格劳恩斯精灵觉醒"/>
+	<item id="1709099" level="0" color="#ffffff" des="可在四九战王关卡中兑换四九战王。"/>
+	<item id="1709100" level="0" color="#ffffff" des="可在四九战王关卡中对四九战王进行能力提升。"/>
+	<item id="1710547" level="0" color="#ffffff" des="四九圣尊能量凝结辉光，可用于四九圣尊特训。"/>
+	<item id="1710545" level="0" color="#ffffff" des="可用于兑换四九圣尊传说皮肤：审判之光。"/>
 	
 	<!-- 觉醒物品（旧） -->
 	<item id="2000001" level="0" color="#ffffff" des="博士培育出的水系全能精元，可以觉醒成为初级水系精灵，同时也可以吸收其他全能精元来提高等级"/>
@@ -6104,6 +6109,8 @@
 	<item id="2400574" level="0" color="#ffffff" des="可在【精灵因子背包】合成获得特维耶或对其进行能力提升，共需消耗700因子"/>
 	<item id="2400575" level="0" color="#ffffff" des="可在【精灵因子背包】合成获得莱布缇或对其进行能力提升，共需消耗918因子"/>
 	<item id="2400576" level="0" color="#ffffff" des="可在【精灵因子背包】合成获得小珍妮或对其进行能力提升，共需消耗700因子"/>
+	<item id="2400577" level="0" color="#ffffff" des="可在【精灵因子背包】合成获得西西弗或对其进行能力提升，共需消耗918因子"/>
+	<item id="2400578" level="0" color="#ffffff" des="可在【精灵因子背包】合成获得月冕或对其进行能力提升，共需消耗918因子"/>
 	
 	<!-- 限时道具 -->
 	<item id="2500001" level="0" color="#ffffff" des="【限时·关卡扫荡券】：可在【精灵因子】类型的S级关卡中使用，此物品会在获得物品后的7天内过期而消失，在使用时会优先扣除离过期时间最近的那一个道具"/>
