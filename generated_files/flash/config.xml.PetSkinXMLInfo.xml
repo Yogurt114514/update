@@ -1,7 +1,7 @@
 <!--
 Skin ID：		主键ID 皮肤ID
 MonID：			皮肤归属MonID精灵
-Type:  1:英雄（停用） 2:史诗 3:传说 4:周年限定 5:万圣限定 6:中秋限定 7:春节限定 8:圣诞限定 9:青春校园 11:周年限定-乐队 12：周年限定-泳池 13：异元时空限定 14：神话（后续可能单开展示） 15：巅峰赛季限定 16：古堡晚宴限定 17：七夕限定 18：限定 19：航行纪念
+Type:  1:英雄（停用） 2:史诗 3:传说 4:周年限定 5:万圣限定 6:中秋限定 7:春节限定 8:圣诞限定 9:青春校园 11:周年限定-乐队 12：周年限定-泳池 13：异元时空限定 14：神话（后续可能单开展示） 15：巅峰赛季限定 16：古堡晚宴限定 17：七夕限定 18：限定 19：航行纪念 20：至臻
 Target：		0 对自己生效； 1 对对手生效  默认0
 Occasion: 		0 全部生效； 1 pvp生效； 2 pve生效  （若配成其他值，可在特定场合处理、生效）
 AddWay:			与Attribute配合使用；0 按照固定值加成； 1 按照百分比加成
@@ -13,7 +13,7 @@ SkinKind Type:  1:限时皮肤  2:永久皮肤
 LifeTime:限时天数
 Jumptarget：unity跳转，读jumptarget表
 
-SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说 21-异元时空 22-莱卡的守望）
+SkinType：该皮肤所属的系列id（1-巅峰时装 2-星海誓约 3-夏日奇遇 4-童话梦境 5-江湖令 6-洛林卡之星 7-时代轨迹 8-月满中秋 9-铁甲小宝 10-万圣惊魂夜 11-圣诞礼遇 12-魔界之刻 13-航纪珍藏 14-锦绣春华 15-专家之证 16-运动时光 17-岁令万象 18-青春校园 19-巨樽失窃案 20-瓏域传说 21-异元时空 22-莱卡的守望 23-至臻典藏）
 Year：该皮肤所属的年份（当前仅面向巅峰时装）
 
 -->
@@ -2829,6 +2829,30 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 	</Skin>
 	
 	<Skin ID="836" MonID="4834" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="派鲁基达" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="837" MonID="4000" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="20" Name="于生命中得见·薇尔诗" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114084">
+		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="23"/>
+	</Skin>
+
+	<Skin ID="838" MonID="4853" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="超算魅影·梅赫维特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114086">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="839" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="审判天使·钢傀" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114087">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="840" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="星际领航员·艾欧丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114090">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="841" MonID="4760" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="闪耀探险家·嗒啦啦" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="842" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="限制解除·钢傀" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114078">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 

@@ -15544,6 +15544,26 @@ eg:
 	
 	<Map ID="2172" Name="波卢卡星矿坑" InitX="580" InitY="440">
     </Map>
+	
+	<Map ID="2173" Name="至日广场" InitX="580" InitY="440">
+	    <Monsters>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+			<Monster ID="4910" Lv="17 17"/>
+		</Monsters>
+    </Map>
+	
+	<Map ID="2174" Name="空场景占位" InitX="580" InitY="440">
+    </Map>
+	
+	<Map ID="2175" Name="传送舱" InitX="580" InitY="440">
+    </Map>
 
 
 
@@ -18557,6 +18577,6 @@ eg:
 		<DefaultMap ID="3" RandMaps="1224" Desc="新手登录场景"/>
 	</DefaultMaps>
 	<VersionNumber>
-		<Version ID="20260529" Desc="每次发版需同步更新版本号"/>
+		<Version ID="20260605" Desc="每次发版需同步更新版本号"/>
 	</VersionNumber>
 </Maps>

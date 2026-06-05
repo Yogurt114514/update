@@ -80599,6 +80599,31 @@
 </ExtraMoves>
 </Monster>
 
+	<Monster ID="4000" DefName="薇尔诗" Type="223" GrowthType="4" HP="180" Atk="80" Def="125" SpAtk="150" SpDef="125" Spd="140" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="2660" FormParam="0" CharacterAttrParam="4" GradeParam="5" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10047" LearningLv="1"/>
+			<Move ID="22660" LearningLv="5"/>
+			<Move ID="14897" LearningLv="9"/>
+			<Move ID="22661" LearningLv="13"/>
+			<Move ID="14935" LearningLv="17"/>
+			<Move ID="38420" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="22662" LearningLv="25"/>
+			<Move ID="14898" LearningLv="29"/>
+			<Move ID="22637" LearningLv="33"/>
+			<Move ID="14899" LearningLv="37"/>
+			<Move ID="22638" LearningLv="41"/>
+			<Move ID="14859" LearningLv="45"/>
+			<Move ID="29371" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="38421" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="32106" LearningLv="57"/>
+			<Move ID="38422" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38423" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+
+
 <Monster ID="4001" DefName="无上·万魔天尊" Type="113" GrowthType="5" HP="175" Atk="70" Def="115" SpAtk="140" SpDef="115" Spd="135" YieldingExp="130" CatchRate="0" YieldingEV="0 0 0 1 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="2661" FormParam="0" CharacterAttrParam="4" GradeParam="5" AddSeParam="1" Resist="1">
 <LearnableMoves>
 		 <Move ID="10001" LearningLv="1"/>
@@ -102416,6 +102441,97 @@
 		</ExtraMoves>
 	</Monster>
 
+	<Monster ID="4908" DefName="蕊沃尔" Type="3" GrowthType="4" HP="165" Atk="70" Def="114" SpAtk="144" SpDef="114" Spd="133" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3569" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10086" LearningLv="1"/>
+			<Move ID="10412" LearningLv="5"/>
+			<Move ID="11959" LearningLv="9"/>
+			<Move ID="20030" LearningLv="13"/>
+			<Move ID="11960" LearningLv="17"/>
+			<Move ID="38410" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="11167" LearningLv="25"/>
+			<Move ID="20955" LearningLv="29"/>
+			<Move ID="11961" LearningLv="33"/>
+			<Move ID="21001" LearningLv="37"/>
+			<Move ID="11962" LearningLv="41"/>
+			<Move ID="11963" LearningLv="45"/>
+			<Move ID="29362" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="29363" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="38411" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="29364" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+	
+	<Monster ID="4909" DefName="钢傀" Type="103" GrowthType="4" HP="175" Atk="140" Def="80" SpAtk="140" SpDef="80" Spd="130" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3570" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="0" Resist="1">
+		<LearnableMoves>
+			<Move ID="10086" LearningLv="1"/>
+			<Move ID="20889" LearningLv="5"/>
+			<Move ID="13601" LearningLv="9"/>
+			<Move ID="20164" LearningLv="13"/>
+			<Move ID="10330" LearningLv="17"/>
+			<Move ID="38412" LearningLv="21" Rec="1" Tag="4"/>
+			<Move ID="20355" LearningLv="25"/>
+			<Move ID="10650" LearningLv="29"/>
+			<Move ID="24622" LearningLv="33"/>
+			<Move ID="34543" LearningLv="37"/>
+			<Move ID="27321" LearningLv="41"/>
+			<Move ID="34544" LearningLv="45"/>
+			<Move ID="29365" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="29366" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="27323" LearningLv="57"/>
+			<Move ID="38413" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38414" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+
+	<Monster ID="4910" DefName="波动态幽魂" Type="13" GrowthType="4" HP="161" Atk="124" Def="105" SpAtk="70" SpDef="105" Spd="135" YieldingExp="70" CatchRate="15" YieldingEV="0 0 0 0 0 0" FreeForbidden="0" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3571" FormParam="0" CharacterAttrParam="0" GradeParam="1" AddSeParam="0" Resist="1">
+		<LearnableMoves>
+			<Move ID="10223" LearningLv="1"/>
+			<Move ID="20168" LearningLv="5"/>
+			<Move ID="10390" LearningLv="9"/>
+			<Move ID="20181" LearningLv="13"/>
+			<Move ID="10831" LearningLv="17"/>
+			<Move ID="38415" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="10392" LearningLv="25"/>
+			<Move ID="10832" LearningLv="29"/>
+			<Move ID="20170" LearningLv="33"/>
+			<Move ID="10424" LearningLv="37"/>
+			<Move ID="10833" LearningLv="41"/>
+			<Move ID="20183" LearningLv="45"/>
+			<Move ID="29367" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="29368" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="20184" LearningLv="57"/>
+			<Move ID="38416" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+	</Monster>
+
+	<Monster ID="4911" DefName="星光·艾欧丽娅" Type="91" GrowthType="4" HP="168" Atk="147" Def="118" SpAtk="70" SpDef="118" Spd="139" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3572" FormParam="0" CharacterAttrParam="0" GradeParam="5" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10001" LearningLv="1"/>
+			<Move ID="20177" LearningLv="5"/>
+			<Move ID="10361" LearningLv="9"/>
+			<Move ID="20618" LearningLv="13"/>
+			<Move ID="14290" LearningLv="17"/>
+			<Move ID="38417" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="10218" LearningLv="25"/>
+			<Move ID="20644" LearningLv="29"/>
+			<Move ID="23745" LearningLv="33"/>
+			<Move ID="30907" LearningLv="37"/>
+			<Move ID="25561" LearningLv="41"/>
+			<Move ID="30908" LearningLv="45"/>
+			<Move ID="29369" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="29370" LearningLv="53" Rec="1" Tag="3"/>
+			<Move ID="25563" LearningLv="57"/>
+			<Move ID="38418" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38419" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
 
 
@@ -115686,6 +115802,15 @@
   <Monster ID="1400834" DefName="莱卡的守望·加尔鲁特" RealId=""/>
   <Monster ID="1400835" DefName="卡通玩具·萨瑞卡" RealId=""/>
   <Monster ID="1400836" DefName="派鲁基达" RealId="73"/>
+  <Monster ID="1400837" DefName="于生命中得见·薇尔诗" RealId=""/>
+  <Monster ID="1400838" DefName="超算魅影·梅赫维特" RealId=""/>
+  <Monster ID="1400839" DefName="审判天使·钢傀" RealId=""/>
+  <Monster ID="1400840" DefName="星际领航员·艾欧丽娅" RealId="1400812"/>
+  <Monster ID="1400841" DefName="闪耀探险家·嗒啦啦" RealId=""/>
+  <Monster ID="1400842" DefName="限制解除·钢傀" RealId=""/>
+
+
+
 
 </Monsters>
 

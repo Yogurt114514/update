@@ -2,7 +2,7 @@
 	<item id="2001" name="新兵训练营" Ename="Destination Reached" pic="2001" sound="BGM_001" PlayerXYZ="300,300" NPCID="5,13,4,3,11,10,9,8,7,6,2,12" NPCScale="1" NPCXYZ="583,288_171,360_249,396_337,438_855,332_890,364_950,396_583,397_657,396_623,439_762,420_583,471" hidenAllPlayers="1" />
 	<item id="2002" name="船长室" Ename="Destination Reached" pic="4" sound="2" GroupID="10101" PlayerXYZ="104,446" NPCID="27" NPCScale="1" NPCXYZ="380,370" />
 	<item id="2003" name="精灵中心" Ename="Destination Reached" pic="5" sound="embed_5" GroupID="10102" PlayerXYZ="707,429" NPCID="33" NPCScale="1" NPCXYZ="365,380" />
-	<item id="2004" name="传送舱" Ename="Destination Reached" pic="1" sound="1" GroupID="10103" PlayerXYZ="467,404" NPCID="28" NPCScale="1" NPCXYZ="350,430" enterMap="1" />
+	<item id="2004" name="传送舱" Ename="Destination Reached" pic="1" sound="1" GroupID="10103" PlayerXYZ="467,404" NPCID="28" NPCScale="1" NPCXYZ="350,430" />
 	<item id="2005" name="瞭望舱" Ename="Destination Reached" pic="7" sound="BGM_104A" GroupID="10104" PlayerXYZ="190,485" NPCID="32" NPCScale="1" NPCXYZ="865,390" />
 	<item id="2006" name="瞭望露台" Ename="Destination Reached" pic="103" sound="2" GroupID="10105" PlayerXYZ="200,460" NPCID="35" NPCScale="1" NPCXYZ="325,455" />
 	<item id="2007" name="发明室" Ename="Destination Reached" pic="107" sound="3" GroupID="10106" PlayerXYZ="300,270" NPCID="26" NPCScale="1" NPCXYZ="870,410" />
@@ -713,6 +713,9 @@
 	<item id="2168" name="化乐天林海" Ename="Destination Reached" pic="2168" sound="2026wil_01" GroupID="22003" GroupName="薇星" PlayerXYZ="400,900" WildBossNum="3" WildBossPoint="108,880_470,880_1020,720_960,900_230,380_500,320_850,310_1320,340_670,610" WildBossLifeTime="8" WildBossID="4893" WildBossWeight="1" MapRatio="1" />
 	<item id="2169" name="自在天飞船" Ename="Destination Reached" pic="2169" sound="2026wil_04" GroupID="22003" GroupName="薇星" PlayerXYZ="340,430" WildBossNum="3" WildBossPoint="60,370_190,420_220,320_330,430_500,450_650,410_820,420_960,360_720,310" WildBossLifeTime="8" WildBossID="4884" WildBossWeight="1" MapRatio="1" />
 	<item id="2170" name="波卢卡星地表" Ename="Destination Reached" pic="2170" sound="boruca01_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="220,290" NPCID="305" NPCScale="0.7" NPCXYZ="1120,200" MapRatio="1" />
-	<item id="2171" name="宗座宫内廷" Ename="Destination Reached" pic="2171" sound="boruca02_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="100,370" WildBossNum="3" WildBossPoint="320,360_500,440_820,360_1290,360_1530,440_1760,360_2240,360_2510,440_2700,360" WildBossLifeTime="8" WildBossID="4896" WildBossWeight="1" MapRatio="1" />
+	<item id="2171" name="宗座宫内廷" Ename="Destination Reached" pic="2171" sound="boruca02_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="150,390" WildBossNum="3" WildBossPoint="320,360_500,440_820,360_1290,360_1530,440_1760,360_2240,360_2510,440_2700,360" WildBossLifeTime="8" WildBossID="4896" WildBossWeight="1" MapRatio="1" />
 	<item id="2172" name="波卢卡星矿坑" Ename="Destination Reached" pic="2172" sound="boruca01_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="240,320" MapRatio="1" />
+	<item id="2173" name="至日广场" Ename="Destination Reached" pic="2173" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,260" WildBossNum="3" WildBossPoint="90,380_290,270_520,400_720,380_890,280_1070,330_1210,380_1570,290_1370,210" WildBossLifeTime="8" WildBossID="4910" WildBossWeight="1" MapRatio="1" />
+	<item id="2174" name="空场景占位" Ename="Destination Reached" pic="2174" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,260" MapRatio="1" />
+	<item id="2175" name="传送舱" notes="17周年庆" Ename="Destination Reached" pic="2175" sound="BGM_151A" GroupID="10103" PlayerXYZ="467,404" NPCID="28" NPCScale="1" NPCXYZ="145,404" enterMap="1" MapRatio="1" />
 </root>

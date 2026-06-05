@@ -22,5 +22,5 @@
 	<item id="221" name="费尤" type="2" pic="21" uni="2" StarID="21438_21442_21440_21439_21437_21441" StarBG="" isopen="0" />
 	<item id="222" name="赛尔号飞船" type="5" uni="3" StarID="10101_10102_10103_10104_10105_10106_10107_10108_10109_10110_10111_10112_10113_10114_10120_10121_10122" StarBG="" isopen="0" />
 	<item id="223" name="太空站区域" type="5" uni="3" StarID="10115_10116_10117_10118_10119_10124" StarBG="" isopen="0" />
-	<item id="225" name="奥朗星系" type="1" pic="22" uni="1" StarID="22001_22002_22003_22004" StarBG="1" sort="1" isopen="1" />
+	<item id="225" name="奥朗星系" type="1" pic="22" uni="1" StarID="22001_22002_22003_22004_22005" StarBG="1" sort="1" isopen="1" />
 </root>

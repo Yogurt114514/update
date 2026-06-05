@@ -12,4 +12,10 @@
 	<item skinid="645">
 		<skill id="35620" replaceId="64535620" action="sa5"/>
 	</item>
+	<item petid="4000">
+		<skill id="38423" replaceId="38423" action="hidemove"/>
+	</item>
+	<item skinid="837">
+		<skill id="38423" replaceId="38423" action="hidemove"/>
+	</item>
 </Root>

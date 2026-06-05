@@ -898,6 +898,7 @@
 				<Rule ID="10" Threshold="10" AchievementPoint="10" icon="1" achName="信仰之化身" proicon="1482" SpeNameBonus="584" title="信仰之化身" Desc="通关S-安瑟伦【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="11" Threshold="11" AchievementPoint="10" icon="1" achName="自由之化身" proicon="1489" SpeNameBonus="587" title="自由之化身" Desc="通关S-莱布缇【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="12" Threshold="12" AchievementPoint="10" icon="1" achName="希望之化身" proicon="1493" SpeNameBonus="590" title="希望之化身" Desc="通关S-西西弗【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="13" Threshold="13" AchievementPoint="10" icon="1" achName="反抗之化身" proicon="1498" SpeNameBonus="595" title="反抗之化身" Desc="通关S-蕊沃尔【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 
@@ -1865,8 +1866,12 @@
 				<Rule ID="2" Threshold="2" AchievementPoint="5" icon="1" achName="知晓故事之人" proicon="1479" SpeNameBonus="581" title="故事达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
 				<Rule ID="3" Threshold="3" AchievementPoint="10" icon="1" achName="潜入达人" proicon="1481" SpeNameBonus="583" title="潜入达人" Desc="在波卢卡星地表完成探索解密" titleColor="0xFFFFFF"/>
 				<Rule ID="4" Threshold="4" AchievementPoint="10" icon="1" achName="活干完了" proicon="1488" SpeNameBonus="586" title="活干完了" Desc="完成9527的奥朗金属熔炼任务获得" titleColor="0xFFFFFF"/>
-				<!-- <Rule ID="5" Threshold="5" AchievementPoint="10" icon="1" achName="昨日重现" proicon="1490" SpeNameBonus="588" title="昨日重现" Desc="在至日广场成功奏响往日的乐章" titleColor="0xFFFFFF"/> -->
+				<Rule ID="5" Threshold="5" AchievementPoint="10" icon="1" achName="昨日重现" proicon="1490" SpeNameBonus="588" title="昨日重现" Desc="在至日广场成功奏响往日的乐章" titleColor="0xFFFFFF"/>
 				<!-- <Rule ID="6" Threshold="6" AchievementPoint="10" icon="1" achName="奇妙博物馆" proicon="1492" SpeNameBonus="589" title="奇妙博物馆" Desc="顺利解决众星博物馆内的奇异事件" titleColor="0xFFFFFF"/> -->
+				<Rule ID="7" Threshold="7" AchievementPoint="10" icon="1" achName="星光铸就者" proicon="1494" SpeNameBonus="591" title="星光铸就者" Desc="参与活动【星光拾忆】获得" titleColor="0xFFFFFF" AbilityTitle="1" abtext="攻击+40，特攻+40，速度+10，体力+80"/>
+				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="闪耀的此刻" proicon="1495" SpeNameBonus="592" title="闪耀的此刻" Desc="在【深空璀璨】中发现全部16颗星球" titleColor="0xFFFFFF"/>
+				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="终点亦是起点" proicon="1496" SpeNameBonus="593" title="终点亦是起点" Desc="游玩【奥朗终局战】获得。在薇的注视之下走得更远吧！" titleColor="0xFFFFFF"/>
+				<Rule ID="10" Threshold="10" AchievementPoint="10" icon="1" achName="蝶舞朝暮" proicon="1497" SpeNameBonus="594" title="蝶舞朝暮" Desc="参与活动【虹辉的颂歌】获得" titleColor="0xFFFFFF"/>
 			</Branch>
 
 			</Branches>

@@ -1,18 +1,18 @@
 <root>
-	<item id="10101" name="船长室" intro="飞船的中央控制室，赛尔号的大脑，也是船长「黑特·罗杰」的办公室。" fun="主线剧情_飞船手册" type="1" pic="101" Gotomap="2002" submap="2002" isopen="1" />
-	<item id="10102" name="精灵中心" intro="由博士「赫尔斯·派特」负责的精灵研究所，通过分析精灵们的特征和习性，为赛尔号带来了无数实用的精灵繁育和养成技术。" fun="精灵养成_精元孵化" type="1" pic="102" Gotomap="2003" submap="2003" isopen="1" />
-	<item id="10103" name="传送舱" intro="赛尔们开启宇宙旅行的集散中心，即使星际地图的快速传送功能也需要传送舱的中继支持。" fun="场景传送" type="1" pic="103" Gotomap="2004" submap="2004" isopen="1" />
-	<item id="10104" name="瞭望舱" intro="监测宇宙各项参数的舱室，超远距空间望远镜和各项灵敏监测装置共同保障着飞船在浩瀚星海中的航行安全。" fun="精灵学习计划" type="1" pic="104" Gotomap="2005" submap="2005" isopen="1" />
-	<item id="10105" name="瞭望露台" intro="本是飞船的贸易中心，由自火星港而来的万事通「罗开·翔」运作。随着超远距离输送技术的成熟，赛尔们已经可以在自己的舱室中的在线商城选购。" fun="火星港商城" type="1" pic="105" Gotomap="2006" submap="2006" isopen="1" />
-	<item id="10106" name="发明室" intro="赛尔们的好帮手——NONO诞生的地方。发明家「斯卡·肖恩」于此不断挑战着技术理论的最前沿。" fun="查看VIP特权_领取战斗火焰" type="1" pic="106" Gotomap="2007" submap="2007" isopen="1" />
-	<item id="10107" name="荣誉大厅" intro="为表彰精英赛尔而建立，成就卓越的赛尔们可以在此接受功勋官「魏·克罗」的军衔晋升、享受军需补给。" fun="领取军衔奖励_成就与军衔信息" type="1" pic="107" Gotomap="2008" submap="2008" isopen="1" />
-	<item id="10108" name="活动中心" intro="飞船各项活动的播报中心，主播「彼格·纽斯」永远为大家带来最热最烫的最新资讯！" fun="最新活动" type="1" pic="108" Gotomap="2009" submap="2009" isopen="1" />
-	<item id="10109" name="动力室" intro="飞船的能源供给中心，赛尔号的绝对心脏。在工程师「费得·苏克」的勤恳运作下，赛尔们自宇宙各处采集来的资源将转化为能量，输送向飞船的每个角落。" type="1" pic="109" Gotomap="2010" submap="2009" isopen="1" />
-	<item id="10110" name="机械室" intro="赛尔研发、制造中心，机械师「璨·茜茜」会为每位崭新出厂的赛尔做细致的精密检查，闲暇之余也会研发各式装备。" fun="赛尔工厂_涂装室" type="1" pic="110" Gotomap="2011" submap="2011" isopen="1" />
-	<item id="10111" name="资料室" intro="赛尔号的情报集散和处理枢纽。「菲·爱丽丝」会将赛尔们从各个星球搜集到的海量信息筛选、分类、存档，并输送向船长室与活动中心。" fun="使用兑换码" type="1" pic="111" Gotomap="2012" submap="2012" isopen="1" />
-	<item id="10112" name="暂未开放（星际银行）" intro="暂未开放（星际银行）" type="1" pic="112" Gotomap="2013" submap="2013" isopen="0" />
-	<item id="10113" name="暂未开放（放映厅）" intro="赛尔们的休闲娱乐舱室，于赛尔历43年设立，巨大荧幕上仍投映着赛尔们曾经的英姿。" type="1" pic="113" Gotomap="2014" submap="2014" isopen="0" />
-	<item id="10114" name="教官办公室" intro="赛尔号新兵总教官「索罗斯·雷蒙」的办公室，他忙碌的身影总是穿梭于办公室与新兵训练营的两点一线。" type="1" pic="114" Gotomap="2015" submap="2015" isopen="1" />
+	<item id="10101" name="船长室" intro="飞船的中央控制室，赛尔号的大脑，也是船长「黑特·罗杰」的办公室。" fun="主线剧情_飞船手册" type="1" pic="101" Gotomap="2002" submap="2002" isopen="1" showOut="1" shipArea="1" />
+	<item id="10102" name="精灵中心" intro="由博士「赫尔斯·派特」负责的精灵研究所，通过分析精灵们的特征和习性，为赛尔号带来了无数实用的精灵繁育和养成技术。" fun="精灵养成_精元孵化" type="1" pic="102" Gotomap="2003" submap="2003" isopen="1" showOut="1" shipArea="2" />
+	<item id="10103" name="传送舱" intro="赛尔们开启宇宙旅行的集散中心，即使星际地图的快速传送功能也需要传送舱的中继支持。" fun="场景传送" type="1" pic="103" Gotomap="2004" submap="2004" isopen="1" showOut="1" shipArea="3" />
+	<item id="10104" name="瞭望舱" intro="监测宇宙各项参数的舱室，超远距空间望远镜和各项灵敏监测装置共同保障着飞船在浩瀚星海中的航行安全。" fun="精灵学习计划" type="1" pic="104" Gotomap="2005" submap="2005" isopen="1" showOut="1" shipArea="4" />
+	<item id="10105" name="瞭望露台" intro="本是飞船的贸易中心，由自火星港而来的万事通「罗开·翔」运作。随着超远距离输送技术的成熟，赛尔们已经可以在自己的舱室中的在线商城选购。" fun="火星港商城" type="1" pic="105" Gotomap="2006" submap="2006" isopen="1" showOut="1" shipArea="5" />
+	<item id="10106" name="发明室" intro="赛尔们的好帮手——NONO诞生的地方。发明家「斯卡·肖恩」于此不断挑战着技术理论的最前沿。" fun="查看VIP特权_领取战斗火焰" type="1" pic="106" Gotomap="2007" submap="2007" isopen="1" showOut="0" shipArea="6" />
+	<item id="10107" name="荣誉大厅" intro="为表彰精英赛尔而建立，成就卓越的赛尔们可以在此接受功勋官「魏·克罗」的军衔晋升、享受军需补给。" fun="领取军衔奖励_成就与军衔信息" type="1" pic="107" Gotomap="2008" submap="2008" isopen="1" showOut="1" shipArea="7" />
+	<item id="10108" name="活动中心" intro="飞船各项活动的播报中心，主播「彼格·纽斯」永远为大家带来最热最烫的最新资讯！" fun="最新活动" type="1" pic="108" Gotomap="2009" submap="2009" isopen="1" showOut="0" shipArea="8" />
+	<item id="10109" name="动力室" intro="飞船的能源供给中心，赛尔号的绝对心脏。在工程师「费得·苏克」的勤恳运作下，赛尔们自宇宙各处采集来的资源将转化为能量，输送向飞船的每个角落。" type="1" pic="109" Gotomap="2010" submap="2009" isopen="1" showOut="0" shipArea="9" />
+	<item id="10110" name="机械室" intro="赛尔研发、制造中心，机械师「璨·茜茜」会为每位崭新出厂的赛尔做细致的精密检查，闲暇之余也会研发各式装备。" fun="赛尔工厂_涂装室" type="1" pic="110" Gotomap="2011" submap="2011" isopen="1" showOut="0" shipArea="10" />
+	<item id="10111" name="资料室" intro="赛尔号的情报集散和处理枢纽。「菲·爱丽丝」会将赛尔们从各个星球搜集到的海量信息筛选、分类、存档，并输送向船长室与活动中心。" fun="使用兑换码" type="1" pic="111" Gotomap="2012" submap="2012" isopen="1" showOut="0" shipArea="11" />
+	<item id="10112" name="暂未开放（星际银行）" intro="暂未开放（星际银行）" type="1" pic="112" Gotomap="2013" submap="2013" isopen="0" showOut="0" />
+	<item id="10113" name="暂未开放（放映厅）" intro="赛尔们的休闲娱乐舱室，于赛尔历43年设立，巨大荧幕上仍投映着赛尔们曾经的英姿。" type="1" pic="113" Gotomap="2014" submap="2014" isopen="0" showOut="0" />
+	<item id="10114" name="教官办公室" intro="赛尔号新兵总教官「索罗斯·雷蒙」的办公室，他忙碌的身影总是穿梭于办公室与新兵训练营的两点一线。" type="1" pic="114" Gotomap="2015" submap="2015" isopen="1" showOut="0" shipArea="13" />
 	<item id="10115" name="太空站精灵区" type="4" Gotomap="2086" submap="2086" />
 	<item id="10116" name="太空资源区" type="4" Gotomap="2087" submap="2087" />
 	<item id="10117" name="竞技天堂" type="4" Gotomap="2088" submap="2088" />
@@ -20,17 +20,20 @@
 	<item id="10119" name="新兵训练营" type="4" Gotomap="2090" submap="2090" />
 	<item id="10120" name="往期经典" type="4" Gotomap="2091" submap="2091" />
 	<item id="10121" name="能源研究中心" type="4" Gotomap="2092" submap="2092" />
-	<item id="10122" name="星际擂台" intro="星光·帕诺杯参赛场地，今后或许将承办各类赛事。" type="1" pic="115" Gotomap="2137" submap="2136_2137_2138" isopen="1" />
-	<item id="20101" name="赫尔卡星" intro="赫尔卡星是一颗机械文明高度发达的星球，过度的开发制造导致了灭亡。超负荷的电力养育了不少电系和机械系的精灵。" type="2" Gotomap="2151" submap="3014_3015_3016_3017_3018_3019_2142_2143_2144_2145_2146_2147_2148_2149_2150_2151" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20102" name="海洋星" intro="海洋星是一颗被水体覆盖的星球，其海底的环境遭到破坏，导致这里的精灵都比较凶狠，大部分都为水系。" type="2" Gotomap="3008" submap="3008_3009_3010_3041" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20103" name="克洛斯星" intro="克洛斯星地貌奇特，孕育着大量稀有资源，这里生活着皮皮一族，是一颗自然美丽的星球，也是精灵们的快乐天堂。" type="2" Gotomap="2140" submap="3001_3002_3003_3042_2139_2140" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20104" name="火山星" intro="火山星是一颗十分炎热的星球，这里被岩浆和火山包围，火山洞内孕育着神秘又强大的力量。" type="2" Gotomap="3005" submap="3005_3006_3007" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20105" name="云霄星" intro="云霄星上物质的质量非常低，引力较小，有丰富的气态资源，是一座漂浮在空中的绿洲。" type="2" Gotomap="2141" submap="3011_3012_3013_2141" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="10122" name="星际擂台" intro="星光·帕诺杯参赛场地，今后或许将承办各类赛事。" type="1" pic="115" Gotomap="2138" submap="2136_2137_2138" isopen="0" showOut="0" />
+	<item id="10123" name="新手用地图" type="4" Gotomap="2032" submap="2032_2001" />
+	<item id="10124" name="精灵太空站" type="4" Gotomap="2152" submap="2152_2153_2154_2155" isopen="1" />
+	<item id="10125" name="世界BOSS" type="4" Gotomap="2156" submap="2156" />
+	<item id="20101" name="赫尔卡星" intro="赫尔卡星是一颗机械文明高度发达的星球，过度的开发制造导致了灭亡。超负荷的电力养育了不少电系和机械系的精灵。" type="2" Gotomap="3014" submap="3014_3015_3016_3017_3018_3019_2147" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20102" name="海洋星" intro="海洋星是一颗被水体覆盖的星球，其海底的环境遭到破坏，导致这里的精灵都比较凶狠，大部分都为水系。" type="2" Gotomap="3008" submap="3008_3009_3010_3041_2158" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20103" name="克洛斯星" intro="克洛斯星地貌奇特，孕育着大量稀有资源，这里生活着皮皮一族，是一颗自然美丽的星球，也是精灵们的快乐天堂。" type="2" Gotomap="3001" submap="3001_3002_3003_3042" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20104" name="火山星" intro="火山星是一颗十分炎热的星球，这里被岩浆和火山包围，火山洞内孕育着神秘又强大的力量。" type="2" Gotomap="3005" submap="3005_3006_3007_2159" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20105" name="云霄星" intro="云霄星上物质的质量非常低，引力较小，有丰富的气态资源，是一座漂浮在空中的绿洲。" type="2" Gotomap="3011" submap="3011_3012_3013" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20106" name="双子阿尔法星" intro="双子星之一，星球表面遭受过严重污染，缺少植被覆盖，一片荒芜，但在有些地方还能找到神奇的太空温泉。" type="2" Gotomap="3034" submap="3034_3035_3024_3052" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20107" name="双子贝塔星" intro="双子星之一，被海盗长期占领，导致环境大规模的被破坏，急需进行环境改造。" type="2" Gotomap="3025" submap="3025_3026_3027" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20108" name="塞西利亚星" intro="塞西利亚星位于极寒地带，整颗星球为冰雪所覆盖，犹如一颗美丽的钻石，是冰雪系精灵的故乡。" type="2" Gotomap="3020" submap="3020_3021_3022_3023_3053" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20109" name="拜伦号" intro="拜伦号像一个很神秘的地方，曾是赫尔卡长老的飞船，最后被攻击变为了现在的遗迹。 " type="2" Gotomap="3036" submap="3036_3037" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20110" name="露希欧星" intro="露希欧星是一颗非常富饶生机勃勃的星球，这里自然矿物丰富，精灵多样，但最终被咤克斯毁灭。" type="2" Gotomap="3031" submap="3031_3032" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20110" name="露希欧星" intro="露希欧星是一颗非常富饶生机勃勃的星球，这里自然矿物丰富，精灵多样。在那场灾难发生的十五年后，它终又恢复了原本的模样。" type="2" Gotomap="3031" submap="3031_3032_3033_2157" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20111" name="斯诺星" intro="斯诺星是被白雪覆盖的星球，这里的米鲁族人拥有高度智商，非常可爱，建立了独特神奇的文明。" type="2" Gotomap="3028" submap="3028_3030_3040" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20112" name="卡酷星" intro="卡酷星覆盖着一层朦胧的面纱，在这个拥有美丽自然的星球上似乎隐藏着不为人知的过去。" type="2" Gotomap="3038" submap="3038_3039" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20113" name="格朗德星" intro="格朗德星上被特殊的红色晶矿覆盖，神兽的降临让这个星球上流动着庄严的气息。" type="2" Gotomap="3043" submap="3043" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
@@ -73,7 +76,7 @@
 	<item id="20411" name="泰若星" intro="野心与入侵，隔阂与阴谋，命运扭曲了神狐一族和这遍布紫晶的美丽星球。但那无法被扭曲的、深埋于神狐血脉的守护之意志，消融了一切。" type="2" Gotomap="3274" submap="3274_3275_3276_3277_3278" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20412" name="提尔瑞斯星" intro="如我一样，在时间的洗礼下，斗者擂台早已失去了往日的光辉与鲜亮。但那些激昂呐喊的回音、那些锈蚀的钢刃，穿透了时间，仍镌刻着独属于少年人的热血和勇气。|——《马西莫斯回忆录》" type="2" Gotomap="3279" submap="3279_3280" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20413" name="火凤之巢" intro="裂空星系守护者朱雀·菲尼克斯的栖居地。炽烈的熔岩，不灭的火焰，纵然是逆势的尊王，也会被焚烧殆尽吧……" type="2" Gotomap="3281" submap="3281" TipType="1" StarShow="1" StarContrl="500_0_50" anima="0" TipShow="1" TipContrl="500_0_0" isopen="1" />
-	<item id="20501" name="巨石星" intro="曾经的守护四灵之一，阿努比斯的守护地。堕为邪灵的他给这颗本应守护之星带来了无尽恐惧与阴霾，然而四处林立的上古遗迹无不昭示着曾经主宰、也必将重临的麒麟之名号。凡以背叛，必将偿还。" type="2" Gotomap="3282" submap="3282_3283_3284_3285_3286_3287" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
+	<item id="20501" name="巨石星" intro="曾经的守护四灵之一，阿洛比斯的守护地。堕为邪灵的他给这颗本应守护之星带来了无尽恐惧与阴霾，然而四处林立的上古遗迹无不昭示着曾经主宰、也必将重临的麒麟之名号。凡以背叛，必将偿还。" type="2" Gotomap="3282" submap="3282_3283_3284_3285_3286_3287" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20502" name="艾伦星" intro="再没有比艾伦星上更清澈的海水了。鲛人在月下浅唱轻吟，贝壳在沙滩上倚风鸣奏。然而一切的美好都有期限，在帕罗狄亚的铁蹄踏上浅滩海岛的那一刻，艾伦星的平静，结束了。" type="2" Gotomap="3290" submap="3290_3291_3292_3293_3294_3295_3296_3297" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20503" name="巴斯星" intro="巴斯星深处，早已黯淡的星尘龙境仍回荡着谁的咆哮，那声音澎湃、愤怒，似是要焚烬世间一切的不公。在仇火的煨烬中，那颗疯狂的心终于冷却，而一颗崭新的龙族之心，已如战鼓擂鸣！" type="2" Gotomap="3298" submap="3298_3299_3300_3301_3302_3303" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
 	<item id="20504" name="莱恩那星" intro="在莱恩那星密密层层的巨型蘑菇间，你或许能看到年迈的普兰特村长，他躺在自己编织的藤椅上，口中呢喃着友谊之树过去的故事……" type="2" Gotomap="3304" submap="3304_3305_3306_3307_3308_3309_3310_3311_3312_3313_3314" TipType="1" StarShow="1" StarContrl="500_0_50" anima="1" TipShow="1" TipContrl="500_0_0" isopen="1" />
@@ -180,5 +183,10 @@
 	<item id="21441" name="创世塔" intro="位于费尤大陆最中央的位置，时常闪耀着神秘的光辉。传说这里埋藏着费尤创世的秘密，但强大的风暴结界让人望而却步。" type="2" Gotomap="2132" submap="2052_2075_2079_2103_2104_2125_2126_2128_2131_2132" TipType="2" StarShow="1" StarContrl="500_0_50" anima="0" TipShow="2" TipContrl="500_1" isopen="1" />
 	<item id="21442" name="弗罗斯特" intro="无尽冰凌的雪眠之国。冷酷的不只有这里的风雪，还有这里的生存法则。沉眠的冰晶一旦爆发，将席卷整片大地。" type="2" Gotomap="2067" submap="2023_2041_2042_2043_2045_2046_2047_2048_2050_2051_2054_2055_2056_2057_2058_2059_2060_2061_2062_2063_2064_2065_2066_2067" TipType="2" StarShow="1" StarContrl="500_0_50" anima="0" TipShow="2" TipContrl="500_1" isopen="1" />
 	<item id="21443" name="查理星系的底盘" type="2" StarShow="1" StarContrl="500_0_50" anima="0" isopen="2" />
-	<item id="21444" name="世界BOSS" type="2" Gotomap="2156" submap="2156" />
+	<item id="22000" name="恒星" intro="恒星主星序" type="2" isopen="0" />
+	<item id="22001" name="维茨洛奇坦星" intro="由黄沙覆盖的干旱星球，当地的居民围绕着零星的绿洲与唯一一条大河建立定居点。恶劣的环境时刻考验着文明的坚韧。" type="2" Gotomap="2162" submap="2162_2166" TipType="1" isopen="1" />
+	<item id="22002" name="犹尔尼斯星" intro="一颗被冰雪完全覆盖的极端星球，在雪原上几乎搜寻不到生命的踪迹。潜藏在地表之下的秘密，似乎早已被无尽的风雪掩埋。" type="2" Gotomap="2164" submap="2164_2167" TipType="1" isopen="1" />
+	<item id="22003" name="薇星" intro="如同世外桃源一般绿意盎然的森林行星，居住于此的生命们不知何为善恶，心中仅有喜乐。有人说过——天堂都是建立在无知无觉的空虚世界之上的。" type="2" Gotomap="2168" submap="2168_2169" TipType="1" isopen="1" />
+	<item id="22004" name="波卢卡星" intro="远远看起来就像是一颗完全死掉的星球，很难想象这样的星球上会有生命存在。那座金碧辉煌的宫殿就是一切苦难的来源。" type="2" Gotomap="2170" submap="2170_2171_2172" TipType="1" isopen="1" />
+	<item id="22005" name="阿派罗尼亚" intro="奥朗星系曾经的文明中心，如今只剩下阴霾的天空以及无边无际的废墟。阿派罗尼亚的往日荣光葬于黄金波动，留下的仅有回忆而已。" type="2" Gotomap="2173" submap="2173" TipType="1" isopen="1" />
 </root>

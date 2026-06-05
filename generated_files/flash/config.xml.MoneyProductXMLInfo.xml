@@ -76,7 +76,11 @@
 	<item name="7月风尚月历" productID="200072" itemID="1728041" price="30" vip="1" gold="1" type="-1"/>
     <item name="购买【普通砸蛋锤】" productID="200073" itemID="1728124" price="10" vip="1" gold="1" type="-1"/>
     <item name="购买【稀有砸蛋锤】" productID="200074" itemID="1728125" price="20" vip="1" gold="1" type="-1"/>
-    <item name="购买【珍贵砸蛋锤】" productID="200075" itemID="1728126" price="30" vip="1" gold="1" type="-1"/> 	
+    <item name="购买【珍贵砸蛋锤】" productID="200075" itemID="1728126" price="30" vip="1" gold="1" type="-1"/> 
+    <item name="购买精灵心愿单礼包（小）" productID="200076" itemID="1728183" price="5" vip="1" gold="1" type="-1"/>	
+	<item name="购买精灵心愿单礼包（中）" productID="200077" itemID="1728184" price="10" vip="1" gold="1" type="-1"/>	
+	<item name="购买精灵心愿单礼包（大）" productID="200078" itemID="1728185" price="35" vip="1" gold="1" type="-1"/>
+    <item name="购买皮肤尊享卡" productID="200079" itemID="1728186" price="20" vip="1" gold="1" type="-1"/>	
 	
 	<!-- <item name="废弃" productID="200061" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
 	<!-- <item name="废弃" productID="200062" itemID="" price="1" vip="1" gold="1" type="-1"/>	-->
