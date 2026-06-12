@@ -2252,7 +2252,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="14"/>
 	</Skin>
 
-	<Skin ID="692" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="文明之忏·尤纳斯" >
+	<Skin ID="692" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="文明之忏·尤纳斯"  Jumptarget="510007" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
@@ -2413,7 +2413,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="732" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""   Type="3" Name="黑日之灾·尤纳斯"   Jumptarget="510004">
+	<Skin ID="732" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""   Type="3" Name="黑日之灾·尤纳斯"   Jumptarget="510007">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
@@ -2477,7 +2477,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="5"/>
 	</Skin>
 
-	<Skin ID="748" MonID="4421" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""   Type="3"  Name="沧浪龙吟·赵云"  Jumptarget="510004">
+	<Skin ID="748" MonID="4421" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""   Type="3"  Name="沧浪龙吟·赵云"  Jumptarget="510007">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="5"/>
 	</Skin>
 
@@ -2744,7 +2744,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 
-	<Skin ID="815" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="怪盗气球·尤纳斯" >
+	<Skin ID="815" MonID="4717" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="怪盗气球·尤纳斯"  Jumptarget="410000">
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="19"/>
 	</Skin>
 
@@ -2853,6 +2853,26 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 	</Skin>
 
 	<Skin ID="842" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="限制解除·钢傀" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114078">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="843" MonID="3940" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="傲世飞将·吕布" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="844" MonID="4912" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="无法抵达的梦·灰蛾" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114092">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="845" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="星冕纱华·艾欧丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114093">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="846" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="阿娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114094">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="847" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="艾丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114094">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 

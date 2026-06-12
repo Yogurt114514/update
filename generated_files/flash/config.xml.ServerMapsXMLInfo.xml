@@ -15559,7 +15559,7 @@ eg:
 		</Monsters>
     </Map>
 	
-	<Map ID="2174" Name="空场景占位" InitX="580" InitY="440">
+	<Map ID="2174" Name="众星博物馆" InitX="580" InitY="440">
     </Map>
 	
 	<Map ID="2175" Name="传送舱" InitX="580" InitY="440">
@@ -18577,6 +18577,6 @@ eg:
 		<DefaultMap ID="3" RandMaps="1224" Desc="新手登录场景"/>
 	</DefaultMaps>
 	<VersionNumber>
-		<Version ID="20260605" Desc="每次发版需同步更新版本号"/>
+		<Version ID="20260612" Desc="每次发版需同步更新版本号"/>
 	</VersionNumber>
 </Maps>

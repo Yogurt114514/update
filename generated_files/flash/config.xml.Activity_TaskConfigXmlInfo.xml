@@ -398,4 +398,11 @@
 	<item id="535" activityid="32" activityname="0618" describe="累计游玩30次游戏" value="30" time="0" timelimit="1" timestart="1781748000" timeend="1783044000" rewardinfo="1_300791_1" />
 	<item id="536" activityid="32" activityname="0618" describe="累计游玩32次游戏" value="32" time="0" timelimit="1" timestart="1781748000" timeend="1783044000" rewardinfo="1_2300046_2" />
 	<item id="537" activityid="32" activityname="0618" describe="累计游玩35次游戏" value="35" time="0" timelimit="1" timestart="1781748000" timeend="1783044000" rewardinfo="1_2300046_2" />
+	<item id="538" activityid="33" activityname="艾欧丽娅的试炼" describe="通过1次试炼" value="1" time="1" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="1_2500005_3" userinfo="207441" userbitbuf2="207443_1" />
+	<item id="539" activityid="33" activityname="艾欧丽娅的试炼" describe="累计击败过2种试炼对手" value="2" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="1_300810_2" userinfo="152077" userbitbuf2="152078_1" />
+	<item id="540" activityid="33" activityname="艾欧丽娅的试炼" describe="累计击败过3种试炼对手" value="3" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="1_300810_2" userinfo="152077" userbitbuf2="152078_2" />
+	<item id="541" activityid="33" activityname="艾欧丽娅的试炼" describe="累计达成过2种试炼条件" value="2" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="1_300810_2" userinfo="152077" userbitbuf2="152078_3" />
+	<item id="542" activityid="33" activityname="艾欧丽娅的试炼" describe="累计达成过3种试炼条件" value="3" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="1_300810_2" userinfo="152077" userbitbuf2="152078_4" />
+	<item id="543" activityid="33" activityname="艾欧丽娅的试炼" describe="累计试炼进度达到10点" value="10" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="6_846_1" userinfo="152076" userbitbuf2="152078_5" />
+	<item id="544" activityid="33" activityname="艾欧丽娅的试炼" describe="累计试炼进度达到20点" value="20" time="0" timelimit="1" timestart="1781229600" timeend="1783044000" rewardinfo="6_847_1" userinfo="152076" userbitbuf2="152078_6" />
 </root>

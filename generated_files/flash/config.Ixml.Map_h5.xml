@@ -716,6 +716,6 @@
 	<item id="2171" name="宗座宫内廷" Ename="Destination Reached" pic="2171" sound="boruca02_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="150,390" WildBossNum="3" WildBossPoint="320,360_500,440_820,360_1290,360_1530,440_1760,360_2240,360_2510,440_2700,360" WildBossLifeTime="8" WildBossID="4896" WildBossWeight="1" MapRatio="1" />
 	<item id="2172" name="波卢卡星矿坑" Ename="Destination Reached" pic="2172" sound="boruca01_bgm" GroupID="22004" GroupName="波卢卡星" PlayerXYZ="240,320" MapRatio="1" />
 	<item id="2173" name="至日广场" Ename="Destination Reached" pic="2173" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,260" WildBossNum="3" WildBossPoint="90,380_290,270_520,400_720,380_890,280_1070,330_1210,380_1570,290_1370,210" WildBossLifeTime="8" WildBossID="4910" WildBossWeight="1" MapRatio="1" />
-	<item id="2174" name="空场景占位" Ename="Destination Reached" pic="2174" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,260" MapRatio="1" />
+	<item id="2174" name="众星博物馆" Ename="Destination Reached" pic="2174" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,880" MapRatio="1" />
 	<item id="2175" name="传送舱" notes="17周年庆" Ename="Destination Reached" pic="2175" sound="BGM_151A" GroupID="10103" PlayerXYZ="467,404" NPCID="28" NPCScale="1" NPCXYZ="145,404" enterMap="1" MapRatio="1" />
 </root>

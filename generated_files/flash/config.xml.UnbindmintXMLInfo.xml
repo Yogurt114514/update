@@ -11,6 +11,19 @@
 <Root>
 	<UnbindActivity CurStage="1" >
 		<!--以下为赤洲龙子系列-->
+        <Unbindmintinfo MintmarkID="42691" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42692" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42693" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42694" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42695" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42696" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42697" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42698" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+
+
+
+
+		<!--以下为赤洲龙子系列-->
         <Unbindmintinfo MintmarkID="42636" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42637" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42638" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
@@ -36,6 +49,7 @@
         <Unbindmintinfo MintmarkID="42564" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060201"/>
         <Unbindmintinfo MintmarkID="42565" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060202"/>
         <Unbindmintinfo MintmarkID="42611" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060203"/>
+        <Unbindmintinfo MintmarkID="45075" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060203"/>
 
 		<!--以下为和平星系列-->
         <Unbindmintinfo MintmarkID="42595" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2511060204"/>
@@ -67,6 +81,14 @@
         <Unbindmintinfo MintmarkID="42583" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42584" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42585" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45067" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45068" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45069" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45070" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45071" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45072" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45073" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45074" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
 		
 	    <!--以下为赫星千年系列-->
         <Unbindmintinfo MintmarkID="42542" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250100"/>
@@ -77,6 +99,14 @@
         <Unbindmintinfo MintmarkID="42547" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250105"/>
         <Unbindmintinfo MintmarkID="42548" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250106"/>
         <Unbindmintinfo MintmarkID="42549" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250107"/>
+        <Unbindmintinfo MintmarkID="45057" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250100"/>
+        <Unbindmintinfo MintmarkID="45058" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250101"/>
+        <Unbindmintinfo MintmarkID="45059" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250102"/>
+        <Unbindmintinfo MintmarkID="45060" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250103"/>
+        <Unbindmintinfo MintmarkID="45061" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250104"/>
+        <Unbindmintinfo MintmarkID="45062" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250105"/>
+        <Unbindmintinfo MintmarkID="45063" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250106"/>
+        <Unbindmintinfo MintmarkID="45064" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250107"/>
 
 	    <!--以下为赫星奇迹系列-->
         <Unbindmintinfo MintmarkID="42550" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
@@ -101,7 +131,8 @@
         <Unbindmintinfo MintmarkID="42497" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270637"/>
         <Unbindmintinfo MintmarkID="42498" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270638"/>
         <Unbindmintinfo MintmarkID="42499" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270639"/>
-
+        <Unbindmintinfo MintmarkID="45047" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270636"/>
+        <Unbindmintinfo MintmarkID="45048" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270637"/>
 	    <!--以下为淘乐节系列-->
         <Unbindmintinfo MintmarkID="42291" NeedConsumeID="1724169" NeedConsumeNum="258" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42292" NeedConsumeID="1724169" NeedConsumeNum="258" NewMsglogId=""/>
@@ -130,6 +161,14 @@
         <Unbindmintinfo MintmarkID="42506" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270611"/>
         <Unbindmintinfo MintmarkID="42507" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270612"/>
         <Unbindmintinfo MintmarkID="42508" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270613"/>
+        <Unbindmintinfo MintmarkID="45049" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270606"/>
+        <Unbindmintinfo MintmarkID="45050" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270607"/>
+        <Unbindmintinfo MintmarkID="45051" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270608"/>
+        <Unbindmintinfo MintmarkID="45052" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270609"/>
+        <Unbindmintinfo MintmarkID="45053" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270610"/>
+        <Unbindmintinfo MintmarkID="45054" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270611"/>
+        <Unbindmintinfo MintmarkID="45055" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270612"/>
+        <Unbindmintinfo MintmarkID="45056" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2412270613"/>
 
 	    <!--以下为沧吟星海系列-->
         <Unbindmintinfo MintmarkID="42368" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210500"/>
@@ -140,6 +179,14 @@
         <Unbindmintinfo MintmarkID="42373" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210505"/>
         <Unbindmintinfo MintmarkID="42374" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210506"/>
         <Unbindmintinfo MintmarkID="42375" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210507"/>
+        <Unbindmintinfo MintmarkID="45039" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210500"/>
+        <Unbindmintinfo MintmarkID="45040" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210501"/>
+        <Unbindmintinfo MintmarkID="45041" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210502"/>
+        <Unbindmintinfo MintmarkID="45042" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210503"/>
+        <Unbindmintinfo MintmarkID="45043" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210504"/>
+        <Unbindmintinfo MintmarkID="45044" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210505"/>
+        <Unbindmintinfo MintmarkID="45045" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210506"/>
+        <Unbindmintinfo MintmarkID="45046" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210507"/>
 
 	    <!--以下为瓏域系列-->
         <Unbindmintinfo MintmarkID="42353" NeedConsumeID="1724169" NeedConsumeNum="128" NewMsglogId="2404260400"/>
@@ -158,6 +205,8 @@
         <Unbindmintinfo MintmarkID="42366" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2404260413"/>
         <Unbindmintinfo MintmarkID="42367" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2404260414"/>
         <Unbindmintinfo MintmarkID="42377" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2404260415"/>
+        <Unbindmintinfo MintmarkID="45037" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2404260413"/>
+        <Unbindmintinfo MintmarkID="45038" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2404260414"/>
 
 
 	    <!--以下为K13系列-->
@@ -169,6 +218,14 @@
         <Unbindmintinfo MintmarkID="42245" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210513"/>
         <Unbindmintinfo MintmarkID="42246" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210514"/>
         <Unbindmintinfo MintmarkID="42247" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210515"/>
+        <Unbindmintinfo MintmarkID="45029" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210508"/>
+        <Unbindmintinfo MintmarkID="45030" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210509"/>
+        <Unbindmintinfo MintmarkID="45031" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210510"/>
+        <Unbindmintinfo MintmarkID="45032" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210511"/>
+        <Unbindmintinfo MintmarkID="45033" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210512"/>
+        <Unbindmintinfo MintmarkID="45034" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210513"/>
+        <Unbindmintinfo MintmarkID="45035" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210514"/>
+        <Unbindmintinfo MintmarkID="45036" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2406210515"/>
 
 	    <!--以下为星璨灵籁系列-->
         <Unbindmintinfo MintmarkID="42214" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260416"/>
@@ -183,7 +240,19 @@
         <Unbindmintinfo MintmarkID="42235" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260425"/>
         <Unbindmintinfo MintmarkID="42236" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260426"/>
         <Unbindmintinfo MintmarkID="42237" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260427"/>
-		
+		<Unbindmintinfo MintmarkID="45017" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260416"/>
+        <Unbindmintinfo MintmarkID="45018" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260417"/>
+        <Unbindmintinfo MintmarkID="45019" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260418"/>
+        <Unbindmintinfo MintmarkID="45020" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260419"/>
+        <Unbindmintinfo MintmarkID="45021" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260420"/>
+        <Unbindmintinfo MintmarkID="45022" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260421"/>
+		<Unbindmintinfo MintmarkID="45023" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260422"/>
+        <Unbindmintinfo MintmarkID="45024" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260423"/>
+        <Unbindmintinfo MintmarkID="45025" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260424"/>
+        <Unbindmintinfo MintmarkID="45026" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260425"/>
+        <Unbindmintinfo MintmarkID="45027" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260426"/>
+        <Unbindmintinfo MintmarkID="45028" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2404260427"/>
+
 
 
 	    <!--以下为十年系列、V10系列，都属于十周年这个大系列-->
@@ -196,6 +265,14 @@
         <Unbindmintinfo MintmarkID="41611" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210203"/>		
         <Unbindmintinfo MintmarkID="41612" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210204"/>		
         <Unbindmintinfo MintmarkID="41613" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210205"/>		
+        <Unbindmintinfo MintmarkID="45001" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210100"/>
+        <Unbindmintinfo MintmarkID="45002" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210101"/>
+        <Unbindmintinfo MintmarkID="45003" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210200"/>		
+        <Unbindmintinfo MintmarkID="45004" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210201"/>		
+        <Unbindmintinfo MintmarkID="45005" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210202"/>		
+        <Unbindmintinfo MintmarkID="45006" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210203"/>		
+        <Unbindmintinfo MintmarkID="45007" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210204"/>		
+        <Unbindmintinfo MintmarkID="45008" NeedConsumeID="1724169" NeedConsumeNum="268" NewMsglogId="2201210205"/>		
 	    <!--以下为V10-->
         <Unbindmintinfo MintmarkID="41700" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210206"/>		
         <Unbindmintinfo MintmarkID="41701" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210207"/>		
@@ -205,7 +282,15 @@
         <Unbindmintinfo MintmarkID="41705" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210211"/>		
         <Unbindmintinfo MintmarkID="41706" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210212"/>		
         <Unbindmintinfo MintmarkID="41707" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210213"/>
-		
+		<Unbindmintinfo MintmarkID="45009" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210206"/>		
+        <Unbindmintinfo MintmarkID="45010" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210207"/>		
+        <Unbindmintinfo MintmarkID="45011" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210208"/>		
+        <Unbindmintinfo MintmarkID="45012" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210209"/>		
+        <Unbindmintinfo MintmarkID="45013" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210210"/>		
+        <Unbindmintinfo MintmarkID="45014" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210211"/>		
+        <Unbindmintinfo MintmarkID="45015" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210212"/>		
+        <Unbindmintinfo MintmarkID="45016" NeedConsumeID="1724169" NeedConsumeNum="288" NewMsglogId="2201210213"/>
+
 		
 		
 	    <!--以下为英雄之证系列	-->
@@ -225,6 +310,9 @@
         <Unbindmintinfo MintmarkID="42561" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42594" NeedConsumeID="1724169" NeedConsumeNum="168" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42658" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42701" NeedConsumeID="1724169" NeedConsumeNum="318" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42702" NeedConsumeID="1724169" NeedConsumeNum="318" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42703" NeedConsumeID="1724169" NeedConsumeNum="318" NewMsglogId=""/>
 
 
 
@@ -366,6 +454,8 @@
         <Unbindmintinfo MintmarkID="41750" NeedConsumeID="1724169" NeedConsumeNum="218" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42576" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42577" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45065" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="45066" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId=""/>
 
 	    <!--以下为浮云系列-->
         <Unbindmintinfo MintmarkID="42014" NeedConsumeID="1724169" NeedConsumeNum="158" NewMsglogId="2204290115"/>		

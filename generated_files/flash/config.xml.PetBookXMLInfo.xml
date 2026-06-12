@@ -213,11 +213,11 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4000" ImageID= "4000" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4908" ImageID= "4908" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4909" ImageID= "4909" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4910" ImageID= "4910" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4912" ImageID= "4912" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4913" ImageID= "4913" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4914" ImageID= "4914" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "0" ID="4910" ImageID= "4910" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4804" ImageID= "4804" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4805" ImageID= "4805" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,12 +255,12 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="837" monID="4000" ImageID= "1400837" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="838" monID="4853" ImageID= "1400838" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="839" monID="4909" ImageID= "1400839" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="840" monID="4911" ImageID= "1400840" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="841" monID="4760" ImageID= "1400841" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="843" monID="3940" ImageID= "1400843" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="844" monID="4912" ImageID= "1400844" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="845" monID="4911" ImageID= "1400845" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="846" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="747" monID="4676" ImageID= "1400747" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="748" monID="4421" ImageID= "1400748" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="746" monID="4753" ImageID= "1400746" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -5171,7 +5171,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4869" DefName="颅腹虫" Type="神秘" Height="34" Weight="13" Features="身体构造奇怪的虫族生物，大脑生长在腹腔的它似乎有着比其他虫族更高的智慧。" Redirect="module" Go="app/FinalActivityPanel" Target="400019"/>
 	<Monster ID="4870" DefName="康迪亚克" Type="地面" Height="176" Weight="58" Features="潜藏于犹尔尼斯星的另一位黄金圣徒，康迪亚克毅然站在虫族的对立阵营，为其他族群争取生存的权益。然而，在他的内心深处，却还有另一番别样的盘算……" Redirect="module" Go="app/FinalActivityPanel" Target="153201/845"/>
 	<Monster ID="4871" DefName="嘲风" Type="飞行 火" Height="165" Weight="49" Features="性格急躁，好高骛远的龙之九子第三子，嘲风号船长。热衷于烟花爆竹和大摆宴席，别看她平时吊儿郎当的，但关键时刻值得信任。" Redirect="module" Go="app/FinalActivityPanel" Target="150105"/>
-	<Monster ID="4872" DefName="妙时天女" Type="混沌 光" Height="未知" Weight="未知" Features="来自“东之圈”星球赤洲星的大佛，拥有黑白两面。白面掌管吉时佳节的欢庆，是一位善神，黑面又称“厉世天母”，掌控祭祀与狂欢。" Redirect="module" Go="app/FinalActivityPanel" Target="114042"/>
+	<Monster ID="4872" DefName="妙时天女" Type="混沌 光" Height="未知" Weight="未知" Features="来自“东之圈”星球赤洲星的大佛，拥有黑白两面。白面掌管吉时佳节的欢庆，是一位善神，黑面又称“厉世天母”，掌控祭祀与狂欢。" Redirect="module" Go="app/FinalActivityPanel" Target="114095"/>
 	<Monster ID="4873" DefName="宵灵·午驹" Type="飞行" Height="65" Weight="比燕子轻" Features="赤洲星的吉祥物，龙船的领航员，虽然身兼重职，但可惜所有人都把她当小孩子看待。据说每一年都会变换样貌，很是奇妙。" Redirect="module" Go="app/FinalActivityPanel" Target="114044"/>
 	<Monster ID="4874" DefName="瓏首" Type="远古" Height="265" Weight="未知" Features="由古代赤洲方术和各项神秘技术制造的构造体，现作为龙船的大副或龙子的管家活动。其思考方式和行为逻辑类似于人工智能。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/849"/>
 	<Monster ID="4875" DefName="永烬劫炎·上古炎兽" Type="火" Height="2200" Weight="32000" Features="炎魔之王在古老的火焰中淬炼自我，重拾本源的它将永不熄灭！" Redirect="module" Go="app/FinalActivityPanel" Target="114043"/>
@@ -5211,5 +5211,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4909" DefName="钢傀" Type="机械 战斗" Height="168" Weight="45" Features="失忆的机甲驾驶者钢傀，性直爽敢闯，在旅行中寻回记忆，并同你结成了要好的兄弟。" Redirect="module" Go="app/FinalActivityPanel" Target="114078"/>
 	<Monster ID="4910" DefName="波动态幽魂" Type="暗影" Height="155" Weight="0" Features="黄金的波动下，残留在现世的遗愿，昭示着阿派罗尼亚曾经无尽的遗憾。" Redirect="module" Go="app/FinalActivityPanel" Target="400024"/>
 	<Monster ID="4911" DefName="星光·艾欧丽娅" Type="冰 自然" Height="176" Weight="61" Features="艾欧丽娅星光蜕变，凝练冰霜与自然之风，温柔坚定守护挚伴，与你共赴未来星海。" Redirect="module" Go="app/FinalActivityPanel" Target="150128"/>
+	<Monster ID="4912" DefName="生之焰·灰蛾" Type="火 虫" Height="166" Weight="49" Features="在苦难中成长的复仇者，灰蛾在与大家同行后化恨为护，以生命守护挚绊。" Redirect="module" Go="app/FinalActivityPanel" Target="114091"/>
+	<Monster ID="4913" DefName="夏哆" Type="光 暗影" Height="119" Weight="29" Features="遗留在众星博物馆中的一名小管理员，自从经历了那次的“波动”后，身体就变成了这副模样。" Redirect="module" Go="app/FinalActivityPanel" Target="400025"/>
+	<Monster ID="4914" DefName="奇灵画像" Type="超能" Height="76" Weight="40" Features="狡猾的家伙，居然伪装成画像来偷袭探险的正义伙伴，必须狠狠修理一番！" Redirect="module" Go="app/FinalActivityPanel" Target="400025"/>
 
 </root>

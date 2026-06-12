@@ -152,9 +152,14 @@
 <!-- <Pet PetId="3533" Price="98" productID="262359" MiditemId="1727959" LimitLv="5" TimeId="1001" TimeSubId="24" IsExtra="1" NewSe="2765" MintmarkId="41139" Turn="0" desc="" JudgeType="2" ForeverKey="121831" ForeverHalfPos="1" NewMsglogId="2512180802"/> -->
 
 	<!--20260508第25期-->
-<Pet PetId="3553" Price="98" productID="262417" MiditemId="1728042" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2787" MintmarkId="41161" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180800"/>
-<Pet PetId="3570" Price="198" productID="262418" MiditemId="1728043" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2802" MintmarkId="41185" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180801"/>
-<Pet PetId="3578" Price="198" productID="262419" MiditemId="1728044" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2811" MintmarkId="41193" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180802"/>
+<!-- <Pet PetId="3553" Price="98" productID="262417" MiditemId="1728042" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2787" MintmarkId="41161" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180800"/> -->
+<!-- <Pet PetId="3570" Price="198" productID="262418" MiditemId="1728043" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2802" MintmarkId="41185" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180801"/> -->
+<!-- <Pet PetId="3578" Price="198" productID="262419" MiditemId="1728044" LimitLv="5" TimeId="1001" TimeSubId="25" IsExtra="1" NewSe="2811" MintmarkId="41193" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180802"/> -->
+
+	<!--20260612第26期-->
+<Pet PetId="3583" Price="98" productID="262514" MiditemId="1728174" LimitLv="5" TimeId="1001" TimeSubId="26" IsExtra="1" NewSe="2815" MintmarkId="41202" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180800"/>
+<Pet PetId="3587" Price="198" productID="262515" MiditemId="1728175" LimitLv="5" TimeId="1001" TimeSubId="26" IsExtra="1" NewSe="2819" MintmarkId="41206" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180801"/>
+<Pet PetId="3621" Price="198" productID="262516" MiditemId="1728176" LimitLv="5" TimeId="1001" TimeSubId="26" IsExtra="1" NewSe="2852" MintmarkId="41242" Turn="0" desc="" JudgeType="1" ForeverKey="0" ForeverHalfPos="0" NewMsglogId="2512180802"/>
 
 </root>
 

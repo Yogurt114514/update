@@ -14377,19 +14377,19 @@
         </Stat>
     </Design>
 	
-	<Design ID="247" TimeFlag="" Desc="20260605 S-蕊沃尔">
+    <Design ID="247" TimeFlag="" Desc="20260605 S-蕊沃尔">
         <Rules>
-            <Rule ID="1" MouldID="1" Args="" UserInfo="302016 302017 302018 302019 302020 302021 302022 302023 302024 302025 302026 302027 302028 302029 302030 302031 302032 302033 302034 302035 302036 302037 302038 302039" CheckTips="本关卡在挑战中，不可重复上阵（出战背包派出过的）精灵" FailTips="" RepeatTips="背包内以下精灵放入过出战背包，不可重复出战：\n{0}"/>
+            <Rule ID="1" MouldID="1" Args="" UserInfo="302716 302717 302718 302719 302720 302721 302722 302723 302724 302725 302726 302727 302728 302729 302730 302731 302732 302733 302734 302735 302736 302737 302738 302739" CheckTips="本关卡在挑战中，不可重复上阵（出战背包派出过的）精灵" FailTips="" RepeatTips="背包内以下精灵放入过出战背包，不可重复出战：\n{0}"/>
             <Rule ID="2" MouldID="2" Args="6" UserInfo="" CheckTips="每场battle需要在6回合内击败BOSS，否则battle按失败结算" FailTips="很抱歉，战斗未在6回合内结束，结算为失败！"/>
             <Rule ID="3" MouldID="3" Args="3022 4649 3894" UserInfo="" CheckTips="本关卡不可使用精灵：王之哈莫、星光·魔焰猩猩、千裳" FailTips=""/>
             <Rule ID="4" MouldID="4" Args="100" UserInfo="" CheckTips="出战精灵需等于100级" FailTips=""/>
-            <Rule ID="5" MouldID="5" Args="3" UserInfo="302040" CheckTips="关卡挑战中的对战累计失败次数＞3次，则本轮关卡挑战自动放弃" FailTips="很抱歉，本关卡中对战累计失败次数已大于3次，挑战失败！"/>
-            <Rule ID="6" MouldID="6" Args="3" UserInfo="302041" CheckTips="一天之内连续胜利此难度关卡3次，即可解锁本关卡扫荡功能（需要连续胜利，不可中断）" FailTips=""/>
+            <Rule ID="5" MouldID="5" Args="3" UserInfo="302740" CheckTips="关卡挑战中的对战累计失败次数＞3次，则本轮关卡挑战自动放弃" FailTips="很抱歉，本关卡中对战累计失败次数已大于3次，挑战失败！"/>
+            <Rule ID="6" MouldID="6" Args="3" UserInfo="302741" CheckTips="一天之内连续胜利此难度关卡3次，即可解锁本关卡扫荡功能（需要连续胜利，不可中断）" FailTips=""/>
             <Rule ID="7" MouldID="7" Args="" UserInfo="" CheckTips="通关地狱难度则发放成就" FailTips=""/>
         </Rules>
         <Achievement BranchID="172" RuleID="13" ReachRuleID="7"/>
         <Reward ItemID="2400579" MonsterID="4908" MintMarkID="" MoveID="1" NewSeId="6399" GainValue="126165"/>
-        <Configure Exchange_pet="" Exchange_mintmark="" Exchange_moves="" Exchange_newse="" Times="3" ProgressValue="302042" TimeValue="302043" FailTimes="302040" ExchangeID="14754 14755 14756" ExchangeProductID="262498 262503 262499"/>
+        <Configure Exchange_pet="" Exchange_mintmark="" Exchange_moves="" Exchange_newse="" Times="3" ProgressValue="302742" TimeValue="302743" FailTimes="302740" ExchangeID="14755 14756 14757" ExchangeProductID="262498 262503 262499"/>
         <EasyBattle Out="12" RuleID="" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
             <Task ID="1" BattleBoss="4842" BattleType="2" Battlelevel="1" BossID="1003649" Desc="【简单的敌人，先制+1】"/>
             <Task ID="2" BattleBoss="4890" BattleType="2" Battlelevel="2" BossID="1003650" Desc="【普通的敌人，先制+1，每回合附加一定固定伤害】"/>
@@ -14424,7 +14424,6 @@
             <Achievement Get=""/>
         </Stat>
     </Design>
-	
 	
 	
 </Root>
