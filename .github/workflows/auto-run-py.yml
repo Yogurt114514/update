@@ -1,10 +1,10 @@
+# 与 CNB .cnb.yml 对齐；GitHub schedule 为 UTC，CNB crontab 为 Asia/Shanghai
 name: Auto Run Python Script and Upload Files
 
 on:
   schedule:
-    # 每隔15分钟触发一次
-    - cron: '*/15 * * * *'
-  # 保留手动触发，方便测试
+    # 每半小时一次（:00 与 :30，UTC）
+    - cron: '0,30 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,11 @@ jobs:
 
       - name: Install dependencies
         run: |
+          set -eux
+          sudo apt-get update -qq
+          # FFDec（魂印/道具 SWF 导出）依赖 java 命令
+          sudo apt-get install -y -qq git openjdk-17-jre-headless
+          java -version
           python -m pip install --upgrade pip
           echo "PWD:"
           pwd
@@ -33,7 +38,6 @@ jobs:
           ls -la
           echo "Update dir files (if exists):"
           ls -la update || true
-
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           elif [ -f update/requirements.txt ]; then
@@ -48,6 +52,7 @@ jobs:
 
       - name: Collect generated db files
         run: |
+          set -eux
           mkdir -p ./generated_files/db
           find ./generated_files -type f -name "*.db" -exec cp -f {} ./generated_files/db/ \;
           echo "Collected DB files:"
@@ -55,6 +60,7 @@ jobs:
 
       - name: Prune stale version1 / version2 artifacts
         run: |
+          set -eux
           python << 'PY'
           from pathlib import Path
 
@@ -86,10 +92,7 @@ jobs:
           root = Path("generated_files")
           removed = []
 
-          for legacy in (data_dir / "version1.txt", data_dir / "version2.txt"):
-              if legacy.is_file():
-                  legacy.unlink()
-                  removed.append(str(legacy))
+          # 保留 main.py 写入的 version1.txt / version2.txt（无下划线），不删除遗留同名文件
 
           for p in root.rglob("*.db"):
               stem = p.stem
@@ -119,13 +122,17 @@ jobs:
 
       - name: Commit and push files
         run: |
+          set -eux
           git config --global user.name "Yogurt114514"
           git config --global user.email "1157733847@qq.com"
-          # -A：新增/修改/删除（含旧 db、version1_*.txt / version2_*.txt、遗留 version1.txt / version2.txt）
           git add -A ./generated_files/
           if git diff --cached --quiet; then
             echo "No files changed, skip commit"
           else
             git commit -m "Auto update: Generate files at $(date +'%Y-%m-%d %H:%M:%S')"
+            git fetch origin "${{ github.ref_name }}" || true
+            if git rev-parse FETCH_HEAD >/dev/null 2>&1; then
+              git merge FETCH_HEAD --no-edit -m "Merge remote ${{ github.ref_name }} before CI push"
+            fi
             git push
           fi
