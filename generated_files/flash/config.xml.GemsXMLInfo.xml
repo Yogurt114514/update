@@ -2009,13 +2009,230 @@
 			<Effect EffectId="2216" Param="25" />
 		</SkillEffects>
 	</Gem>
-	
-	
-	
-	
-	
-	
-	
-	
+	<Gem ID="1800291" Name="秘咒宝石Ⅰ" Category="119" Lv="1" EquitLv1Cnt1="0" Des="使用时，下次附加概率高于70%/65%/60%/55%/50%的异常状态附加概率提升5%/10%/15%/20%/25%，若对手对此异常状态的抗性不高于5%/10%/15%/20%/25%则额外忽略5%/10%/15%/20%/25%（仅限PVP）"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800292"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="1" FailCompensateEnd="1" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2511" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800292" Name="秘咒宝石Ⅱ" Category="119" Lv="2" EquitLv1Cnt1="10000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800293"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="2" FailCompensateEnd="2" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2512" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800293" Name="秘咒宝石Ⅲ" Category="119" Lv="3" EquitLv1Cnt1="30000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800294"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="3" FailCompensateEnd="3" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2513" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800294" Name="秘咒宝石Ⅳ" Category="119" Lv="4" EquitLv1Cnt1="60000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800295"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="4" FailCompensateEnd="4" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2514" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800295" Name="秘咒宝石Ⅴ" Category="119" Lv="5" EquitLv1Cnt1="100000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId=""
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="5" FailCompensateEnd="5" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2515" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800296" Name="失力宝石Ⅰ" Category="120" Lv="1" EquitLv1Cnt1="0" Des="对手每处于1级能力下降状态，当回合对手造成的攻击伤害减少1%/2%/2%/3%/4%，最高20%/25%/30%/35%/40%（仅限PVP）"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800297"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="1" FailCompensateEnd="1" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2516" Param="1 20" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800297" Name="失力宝石Ⅱ" Category="120" Lv="2" EquitLv1Cnt1="10000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800298"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="2" FailCompensateEnd="2" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2516" Param="2 25" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800298" Name="失力宝石Ⅲ" Category="120" Lv="3" EquitLv1Cnt1="30000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800299"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="3" FailCompensateEnd="3" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2516" Param="2 30" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800299" Name="失力宝石Ⅳ" Category="120" Lv="4" EquitLv1Cnt1="60000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800300"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="4" FailCompensateEnd="4" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2516" Param="3 35" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800300" Name="失力宝石Ⅴ" Category="120" Lv="5" EquitLv1Cnt1="100000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId=""
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="5" FailCompensateEnd="5" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2516" Param="4 40" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800301" Name="活力保留宝石Ⅰ" Category="121" Lv="1" EquitLv1Cnt1="0" Des="自身每次在场的前1/1/1/1/2回合，此技能PP值被清除时50%/70%/100%/100%/100%保留1/1/1/2/2点PP值（仅限PVP）"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800302"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="1" FailCompensateEnd="1" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2517" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800302" Name="活力保留宝石Ⅱ" Category="121" Lv="2" EquitLv1Cnt1="10000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800303"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="2" FailCompensateEnd="2" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2518" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800303" Name="活力保留宝石Ⅲ" Category="121" Lv="3" EquitLv1Cnt1="30000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800304"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="3" FailCompensateEnd="3" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2519" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800304" Name="活力保留宝石Ⅳ" Category="121" Lv="4" EquitLv1Cnt1="60000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800305"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="4" FailCompensateEnd="4" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2520" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800305" Name="活力保留宝石Ⅴ" Category="121" Lv="5" EquitLv1Cnt1="100000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId=""
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="5" FailCompensateEnd="5" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2521" Param="" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800306" Name="护盾回溯宝石Ⅰ" Category="122" Lv="1" EquitLv1Cnt1="0" Des="获得自身上回合失去护盾的5%/10%/15%/20%/25%，最高40/60/80/100/120点（仅限PVP）"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800307"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="1" FailCompensateEnd="1" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2522" Param="5 40" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800307" Name="护盾回溯宝石Ⅱ" Category="122" Lv="2" EquitLv1Cnt1="10000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800308"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="2" FailCompensateEnd="2" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2522" Param="10 60" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800308" Name="护盾回溯宝石Ⅲ" Category="122" Lv="3" EquitLv1Cnt1="30000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800309"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="3" FailCompensateEnd="3" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2522" Param="15 80" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800309" Name="护盾回溯宝石Ⅳ" Category="122" Lv="4" EquitLv1Cnt1="60000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800310"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="4" FailCompensateEnd="4" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2522" Param="20 100" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800310" Name="护盾回溯宝石Ⅴ" Category="122" Lv="5" EquitLv1Cnt1="100000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId=""
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="5" FailCompensateEnd="5" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2522" Param="25 120" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800311" Name="护罩回溯宝石Ⅰ" Category="123" Lv="1" EquitLv1Cnt1="0" Des="获得自身上回合失去护罩的5%/10%/15%/20%/25%，最高40/60/80/100/120点（仅限PVP）"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800312"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="1" FailCompensateEnd="1" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2523" Param="5 40" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800312" Name="护罩回溯宝石Ⅱ" Category="123" Lv="2" EquitLv1Cnt1="10000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800313"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="2" FailCompensateEnd="2" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2523" Param="10 60" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800313" Name="护罩回溯宝石Ⅲ" Category="123" Lv="3" EquitLv1Cnt1="30000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800314"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="3" FailCompensateEnd="3" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2523" Param="15 80" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800314" Name="护罩回溯宝石Ⅳ" Category="123" Lv="4" EquitLv1Cnt1="60000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId="1800315"
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="4" FailCompensateEnd="4" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2523" Param="20 100" />
+		</SkillEffects>
+	</Gem>
+	<Gem ID="1800315" Name="护罩回溯宝石Ⅴ" Category="123" Lv="5" EquitLv1Cnt1="100000"
+		PromoteItemId="0" ItemProb="0" UpgradeGemId=""
+		UpgradeFailCompensanteProb="0" InlayProb="10000"
+		FailCompensateStart="5" FailCompensateEnd="5" InlayPromoteItem="0"
+		InlayPromoteProb="0" DecomposeProb="3000" cap_lv="1">
+		<SkillEffects>
+			<Effect EffectId="2523" Param="25 120" />
+		</SkillEffects>
+	</Gem>
 	
 </Gems>

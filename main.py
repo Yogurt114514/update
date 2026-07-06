@@ -33,6 +33,7 @@ from _swf_handle import (
 	extract_binary_data,
 	extract_swf_data,
 )
+from _pet_anim_export import export_all_pet_animations
 
 from pytz import timezone
 
@@ -44,7 +45,7 @@ OUTPUT_ROOT = Path(os.getenv("OUTPUT_ROOT", REPO_ROOT / "generated_files")).reso
 PLUGIN_BASE_DIR = Path(os.getenv("PLUGIN_BASE_DIR", OUTPUT_ROOT / "plugins")).resolve()
 data_path = Path(os.getenv("DATA_PATH", PLUGIN_BASE_DIR / "新数据")).resolve()
 FLASH_DIR = Path(os.getenv("FLASH_DIR", OUTPUT_ROOT / "flash")).resolve()
-FFDEC_JAR_PATH = Path(os.getenv("FFDEC_JAR_PATH", PLUGIN_BASE_DIR / "ffdec_18.0.0" / "ffdec.jar")).resolve()
+FFDEC_JAR_PATH = Path(os.getenv("FFDEC_JAR_PATH", PLUGIN_BASE_DIR / "ffdec_26.2.1" / "ffdec.jar")).resolve()
 
 LOCAL_BASE = str(PLUGIN_BASE_DIR)
 IMG_LOCAL_BASE = LOCAL_BASE
@@ -329,9 +330,6 @@ TARGET_TEXTASSET_NAMES = [
     "skillTypes",
     "sp_hide_moves",
     "petEffectIcon",
-    "pvp_ban",
-    "pvp_ban_expert",
-    "pvp_vote",
     "pet_advance",
     "pet_skin",
     "gems",
@@ -340,6 +338,14 @@ TARGET_TEXTASSET_NAMES = [
     "achievements",
     "suit",
     "equip",
+    "signIcon_fight",
+    "battle_effects",
+    "pet_skin_rewardtype",
+    "new_se",
+    "new_super_design",
+    "archivesBook",
+    "archivesStory",
+    "Fragment",
 ]  # 只导出这些 TextAsset 名（导出为 moves.bytes 等）
 
 # === 可配置参数 ===
@@ -631,6 +637,24 @@ def export_all_png_type(path: str):
         ensure_dir(os.path.dirname(out_path))
         img.save(out_path)
         print(f"导出: {out_path}")
+    shutil.rmtree(IMG_BUNDLE_DIR)
+
+def export_all_png_filter(path: str):
+    ensure_dir(path)
+    env = UnityPy.load(IMG_BUNDLE_DIR)
+    for obj in env.objects:
+        if obj.type.name != "Sprite":
+            continue
+        tex = obj.read()
+        img = tex.image
+        if img is None:
+            continue
+        filename = safe_filename(tex.m_Name) + ".png"
+        out_path = os.path.join(path, filename)
+        ensure_dir(os.path.dirname(out_path))
+        if "common_pet_skin_icon" in tex.m_Name and not os.path.exists(out_path):
+            img.save(out_path)
+            print(f"导出: {out_path}")
     shutil.rmtree(IMG_BUNDLE_DIR)
 
 def write_json(output_json_path: str, result: dict) -> None:
@@ -2038,6 +2062,7 @@ def parse_and_dump_item(input_bytes_path, output_json_path):
                         temp["Sort"] = r.ReadSignedInt()
                         temp["UseMax"] = r.ReadSignedInt()
                         temp["catID"] = r.ReadSignedInt()
+                        temp["purpose"] = r.ReadSignedInt()
                         temp["wd"] = r.ReadSignedInt()
                     case 26:
                         temp["ID"] = r.ReadSignedInt()
@@ -2181,6 +2206,467 @@ def parse_and_dump_equip(input_bytes_path, output_json_path):
                 temp["SuitID"] = r.ReadSignedInt()
                 equip.append(temp)
             result["root"] = equip
+    write_json(output_json_path, result)
+
+def parse_and_dump_buff(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"data": []}
+
+    # 检查根布尔标志
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["Desc"] = r.ReadUTFBytesWithLength()
+            temp["Tag"] = r.ReadUTFBytesWithLength()
+            temp["desc_tag"] = r.ReadUTFBytesWithLength()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["icon"] = [r.ReadSignedInt() for _ in range(a)]
+            temp["icontype"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            result["data"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_signIcon_fight(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["Des"] = r.ReadUTFBytesWithLength()
+            temp["NumDes"] = r.ReadUTFBytesWithLength()
+            temp["className"] = r.ReadUTFBytesWithLength()
+            temp["dec"] = r.ReadUTFBytesWithLength()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["frame"] = [r.ReadUTFBytesWithLength() for _ in range(a)]
+            temp["id"] = r.ReadSignedInt()
+            temp["isShowNum"] = r.ReadSignedInt()
+            temp["showmonster"] = r.ReadSignedInt()
+            temp["showtime"] = r.ReadSignedInt()
+            temp["sort"] = r.ReadSignedInt()
+            if r.read_bool():
+                b = r.ReadSignedInt()
+                temp["spDes"] = [r.ReadUTFBytesWithLength() for _ in range(b)]
+            if r.read_bool():
+                c = r.ReadSignedInt()
+                temp["spicon"] = [r.ReadUTFBytesWithLength() for _ in range(c)]
+            if r.read_bool():
+                d = r.ReadSignedInt()
+                temp["sptips"] = [r.ReadUTFBytesWithLength() for _ in range(d)]
+            temp["tips"] = r.ReadUTFBytesWithLength()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_battle_effects(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            tmp = []
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                for _ in range(a):
+                    t = {}
+                    t["ctrl"] = r.ReadSignedInt()
+                    t["dependent"] = r.ReadSignedInt()
+                    t["derivation"] = r.ReadSignedInt()
+                    t["efftype"] = r.ReadSignedInt()
+                    t["id"] = r.ReadSignedInt()
+                    t["name"] = r.ReadUTFBytesWithLength()
+                    t["restriction"] = r.ReadSignedInt()
+                    t["unctrl"] = r.ReadSignedInt()
+                    t["undependent"] = r.ReadSignedInt()
+                    t["underivation"] = r.ReadSignedInt()
+                    t["unrestriction"] = r.ReadSignedInt()
+                    t["unweaken"] = r.ReadSignedInt()
+                    t["weaken"] = r.ReadSignedInt()
+                    tmp.append(t)
+            temp["sub_effect"] = tmp
+            temp["type"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_pet_skin_rewardtype(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["id"] = r.ReadSignedInt()
+            temp["name"] = r.ReadUTFBytesWithLength()
+            temp["sort"] = r.ReadSignedInt()
+            temp["subtype"] = r.ReadSignedInt()
+            temp["subtypename"] = r.ReadUTFBytesWithLength()
+            temp["type"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_new_se(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["AdditionNum"] = r.ReadSignedInt()
+            temp["AdditionType"] = r.ReadSignedInt()
+            temp["Args"] = r.ReadUTFBytesWithLength()
+            temp["Des"] = r.ReadUTFBytesWithLength()
+            temp["Desc"] = r.ReadUTFBytesWithLength()
+            temp["Eid"] = r.ReadSignedInt()
+            temp["Idx"] = r.ReadSignedInt()
+            temp["Intro"] = r.ReadUTFBytesWithLength()
+            temp["ItemId"] = r.ReadSignedInt()
+            temp["StarLevel"] = r.ReadSignedInt()
+            temp["Stat"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_new_super_design(input_bytes_path, output_json_path):
+    """解析赛尔号客户端的因子关卡数据文件。"""
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    if not r.read_bool():
+        write_json(output_json_path, result)
+        return
+
+    if r.read_bool():
+        design_count = r.ReadSignedInt()
+        for _ in range(design_count):
+            design_item = {}
+
+            if r.read_bool():
+                design_item["achievement"] = {
+                    "branch_id": r.ReadSignedInt(),
+                    "rule_id": r.ReadSignedInt(),
+                }
+            else:
+                design_item["achievement"] = None
+
+            if r.read_bool():
+                exchange_id = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    exchange_id = [r.ReadSignedInt() for _ in range(count)]
+                exchange_product_id = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    exchange_product_id = [r.ReadSignedInt() for _ in range(count)]
+                design_item["configure"] = {
+                    "exchange_id": exchange_id,
+                    "exchange_product_id": exchange_product_id,
+                    "exchange_mintmark": r.ReadSignedInt(),
+                    "fail_times": r.ReadSignedInt(),
+                    "progress_value": r.ReadSignedInt(),
+                    "time_value": r.ReadSignedInt(),
+                    "times": r.ReadSignedInt(),
+                    "needmon": r.ReadSignedInt(),
+                }
+            else:
+                design_item["configure"] = None
+
+            if r.read_bool():
+                battle_cnt = r.ReadSignedInt()
+                desc = r.ReadUTFBytesWithLength()
+                out = r.ReadSignedInt()
+                task = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    for _ in range(count):
+                        task.append({
+                            "battle_boss": r.ReadSignedInt(),
+                            "battle_type": r.ReadSignedInt(),
+                            "battlelevel": r.ReadSignedInt(),
+                            "desc": r.ReadUTFBytesWithLength(),
+                            "id": r.ReadSignedInt(),
+                        })
+                task_style = r.ReadSignedInt()
+                design_item["easy_battle"] = {
+                    "desc": desc,
+                    "task": task,
+                    "battle_cnt": battle_cnt,
+                    "out": out,
+                    "task_style": task_style,
+                }
+            else:
+                design_item["easy_battle"] = None
+
+            if r.read_bool():
+                battle_cnt = r.ReadSignedInt()
+                desc = r.ReadUTFBytesWithLength()
+                out = r.ReadSignedInt()
+                rule_id = r.ReadUTFBytesWithLength()
+                task = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    for _ in range(count):
+                        task.append({
+                            "battle_boss": r.ReadSignedInt(),
+                            "battle_type": r.ReadSignedInt(),
+                            "battlelevel": r.ReadSignedInt(),
+                            "desc": r.ReadUTFBytesWithLength(),
+                            "id": r.ReadSignedInt(),
+                        })
+                task_style = r.ReadSignedInt()
+                design_item["hard_battle"] = {
+                    "desc": desc,
+                    "rule_id": rule_id,
+                    "task": task,
+                    "battle_cnt": battle_cnt,
+                    "out": out,
+                    "task_style": task_style,
+                }
+            else:
+                design_item["hard_battle"] = None
+
+            design_item["id"] = r.ReadSignedInt()
+
+            if r.read_bool():
+                battle_cnt = r.ReadSignedInt()
+                desc = r.ReadUTFBytesWithLength()
+                out = r.ReadSignedInt()
+                rule_id = r.ReadUTFBytesWithLength()
+                task = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    for _ in range(count):
+                        task.append({
+                            "battle_boss": r.ReadSignedInt(),
+                            "battle_type": r.ReadSignedInt(),
+                            "battlelevel": r.ReadSignedInt(),
+                            "desc": r.ReadUTFBytesWithLength(),
+                            "id": r.ReadSignedInt(),
+                        })
+                task_style = r.ReadSignedInt()
+                design_item["normal_battle"] = {
+                    "desc": desc,
+                    "rule_id": rule_id,
+                    "task": task,
+                    "battle_cnt": battle_cnt,
+                    "out": out,
+                    "task_style": task_style,
+                }
+            else:
+                design_item["normal_battle"] = None
+
+            if r.read_bool():
+                design_item["reward"] = {
+                    "gain_value": r.ReadSignedInt(),
+                    "item_id": r.ReadSignedInt(),
+                    "mint_mark_id": r.ReadSignedInt(),
+                    "monster_id": r.ReadSignedInt(),
+                }
+            else:
+                design_item["reward"] = None
+
+            if r.read_bool():
+                rule_list = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    for _ in range(count):
+                        rule_list.append({
+                            "args": r.ReadUTFBytesWithLength(),
+                            "check_tips": r.ReadUTFBytesWithLength(),
+                            "fail_tips": r.ReadUTFBytesWithLength(),
+                            "id": r.ReadSignedInt(),
+                            "mould_id": r.ReadSignedInt(),
+                            "repeat_tips": r.ReadUTFBytesWithLength(),
+                            "user_info": r.ReadUTFBytesWithLength(),
+                        })
+                design_item["rules"] = {"rule": rule_list}
+            else:
+                design_item["rules"] = None
+
+            if r.read_bool():
+                product_id = []
+                if r.read_bool():
+                    count = r.ReadSignedInt()
+                    product_id = [r.ReadSignedInt() for _ in range(count)]
+                design_item["sweep"] = {"product_id": product_id}
+            else:
+                design_item["sweep"] = None
+
+            result["root"].append(design_item)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_archivesBook(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["bookid"] = r.ReadSignedInt()
+            temp["chapterid"] = r.ReadSignedInt()
+            temp["chaptername"] = r.ReadUTFBytesWithLength()
+            temp["id"] = r.ReadSignedInt()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["txt"] = [r.ReadUTFBytesWithLength() for _ in range(a)]
+            if r.read_bool():
+                b = r.ReadSignedInt()
+                temp["txtdivide"] = [r.ReadSignedInt() for _ in range(b)]
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_archivesStory(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["classid"] = r.ReadSignedInt()
+            temp["classname"] = r.ReadUTFBytesWithLength()
+            temp["id"] = r.ReadSignedInt()
+            temp["isrec"] = r.ReadSignedInt()
+            temp["monid"] = r.ReadSignedInt()
+            temp["monname"] = r.ReadUTFBytesWithLength()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["samemonid"] = [r.ReadSignedInt() for _ in range(a)]
+            temp["storyid"] = r.ReadSignedInt()
+            temp["txt"] = r.ReadUTFBytesWithLength()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_move_stones(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["accuracy"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            temp["max_pp"] = r.ReadSignedInt()
+            temp["move_effect"] = []
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                for _ in range(a):
+                    t = {}
+                    t["id"] = r.ReadSignedInt()
+                    if r.read_bool():
+                        b = r.ReadSignedInt()
+                        t["side_effect"] = [r.ReadSignedInt() for _ in range(b)]
+                    if r.read_bool():
+                        c = r.ReadSignedInt()
+                        t["side_effect_arg"] = [r.ReadSignedInt() for _ in range(c)]
+                    temp["move_effect"].append(t)
+            temp["name"] = r.ReadUTFBytesWithLength()
+            temp["power"] = r.ReadSignedInt()
+            temp["type"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_fragment(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["ID"] = r.ReadSignedInt()
+            temp["MonsterID"] = r.ReadSignedInt()
+            temp["MoveID"] = r.ReadSignedInt()
+            temp["MovesConsume"] = r.ReadSignedInt()
+            temp["NeedmonID"] = r.ReadSignedInt()
+            temp["NewSeIdx"] = r.ReadSignedInt()
+            temp["NewseConsume"] = r.ReadSignedInt()
+            temp["PetConsume"] = r.ReadSignedInt()
+            temp["PetLimit"] = r.ReadSignedInt()
+            temp["Rarity"] = r.ReadSignedInt()
+            temp["effectId"] = r.ReadSignedInt()
+            temp["show"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
     write_json(output_json_path, result)
 
 def xml_to_json7(xml_file_path, output_json_path=None):
@@ -2474,6 +2960,152 @@ def export_swf_to_svg(ffdec_jar_path, input_swf_path, export_type="frame"):
 
     return True
 
+def export_swf_to_png(ffdec_jar_path):
+    items_db_path = data_path / f"items_{version1}.db"
+    if not items_db_path.is_file():
+        print(f"跳过道具 PNG 导出：未找到 {items_db_path}")
+        return
+
+    prop_root = PLUGIN_BASE_DIR / "道具"
+    prop_root.mkdir(parents=True, exist_ok=True)
+    ffdec_jar = str(ffdec_jar_path)
+    if ffdec_jar and not os.path.exists(ffdec_jar):
+        print(f"未找到 ffdec.jar：{ffdec_jar}，跳过道具 PNG 导出")
+        return
+
+    conn = sqlite3.connect(str(items_db_path))
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM items")
+    rows = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    data_list = [dict(zip(columns, row)) for row in rows]
+
+    for item in data_list:
+        if item["url"] == "undefined":
+            continue
+        url = item["url"][21:]
+        item_id = item["ID"]
+
+        final_png_path = prop_root / url / f"{item_id}.png"
+        if final_png_path.is_file():
+            continue
+
+        # ========== 路径配置（与 export_swf_to_svg 一致：PLUGIN_BASE_DIR 下）==========
+        root_dir = str(prop_root)
+        swf_dir = os.path.join(root_dir, str(item_id))
+        swf_file = os.path.join(swf_dir, f"{item_id}.swf")
+        export_dir = swf_dir
+        target_dir = os.path.join(root_dir, url)
+        if os.path.exists(swf_dir):
+            continue
+        os.makedirs(swf_dir, exist_ok=True)
+        (Path(swf_dir) / ".gitkeep").touch(exist_ok=True)
+        os.makedirs(target_dir, exist_ok=True)
+        (Path(target_dir) / ".gitkeep").touch(exist_ok=True)
+
+        original_cwd = os.getcwd()
+
+        try:
+            # 下载 SWF
+            swf_url = f'https://seer.61.com/resource/{url}{item_id}.swf'
+            r = requests.get(swf_url, timeout=5)
+            if r.status_code != 404:
+                with open(swf_file, "wb") as f:
+                    f.write(r.content)
+            else:
+                print(f"❌ {item_id} SWF 文件不存在（404）")
+                continue
+
+            os.chdir(swf_dir)
+
+            # ==============================================
+            # 第一步：始终优先【原始位图】目录 bitmap；仅当其中没有任何图片时，才进入后面的 Sprite 导出与选目录逻辑。
+            # ==============================================
+            # FFDec CLI 的 itemtype 为 image（DefineBits 等），没有 bitmap；用错类型时目录为空，永远“检测不到”
+            bitmap_output = os.path.join(export_dir, "bitmap")
+            cmd_bitmap = [
+                'java', '-jar', ffdec_jar,
+                '-format', 'image:png',
+                '-export', 'image', bitmap_output, f"{item_id}.swf"
+            ]
+            subprocess.run(cmd_bitmap, capture_output=True, timeout=3, encoding='gbk')
+
+            # 查找导出的位图（默认可能为 png/jpeg；加 bmp/gif/webp 兼容未指定 -format 的旧行为）
+            bitmap_found = None
+            if os.path.exists(bitmap_output):
+                for root, dirs, files in os.walk(bitmap_output):
+                    for f in files:
+                        if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif', '.webp')):
+                            bitmap_found = os.path.join(root, f)
+                            break
+                    if bitmap_found:
+                        break
+
+            if bitmap_found:
+                final_png_path.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(bitmap_found, final_png_path)
+                print(f"✅ {item_id}：导出位图 PNG")
+                continue
+
+            # ==============================================
+            # 第二步：无位图 → 导出 Sprite as PNG
+            # ==============================================
+            cmd_sprite = [
+                'java', '-jar', ffdec_jar,
+                '-format', 'sprite:png',
+                '-export', 'sprite', export_dir, f"{item_id}.swf"
+            ]
+            subprocess.run(cmd_sprite, check=True, capture_output=True, timeout=3, encoding='gbk')
+
+            # Sprite 导出完成后仍优先 bitmap：若此时 bitmap 下已有图（与第一步相同扩展名），则不用 DefineSprite 等目录。
+            bitmap_after_sprite = None
+            if os.path.isdir(bitmap_output):
+                for root, dirs, files in os.walk(bitmap_output):
+                    for f in files:
+                        if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif', '.webp')):
+                            bitmap_after_sprite = os.path.join(root, f)
+                            break
+                    if bitmap_after_sprite:
+                        break
+            if bitmap_after_sprite:
+                final_png_path.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(bitmap_after_sprite, final_png_path)
+                print(f"✅ {item_id}：导出位图 PNG")
+                continue
+
+            # Sprite 帧目录：原先 sorted 取末项会误判（如 DefineSprite_14 字典序在 DefineSprite_2 前）；
+            # 且末目录可能无 PNG。bitmap 已在上方处理；此处只在其余「含 PNG」子目录里，按名称中数字段的最大值择优（_1/_3/_14 → 14；数字在中间同样参与比较）。
+            def _sprite_dir_numeric_rank(dirname: str) -> int:
+                nums = [int(x) for x in re.findall(r"\d+", dirname)]
+                return max(nums) if nums else -1
+
+            sprite_candidates: list[tuple[int, str, list[str]]] = []
+            for d in os.listdir(export_dir):
+                if d.startswith(".") or d.lower() == "bitmap":
+                    continue
+                sub = os.path.join(export_dir, d)
+                if not os.path.isdir(sub):
+                    continue
+                pngs = [f for f in os.listdir(sub) if f.lower().endswith(".png")]
+                if not pngs:
+                    continue
+                sprite_candidates.append((_sprite_dir_numeric_rank(d), d, pngs))
+
+            if not sprite_candidates:
+                continue
+            sprite_candidates.sort(key=lambda t: (t[0], t[1]))
+            _, pick_dir, pngs = sprite_candidates[-1]
+            final_png_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(os.path.join(export_dir, pick_dir, pngs[0]), final_png_path)
+            print(f"✅ {item_id}：矢量导出 PNG")
+
+        except Exception as e:
+            print(f"❌ {item_id} 失败：{str(e)}")
+        finally:
+            os.chdir(original_cwd)
+
+    conn.close()
+
 
 
 
@@ -2495,9 +3127,6 @@ for name, platform in platforms:
     platform.save_remote_version()
     time_str = datetime.now(timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%SUTC%z")
 
-manifest_bytes = img_get_remote_manifest_bytes(version2)
-manifest = parse_package_manifest(manifest_bytes)
-
 manifest_bytes = get_remote_manifest_bytes(version1)
 manifest = parse_package_manifest(manifest_bytes)
 bundle_ids = resolve_bundles_for_targets(manifest, TARGET_TEXTASSET_NAMES)
@@ -2507,6 +3136,23 @@ for bid in bundle_ids:
     save_bundle(data, b["BundleName"])
 
 export_selected_textassets(TARGET_TEXTASSET_NAMES)
+
+manifest_bytes = img_get_remote_manifest_bytes(version2)
+manifest = parse_package_manifest(manifest_bytes)
+# 指定前缀列表
+prefixes = ["art_ui_common"]
+bundle_ids = [
+    idx for idx, b in enumerate(manifest["BundleList"])
+    if any(b["BundleName"].startswith(prefix) for prefix in prefixes)
+]
+print(f"需要下载的 bundle 数量: {len(bundle_ids)}")
+for bid in bundle_ids:
+    b = manifest["BundleList"][bid]
+    print(f"- 下载 {b['BundleName']} ({b['FileHash']})")
+    data = img_download_bundle(b["FileHash"])
+    img_save_bundle(data, b["BundleName"])
+export_all_png_filter(Path(os.path.join(LOCAL_BASE, "标签")))
+
 
 
 # """神谕/觉醒"""
@@ -2542,135 +3188,6 @@ with open((data_path / "monsters.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 Monsters = data["Monsters"]
 Monster = Monsters["Monster"]
-temp = {
-    "Atk": 140,
-    "CharacterAttrParam": 0,
-    "Combo": 0,
-    "Def": 110,
-    "DefName": "九青",
-    "EvolvFlag": 0,
-    "EvolvesTo": 0,
-    "EvolvingLv": 0,
-    "ExtraMoves": {
-        "Move": [
-        {
-            "ID": 36802,
-            "LearningLv": 76,
-            "Rec": 0,
-            "Tag": 0
-        }
-        ]
-    },
-    "FreeForbidden": 1,
-    "Gender": 2,
-    "HP": 165,
-    "ID": 4543,
-    "LearnableMoves": {
-        "Move": [
-        {
-            "ID": 10047,
-            "LearningLv": 1,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 22660,
-            "LearningLv": 5,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 14897,
-            "LearningLv": 9,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 10313,
-            "LearningLv": 13,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 14935,
-            "LearningLv": 17,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 36798,
-            "LearningLv": 21,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 22662,
-            "LearningLv": 25,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 14898,
-            "LearningLv": 29,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 22637,
-            "LearningLv": 33,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 22053,
-            "LearningLv": 37,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 24558,
-            "LearningLv": 41,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 36799,
-            "LearningLv": 45,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 28411,
-            "LearningLv": 49,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 36800,
-            "LearningLv": 53,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 28412,
-            "LearningLv": 57,
-            "Rec": 0,
-            "Tag": 0
-        },
-        {
-            "ID": 36801,
-            "LearningLv": 61,
-            "Rec": 0,
-            "Tag": 0
-        },
-        ]
-    },
-    "SpAtk": 70,
-    "SpDef": 110,
-    "Spd": 130,
-    "Type": 100,
-}
-Monster.append(temp)
 
 
 """刻印"""
@@ -2777,6 +3294,12 @@ with open((data_path / "effectIcon.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
 effect = root["effect"]
+for i in effect:    # 导出魂印图标
+    export_swf_to_svg(
+        ffdec_jar_path=FFDEC_JAR_PATH,
+        input_swf_path=i["icon_id"],  # SWF文件名（数字）
+        export_type="sprite"  # 导出精灵（frame=导出帧，sprite=导出精灵）
+    )
 parse_and_dump_effect_tag( # 魂印标签
     (data_path / "effectag.bytes"),
     (data_path / "effectag.json"),
@@ -2858,92 +3381,6 @@ with open((data_path / "moves.json"), 'r', encoding='utf-8') as f:
 MovesTbl = data["MovesTbl"]
 Moves = MovesTbl["Moves"]
 Move = Moves["Move"]
-temp = [
-    {
-        "ID": 36798,
-        "Name": "生尘眷盼",
-        "Category": 2,
-        "Type": 100,
-        "Power": 90,
-        "MaxPP": 10,
-        "Accuracy": 99,
-        "Priority": 3,
-        "SideEffect": "1897 842",
-        "SideEffectArg": "2 250 2 100 50",
-    },
-    {
-        "ID": 36799,
-        "Name": "永世相约",
-        "Category": 2,
-        "Type": 100,
-        "Power": 9,
-        "MaxPP": 9,
-        "Accuracy": 99,
-        "SideEffect": "1454",
-        "SideEffectArg": "7 25 5 20",
-    },
-    {
-        "ID": 28411,
-        "Name": "如日方升",
-        "Category": 4,
-        "Type": 8,
-        "Power": 0,
-        "MaxPP": 5,
-        "Accuracy": 100,
-        "MustHit": 1,
-        "SideEffect": "191 2060 854 843",
-        "SideEffectArg": "4 3 100 7 3 100 2 2",
-    },
-    {
-        "ID": 36800,
-        "Name": "圣钧无双陨",
-        "Category": 1,
-        "Type": 100,
-        "Power": 140,
-        "MaxPP": 5,
-        "Accuracy": 100,
-        "MustHit": 1,
-        "SideEffect": "426 2061",
-        "SideEffectArg": "2 100 2",
-    },
-    {
-        "ID": 28412,
-        "Name": "遂心快意",
-        "Category": 4,
-        "Type": 8,
-        "Power": 0,
-        "MaxPP": 5,
-        "Accuracy": 100,
-        "MustHit": 1,
-        "SideEffect": "521 1020 597 693",
-        "SideEffectArg": "1 4 3 2 100",
-    },
-    {
-        "ID": 36801,
-        "Name": "苍灵衔乐",
-        "Category": 2,
-        "Type": 100,
-        "Power": 150,
-        "MaxPP": 5,
-        "Accuracy": 99,
-        "SideEffect": "699 1568 852",
-        "SideEffectArg": "30 3",
-    },
-    {
-        "ID": 36802,
-        "Name": "清璨星辰落",
-        "Category": 1,
-        "Type": 100,
-        "Power": 160,
-        "MaxPP": 5,
-        "Accuracy": 100,
-        "MustHit": 1,
-        "SideEffect": "1843 933 1827 853",
-        "SideEffectArg": "300 100 9 1 1 25 10 45",
-    }
-]
-for i in temp:
-    Move.append(i)
 
 
 """技能代码"""
@@ -2958,23 +3395,17 @@ with open((data_path / "effectInfo.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
 ParamType = root["param_type"]
-temp = {"id": 114514, "desc": "火火自用标记……"}
-ParamType.append(temp)
 Effect = root["effect"]
 temp = {"id": 21, "args_num": 3, "info": "作用{0}回合，每回合反弹对手1/{2}的伤害"}
 Effect.append(temp)
-temp = {"id": 31, "args_num": 2, "info": "1回合做{0}~{1}次攻击"}
+temp = {"id": 31, "args_num": 2, "info": "1回合做{0}次攻击"}
 Effect.append(temp)
 temp = {"id": 41, "args_num": 2, "info": "{0}回合本方受到的火系攻击伤害减半"}
 Effect.append(temp)
 temp = {"id": 42, "args_num": 2, "info": "{0}回合自己使用电招式伤害×2"}
 Effect.append(temp)
-temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用属性攻击则{3}%自身{4}", "param": [114514,4,4]}
+temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用属性攻击则{3}%自身{1}等级+{4}"}
 Effect.append(temp)
-# temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用{2}攻击则{3}%自身{4}"}
-# Effect.append(temp)
-# temp = {"id": 114514, "args_num": 1, "info": "自身为最后一只存活精灵时，此技能转化为与自身系别相同的特殊攻击技能，且对方每比己方多存活一只精灵，威力提升{0}点"}
-# Effect.append(temp)
 parse_and_dump_skill_effect(
     (data_path / "skill_effect.bytes"),
     (data_path / "skill_effect.json"),
@@ -3035,6 +3466,52 @@ parse_and_dump_equip(
     (data_path / "equip.bytes"),
     (data_path / "equip.json"),
 )
+parse_and_dump_buff(
+    (data_path / "buff.bytes"),
+    (data_path / "buff.json"),
+)
+parse_and_dump_signIcon_fight(
+    (data_path / "signIcon_fight.bytes"),
+    (data_path / "signIcon_fight.json"),
+)
+parse_and_dump_battle_effects(
+    (data_path / "battle_effects.bytes"),
+    (data_path / "battle_effects.json"),
+)
+parse_and_dump_pet_skin_rewardtype(
+    (data_path / "pet_skin_rewardtype.bytes"),
+    (data_path / "pet_skin_rewardtype.json"),
+)
+parse_and_dump_new_se(
+    (data_path / "new_se.bytes"),
+    (data_path / "new_se.json"),
+)
+parse_and_dump_new_super_design(
+    (data_path / "new_super_design.bytes"),
+    (data_path / "new_super_design.json"),
+)
+parse_and_dump_archivesBook(
+    (data_path / "archivesBook.bytes"),
+    (data_path / "archivesBook.json"),
+)
+parse_and_dump_archivesStory(
+    (data_path / "archivesStory.bytes"),
+    (data_path / "archivesStory.json"),
+)
+parse_and_dump_move_stones(
+    (data_path / "move_stones.bytes"),
+    (data_path / "move_stones.json"),
+)
+parse_and_dump_fragment(
+    (data_path / "Fragment.bytes"),
+    (data_path / "Fragment.json"),
+)
+# export_all_pet_animations(
+# 	monsters_json_path=data_path / "monsters.json",
+# 	plugin_base_dir=PLUGIN_BASE_DIR,
+# 	ffdec_jar_path=FFDEC_JAR_PATH,
+# 	extra_pet_ids=[4543],
+# )
 
 
 
@@ -3299,8 +3776,11 @@ def generate_effect_text(skill, effect):
     info = effect.get("info", "")
     param = effect.get("param", [])
 
+    if args_num == 0:
+        return [info.rstrip(), f'{effect_id}']
+
     # 特殊处理某些效果ID
-    if effect_id in [21, 41, 42]:
+    elif effect_id in [21, 31, 41, 42]:
         temp = []
         for i in range(args_num):
             temp.append(skill.args_list.pop(0))
@@ -3310,12 +3790,20 @@ def generate_effect_text(skill, effect):
             temp[0] = temp[0] + '~' + temp[1]
             return [info.format(*temp).rstrip(), f'{effect_id}']
 
-    elif effect_id in [451]:
-        temp = [skill.args_list[0], '1']
+    elif effect_id in [174]:
+        temp = []
+        for i in range(args_num):
+            temp.append(skill.args_list.pop(0))
+        v_ = ["攻击", "防御", "特攻", "特防", "速度", "命中"]
+        if temp[2] == '-1':
+            temp[1] = v_[int(temp[1])]
+        else:
+            temp[1] = f"{v_[int(temp[1])]}和{v_[int(temp[2])]}"
         return [info.format(*temp).rstrip(), f'{effect_id}']
 
-    elif args_num == 0:
-        return [info.rstrip(), f'{effect_id}']
+    # elif effect_id in [451]:
+    #     temp = [skill.args_list[0], '1']
+    #     return [info.format(*temp).rstrip(), f'{effect_id}']
 
     else:
         try:
@@ -3347,10 +3835,6 @@ def generate_effect_text(skill, effect):
                                     changes.append(list(pt["params"].split('|'))[i])
                             temp[p[1]] = '、'.join(changes)
 
-                        elif p[0] == 20:
-                            if int(temp[p[1]]) >= 40:
-                                temp[p[1]] = '全部'
-
                         elif p[0] == 22:
                             for item in stitem:
                                 if item["id"] == int(temp[p[1]]):
@@ -3362,14 +3846,8 @@ def generate_effect_text(skill, effect):
                             for i in range(6):
                                 if int(temp[p[1] + i]) > 0:
                                     changes.append(list(pt["params"].split('|'))[i] + '-' + temp[p[1]+i])
-                            temp[p[1]] = '、'.join(changes)
+                            temp[p[1]] = '，'.join(changes)
 
-                        elif p[0] == 114514:
-                            if int(temp[p[1] - 2]) == -1:
-                                temp[p[1]] = "速度等级+1"
-                            else:
-                                temp[p[1]] = "特攻和速度等级+1"
-                        
                         else:
                             # 普通参数类型处理
                             params = pt.get("params", "").split('|')
@@ -3633,6 +4111,404 @@ with open(output_json_path, "w", encoding="utf-8") as f:
 
 import simplejson as json
 
+def db_achievements():
+    with open(data_path / "achievements.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    achievements = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS achievements (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                desc1 TEXT NOT NULL,        -- 
+                bid INTEGER NOT NULL,  -- 
+                desc2 TEXT NOT NULL,  -- 
+                rid INTEGER NOT NULL,  -- 
+                is_single INTEGER NOT NULL,  -- 
+                _text TEXT NOT NULL,  -- 
+                is_show_pro INTEGER NOT NULL,  -- 
+                ability_title INTEGER NOT NULL,  -- 
+                achievement_point INTEGER NOT NULL,  -- 
+                desc TEXT NOT NULL,  -- 
+                id INTEGER NOT NULL,  -- 
+                spe_name_bonus INTEGER NOT NULL,  -- 
+                threshold TEXT NOT NULL,  -- 
+                abtext TEXT NOT NULL,  -- 
+                ach_name TEXT NOT NULL,  -- 
+                hide INTEGER NOT NULL,  -- 
+                proicon INTEGER NOT NULL,  -- 
+                title TEXT NOT NULL,  -- 
+                title_color TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"achievements_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in achievements:
+        desc1 = i.get("Desc", '')
+        bid = i.get("ID", 0)
+        Branches = i.get("Branches", [])
+        for j in Branches:
+            for k in j:
+                desc2 = k.get("Desc", '')
+                rid = k.get("ID", 0)
+                is_single = k.get("IsSingle", 0)
+                _text = k.get("_text", '')
+                is_show_pro = k.get("isShowPro", 0)
+                Rule = k.get("Rule", [])
+                for l in Rule:
+                    try:
+                        ability_title = l.get("AbilityTitle", 0)
+                        achievement_point = l.get("AchievementPoint", 0)
+                        desc = l.get("Desc", '')
+                        id = l.get("ID", 0)
+                        spe_name_bonus = l.get("SpeNameBonus", 0)
+                        threshold = l.get("Threshold", '')
+                        abtext = l.get("abtext", '')
+                        ach_name = l.get("achName", '')
+                        hide = l.get("hide", 0)
+                        proicon = l.get("proicon", 0)
+                        title = l.get("title", '')
+                        title_color = l.get("titleColor", '')
+                        cursor.execute("""
+                            INSERT INTO achievements (desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """,(desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
+                        )
+                    except Exception as e:
+                        print(f"❌ 插入数据失败：{e}，数据内容：{l}")
+    conn.commit()
+db_achievements()
+def db_archive():
+    with open(data_path / "archivesBook.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root1 = data["root"]
+    with open(data_path / "archivesStory.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS book (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                bookid INTEGER NOT NULL,        -- 
+                chapterid INTEGER NOT NULL,        -- 
+                chaptername TEXT NOT NULL,        -- 
+                id INTEGER NOT NULL,        -- 
+                txt TEXT NOT NULL,        -- 
+                txtdivide TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS story (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                classid INTEGER NOT NULL,        -- 
+                classname TEXT NOT NULL,        -- 
+                id INTEGER NOT NULL,        -- 
+                isrec INTEGER NOT NULL,        -- 
+                monid INTEGER NOT NULL,        -- 
+                monname TEXT NOT NULL,        -- 
+                samemonid TEXT NOT NULL,        -- 
+                storyid INTEGER NOT NULL,        -- 
+                txt TEXT NOT NULL        -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"archive_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root1:
+        try:
+            bookid = i.get("bookid", 0)
+            chapterid = i.get("chapterid", 0)
+            chaptername = i.get("chaptername", "")
+            id = i.get("id", 0)
+            txt = str(i.get("txt", []))
+            txtdivide = str(i.get("txtdivide", []))
+            cursor.execute("""
+                INSERT INTO book (bookid, chapterid, chaptername, id, txt, txtdivide)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """, (bookid, chapterid, chaptername, id, txt, txtdivide)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root2:
+        try:
+            classid = i.get("classid", 0)
+            classname = i.get("classname", "")
+            id = i.get("id", 0)
+            isrec = i.get("isrec", 0)
+            monid = i.get("monid", 0)
+            monname = i.get("monname", "")
+            samemonid = str(i.get("samemonid", []))
+            storyid = i.get("storyid", 0)
+            txt = i.get("txt", "")
+            cursor.execute("""
+                INSERT INTO story (classid, classname, id, isrec, monid, monname, samemonid, storyid, txt)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (classid, classname, id, isrec, monid, monname, samemonid, storyid, txt)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_archive()
+def db_buff():
+    with open(data_path / "buff.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data["data"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS buff (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                desc TEXT NOT NULL,        -- 
+                tag TEXT NOT NULL,        -- 
+                desc_tag TEXT NOT NULL,        -- 
+                icon INTEGER NOT NULL,        -- 
+                icontype INTEGER NOT NULL,        -- 
+                id INTEGER NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"buff_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            desc = i.get("Desc", "")
+            tag = i.get("Tag", "")
+            desc_tag = i.get("desc_tag", "")
+            icon = i.get("icon", [0])[0]
+            icontype = i.get("icontype", 0)
+            id = i.get("id", 0)
+            cursor.execute("""
+                INSERT INTO buff (desc, tag, desc_tag, icon, icontype, id)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """, (desc, tag, desc_tag, icon, icontype, id)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_buff()
+def db_cloth():
+    with open(data_path / "suit.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root1 = data["root"]
+    with open(data_path / "equip.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"]
+    with open(data_path / "itemsOptimizeCatItems1.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root3 = data["root"]
+    with open(data_path / "itemsOptimizeCatItems13.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root4 = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS cloth (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                is_suit INTEGER NOT NULL,        -- 
+                name TEXT NOT NULL,  -- 
+                id INTEGER NOT NULL,  -- 
+                suitdes TEXT NOT NULL,  -- 
+                cloths TEXT NOT NULL,  -- 
+                item_id INTEGER NOT NULL,  -- 
+                desc TEXT NOT NULL,  -- 
+                rank_desc TEXT NOT NULL,  -- 
+                type TEXT NOT NULL,  -- 
+                suit_id INTEGER NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"cloth_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root1:
+        try:
+            name = i.get("name", '')
+            id = i.get("id", 0)
+            suitdes = i.get("suitdes", '')
+            cloths = str(i.get("cloths", ''))
+            item_id = 0
+            desc = ''
+            rank_desc = ''
+            type = ''
+            suit_id = 0
+            for j in root2:
+                if j.get("SuitID", 0) == id:
+                    desc = j.get("Desc", '')
+                    break
+            cursor.execute("""
+                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (1, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root3 + root4:
+        try:
+            name = i.get("Name", '')
+            id = 0
+            suitdes = ''
+            cloths = ''
+            item_id = i.get("ID", 0)
+            desc = ''
+            rank_desc = ''
+            type = i.get("type", '')
+            suit_id = 0
+            for j in root2:
+                if j.get("ItemID", 0) == item_id:
+                    desc = j.get("Desc", '')
+                    rank_desc = j.get("Rank", [])[0]["Desc"]
+                    if rank_desc == desc:
+                        rank_desc = ''
+                    suit_id = j.get("SuitID", 0)
+                    break
+            if suit_id == 0:
+                for j in root1:
+                    if item_id in j.get("cloths", []):
+                        suit_id = j.get("id", 0)
+                        break
+            cursor.execute("""
+                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (0, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_cloth()
 def db_effectag():
     with open(data_path / "effectag.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -3764,7 +4640,10 @@ db_effectbuff()
 def db_effectDes():
     with open(data_path / "effectDes.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root = data["root"]["item"]
+    root1 = data["root"]["item"]
+    with open(data_path / "battle_effects.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"][0]["sub_effect"]
 
 
     def create_scheme_database(db_path):
@@ -3816,7 +4695,7 @@ def db_effectDes():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
-    for i in root:
+    for i in root1:
         try:
             desc = i.get("desc", '')
             icon = i.get("icon", 0)
@@ -3826,6 +4705,49 @@ def db_effectDes():
             link = i.get("link", '')
             monster = i.get("monster", '')
             tab = i.get("tab", 0)
+            cursor.execute("""
+                INSERT INTO effectDes (desc, icon, id, kind, kinddes, link, monster, tab)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,(desc, icon, id, kind, kinddes, link, monster, tab)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root2:
+        try:
+            icon = i.get("id", 0)
+            kinddes = i.get("name", '')
+            desc = ''
+            id = 0
+            kind = 0
+            link = ''
+            monster = ''
+            res = i.get("efftype", 2)       # 0是控制抗性，1是弱化抗性
+            a1 = i.get("ctrl", 0)           # 控制类
+            a2 = i.get("weaken", 0)         # 弱化类
+            a3 = i.get("dependent", 0)      # 附属类
+            a4 = i.get("restriction", 0)    # 限制类
+            a5 = i.get("derivation", 0)     # 衍化类
+            tab = - (res*100000 + a1*10000 + a2*1000 + a3*100 + a4*10 + a5)
+            flag = True
+            for j in root1:
+                if j.get("kinddes", 0) == kinddes:
+                    desc = j.get("desc", '')
+                    id = j.get("id", 0)
+                    kind = j.get("kind", 0)
+                    link = j.get("link", '')
+                    monster = j.get("monster", '')
+                    flag = False
+                    break
+            if flag:
+                for j in root1:
+                    if j.get("icon", 0) == icon:
+                        desc = j.get("desc", '')
+                        id = j.get("id", 0)
+                        kind = j.get("kind", 0)
+                        link = j.get("link", '')
+                        monster = j.get("monster", '')
+                        flag = False
+                        break
             cursor.execute("""
                 INSERT INTO effectDes (desc, icon, id, kind, kinddes, link, monster, tab)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -3935,6 +4857,16 @@ def db_effectInfo():
     with open(data_path / "effectInfo.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root1 = data["root"]["effect"]
+    temp = {"id": 21, "args_num": 3, "info": "作用{0}回合，每回合反弹对手1/{2}的伤害"}
+    root1.append(temp)
+    temp = {"id": 31, "args_num": 2, "info": "1回合做{0}次攻击"}
+    root1.append(temp)
+    temp = {"id": 41, "args_num": 2, "info": "{0}回合本方受到的火系攻击伤害减半"}
+    root1.append(temp)
+    temp = {"id": 42, "args_num": 2, "info": "{0}回合自己使用电招式伤害×2"}
+    root1.append(temp)
+    temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用属性攻击则{3}%自身{1}等级+{4}"}
+    root1.append(temp)
     root2 = data["root"]["param_type"]
 
 
@@ -4197,6 +5129,7 @@ def db_items():
                 print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_items()
+export_swf_to_png(ffdec_jar_path=FFDEC_JAR_PATH)
 def db_mintmark():
     with open(data_path / "mintmark.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -4442,7 +5375,10 @@ db_moves()
 def db_pet_skin():
     with open(data_path / "pet_skin.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root = data["root"]
+    root1 = data["root"]
+    with open(data_path / "pet_skin_rewardtype.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"]
 
 
     def create_scheme_database(db_path):
@@ -4467,7 +5403,7 @@ def db_pet_skin():
                 Name TEXT NOT NULL,        -- 
                 SkinKindID INTEGER NOT NULL,        -- 
                 SkinKindLifeTime INTEGER NOT NULL,        -- 
-                SkinKindSkinType INTEGER NOT NULL,        -- 
+                SkinKindSkinType TEXT NOT NULL,        -- 
                 SkinKindType INTEGER NOT NULL,        -- 
                 SkinKindYear INTEGER NOT NULL,        -- 
                 Type INTEGER NOT NULL  -- 
@@ -4498,7 +5434,7 @@ def db_pet_skin():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
-    for i in root:
+    for i in root1:
         try:
             Go = i.get("Go", '')
             GoType = i.get("GoType", '')
@@ -4508,7 +5444,14 @@ def db_pet_skin():
             Name = i.get("Name", '')
             SkinKindID = i["SkinKind"][0]["ID"]
             SkinKindLifeTime = i["SkinKind"][0]["LifeTime"]
-            SkinKindSkinType = i["SkinKind"][0]["SkinType"]
+            SkinKindSkinType = str(i["SkinKind"][0]["SkinType"])
+            for j in root2:
+                try:
+                    if str(j.get("id", 0)) == SkinKindSkinType:
+                        SkinKindSkinType = j.get("name", '')
+                        break
+                except Exception as e:
+                    print(f"❌ 插入数据失败：{e}，数据内容：{j}")
             SkinKindType = i["SkinKind"][0]["Type"]
             SkinKindYear = i["SkinKind"][0]["Year"]
             Type = i.get("Type", 0)
@@ -4525,9 +5468,147 @@ def db_pets():
     with open(data_path / "monsters.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root = data["Monsters"]["Monster"]
+    temp = {
+        "Atk": 140,
+        "CharacterAttrParam": 0,
+        "Combo": 0,
+        "Def": 110,
+        "DefName": "九青",
+        "EvolvFlag": 0,
+        "EvolvesTo": 0,
+        "EvolvingLv": 0,
+        "ExtraMoves": {
+            "Move": [
+            {
+                "ID": 36802,
+                "LearningLv": 76,
+                "Rec": 0,
+                "Tag": 0
+            }
+            ]
+        },
+        "FreeForbidden": 1,
+        "Gender": 2,
+        "HP": 165,
+        "ID": 4543,
+        "LearnableMoves": {
+            "Move": [
+            {
+                "ID": 10047,
+                "LearningLv": 1,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 22660,
+                "LearningLv": 5,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 14897,
+                "LearningLv": 9,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 10313,
+                "LearningLv": 13,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 14935,
+                "LearningLv": 17,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 36798,
+                "LearningLv": 21,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 22662,
+                "LearningLv": 25,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 14898,
+                "LearningLv": 29,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 22637,
+                "LearningLv": 33,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 22053,
+                "LearningLv": 37,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 24558,
+                "LearningLv": 41,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 36799,
+                "LearningLv": 45,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 28411,
+                "LearningLv": 49,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 36800,
+                "LearningLv": 53,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 28412,
+                "LearningLv": 57,
+                "Rec": 0,
+                "Tag": 0
+            },
+            {
+                "ID": 36801,
+                "LearningLv": 61,
+                "Rec": 0,
+                "Tag": 0
+            },
+            ]
+        },
+        "SpAtk": 70,
+        "SpDef": 110,
+        "Spd": 130,
+        "Type": 100,
+    }
+    root.append(temp)
     with open(data_path / "petbook.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root1 = data["root"]["Monster"]
+    temp = {
+      "ID": 4543,
+      "DefName": "九青",
+      "Type": "圣灵 地面",
+      "Height": 162,
+      "Weight": 56,
+      "Features": "2023年9月巅峰圣战精灵……“有些约定，就是一开始便知道结局，也还是会义无反顾嘛……”九青看着手中的信封，呆呆的注视着望不到边际的北方。",
+    }
+    root1.append(temp)
     book = []
     for i in root1:
         book.append(i["ID"])
@@ -4538,10 +5619,7 @@ def db_pets():
         data = json.load(f)
     root3 = data["root"]["Task"]
     pro = []
-    for i in root2:
-        race = i["Advances"]["Race"]["NewRace"]
-        pro.append([i["Advances"]["MonsterId"], race])
-    for i in root3:
+    for i in root3 + root2:
         race = i["Advances"]["Race"]["NewRace"]
         pro.append([i["Advances"]["MonsterId"], race])
 
@@ -4884,11 +5962,10 @@ def db_skillTypes():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_skillTypes()
-def db_sp_hide_moves():
-    with open(data_path / "sp_hide_moves.json", 'r', encoding='utf-8') as f:
+def db_stone():
+    with open(data_path / "move_stones.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root1 = data["root"]["ShowMoves"]
-    root2 = data["root"]["SpMoves"]
+    root = data["root"]
 
 
     def create_scheme_database(db_path):
@@ -4903,30 +5980,15 @@ def db_sp_hide_moves():
             cursor = conn.cursor()
 
             create_table_sql = """
-            CREATE TABLE IF NOT EXISTS ShowMoves (
+            CREATE TABLE IF NOT EXISTS stone (
                 dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                accuracy INTEGER NOT NULL,        -- 
                 id INTEGER NOT NULL,        -- 
-                item INTEGER NOT NULL,        -- 
-                itemname TEXT NOT NULL,        -- 
-                itemnumber INTEGER NOT NULL,        -- 
-                monster INTEGER NOT NULL,        -- 
-                moves INTEGER NOT NULL,        -- 
-                movesname TEXT NOT NULL,        -- 
-                movetype INTEGER NOT NULL        -- 
-            );
-            """
-            cursor.execute(create_table_sql)
-            create_table_sql = """
-            CREATE TABLE IF NOT EXISTS SpMoves (
-                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                id INTEGER NOT NULL,        -- 
-                item INTEGER NOT NULL,        -- 
-                itemname TEXT NOT NULL,        -- 
-                itemnumber INTEGER NOT NULL,        -- 
-                monster INTEGER NOT NULL,        -- 
-                moves INTEGER NOT NULL,        -- 
-                movesname TEXT NOT NULL,        -- 
-                movetype INTEGER NOT NULL        -- 
+                max_pp INTEGER NOT NULL,        -- 
+                move_effect TEXT NOT NULL,        -- 
+                name TEXT NOT NULL,        -- 
+                power INTEGER NOT NULL,        -- 
+                type INTEGER NOT NULL  -- 
             );
             """
             cursor.execute(create_table_sql)
@@ -4941,7 +6003,7 @@ def db_sp_hide_moves():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / f"sp_hide_moves_{version1}.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"stone_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -4954,46 +6016,28 @@ def db_sp_hide_moves():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
-    for i in root1:
+    for i in root:
         try:
+            accuracy = i.get("accuracy", 0)
             id = i.get("id", 0)
-            item = i.get("item", 0)
-            itemname = i.get("itemname", "")
-            itemnumber = i.get("itemnumber", 0)
-            monster = i.get("monster", 0)
-            moves = i.get("moves", 0)
-            movesname = i.get("movesname", "")
-            movetype = i.get("movetype", 0)
+            max_pp = i.get("max_pp", 0)
+            move_effect = str(i.get("move_effect", []))
+            name = i.get("name", "")
+            power = i.get("power", 0)
+            type = i.get("type", 0)
             cursor.execute("""
-                INSERT INTO ShowMoves (id, item, itemname, itemnumber, monster, moves, movesname, movetype)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                """, (id, item, itemname, itemnumber, monster, moves, movesname, movetype)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    for i in root2:
-        try:
-            id = i.get("id", 0)
-            item = i.get("item", 0)
-            itemname = i.get("itemname", "")
-            itemnumber = i.get("itemnumber", 0)
-            monster = i.get("monster", 0)
-            moves = i.get("moves", 0)
-            movesname = i.get("movesname", "")
-            movetype = i.get("movetype", 0)
-            cursor.execute("""
-                INSERT INTO SpMoves (id, item, itemname, itemnumber, monster, moves, movesname, movetype)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                """, (id, item, itemname, itemnumber, monster, moves, movesname, movetype)
+                INSERT INTO stone (accuracy, id, max_pp, move_effect, name, power, type)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """, (accuracy, id, max_pp, move_effect, name, power, type)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
-db_sp_hide_moves()
-def db_achievements():
-    with open(data_path / "achievements.json", 'r', encoding='utf-8') as f:
+db_stone()
+def db_te_xing():
+    with open(data_path / "new_se.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    achievements = data["root"]
+    root = data["root"]
 
 
     def create_scheme_database(db_path):
@@ -5008,27 +6052,19 @@ def db_achievements():
             cursor = conn.cursor()
 
             create_table_sql = """
-            CREATE TABLE IF NOT EXISTS achievements (
+            CREATE TABLE IF NOT EXISTS te_xing (
                 dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                desc1 TEXT NOT NULL,        -- 
-                bid INTEGER NOT NULL,  -- 
-                desc2 TEXT NOT NULL,  -- 
-                rid INTEGER NOT NULL,  -- 
-                is_single INTEGER NOT NULL,  -- 
-                _text TEXT NOT NULL,  -- 
-                is_show_pro INTEGER NOT NULL,  -- 
-                ability_title INTEGER NOT NULL,  -- 
-                achievement_point INTEGER NOT NULL,  -- 
-                desc TEXT NOT NULL,  -- 
-                id INTEGER NOT NULL,  -- 
-                spe_name_bonus INTEGER NOT NULL,  -- 
-                threshold TEXT NOT NULL,  -- 
-                abtext TEXT NOT NULL,  -- 
-                ach_name TEXT NOT NULL,  -- 
-                hide INTEGER NOT NULL,  -- 
-                proicon INTEGER NOT NULL,  -- 
-                title TEXT NOT NULL,  -- 
-                title_color TEXT NOT NULL  -- 
+                AdditionNum INTEGER NOT NULL,        -- 
+                AdditionType INTEGER NOT NULL,        -- 
+                Args TEXT NOT NULL,        -- 
+                Des TEXT NOT NULL,        -- 
+                Desc TEXT NOT NULL,        -- 
+                Eid INTEGER NOT NULL,        -- 
+                Idx INTEGER NOT NULL,        -- 
+                Intro TEXT NOT NULL,        -- 
+                ItemId INTEGER NOT NULL,        -- 
+                StarLevel INTEGER NOT NULL,        -- 
+                Stat INTEGER NOT NULL  -- 
             );
             """
             cursor.execute(create_table_sql)
@@ -5043,7 +6079,7 @@ def db_achievements():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / f"achievements_{version1}.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"te_xing_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -5056,54 +6092,35 @@ def db_achievements():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
-    for i in achievements:
-        desc1 = i.get("Desc", '')
-        bid = i.get("ID", 0)
-        Branches = i.get("Branches", [])
-        for j in Branches:
-            for k in j:
-                desc2 = k.get("Desc", '')
-                rid = k.get("ID", 0)
-                is_single = k.get("IsSingle", 0)
-                _text = k.get("_text", '')
-                is_show_pro = k.get("isShowPro", 0)
-                Rule = k.get("Rule", [])
-                for l in Rule:
-                    try:
-                        ability_title = l.get("AbilityTitle", 0)
-                        achievement_point = l.get("AchievementPoint", 0)
-                        desc = l.get("Desc", '')
-                        id = l.get("ID", 0)
-                        spe_name_bonus = l.get("SpeNameBonus", 0)
-                        threshold = l.get("Threshold", '')
-                        abtext = l.get("abtext", '')
-                        ach_name = l.get("achName", '')
-                        hide = l.get("hide", 0)
-                        proicon = l.get("proicon", 0)
-                        title = l.get("title", '')
-                        title_color = l.get("titleColor", '')
-                        cursor.execute("""
-                            INSERT INTO achievements (desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                            """,(desc1, bid, desc2, rid, is_single, _text, is_show_pro, ability_title, achievement_point, desc, id, spe_name_bonus, threshold, abtext, ach_name, hide, proicon, title, title_color)
-                        )
-                    except Exception as e:
-                        print(f"❌ 插入数据失败：{e}，数据内容：{l}")
+    for i in root:
+        try:
+            AdditionNum = i.get("AdditionNum", 0)
+            AdditionType = i.get("AdditionType", 0)
+            Args = i.get("Args", "")
+            Des = i.get("Des", "")
+            Desc = i.get("Desc", "")
+            Eid = i.get("Eid", 0)
+            Idx = i.get("Idx", 0)
+            Intro = i.get("Intro", "")
+            ItemId = i.get("ItemId", 0)
+            StarLevel = i.get("StarLevel", 0)
+            Stat = i.get("Stat", 0)
+            cursor.execute("""
+                INSERT INTO te_xing (AdditionNum, AdditionType, Args, Des, Desc, Eid, Idx, Intro, ItemId, StarLevel, Stat)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (AdditionNum, AdditionType, Args, Des, Desc, Eid, Idx, Intro, ItemId, StarLevel, Stat)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
-db_achievements()
-def db_cloth():
-    with open(data_path / "suit.json", 'r', encoding='utf-8') as f:
+db_te_xing()
+def db_yin_zi():
+    with open(data_path / "new_super_design.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root1 = data["root"]
-    with open(data_path / "equip.json", 'r', encoding='utf-8') as f:
+    with open(data_path / "Fragment.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
     root2 = data["root"]
-    with open(data_path / "itemsOptimizeCatItems1.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root3 = data["root"]
-    with open(data_path / "itemsOptimizeCatItems13.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root4 = data["root"]
 
 
     def create_scheme_database(db_path):
@@ -5118,18 +6135,26 @@ def db_cloth():
             cursor = conn.cursor()
 
             create_table_sql = """
-            CREATE TABLE IF NOT EXISTS cloth (
+            CREATE TABLE IF NOT EXISTS yin_zi (
                 dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                is_suit INTEGER NOT NULL,        -- 
-                name TEXT NOT NULL,  -- 
-                id INTEGER NOT NULL,  -- 
-                suitdes TEXT NOT NULL,  -- 
-                cloths TEXT NOT NULL,  -- 
-                item_id INTEGER NOT NULL,  -- 
-                desc TEXT NOT NULL,  -- 
-                rank_desc TEXT NOT NULL,  -- 
-                type TEXT NOT NULL,  -- 
-                suit_id INTEGER NOT NULL  -- 
+                monster_id INTEGER NOT NULL,        -- 
+                needmon INTEGER NOT NULL,        -- 
+                reward_item INTEGER NOT NULL,        -- 
+                consume_pet INTEGER NOT NULL,        -- 
+                reward_icon INTEGER NOT NULL,        -- 
+                consume_icon INTEGER NOT NULL,        -- 
+                reward_move INTEGER NOT NULL,        -- 
+                consume_move INTEGER NOT NULL,        -- 
+                reward_mintmark INTEGER NOT NULL,        -- 
+                consume_mintmark INTEGER NOT NULL,        -- 
+                rarity INTEGER NOT NULL,        -- 
+                pet_limit INTEGER NOT NULL,        -- 
+                a1 INTEGER NOT NULL,        -- 
+                a2 INTEGER NOT NULL,        -- 
+                rule TEXT NOT NULL,        -- 
+                easy_battle TEXT NOT NULL,        -- 
+                normal_battle TEXT NOT NULL,        -- 
+                hard_battle TEXT NOT NULL        -- 
             );
             """
             cursor.execute(create_table_sql)
@@ -5144,7 +6169,7 @@ def db_cloth():
             if conn:
                 conn.close()
 
-    DB_PATH = str(data_path / f"cloth_{version1}.db")  # CI 输出路径
+    DB_PATH = str(data_path / f"yin_zi_{version1}.db")  # CI 输出路径
 
     try:
         os.remove(DB_PATH)
@@ -5157,68 +6182,58 @@ def db_cloth():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
-    for i in root1:
+    for j in root2:
         try:
-            name = i.get("name", '')
-            id = i.get("id", 0)
-            suitdes = i.get("suitdes", '')
-            cloths = str(i.get("cloths", ''))
-            item_id = 0
-            desc = ''
-            rank_desc = ''
-            type = ''
-            suit_id = 0
-            for j in root2:
-                if j.get("SuitID", 0) == id:
-                    desc = j.get("Desc", '')
+            reward_item = j["ID"]
+            consume_pet = j["PetConsume"]
+            reward_icon = j["effectId"]
+            consume_icon = j["NewseConsume"]
+            reward_move = j["MoveID"]
+            consume_move = j["MovesConsume"]
+            rarity = j["Rarity"]
+            pet_limit = j["PetLimit"]
+            monster_id = j["MonsterID"]
+            needmon = 0
+            reward_mintmark = 0
+            consume_mintmark = 0
+            a1 = 0
+            a2 = 0
+            rule = ""
+            easy_battle = ""
+            normal_battle = ""
+            hard_battle = ""
+            for i in root1:
+                if i["reward"]["item_id"] == reward_item:
+                    needmon = i["configure"]["needmon"]
+                    reward_mintmark = i["reward"]["mint_mark_id"]
+                    consume_mintmark = i["configure"]["exchange_mintmark"]
+                    a1 = i["achievement"]["branch_id"]
+                    a2 = i["achievement"]["rule_id"]
+                    rule = str(i["rules"]["rule"])
+                    easy_battle = str(i.get("easy_battle", "{}"))
+                    normal_battle = str(i.get("normal_battle", "{}"))
+                    hard_battle = str(i.get("hard_battle", "{}"))
                     break
             cursor.execute("""
-                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (1, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
+                INSERT INTO yin_zi (monster_id, needmon, reward_item, consume_pet, reward_mintmark, consume_mintmark, reward_icon, consume_icon, reward_move, consume_move, rarity, pet_limit, a1, a2, rule, easy_battle, normal_battle, hard_battle)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (monster_id, needmon, reward_item, consume_pet, reward_mintmark, consume_mintmark, reward_icon, consume_icon, reward_move, consume_move, rarity, pet_limit, a1, a2, rule, easy_battle, normal_battle, hard_battle)
             )
         except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    for i in root3 + root4:
-        try:
-            name = i.get("Name", '')
-            id = 0
-            suitdes = ''
-            cloths = ''
-            item_id = i.get("ID", 0)
-            desc = ''
-            rank_desc = ''
-            type = i.get("type", '')
-            suit_id = 0
-            for j in root2:
-                if j.get("ItemID", 0) == item_id:
-                    desc = j.get("Desc", '')
-                    rank_desc = j.get("Rank", [])[0]["Desc"]
-                    if rank_desc == desc:
-                        rank_desc = ''
-                    suit_id = j.get("SuitID", 0)
-                    break
-            if suit_id == 0:
-                for j in root1:
-                    if item_id in j.get("cloths", []):
-                        suit_id = j.get("id", 0)
-                        break
-            cursor.execute("""
-                INSERT INTO cloth (is_suit, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (0, name, id, suitdes, cloths, item_id, desc, rank_desc, type, suit_id)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+            print(f"❌ 插入数据失败：{e}，数据内容：{j}")
     conn.commit()
-db_cloth()
+db_yin_zi()
 
 
 
 
 
+with open(data_path/f'version1.txt', "w", encoding="utf-8") as file:
+    file.write(version1)
 with open(data_path/f'version1_{version1}.txt', "w", encoding="utf-8") as file:
     file.write(version1)
+with open(data_path/f'version2.txt', "w", encoding="utf-8") as file:
+    file.write(version2)
 with open(data_path/f'version2_{version2}.txt', "w", encoding="utf-8") as file:
     file.write(version2)
 print("数据更新完成！", version1, version2)

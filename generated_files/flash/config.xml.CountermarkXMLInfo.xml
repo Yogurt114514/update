@@ -3810,6 +3810,26 @@
 	<MintMark ID="42711" Type="3" Rare="3" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 5 2 5 2 9" MaxAttriValue="0 51 21 51 21 91" MintmarkClass="95" Level="100" Max="99" Des="薇之新芽" EffectDes="防御5/51,特攻2/21,特防5/51,速度2/21,体力9/91"/>
 	<MintMark ID="42712" Type="3" Rare="3" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="2 5 0 5 2 9" MaxAttriValue="21 51 0 51 21 91" MintmarkClass="95" Level="100" Max="99" Des="薇之守候" EffectDes="攻击2/21,防御5/51,特防5/51,速度2/21,体力9/91"/>
 	<MintMark ID="42713" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="5 3 0 3 4 9" MaxAttriValue="50 30 0 30 40 90" MonsterID="4912" Level="100" Max="99" Des="生之焰·灰蛾专属全能刻印" EffectDes="攻击5/50,防御3/30,特防3/30,速度4/40,体力9/90"/>
+    <MintMark ID="42714" Type="3" Rare="5" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="4 3 0 3 3 13" MaxAttriValue="45 34 0 34 32 135" MintmarkClass="11" Level="100" Max="99" Des="17闪耀" EffectDes="攻击4/45,防御3/34,特防3/34,速度3/32,体力13/135"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

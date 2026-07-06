@@ -11,6 +11,7 @@
 	<item id="106" title="每周任务" describe="累计获得5只精灵" tasktype="106" value="5" time="2" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="20626" exp="800" stat="2401050778" />
 	<item id="107" title="每周任务" describe="累计通关10层学习力训练场" tasktype="107" value="10" time="2" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="20627" exp="800" stat="2401050779" />
 	<item id="108" title="每周任务" describe="累计完成50次战斗" tasktype="108" value="50" time="2" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="20628" exp="1000" stat="2401050780" />
+	<item id="109" title="每周任务" describe="累计完成5场群星牌" tasktype="17" value="5" time="2" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="20629" exp="1000" stat="2606181102" />
 	<item id="1001" title="每期任务" describe="通关4次星际迷航" tasktype="1001" value="4" time="4" time2="2025/10/17/0" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="124541" exp="3000" stat="2401050781" />
 	<item id="1002" title="每期任务" describe="累计击败100只精灵" tasktype="1002" value="100" time="4" time2="2025/10/17/0" timelimit="0" timestart="0" timeend="0" init="1" rewardinfo="0" userinfo="124542" exp="3000" stat="2401050782" />
 </root>

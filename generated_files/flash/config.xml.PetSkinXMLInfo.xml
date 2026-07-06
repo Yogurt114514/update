@@ -2804,47 +2804,47 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="830" MonID="3886" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="凛夜将至·柯尔德" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114071">
+	<Skin ID="830" MonID="3886" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="凛夜将至·柯尔德" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="831" MonID="4629" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="荣光之约·蒙鲁特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="831" MonID="4629" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="荣光之约·蒙鲁特" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="832" MonID="4344" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·潘克多斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+	<Skin ID="832" MonID="4344" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·潘克多斯" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
 	</Skin>
 
-	<Skin ID="833" MonID="4463" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·斯克鲁恩" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+	<Skin ID="833" MonID="4463" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·斯克鲁恩" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
 	</Skin>
 
-	<Skin ID="834" MonID="4606" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·加尔鲁特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114073">
+	<Skin ID="834" MonID="4606" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="18" Name="莱卡的守望·加尔鲁特" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="22"/>
 	</Skin>
 
-	<Skin ID="835" MonID="3637" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="卡通玩具·萨瑞卡" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114076">
+	<Skin ID="835" MonID="3637" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="卡通玩具·萨瑞卡" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	
-	<Skin ID="836" MonID="4834" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="派鲁基达" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="836" MonID="4834" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="派鲁基达" Go="app/FinalActivityPanel" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="837" MonID="4000" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="20" Name="于生命中得见·薇尔诗" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114084">
+	<Skin ID="837" MonID="4000" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="20" Name="于生命中得见·薇尔诗" >
 		<SkinKind ID="1" Type="2" LifeTime="0" SkinType="23"/>
 	</Skin>
 
-	<Skin ID="838" MonID="4853" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="超算魅影·梅赫维特" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114086">
+	<Skin ID="838" MonID="4853" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="超算魅影·梅赫维特" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="839" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="审判天使·钢傀" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114087">
+	<Skin ID="839" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="审判天使·钢傀" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="840" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="星际领航员·艾欧丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114090">
+	<Skin ID="840" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="星际领航员·艾欧丽娅" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
@@ -2852,27 +2852,43 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="842" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="限制解除·钢傀" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114078">
+	<Skin ID="842" MonID="4909" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="限制解除·钢傀" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="843" MonID="3940" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="傲世飞将·吕布" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="843" MonID="3940" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="傲世飞将·吕布" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="844" MonID="4912" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="无法抵达的梦·灰蛾" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114092">
+	<Skin ID="844" MonID="4912" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="无法抵达的梦·灰蛾" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="845" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="星冕纱华·艾欧丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114093">
+	<Skin ID="845" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="星冕纱华·艾欧丽娅" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="846" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="阿娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114094">
+	<Skin ID="846" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="阿娅" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
-	<Skin ID="847" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="艾丽娅" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114094">
+	<Skin ID="847" MonID="4911" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="艾丽娅" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="848" MonID="4915" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="古典艺术·西曼德妮" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="849" MonID="4908" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="偶像叛客·蕊沃尔" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+	
+	<Skin ID="850" MonID="4147" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="森语·月冕" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114017">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+	
+	<Skin ID="851" MonID="4709" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="吉尼亚斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 

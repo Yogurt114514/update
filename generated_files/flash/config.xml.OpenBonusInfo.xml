@@ -2035,6 +2035,12 @@ eg:
 		</Out>
 	</Bonus>
 	
+	<Bonus ID="2317" NewStatId="" Desc="20260703 七月包月精灵">
+		<Out ID="1" >
+			<Monster ID="4918" ExtraMove="1" NewSeID="6414" Lv="100" Name="波比提尔"/>
+		</Out>
+	</Bonus>
+	
 	
 	
 	

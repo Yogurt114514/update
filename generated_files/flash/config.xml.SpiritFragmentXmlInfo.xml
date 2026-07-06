@@ -578,5 +578,10 @@
     <Fragment ID="2400577" show="1" Name="西西弗因子" MonsterID="4905" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6395" effectId="2092" NewseConsume="270" MoveID="38399" MovesConsume="108" NeedmonID="0" NewMsglogId="2605280700" SeMsglog="2605280701" EffectMsglog="2605280702"/>
 	<Fragment ID="2400578" show="1" Name="月冕因子" MonsterID="4147" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="5647" effectId="1376" NewseConsume="270" MoveID="34699" MovesConsume="108" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
 	<Fragment ID="2400579" show="1" Name="蕊沃尔因子" MonsterID="4908" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6399" effectId="2095" NewseConsume="270" MoveID="29364" MovesConsume="108" NeedmonID="0" NewMsglogId="2606041200" SeMsglog="2606041201" EffectMsglog="2606041202"/>
-	
+	<Fragment ID="2400580" show="1" Name="西曼德妮因子" MonsterID="4915" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6401" effectId="2100" NewseConsume="270" MoveID="38433" MovesConsume="108" NeedmonID="0" NewMsglogId="2606181000" SeMsglog="2606181001" EffectMsglog="2606181002"/>
+	<Fragment ID="2400581" show="1" Name="若兰因子" MonsterID="4916" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6410" effectId="2109" NewseConsume="200" MoveID="38436" MovesConsume="100" NeedmonID="0" NewMsglogId="2606250600" SeMsglog="2606250601" EffectMsglog="2606250602"/>
+    <Fragment ID="2400582" show="1" Name="环·木心因子" MonsterID="4054" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5573" effectId="1302" NewseConsume="200" MoveID="34229" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+    <Fragment ID="2400583" show="1" Name="环·回响因子" MonsterID="4043" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5567" effectId="1296" NewseConsume="200" MoveID="34180" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+    <Fragment ID="2400584" show="1" Name="影行者因子" MonsterID="4917" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6415" effectId="2113" NewseConsume="200" MoveID="38440" MovesConsume="100" NeedmonID="0" NewMsglogId="2607020500" SeMsglog="2607020501" EffectMsglog="2607020502"/>
+    
 </Root>

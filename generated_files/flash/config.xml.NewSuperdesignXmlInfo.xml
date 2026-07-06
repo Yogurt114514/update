@@ -14425,5 +14425,156 @@
         </Stat>
     </Design>
 	
+    <Design ID="248" TimeFlag="" Desc="20260618 S-西曼德妮">
+        <Rules>
+            <Rule ID="1" MouldID="1" Args="" UserInfo="302744 302745 302746 302747 302748 302749 302750 302751 302752 302753 302754 302755 302756 302757 302758 302759 302760 302761 302762 302763 302764 302765 302766 302767" CheckTips="本关卡在挑战中，不可重复上阵（出战背包派出过的）精灵" FailTips="" RepeatTips="背包内以下精灵放入过出战背包，不可重复出战：\n{0}"/>
+            <Rule ID="2" MouldID="2" Args="6" UserInfo="" CheckTips="每场battle需要在6回合内击败BOSS，否则battle按失败结算" FailTips="很抱歉，战斗未在6回合内结束，结算为失败！"/>
+            <Rule ID="3" MouldID="3" Args="3022 4648 4462" UserInfo="" CheckTips="本关卡不可使用精灵：王之哈莫、星光·鲁斯王、月华" FailTips=""/>
+            <Rule ID="4" MouldID="4" Args="100" UserInfo="" CheckTips="出战精灵需等于100级" FailTips=""/>
+            <Rule ID="5" MouldID="5" Args="3" UserInfo="302768" CheckTips="关卡挑战中的对战累计失败次数＞3次，则本轮关卡挑战自动放弃" FailTips="很抱歉，本关卡中对战累计失败次数已大于3次，挑战失败！"/>
+            <Rule ID="6" MouldID="6" Args="3" UserInfo="302769" CheckTips="一天之内连续胜利此难度关卡3次，即可解锁本关卡扫荡功能（需要连续胜利，不可中断）" FailTips=""/>
+            <Rule ID="7" MouldID="7" Args="" UserInfo="" CheckTips="通关地狱难度则发放成就" FailTips=""/>
+        </Rules>
+        <Achievement BranchID="172" RuleID="14" ReachRuleID="7"/>
+        <Reward ItemID="2400580" MonsterID="4915" MintMarkID="" MoveID="1" NewSeId="6401" GainValue="126166"/>
+        <Configure Exchange_pet="" Exchange_mintmark="" Exchange_moves="" Exchange_newse="" Times="3" ProgressValue="302770" TimeValue="302771" FailTimes="302768" ExchangeID="14763 14764 14765" ExchangeProductID="262551 262556 262552"/>
+        <EasyBattle Out="12" RuleID="" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4885" BattleType="2" Battlelevel="1" BossID="1003664" Desc="【简单的敌人，先制+1】"/>
+            <Task ID="2" BattleBoss="3437" BattleType="2" Battlelevel="2" BossID="1003665" Desc="【普通的敌人，先制+1，每回合附加一定固定伤害】"/>
+            <Task ID="3" BattleBoss="4898" BattleType="1" Battlelevel="2" BossID="1003666" Desc="【普通的敌人，先制+2，每回合附加一定固定伤害，每回合必定打出致命一击】"/>
+            <Task ID="4" BattleBoss="4000" BattleType="2" Battlelevel="3" BossID="1003667" Desc="【普通的敌人，先制+3，每回合附加一定固定伤害，每回合消除对手回合类效果，每回合消除对手能力提升状态】"/>
+            <Task ID="5" BattleBoss="4915" BattleType="2" Battlelevel="3" BossID="1003668" Desc="【有点难的敌人，先制+3，每回合附加一定固定伤害，无法探知其他能力】"/>
+        </EasyBattle>
+        <NormalBattle Out="18" RuleID="2 1" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4885" BattleType="2" Battlelevel="3" BossID="1003669" Desc="【有点难的敌人，先制+3，闪避率提升了许多，每回合提升自身全部能力值，每回合必定打出致命一击】"/>
+            <Task ID="2" BattleBoss="3437" BattleType="2" Battlelevel="4" BossID="1003670" Desc="【较难的敌人，先制+3，每回合附加一定固定伤害，每回合提升自身全部能力值，体力过低时恢复所有体力】"/>
+            <Task ID="3" BattleBoss="4898" BattleType="1" Battlelevel="4" BossID="1003671" Desc="【较难的敌人，先制+6，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="4000" BattleType="2" Battlelevel="5" BossID="1003672" Desc="【十分困难的敌人，每回合附加一定固定伤害，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="5" BattleBoss="4915" BattleType="2" Battlelevel="5" BossID="1003673" Desc="【十分困难的敌人，对手无法使用属性技能，无法探知其他能力】"/>
+        </NormalBattle>
+        <HardBattle Out="36" RuleID="1 3 4 5" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4885" BattleType="2" Battlelevel="4" BossID="1003674" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="2" BattleBoss="3437" BattleType="2" Battlelevel="4" BossID="1003675" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="3" BattleBoss="4898" BattleType="1" Battlelevel="5" BossID="1003676" Desc="【十分困难的敌人，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="4000" BattleType="2" Battlelevel="6" BossID="1003677" Desc="【极难的敌人，无法探知能力】"/>
+            <Task ID="5" BattleBoss="4915" BattleType="2" Battlelevel="6" BossID="1003678" Desc="【极难的敌人，无法探知能力】"/>
+        </HardBattle>
+        <Sweep ItemID="1400153_2500005_1728224 1400153_2500005_1728225 1400153_2500005_1728226" ProductID="0_0_262553 0_0_262554 0_0_262555" RuleID="6 6 6"/>
+        <Stat>
+            <Battle Start="2606180800" Finish="2606180803" Abandon="2606180806"/>
+            <Exchange Monster="" Mintmark="" NewSe="" Move=""/>
+            <Task>
+                <Easy Win="2606180810" Fail="2606180825"/>
+                <Normal Win="2606180815" Fail="2606180830"/>
+                <Hard Win="2606180820" Fail="2606180835"/>
+            </Task>
+            <Sweep Unlock="2606180840" Finish="2606180843"/>
+            <Achievement Get=""/>
+        </Stat>
+    </Design>
+	
+	<Design ID="249" TimeFlag="" Desc="20260626 S-若兰">
+        <Rules>
+            <Rule ID="1" MouldID="1" Args="" UserInfo="302772 302773 302774 302775 302776 302777 302778 302779 302780 302781 302782 302783 302784 302785 302786 302787 302788 302789 302790 302791 302792 302793 302794 302795" CheckTips="本关卡在挑战中，不可重复上阵（出战背包派出过的）精灵" FailTips="" RepeatTips="背包内以下精灵放入过出战背包，不可重复出战：\n{0}"/>
+            <Rule ID="2" MouldID="2" Args="6" UserInfo="" CheckTips="每场battle需要在6回合内击败BOSS，否则battle按失败结算" FailTips="很抱歉，战斗未在6回合内结束，结算为失败！"/>
+            <Rule ID="3" MouldID="3" Args="4647 4649 4648" UserInfo="" CheckTips="本关卡不可使用精灵：星光·丽莎布布、星光·魔焰猩猩、星光·鲁斯王" FailTips=""/>
+            <Rule ID="4" MouldID="4" Args="100" UserInfo="" CheckTips="出战精灵需等于100级" FailTips=""/>
+            <Rule ID="5" MouldID="5" Args="3" UserInfo="302796" CheckTips="关卡挑战中的对战累计失败次数＞3次，则本轮关卡挑战自动放弃" FailTips="很抱歉，本关卡中对战累计失败次数已大于3次，挑战失败！"/>
+            <Rule ID="6" MouldID="6" Args="3" UserInfo="302797" CheckTips="一天之内连续胜利此难度关卡3次，即可解锁本关卡扫荡功能（需要连续胜利，不可中断）" FailTips=""/>
+        </Rules>
+        <Achievement BranchID="" RuleID="" ReachRuleID=""/>
+        <Reward ItemID="2400581" MonsterID="4916" MintMarkID="" MoveID="1" NewSeId="6410" GainValue="126167"/>
+        <Configure Exchange_pet="" Exchange_mintmark="" Exchange_moves="" Exchange_newse="" Times="3" ProgressValue="302798" TimeValue="302799" FailTimes="302796" ExchangeID="14766 14767 14768" ExchangeProductID="262566 262571 262567"/>
+        <EasyBattle Out="12" RuleID="" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4352" BattleType="2" Battlelevel="1" BossID="1003679" Desc="【简单的敌人，先制+1】"/>
+            <Task ID="2" BattleBoss="3973" BattleType="2" Battlelevel="2" BossID="1003680" Desc="【普通的敌人，先制+1，每回合附加一定固定伤害】"/>
+            <Task ID="3" BattleBoss="4834" BattleType="1" Battlelevel="2" BossID="1003681" Desc="【普通的敌人，先制+2，每回合附加一定固定伤害，每回合必定打出致命一击】"/>
+            <Task ID="4" BattleBoss="4708" BattleType="2" Battlelevel="3" BossID="1003682" Desc="【普通的敌人，先制+3，每回合附加一定固定伤害，每回合消除对手回合类效果，每回合消除对手能力提升状态】"/>
+            <Task ID="5" BattleBoss="4916" BattleType="2" Battlelevel="3" BossID="1003683" Desc="【有点难的敌人，先制+3，每回合附加一定固定伤害，无法探知其他能力】"/>
+        </EasyBattle>
+        <NormalBattle Out="18" RuleID="2 1" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4352" BattleType="2" Battlelevel="3" BossID="1003684" Desc="【有点难的敌人，先制+3，闪避率提升了许多，每回合提升自身全部能力值，每回合必定打出致命一击】"/>
+            <Task ID="2" BattleBoss="3973" BattleType="2" Battlelevel="4" BossID="1003685" Desc="【较难的敌人，先制+3，每回合附加一定固定伤害，每回合提升自身全部能力值，体力过低时恢复所有体力】"/>
+            <Task ID="3" BattleBoss="4834" BattleType="1" Battlelevel="4" BossID="1003686" Desc="【较难的敌人，先制+6，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="4708" BattleType="2" Battlelevel="5" BossID="1003687" Desc="【十分困难的敌人，每回合附加一定固定伤害，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="5" BattleBoss="4916" BattleType="2" Battlelevel="5" BossID="1003688" Desc="【十分困难的敌人，对手无法使用属性技能，无法探知其他能力】"/>
+        </NormalBattle>
+        <HardBattle Out="36" RuleID="1 3 4 5" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4352" BattleType="2" Battlelevel="4" BossID="1003689" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="2" BattleBoss="3973" BattleType="2" Battlelevel="4" BossID="1003690" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="3" BattleBoss="4834" BattleType="1" Battlelevel="5" BossID="1003691" Desc="【十分困难的敌人，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="4708" BattleType="2" Battlelevel="6" BossID="1003692" Desc="【极难的敌人，无法探知能力】"/>
+            <Task ID="5" BattleBoss="4916" BattleType="2" Battlelevel="6" BossID="1003693" Desc="【极难的敌人，无法探知能力】"/>
+        </HardBattle>
+        <Sweep ItemID="1400153_2500005_1728241 1400153_2500005_1728242 1400153_2500005_1728243" ProductID="0_0_262568 0_0_262569 0_0_262570" RuleID="6 6 6"/>
+        <Stat>
+            <Battle Start="2606250400" Finish="2606250403" Abandon="2606250406"/>
+            <Exchange Monster="" Mintmark="" NewSe="" Move=""/>
+            <Task>
+                <Easy Win="2606250410" Fail="2606250425"/>
+                <Normal Win="2606250415" Fail="2606250430"/>
+                <Hard Win="2606250420" Fail="2606250435"/>
+            </Task>
+            <Sweep Unlock="2606250440" Finish="2606250443"/>
+            <Achievement Get=""/>
+        </Stat>
+    </Design>
+	
+	<Design ID="250" TimeFlag="" Desc="20260703 S-影行者">
+        <Rules>
+            <Rule ID="1" MouldID="1" Args="" UserInfo="302800 302801 302802 302803 302804 302805 302806 302807 302808 302809 302810 302811 302812 302813 302814 302815 302816 302817 302818 302819 302820 302821 302822 302823" CheckTips="本关卡在挑战中，不可重复上阵（出战背包派出过的）精灵" FailTips="" RepeatTips="背包内以下精灵放入过出战背包，不可重复出战：\n{0}"/>
+            <Rule ID="2" MouldID="2" Args="6" UserInfo="" CheckTips="每场battle需要在6回合内击败BOSS，否则battle按失败结算" FailTips="很抱歉，战斗未在6回合内结束，结算为失败！"/>
+            <Rule ID="3" MouldID="3" Args="3022 3894 3221" UserInfo="" CheckTips="本关卡不可使用精灵：王之哈莫、千裳、四九圣尊（特训）" FailTips=""/>
+            <Rule ID="4" MouldID="4" Args="100" UserInfo="" CheckTips="出战精灵需等于100级" FailTips=""/>
+            <Rule ID="5" MouldID="5" Args="3" UserInfo="302824" CheckTips="关卡挑战中的对战累计失败次数＞3次，则本轮关卡挑战自动放弃" FailTips="很抱歉，本关卡中对战累计失败次数已大于3次，挑战失败！"/>
+            <Rule ID="6" MouldID="6" Args="3" UserInfo="302825" CheckTips="一天之内连续胜利此难度关卡3次，即可解锁本关卡扫荡功能（需要连续胜利，不可中断）" FailTips=""/>
+        </Rules>
+        <Achievement BranchID="" RuleID="" ReachRuleID=""/>
+        <Reward ItemID="2400584" MonsterID="4917" MintMarkID="" MoveID="1" NewSeId="6415" GainValue="126168"/>
+        <Configure Exchange_pet="" Exchange_mintmark="" Exchange_moves="" Exchange_newse="" Times="3" ProgressValue="302826" TimeValue="302827" FailTimes="302824" ExchangeID="14769 14770 14771" ExchangeProductID="262575 262580 262576"/>
+        <EasyBattle Out="12" RuleID="" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4687" BattleType="2" Battlelevel="1" BossID="1003694" Desc="【简单的敌人，先制+1】"/>
+            <Task ID="2" BattleBoss="4675" BattleType="2" Battlelevel="2" BossID="1003695" Desc="【普通的敌人，先制+1，每回合附加一定固定伤害】"/>
+            <Task ID="3" BattleBoss="4713" BattleType="1" Battlelevel="2" BossID="1003696" Desc="【普通的敌人，先制+2，每回合附加一定固定伤害，每回合必定打出致命一击】"/>
+            <Task ID="4" BattleBoss="3308" BattleType="2" Battlelevel="3" BossID="1003697" Desc="【普通的敌人，先制+3，每回合附加一定固定伤害，每回合消除对手回合类效果，每回合消除对手能力提升状态】"/>
+            <Task ID="5" BattleBoss="4917" BattleType="2" Battlelevel="3" BossID="1003698" Desc="【有点难的敌人，先制+3，每回合附加一定固定伤害，无法探知其他能力】"/>
+        </EasyBattle>
+        <NormalBattle Out="18" RuleID="2 1" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4687" BattleType="2" Battlelevel="3" BossID="1003699" Desc="【有点难的敌人，先制+3，闪避率提升了许多，每回合提升自身全部能力值，每回合必定打出致命一击】"/>
+            <Task ID="2" BattleBoss="4675" BattleType="2" Battlelevel="4" BossID="1003700" Desc="【较难的敌人，先制+3，每回合附加一定固定伤害，每回合提升自身全部能力值，体力过低时恢复所有体力】"/>
+            <Task ID="3" BattleBoss="4713" BattleType="1" Battlelevel="4" BossID="1003701" Desc="【较难的敌人，先制+6，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="3308" BattleType="2" Battlelevel="5" BossID="1003702" Desc="【十分困难的敌人，每回合附加一定固定伤害，每回合消除对手回合类效果，无法探知其他能力】"/>
+            <Task ID="5" BattleBoss="4917" BattleType="2" Battlelevel="5" BossID="1003703" Desc="【十分困难的敌人，对手无法使用属性技能，无法探知其他能力】"/>
+        </NormalBattle>
+        <HardBattle Out="36" RuleID="1 3 4 5" TaskStyle="1" BattleCnt="5" Desc="依次战胜Battle1-5即可通关">
+            <Task ID="1" BattleBoss="4687" BattleType="2" Battlelevel="4" BossID="1003704" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="2" BattleBoss="4675" BattleType="2" Battlelevel="4" BossID="1003705" Desc="【较难的敌人，必定先手，免疫瞬杀，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="3" BattleBoss="4713" BattleType="1" Battlelevel="5" BossID="1003706" Desc="【十分困难的敌人，对手无法使用属性技能，每回合附加一定固定伤害，无法探知其他能力】"/>
+            <Task ID="4" BattleBoss="3308" BattleType="2" Battlelevel="6" BossID="1003707" Desc="【极难的敌人，无法探知能力】"/>
+            <Task ID="5" BattleBoss="4917" BattleType="2" Battlelevel="6" BossID="1003708" Desc="【极难的敌人，无法探知能力】"/>
+        </HardBattle>
+        <Sweep ItemID="1400153_2500005_1728252 1400153_2500005_1728253 1400153_2500005_1728254" ProductID="0_0_262577 0_0_262578 0_0_262579" RuleID="6 6 6"/>
+        <Stat>
+            <Battle Start="2607020300" Finish="2607020303" Abandon="2607020306"/>
+            <Exchange Monster="" Mintmark="" NewSe="" Move=""/>
+            <Task>
+                <Easy Win="2607020310" Fail="2607020325"/>
+                <Normal Win="2607020315" Fail="2607020330"/>
+                <Hard Win="2607020320" Fail="2607020335"/>
+            </Task>
+            <Sweep Unlock="2607020340" Finish="2607020343"/>
+            <Achievement Get=""/>
+        </Stat>
+    </Design>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </Root>

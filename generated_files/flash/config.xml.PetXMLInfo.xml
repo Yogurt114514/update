@@ -84260,6 +84260,9 @@
 <ExtraMoves>
 		  <Move ID="34699" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38437" LearningLv="77"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="4148" DefName="FAY" Type="31" GrowthType="4" HP="153" Atk="130" Def="98" SpAtk="70" SpDef="99" Spd="130" YieldingExp="70" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="2808" FormParam="0" CharacterAttrParam="0" GradeParam="2" AddSeParam="0" Resist="1">
@@ -102599,9 +102602,101 @@
 		</LearnableMoves>
 	</Monster>
 
+	<Monster ID="4915" DefName="西曼德妮" Type="16" GrowthType="4" HP="168" Atk="70" Def="110" SpAtk="144" SpDef="110" Spd="138" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3576" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="12897" LearningLv="1"/>
+			<Move ID="21506" LearningLv="5"/>
+			<Move ID="12898" LearningLv="9"/>
+			<Move ID="12903" LearningLv="13"/>
+			<Move ID="21507" LearningLv="17"/>
+			<Move ID="38431" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="12904" LearningLv="25"/>
+			<Move ID="21508" LearningLv="29"/>
+			<Move ID="12900" LearningLv="33"/>
+			<Move ID="12905" LearningLv="37"/>
+			<Move ID="21509" LearningLv="41"/>
+			<Move ID="12901" LearningLv="45"/>
+			<Move ID="29378" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="12906" LearningLv="53"/>
+			<Move ID="29379" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38432" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38433" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4916" DefName="若兰" Type="87" GrowthType="4" HP="166" Atk="144" Def="109" SpAtk="70" SpDef="109" Spd="137" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3577" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10086" LearningLv="1"/>
+			<Move ID="20230" LearningLv="5"/>
+			<Move ID="10202" LearningLv="9"/>
+			<Move ID="21325" LearningLv="13"/>
+			<Move ID="20154" LearningLv="17"/>
+			<Move ID="38434" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="11838" LearningLv="25"/>
+			<Move ID="12169" LearningLv="29"/>
+			<Move ID="23119" LearningLv="33"/>
+			<Move ID="31550" LearningLv="37"/>
+			<Move ID="25883" LearningLv="41"/>
+			<Move ID="31551" LearningLv="45"/>
+			<Move ID="29380" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="31552" LearningLv="53"/>
+			<Move ID="29381" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38435" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38436" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4917" DefName="影行者" Type="48" GrowthType="4" HP="160" Atk="153" Def="108" SpAtk="70" SpDef="108" Spd="136" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3578" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10234" LearningLv="1"/>
+			<Move ID="22408" LearningLv="5"/>
+			<Move ID="10420" LearningLv="9"/>
+			<Move ID="21747" LearningLv="13"/>
+			<Move ID="11497" LearningLv="17"/>
+			<Move ID="38438" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="22121" LearningLv="25"/>
+			<Move ID="11530" LearningLv="29"/>
+			<Move ID="23063" LearningLv="33"/>
+			<Move ID="11083" LearningLv="37"/>
+			<Move ID="23064" LearningLv="41"/>
+			<Move ID="15570" LearningLv="45"/>
+			<Move ID="29382" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="23065" LearningLv="53"/>
+			<Move ID="29383" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38439" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38440" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4918" DefName="波比提尔" Type="25" GrowthType="4" HP="185" Atk="135" Def="105" SpAtk="70" SpDef="105" Spd="120" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3579" FormParam="0" CharacterAttrParam="0" GradeParam="3" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10086" LearningLv="1"/>
+			<Move ID="20190" LearningLv="5"/>
+			<Move ID="10278" LearningLv="9"/>
+			<Move ID="12255" LearningLv="13"/>
+			<Move ID="21727" LearningLv="17"/>
+			<Move ID="38441" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="10025" LearningLv="25"/>
+			<Move ID="20766" LearningLv="29"/>
+			<Move ID="11544" LearningLv="33"/>
+			<Move ID="16031" LearningLv="37"/>
+			<Move ID="23326" LearningLv="41"/>
+			<Move ID="16038" LearningLv="45"/>
+			<Move ID="29384" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="16039" LearningLv="53"/>
+			<Move ID="29385" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38442" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38443" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
 
 
@@ -115968,6 +116063,10 @@
   <Monster ID="1400845" DefName="星冕纱华·艾欧丽娅" RealId=""/>
   <Monster ID="1400846" DefName="阿娅" RealId="3399"/>
   <Monster ID="1400847" DefName="艾丽娅" RealId="3403"/>
+  <Monster ID="1400848" DefName="古典艺术·西曼德妮" RealId=""/>
+  <Monster ID="1400849" DefName="偶像叛客·蕊沃尔" RealId=""/>
+  <Monster ID="1400850" DefName="森语·月冕" RealId=""/>
+  <Monster ID="1400851" DefName="吉尼亚斯" RealId="147"/>
 
 
 

@@ -132,6 +132,7 @@
 	<SpMoves id="118" monster="3575" monstername="终末之灭·天邪龙王" moves="29338" movesname="祸龑煌啼" item="1728015" itemname="朽念龙鳞" itemnumber="1" itemtips="使用后可为终末之灭·天邪龙王开启全新技能：祸龑煌啼" movetype="2"/>
 	<SpMoves id="119" monster="3924" monstername="凛戾·寂灭魔神" moves="38371" movesname="寂·妖胧天鸣" item="1728016" itemname="撕雷之牙" itemnumber="1" itemtips="使用后可为凛戾·寂灭魔神开启全新技能：寂·妖胧天鸣" movetype="1"/>
 	<SpMoves id="120" monster="4030" monstername="瀚海界神" moves="29337" movesname="逆浪分洲" item="1728017" itemname="瀚海神颂" itemnumber="1" itemtips="使用后可为瀚海界神开启全新技能：逆浪分洲" movetype="2"/>
+	<SpMoves id="121" monster="4147" monstername="月冕" moves="38437" movesname="月·天囚影" item="1728246" itemname="月鬼面" itemnumber="1" itemtips="使用后可为月冕开启全新第五技能：月·天囚影" movetype="1"/>
 
 
 

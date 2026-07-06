@@ -900,6 +900,7 @@
 				<Rule ID="11" Threshold="11" AchievementPoint="10" icon="1" achName="自由之化身" proicon="1489" SpeNameBonus="587" title="自由之化身" Desc="通关S-莱布缇【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="12" Threshold="12" AchievementPoint="10" icon="1" achName="希望之化身" proicon="1493" SpeNameBonus="590" title="希望之化身" Desc="通关S-西西弗【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="13" Threshold="13" AchievementPoint="10" icon="1" achName="反抗之化身" proicon="1498" SpeNameBonus="595" title="反抗之化身" Desc="通关S-蕊沃尔【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="14" Threshold="14" AchievementPoint="10" icon="1" achName="创造之化身" proicon="1500" SpeNameBonus="597" title="创造之化身" Desc="通关S-西曼德妮【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 
@@ -930,6 +931,9 @@
 		<Branches ID="53" Desc="群星牌">
 			<Branch ID="175" Desc="群星牌" >
 				<Rule ID="1" Threshold="1" AchievementPoint="10" achName="群星闪耀" Desc="参与【群星召集】活动获得" proicon="1476" icon="1" SpeNameBonus="578" title="群星闪耀" titleColor="0xFFFFFF"/>
+				<Rule ID="2" Threshold="2" AchievementPoint="0" achName="S1赛季群星牌专家" Desc="S1赛季群星牌首次达到专家段位" proicon="1501" icon="1"/>
+				<Rule ID="3" Threshold="3" AchievementPoint="0" achName="S1赛季群星牌传奇" Desc="S1赛季群星牌首次达到传奇段位" proicon="1502" icon="1"/>
+				<Rule ID="4" Threshold="4" AchievementPoint="0" achName="S1赛季群星牌群星之巅" Desc="S1赛季群星牌首次达到群星之巅段位" proicon="1503" icon="1"/>
 			</Branch>
 		</Branches>
 
@@ -1873,6 +1877,7 @@
 				<Rule ID="8" Threshold="8" AchievementPoint="10" icon="1" achName="闪耀的此刻" proicon="1495" SpeNameBonus="592" title="闪耀的此刻" Desc="在【深空璀璨】中发现全部16颗星球" titleColor="0xFFFFFF"/>
 				<Rule ID="9" Threshold="9" AchievementPoint="10" icon="1" achName="终点亦是起点" proicon="1496" SpeNameBonus="593" title="终点亦是起点" Desc="游玩【奥朗终局战】，在薇的注视之下走得更远吧" titleColor="0xFFFFFF"/>
 				<Rule ID="10" Threshold="10" AchievementPoint="10" icon="1" achName="蝶舞朝暮" proicon="1497" SpeNameBonus="594" title="蝶舞朝暮" Desc="参与活动【虹辉的颂歌】获得" titleColor="0xFFFFFF"/>
+				<Rule ID="11" Threshold="11" AchievementPoint="10" icon="1" achName="手册观察员" proicon="1504" SpeNameBonus="598" title="手册观察员" Desc="虽然只是值班官，但你对航行手册的了解明显超出岗位需求。" titleColor="0xFFFFFF"/>
 			</Branch>
 
 			</Branches>

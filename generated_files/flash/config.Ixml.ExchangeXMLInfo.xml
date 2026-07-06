@@ -618,4 +618,6 @@
 	<item id="800" realid="2400572" type="1" Subtag="20" batch="700" shopid="5" cointype="43" coinid="1727037" price="18" POPID="942" />
 	<item id="801" realid="1400153" type="1" Subtag="11" batch="50" shopid="2" cointype="5" coinid="1707511" price="600" NewStatLog="2605071000" POPID="943" top="1" />
 	<item id="802" realid="2400578" type="1" Subtag="20" batch="918" shopid="5" cointype="43" coinid="1727037" price="21" POPID="944" />
+	<item id="803" realid="2400582" type="1" Subtag="20" batch="700" shopid="5" cointype="43" coinid="1727037" price="18" POPID="945" />
+	<item id="804" realid="2400583" type="1" Subtag="20" batch="700" shopid="5" cointype="43" coinid="1727037" price="18" POPID="946" />
 </root>

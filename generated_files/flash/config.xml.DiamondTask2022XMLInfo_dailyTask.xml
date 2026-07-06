@@ -10,6 +10,7 @@
 	<item id="9" title="精灵王试炼" describe="成功战胜1次精灵王试炼BOSS" tasktype="9" taskparam="1_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_20" target="161600" />
 	<item id="10" title="精灵养成" describe="进行1次精灵养成" tasktype="10" taskparam="0_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_10" target="222000" />
 	<item id="11" title="任务达人" describe="完成任意5项每日任务" tasktype="11" taskparam="1_0_0_0" value="5" num="1" time="1" init="1" rewardinfo="3_204001_30" />
+	<item id="12" title="群星牌" describe="完成1场群星牌" tasktype="17" taskparam="1_0_0_0" value="1" num="1" time="1" init="1" rewardinfo="3_204001_80" target="510009" />
 	<item id="101" title="泰坦矿洞" describe="通关5次泰坦矿洞" tasktype="2" taskparam="1_0_0_0" value="5" num="1" time="2" init="1" rewardinfo="3_20210_10" target="161500" />
 	<item id="102" title="经验训练场" describe="通关10层经验训练场" tasktype="3" taskparam="1_0_0_0" value="10" num="1" time="2" init="1" rewardinfo="3_20210_10" target="161100" />
 	<item id="103" title="学习力战场" describe="通关10层学习力战场" tasktype="4" taskparam="1_0_0_0" value="10" num="1" time="2" init="1" rewardinfo="3_20210_10" target="161200" />
@@ -22,4 +23,5 @@
 	<item id="110" title="六界神王" describe="成功战胜30次六界神王殿BOSS" tasktype="7" taskparam="1_0_0_0" value="30" num="1" time="2" init="1" rewardinfo="3_20210_30" target="161400" />
 	<item id="111" title="精灵因子关卡" describe="通关5次任意难度精灵因子关卡" tasktype="16" taskparam="0_0_0_0" value="5" num="1" time="2" init="1" rewardinfo="3_20210_40" target="153100" />
 	<item id="112" title="星际迷航" describe="通关1次星际迷航" tasktype="12" taskparam="1_0_0_0" value="1" num="1" time="2" init="1" rewardinfo="3_20210_40" target="162200" />
+	<item id="113" title="群星牌" describe="完成10场群星牌" tasktype="17" taskparam="1_0_0_0" value="10" num="1" time="2" init="1" rewardinfo="3_20210_160" target="510009" />
 </root>
