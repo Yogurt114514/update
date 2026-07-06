@@ -1,10 +1,10 @@
-# 与 CNB .cnb.yml 对齐；GitHub schedule 为 UTC，CNB crontab 为 Asia/Shanghai
+# GitHub schedule 为 UTC；CNB 仍为每半小时（Asia/Shanghai），二者独立配置
 name: 定时更新
 
 on:
   schedule:
-    # 每半小时一次（:00 与 :30，UTC）
-    - cron: '0,30 * * * *'
+    # 每 15 分钟一次，偏移至 :07/:22/:37/:52（UTC），避开 :00/:30 整点高峰
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
