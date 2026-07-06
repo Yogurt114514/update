@@ -1,5 +1,5 @@
 # 与 CNB .cnb.yml 对齐；GitHub schedule 为 UTC，CNB crontab 为 Asia/Shanghai
-name: Auto Run Python Script and Upload Files
+name: 定时更新
 
 on:
   schedule:
@@ -12,19 +12,20 @@ permissions:
 
 jobs:
   run-script-and-upload:
+    name: 定时更新
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: 检出代码
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
+      - name: 配置 Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: |
           set -eux
           sudo apt-get update -qq
@@ -47,10 +48,10 @@ jobs:
             exit 1
           fi
 
-      - name: Run Python script
+      - name: 运行 Python 脚本
         run: python main.py
 
-      - name: Collect generated db files
+      - name: 收集生成的 db 文件
         run: |
           set -eux
           mkdir -p ./generated_files/db
@@ -58,7 +59,7 @@ jobs:
           echo "Collected DB files:"
           ls -la ./generated_files/db || true
 
-      - name: Prune stale version1 / version2 artifacts
+      - name: 清理过期的 version1 / version2 产物
         run: |
           set -eux
           python << 'PY'
@@ -120,7 +121,7 @@ jobs:
           print("Pruned", len(removed), "path(s); version1:", v1, "version2:", v2)
           PY
 
-      - name: Commit and push files
+      - name: 提交并推送 generated_files
         run: |
           set -eux
           git config --global user.name "Yogurt114514"
