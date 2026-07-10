@@ -583,5 +583,7 @@
     <Fragment ID="2400582" show="1" Name="环·木心因子" MonsterID="4054" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5573" effectId="1302" NewseConsume="200" MoveID="34229" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
     <Fragment ID="2400583" show="1" Name="环·回响因子" MonsterID="4043" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5567" effectId="1296" NewseConsume="200" MoveID="34180" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
     <Fragment ID="2400584" show="1" Name="影行者因子" MonsterID="4917" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6415" effectId="2113" NewseConsume="200" MoveID="38440" MovesConsume="100" NeedmonID="0" NewMsglogId="2607020500" SeMsglog="2607020501" EffectMsglog="2607020502"/>
-    
+    <Fragment ID="2400585" show="1" Name="卡鲁维德因子" MonsterID="4919" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6417" effectId="2115" NewseConsume="270" MoveID="38446" MovesConsume="108" NeedmonID="0" NewMsglogId="2607090600" SeMsglog="2607090601" EffectMsglog="2607090602"/>
+	<Fragment ID="2400586" show="1" Name="弗勒克斯因子" MonsterID="4920" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6416" effectId="2116" NewseConsume="200" MoveID="38449" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+   
 </Root>

@@ -721,4 +721,5 @@
 	<item id="2176" name="凯旋殿堂" Ename="Destination Reached" pic="2176" sound="1" PlayerXYZ="780,431" MapRatio="1" />
 	<item id="2177" name="0807场景占位" Ename="Destination Reached" pic="2177" sound="1" PlayerXYZ="650,440" MapRatio="1" />
 	<item id="2178" name="β场景占位" Ename="Destination Reached" pic="2178" sound="1" PlayerXYZ="467,404" MapRatio="1" />
+	<item id="2179" name="大墟泽" Ename="Destination Reached" pic="2179" sound="BGM_438" GroupID="20115" PlayerXYZ="820,370" MapRatio="1" />
 </root>

@@ -133,6 +133,11 @@
 	<SpMoves id="119" monster="3924" monstername="凛戾·寂灭魔神" moves="38371" movesname="寂·妖胧天鸣" item="1728016" itemname="撕雷之牙" itemnumber="1" itemtips="使用后可为凛戾·寂灭魔神开启全新技能：寂·妖胧天鸣" movetype="1"/>
 	<SpMoves id="120" monster="4030" monstername="瀚海界神" moves="29337" movesname="逆浪分洲" item="1728017" itemname="瀚海神颂" itemnumber="1" itemtips="使用后可为瀚海界神开启全新技能：逆浪分洲" movetype="2"/>
 	<SpMoves id="121" monster="4147" monstername="月冕" moves="38437" movesname="月·天囚影" item="1728246" itemname="月鬼面" itemnumber="1" itemtips="使用后可为月冕开启全新第五技能：月·天囚影" movetype="1"/>
+	<SpMoves id="122" monster="3549" monstername="灵天圣君·萨尔蒙" moves="29392" movesname="繁苍解道" item="1728275" itemname="御世八芒" itemnumber="1" itemtips="使用后可为灵天圣君·萨尔蒙开启全新技能：繁苍解道" movetype="2"/>
+	<SpMoves id="123" monster="4114" monstername="科罗丽娜" moves="38453" movesname="隐华截生" item="1728276" itemname="月淬之坠" itemnumber="1" itemtips="使用后可为科罗丽娜开启全新技能：隐华截生" movetype="2"/>
+	<SpMoves id="124" monster="3847" monstername="魂帝·天循道" moves="38455" movesname="魂·罪恶支骸" item="1728277" itemname="咎者焚卷" itemnumber="1" itemtips="使用后可为魂帝·天循道开启全新第五技能：魂·罪恶支骸" movetype="1"/>
+	<SpMoves id="125" monster="3979" monstername="炽魂·邪恶魔神" moves="38456" movesname="邪·天壤残火" item="1728278" itemname="熔碑之泪" itemnumber="1" itemtips="使用后可为炽魂·邪恶魔神开启全新第五技能：邪·天壤残火" movetype="1"/>
+	<SpMoves id="126" monster="4216" monstername="拉克希斯" moves="38454" movesname="天破百战" item="1728279" itemname="燃辉之冠" itemnumber="1" itemtips="使用后可为拉克希斯开启全新技能：天破百战" movetype="2"/>
 
 
 

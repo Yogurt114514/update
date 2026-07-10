@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4917" ImageID= "4917" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4918" ImageID= "4918" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4914" ImageID= "4914" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4919" ImageID= "4919" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4920" ImageID= "4920" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4921" ImageID= "4921" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4910" ImageID= "4910" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,8 +255,8 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <!-- <place type= "1" ID="850" monID="4147" ImageID= "1400850" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-      <!-- <place type= "1" ID="851" monID="4709" ImageID= "1400851" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="852" monID="4200" ImageID= "1400852" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="853" monID="4840" ImageID= "1400853" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "1" ID="845" monID="4911" ImageID= "1400845" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="846" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4305,7 +4305,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4001" DefName="无上·万魔天尊" Type="虚空 邪灵" Height="300" Weight="180" Features="魔尊的完全体，真正实力的展现，与其为敌将令你不寒而栗！" Redirect="map|module" Go="1418;app/TheCompleteEvoOfWanMoTianZunMainPanel" Target="150104"/>
 	<Monster ID="4002" DefName="御象灵尊" Type="远古 战斗" Height="220" Weight="100" Features="宝象灵尊的超进化，强化的武技使他的进攻性更强了！" Redirect="map|module" Go="103;app/SpringFestivalBuddhismTypeMainPanel"/>
 	<Monster ID="4003" DefName="丽芙" Type="光 火" Height="169" Weight="51" Features="二月巅峰圣战精灵，光与火的历练不仅让她御剑弑敌，更让她拥有面对一切的信心！"/>
-	<Monster ID="4004" DefName="圣光格劳瑞" Type="圣灵 电" Height="183" Weight="74" Features="沐浴圣光的格劳瑞，锋芒毕露、霆威永驻！" Redirect="map|module" Go="1419;app/S17AvatarOfTheKingOfElectricity"/>
+	<Monster ID="4004" DefName="圣光格劳瑞" Type="圣灵 电" Height="183" Weight="74" Features="沐浴圣光的格劳瑞，锋芒毕露、霆威永驻！" Redirect="map|module" Go="1419;app/S17AvatarOfTheKingOfElectricity" Target="150134"/>
 	<Monster ID="4005" DefName="檀杏·花信" Type="自然 冰" Height="900" Weight="30" Features="二月包月精灵，散发清新香气的温婉花灵！" Redirect="map" Go="0" Target="295005"/>
 	<Monster ID="4006" DefName="戈多" Type="远古 草" Height="900" Weight="30" Features="月光集市的神秘商人，总是在夜晚出现。" Redirect="map" Go="1420"/>
 	<Monster ID="4007" DefName="幻尘·蜜雪儿" Type="地面 神秘" Height="172" Weight="56" Features="蜜雪儿的超进化形态，明眸英姿透露着一股强大的力量！" Redirect="map|module" Go="1420;app/S18MixueerSuperEvoMainPanel"/>
@@ -5218,5 +5218,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4916" DefName="若兰" Type="冰 飞行" Height="182" Weight="61" Features="λ组织的信使若兰，永远温文尔雅，永远疏离。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/933"/>
 	<Monster ID="4917" DefName="影行者" Type="暗影 战斗" Height="177" Weight="49" Features="欧比组织在其他星系发现的神秘生物，通过改造与训练之后就成为了优秀的刺客。它们总是能将自己隐匿于阴影之中——搜集情报或者刺杀关键人物。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/934"/>
 	<Monster ID="4918" DefName="波比提尔" Type="暗影 水" Height="157" Weight="40" Features="2026年包月精灵，万象录之《追求自我之人》。因执念而生的顶尖人偶师，为了追求极致的艺术而改造自身，最终灵魂化为人偶，在废墟中献上永不谢幕的演出。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
+	<Monster ID="4919" DefName="卡鲁维德" Type="虚空" Height="162" Weight="80" Features="由卡鲁克斯被虚空能量污染并改造而来。退化了相当程度的智能，眼中只有杀戮和对主人的服从。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/942"/>
+	<Monster ID="4920" DefName="弗勒克斯" Type="冰 火" Height="174" Weight="57" Features="为了维护正义，勇敢的游侠独自完成了对自我的改造，双枪的配合给予了他更强的火力。" Redirect="module" Go="app/FinalActivityPanel" Target="113026"/>
+	<Monster ID="4921" DefName="天堂极龙兽" Type="圣灵 光" Height="400" Weight="385" Features="传说中的神兽自天堂来袭，这一次它必将终结所有罪恶!" Redirect="module" Go="app/FinalActivityPanel" Target="114116"/>
 
 </root>
