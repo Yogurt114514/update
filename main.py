@@ -877,6 +877,7 @@ def parse_and_dump_monsters(input_bytes_path, output_json_path):
                         for _ in range(c):
                             s_t = {}
                             s_t["ID"] = r.ReadSignedInt()
+                            s_t["LearningLv"] = r.ReadSignedInt()
                             s_t["Rec"] = r.ReadSignedInt()
                             s_t["Tag"] = r.ReadSignedInt()
                             s_t["tag"] = r.ReadSignedInt()
