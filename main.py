@@ -346,6 +346,11 @@ TARGET_TEXTASSET_NAMES = [
     "archivesBook",
     "archivesStory",
     "Fragment",
+    "partner",
+    "partnerEffectUpgrade",
+    "battlepass_shop",
+    "sp_hide_moves_shop",
+    "exchange_clt",
 ]  # 只导出这些 TextAsset 名（导出为 moves.bytes 等）
 
 # === 可配置参数 ===
@@ -2677,6 +2682,158 @@ def parse_and_dump_fragment(input_bytes_path, output_json_path):
 
     write_json(output_json_path, result)
 
+def parse_and_dump_partner(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["bitbuf"] = r.ReadSignedInt()
+            temp["choice"] = r.ReadSignedInt()
+            temp["cost"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["partnerMonsterId"] = [r.ReadSignedInt() for _ in range(a)]
+            temp["partnerName"] = r.ReadUTFBytesWithLength()
+            temp["partnerNumber"] = r.ReadSignedInt()
+            temp["type"] = r.ReadUTFBytesWithLength()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_partnerEffectUpgrade(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["descAfter"] = r.ReadUTFBytesWithLength()
+            temp["descBefore"] = r.ReadUTFBytesWithLength()
+            temp["id"] = r.ReadSignedInt()
+            temp["monID"] = r.ReadSignedInt()
+            if r.read_bool():
+                a = r.ReadSignedInt()
+                temp["skill"] = [r.ReadUTFBytesWithLength() for _ in range(a)]
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_battlepass_shop(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["buytype"] = r.ReadSignedInt()
+            temp["commodity"] = r.ReadUTFBytesWithLength()
+            temp["consumeitemid"] = r.ReadSignedInt()
+            temp["discount"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            temp["limit"] = r.ReadSignedInt()
+            temp["price"] = r.ReadSignedInt()
+            temp["quantity"] = r.ReadSignedInt()
+            temp["sort"] = r.ReadSignedInt()
+            temp["userinfo"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_sp_hide_moves_shop(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["CoinId"] = r.ReadSignedInt()
+            temp["ItemId"] = r.ReadSignedInt()
+            temp["ItemName"] = r.ReadUTFBytesWithLength()
+            temp["Limit"] = r.ReadSignedInt()
+            temp["MonsterId"] = r.ReadSignedInt()
+            temp["MoveId"] = r.ReadSignedInt()
+            temp["Price"] = r.ReadSignedInt()
+            temp["UserInfoId"] = r.ReadSignedInt()
+            temp["UserInfoPos"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+def parse_and_dump_exchange_clt(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["BitSetId"] = r.ReadSignedInt()
+            temp["LimitCnt"] = r.ReadSignedInt()
+            temp["Limittype"] = r.ReadSignedInt()
+            temp["POPID"] = r.ReadSignedInt()
+            temp["Subtag"] = r.ReadSignedInt()
+            temp["UserInfoBitPos"] = r.ReadSignedInt()
+            temp["UserInfoId"] = r.ReadSignedInt()
+            temp["batch"] = r.ReadSignedInt()
+            temp["boundmonster"] = r.ReadSignedInt()
+            temp["coinid"] = r.ReadSignedInt()
+            temp["cointype"] = r.ReadSignedInt()
+            temp["count"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            temp["isjustone"] = r.ReadSignedInt()
+            temp["monappend"] = r.ReadUTFBytesWithLength()
+            temp["price"] = r.ReadSignedInt()
+            temp["realid"] = r.ReadSignedInt()
+            temp["shopid"] = r.ReadSignedInt()
+            temp["top"] = r.ReadSignedInt()
+            temp["type"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
 def xml_to_json7(xml_file_path, output_json_path=None):
     """
     将Monster XML文件转换为指定格式的JSON
@@ -3513,6 +3670,26 @@ parse_and_dump_move_stones(
 parse_and_dump_fragment(
     (data_path / "Fragment.bytes"),
     (data_path / "Fragment.json"),
+)
+parse_and_dump_partner(
+    (data_path / "partner.bytes"),
+    (data_path / "partner.json"),
+)
+parse_and_dump_partnerEffectUpgrade(
+    (data_path / "partnerEffectUpgrade.bytes"),
+    (data_path / "partnerEffectUpgrade.json"),
+)
+parse_and_dump_battlepass_shop(
+    (data_path / "battlepass_shop.bytes"),
+    (data_path / "battlepass_shop.json"),
+)
+parse_and_dump_sp_hide_moves_shop(
+    (data_path / "sp_hide_moves_shop.bytes"),
+    (data_path / "sp_hide_moves_shop.json"),
+)
+parse_and_dump_exchange_clt(
+    (data_path / "exchange_clt.bytes"),
+    (data_path / "exchange_clt.json"),
 )
 # export_all_pet_animations(
 # 	monsters_json_path=data_path / "monsters.json",
@@ -5138,6 +5315,72 @@ def db_items():
     conn.commit()
 db_items()
 export_swf_to_png(ffdec_jar_path=FFDEC_JAR_PATH)
+def db_jb():
+    with open(data_path / "partner.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS jb (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                type TEXT NOT NULL,        -- 
+                partnerName TEXT NOT NULL,        -- 
+                partnerMonsterId TEXT NOT NULL,        -- 
+                cost INTEGER NOT NULL        -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"jb_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            type = i.get("type", "")
+            partnerName = i.get("partnerName", "")
+            partnerMonsterId = str(i.get("partnerMonsterId", []))
+            cost = i.get("cost", 0)
+            cursor.execute("""
+                INSERT INTO jb (type, partnerName, partnerMonsterId, cost)
+                VALUES (?, ?, ?, ?)
+                """, (type, partnerName, partnerMonsterId, cost)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_jb()
 def db_mintmark():
     with open(data_path / "mintmark.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -5380,6 +5623,136 @@ def db_moves():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_moves()
+def db_new_moves():
+    with open(data_path / "sp_hide_moves.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root1 = data["root"]["ShowMoves"]
+    root2 = data["root"]["SpMoves"]
+    with open(data_path / "sp_hide_moves_shop.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root3 = data["root"]
+    with open(data_path / "battlepass_shop.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root4 = data["root"]
+    with open(data_path / "partnerEffectUpgrade.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root5 = data["root"]
+    with open(data_path / "partner.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root6 = data["root"]
+    with open(data_path / "exchange_clt.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root7 = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS new_moves (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER NOT NULL,        -- 
+                name TEXT NOT NULL,        -- 
+                number INTEGER NOT NULL,        -- 
+                monster INTEGER NOT NULL,        -- 
+                moves INTEGER NOT NULL,        -- 
+                movesname TEXT NOT NULL,        -- 
+                movetype INTEGER NOT NULL,        -- 
+                coinid INTEGER NOT NULL,        -- 
+                price INTEGER NOT NULL,        -- 
+                ps TEXT NOT NULL        -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"new_moves_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in reversed(root1 + root2):
+        try:
+            id = i.get("item", "")
+            name = i.get("itemname", "")
+            name = ''.join(name.split())
+            if name == '完成精灵觉醒':
+                continue
+            number = i.get("itemnumber", "")
+            monster = i.get("monster", 0)
+            moves = i.get("moves", 0)
+            movesname = i.get("movesname", "")
+            movesname = ''.join(movesname.split())
+            movetype = i.get("movetype", 0)
+            coinid = 0
+            price = 0
+            ps = '活动获得'
+            for j in root3:
+                if j.get("ItemId", "") == id:
+                    coinid = j.get("CoinId", 0)
+                    price = j.get("Price", 0)
+                    ps = '微光秘境'
+                    break
+            for j in root4:
+                comm = j.get("commodity", "")
+                if comm:
+                    mid_num = int(comm.split("_")[1])
+                    if mid_num == id:
+                        coinid = j.get("consumeitemid", 0)
+                        price = j.get("price", 0)
+                        ps = '通行证'
+                        break
+            for j in root5:
+                if j.get("monID", 0) == monster:
+                    skill = j.get("skill", [])
+                    if str(moves) in skill:
+                        ps = '契约伙伴'
+                        for k in root6:
+                            if monster in k.get("partnerMonsterId", []):
+                                coinid = 1722827
+                                price = k.get("cost", 0)
+                                break
+                        break
+            for j in root7:
+                if j.get("realid", 0) == id:
+                    coinid = j.get("coinid", 0)
+                    price = j.get("price", 0)
+                    ps = '功勋商店'
+                    break
+            cursor.execute("""
+                INSERT INTO new_moves (id, name, number, monster, moves, movesname, movetype, coinid, price, ps)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (id, name, number, monster, moves, movesname, movetype, coinid, price, ps)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_new_moves()
 def db_pet_skin():
     with open(data_path / "pet_skin.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
