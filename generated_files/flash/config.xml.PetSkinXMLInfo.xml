@@ -2884,11 +2884,19 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	
-	<Skin ID="850" MonID="4147" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="森语·月冕" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114017">
+	<Skin ID="850" MonID="4147" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="2" Name="森语·月冕" >
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 	
-	<Skin ID="851" MonID="4709" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="吉尼亚斯" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+	<Skin ID="851" MonID="4709" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Name="吉尼亚斯" >
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="852" MonID="4200" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="风起流沙·阿莱克托" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+	<Skin ID="853" MonID="4840" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="珍珠泡泡·星礼" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114106">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
