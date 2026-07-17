@@ -138,6 +138,11 @@
 	<SpMoves id="124" monster="3847" monstername="魂帝·天循道" moves="38455" movesname="魂·罪恶支骸" item="1728277" itemname="咎者焚卷" itemnumber="1" itemtips="使用后可为魂帝·天循道开启全新第五技能：魂·罪恶支骸" movetype="1"/>
 	<SpMoves id="125" monster="3979" monstername="炽魂·邪恶魔神" moves="38456" movesname="邪·天壤残火" item="1728278" itemname="熔碑之泪" itemnumber="1" itemtips="使用后可为炽魂·邪恶魔神开启全新第五技能：邪·天壤残火" movetype="1"/>
 	<SpMoves id="126" monster="4216" monstername="拉克希斯" moves="38454" movesname="天破百战" item="1728279" itemname="燃辉之冠" itemnumber="1" itemtips="使用后可为拉克希斯开启全新技能：天破百战" movetype="2"/>
+	<SpMoves id="127" monster="4184" monstername="贝狄薇尔" moves="38461" movesname="流弧幻迹" item="1728292" itemname="英灵之镜" itemnumber="1" itemtips="使用后可为贝狄薇尔开启全新技能：流弧幻迹" movetype="2"/>
+	<SpMoves id="128" monster="4187" monstername="迪斯伯德" moves="29399" movesname="魂源嘘古" item="1728293" itemname="星占之眼" itemnumber="1" itemtips="使用后可为迪斯伯德开启全新技能：魂源嘘古" movetype="2"/>
+	<SpMoves id="129" monster="3814" monstername="八岐大蛇" moves="29400" movesname="八歧坏世" item="1728294" itemname="坏世歧角" itemnumber="1" itemtips="使用后可为八岐大蛇开启全新技能：八歧坏世" movetype="2"/>
+	<SpMoves id="130" monster="3455" monstername="洛刹" moves="29401" movesname="神恩永怀" item="1728295" itemname="焕生之痴" itemnumber="1" itemtips="使用后可为洛刹开启全新技能：神念挽引" movetype="2"/>
+	<SpMoves id="131" monster="3488" monstername="阴灵魂姬" moves="29402" movesname="黄泉妖偈" item="1728296" itemname="双源魂蒂" itemnumber="1" itemtips="使用后可为阴灵魂姬开启全新技能：黄泉妖偈" movetype="2"/>
 
 
 

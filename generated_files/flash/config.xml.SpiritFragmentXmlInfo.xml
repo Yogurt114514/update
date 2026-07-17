@@ -585,5 +585,8 @@
     <Fragment ID="2400584" show="1" Name="影行者因子" MonsterID="4917" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6415" effectId="2113" NewseConsume="200" MoveID="38440" MovesConsume="100" NeedmonID="0" NewMsglogId="2607020500" SeMsglog="2607020501" EffectMsglog="2607020502"/>
     <Fragment ID="2400585" show="1" Name="卡鲁维德因子" MonsterID="4919" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6417" effectId="2115" NewseConsume="270" MoveID="38446" MovesConsume="108" NeedmonID="0" NewMsglogId="2607090600" SeMsglog="2607090601" EffectMsglog="2607090602"/>
 	<Fragment ID="2400586" show="1" Name="弗勒克斯因子" MonsterID="4920" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6416" effectId="2116" NewseConsume="200" MoveID="38449" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
-   
+    <Fragment ID="2400587" show="1" Name="墟婆因子" MonsterID="4922" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6419" effectId="2118" NewseConsume="200" MoveID="38459" MovesConsume="100" NeedmonID="0" NewMsglogId="2607160400" SeMsglog="2607160401" EffectMsglog="2607160402"/>
+    <Fragment ID="2400588" show="1" Name="哀伤公爵·阿洛希尔因子" MonsterID="3813" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="3120" effectId="1088" NewseConsume="500" MoveID="33046" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	<Fragment ID="2400589" show="1" Name="鲜血女王·蔻缇雅因子" MonsterID="3815" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="3122" effectId="1090" NewseConsume="500" MoveID="33036" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	
 </Root>

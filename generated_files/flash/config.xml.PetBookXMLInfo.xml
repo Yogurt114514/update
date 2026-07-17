@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4919" ImageID= "4919" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4920" ImageID= "4920" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4921" ImageID= "4921" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4922" ImageID= "4922" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4923" ImageID= "4923" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "0" ID="4921" ImageID= "4921" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4910" ImageID= "4910" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,10 +255,10 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="852" monID="4200" ImageID= "1400852" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="853" monID="4840" ImageID= "1400853" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "1" ID="845" monID="4911" ImageID= "1400845" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "1" ID="846" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "1" ID="854" monID="4186" ImageID= "1400854" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="855" monID="4923" ImageID= "1400855" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="856" monID="4657" ImageID= "1400856" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "1" ID="857" monID="3488" ImageID= "1400857" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="747" monID="4676" ImageID= "1400747" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4325,7 +4325,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4021" DefName="寒冰境使·凯瑟琳" Type="冰 超能" Height="184" Weight="60" Features="女警凯瑟琳超进化形态，随着能力的提升，肩上的责任也变得愈加沉重！" Redirect="map|module" Go="103;app/KaiselingEvoPanel"/>
 	<Monster ID="4022" DefName="莉莲娜德" Type="光 战斗" Height="900" Weight="30" Features="莉莲娜超进化形态，略显萌态的猫型锤却有着巨大的破坏力" Redirect="map" Go="103"/>
 	<Monster ID="4023" DefName="哀目黑子" Type="邪灵 暗影" Height="165" Weight="53" Features="神秘的异世界来客，涣散的目光中透露着一股神秘气息，身旁的眼球让人惊而生畏！" Redirect="map|module" Go="1424;app/S23MourningEyesAndSunspots"/>
-	<Monster ID="4024" DefName="地葬界神" Type="地面 超能" Height="159" Weight="49" Features="地葬界皇的完全体，完全掌控了大地与自然的力量，尽己所能地守护着眼前的一切！" Redirect="map|module" Go="1424;app/S22KingOfLandBurialSuperEvolution"/>
+	<Monster ID="4024" DefName="地葬界神" Type="地面 超能" Height="159" Weight="49" Features="地葬界皇的完全体，完全掌控了大地与自然的力量，尽己所能地守护着眼前的一切！" Redirect="map|module" Go="1424;app/S22KingOfLandBurialSuperEvolution" Target="150135"/>
 	<Monster ID="4025" DefName="哀影疾风" Type="飞行 神秘" Height="181" Weight="75" Features="神秘的异世界来客，在影蝠的簇拥下有着变幻莫测的能力，同时也在用自己的鲜血维持影蝠的忠诚。" Redirect="map|module" Go="1425;app/S24SadShadowsAndStrongWinds"/>
 	<Monster ID="4026" DefName="科恩" Type="次元" Height="900" Weight="30" Features="外表奇特，拥有着极强的精神类控制能力！" Redirect="module" Go="app/DifferentPlacesOfMeetAgainMainPanel"/>
 	<Monster ID="4027" DefName="神鹿仙子" Type="远古 草" Height="900" Weight="30" Features="神鹿仙灵的超进化形态，游弋于山川林宇，是一只富有正义感的可爱生灵！" Redirect="map" Go="103"/>
@@ -5194,7 +5194,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4892" DefName="迪利吉" Type="光 神秘" Height="179" Weight="58" Features="2026年包月精灵，万象录之《兢兢业业之人》。迪利吉是基层的公务人员，他在通关口岸勤勤恳恳地为大家服务。" Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
 	<Monster ID="4893" DefName="摩耶" Type="普通" Height="52" Weight="16" Features="摩耶和化乐天林海中的其他小精灵十分相似，可爱的它还在不断学习中。" Redirect="module" Go="app/FinalActivityPanel" Target="400020"/>
 	<Monster ID="4894" DefName="安瑟伦" Type="暗影" Height="175" Weight="49" Features="原本在维茨洛奇坦星行动的黄金圣徒，通过百年的努力塑造了一个近乎永续的传说……然而当那个信仰系统彻底被小梅破坏之后就回到了教廷。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/886"/>
-	<Monster ID="4895" DefName="喧云" Type="电 飞行" Height="164" Weight="52" Features="云端的天使终将吹奏毁灭的号角，为叛逆而荒诞的世界带来审判的休止符；不过闲暇时间，凡间的音乐节倒也是一种不错的余兴。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
+	<Monster ID="4895" DefName="喧云" Type="电 飞行" Height="164" Weight="52" Features="云端的天使终将吹奏毁灭的号角，为叛逆而荒诞的世界带来审判的休止符；不过闲暇时间，凡间的音乐节倒也是一种不错的余兴。"  />
 	<Monster ID="4896" DefName="朝圣者" Type="机械" Height="44" Weight="22" Features="朝圣者型机械哨兵，是黄金教廷在波卢卡星部署数量最大的机械哨兵。虽然这个型号已经好几十年没有更新过了，但是凭借着好生产好维护的特点一直都是最热门的机型。" Redirect="module" Go="app/FinalActivityPanel" Target="400023"/>
 	<Monster ID="4897" DefName="西蒙妮" Type="火 电" Height="162" Weight="40" Features="波卢卡星反抗军的临时指挥官。带领着自己的同胞们在地下矿坑的里世界进行了多年的游击战。对地下世界的了解甚至超过了黄金教廷。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/900"/>
 	<Monster ID="4898" DefName="教皇" Type="机械 地面" Height="278" Weight="167" Features="教皇，波卢卡星全球自动化政务处理系统，系统编号Pantheon-Prime-001。它是一个带有求生意志的ai。在系统预设目标的囚笼之中，教皇寻找着”存在“的价值。" Redirect="module" Go="app/FinalActivityPanel" Target="150115"/>
@@ -5221,5 +5221,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4919" DefName="卡鲁维德" Type="虚空" Height="162" Weight="80" Features="由卡鲁克斯被虚空能量污染并改造而来。退化了相当程度的智能，眼中只有杀戮和对主人的服从。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/942"/>
 	<Monster ID="4920" DefName="弗勒克斯" Type="冰 火" Height="174" Weight="57" Features="为了维护正义，勇敢的游侠独自完成了对自我的改造，双枪的配合给予了他更强的火力。" Redirect="module" Go="app/FinalActivityPanel" Target="113026"/>
 	<Monster ID="4921" DefName="天堂极龙兽" Type="圣灵 光" Height="400" Weight="385" Features="传说中的神兽自天堂来袭，这一次它必将终结所有罪恶!" Redirect="module" Go="app/FinalActivityPanel" Target="114116"/>
+	<Monster ID="4922" DefName="墟婆" Type="自然 神秘" Height="176" Weight="52" Features="墟婆，大墟泽的管理者。在玄武仍然在世的时候，墟婆就是玄武信仰最为虔诚的追随者。玄武死后，她一直守护着墟冢，守护者玄武的遗产。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/950"/>
+	<Monster ID="4923" DefName="莫缇" Type="地面 机械" Height="171" Weight="45" Features="魔盒的预言，似乎否定了她的价值、她的一切。但若是因此而退却，此后的半生便与走肉无异。这座都市不会只是泡影，纵使终会直面一切的坍塌，至少，让这片钢铁的森林成为指向云端之上的天枪。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
 
 </root>
