@@ -2366,16 +2366,27 @@
 	<Effect id="2524" argsNum="0" info="伤害结算时，若对手处于能力提升状态，则将对手攻击、特攻中的最高值计入自身此技能类型对应的属性值" analyze="[sprite name=iconInherent]伤害结算时，若对手处于能力提升状态，则将对手攻击、特攻中的最高值计入自身此技能类型对应的属性值"/>
 	<Effect id="2525" argsNum="0" info="战斗开始时，为己方设下四象门" analyze="[sprite name=iconInherent]战斗开始时，为己方设下[color=#f35555]四象门[/color]"/>
 	<Effect id="2526" argsNum="0" info="战斗开始时，为自身召唤1具咽咎尸骸，自身登场时，令双方1只阵亡精灵消逝以召唤1具咽咎尸骸" analyze="[sprite name=iconInherent]战斗开始时，为自身召唤1具咽咎尸骸，自身登场时，令双方1只阵亡精灵消逝以召唤1具[color=#f35555]咽咎尸骸[/color]"/>
+	<Effect id="2527" argsNum="2" info="双方场上的五行印记每剩余{0}回合，己方{1}回合内免疫固定伤害、百分比伤害" analyze=""/>
+	<Effect id="2528" argsNum="2" info="击败对手时，自身下回合开始时恢复最大体力的1/{0}并使自身下次攻击后附加恢复量{1}%的百分比伤害" analyze=""/>
+	<Effect id="2529" argsNum="2" info="{0}回合内若对手处于{1}则无法行动" analyze=""/>
+	<Effect id="2530" argsNum="2" info="{0}%令对手{1}，未触发则解除自身所处的异常状态" analyze=""/>
+	<Effect id="2531" argsNum="1" info="场上每有1种五行印记，自身造成的攻击伤害提升{0}%" analyze=""/>
+	<Effect id="2532" argsNum="3" info="本场战斗己方精灵每在场下受到{0}点伤害，汲取对手{1}点体力恢复至己方不在场精灵，最高不超过对手最大体力的{2}%" analyze=""/>
+	<Effect id="2533" argsNum="3" info="{0}%令对手{1}，未触发则恢复自身所有技能{2}点PP值" analyze=""/>
+	<Effect id="2534" argsNum="0" info="己方拥有蜃都之序时，若己方蜃都之序的转化顺序位于蜃都之理之后则不受PP值限制" analyze=""/>
+	<Effect id="2535" argsNum="0" info="己方拥有蜃都之源时，若己方蜃都之源的转化顺序位于蜃都之序之后则先制+1" analyze=""/>
+	<Effect id="2536" argsNum="0" info="己方拥有蜃都之逐时，若己方蜃都之逐的转化顺序位于蜃都之源之后则令对手冻伤" analyze=""/>
+	<Effect id="2537" argsNum="0" info="己方拥有蜃都之理时，若己方蜃都之理的转化顺序位于蜃都之逐之后则克制系数至少为1" analyze=""/>
+	<Effect id="2538" argsNum="0" info="己方同时拥有蜃都之序、蜃都之源、蜃都之逐、蜃都之理时，对手4回合内无法主动切换精灵" analyze=""/>
+	<Effect id="2539" argsNum="0" info="自身处于领域效果时使用技能不受PP值限制，对手无法通过技能恢复PP值" analyze=""/>
+	<Effect id="2540" argsNum="3" info="双方每有1方先制为{0}，对手{1}下回合所有技能先制-{2}" analyze=""/>
+	<Effect id="2541" argsNum="0" info="附加2种非限制类异常状态，然后若对手不处于控制类异常状态则自身重置登场效果的触发次数并获得1层命世之歧" analyze=""/>
+	<Effect id="2542" argsNum="3" info="获得{0}点护盾，此护盾存在时自身进入的异常状态转化为{1}回合{2}" analyze=""/>
+	<Effect id="2543" argsNum="1" info="下次下场时，将上述护盾转移给下只精灵" analyze=""/>
+	<Effect id="2544" argsNum="0" info="自身登场时，若己方精灵中存在索伦森，则将自身的信仰对象改为索伦森；自身位于场下时，为自身的信仰对象提供支援魂歌报丧" analyze=""/>
+	<Effect id="2545" argsNum="0" info="自身登场时，若自身携带了幽冥鬼甲则剥离自身的神秘系以获得冥妖之悼，若自身携带了芳华寂灭则剥离自身的邪灵系以获得耀星之秘，同时携带时此效果失效" analyze=""/>
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
  </root>

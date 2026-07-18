@@ -66399,6 +66399,7 @@
 		  <Move ID="31213" LearningLv="53"/>
 		  <Move ID="25716" LearningLv="57" Rec="1"/>
 		  <Move ID="31214" LearningLv="61" Rec="1"/>
+		  <SpMove ID="29401" Rec="1" Tag="3"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="31215" LearningLv="76"/>
@@ -67274,10 +67275,15 @@
 		  <Move ID="31389" LearningLv="73"/>
 		  <Move ID="25804" LearningLv="74" Rec="1"/>
 		  <Move ID="31390" LearningLv="75" Rec="1"/>
+		  <SpMove ID="29402" Rec="1" Tag="3"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="31391" LearningLv="76"/>
 </ExtraMoves>
+<SpExtraMoves>
+		  <Move ID="38462" LearningLv="76"/>
+		  <Move ID="38463" LearningLv="76"/>
+</SpExtraMoves>
 </Monster>
 
 <Monster ID="3489" DefName="贝乌索" Type="57" GrowthType="4" HP="151" Atk="130" Def="102" SpAtk="70" SpDef="101" Spd="126" YieldingExp="130" CatchRate="0" YieldingEV="0 1 0 0 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="2159" FormParam="0" CharacterAttrParam="0" GradeParam="3" AddSeParam="1" Resist="1">
@@ -75855,6 +75861,7 @@
 		  <Move ID="33040" LearningLv="53"/>
 		  <Move ID="26609" LearningLv="57" Rec="1"/>
 		  <Move ID="33041" LearningLv="61" Rec="1"/>
+		  <SpMove ID="29400" Rec="1" Tag="3"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="33042" LearningLv="70"/>
@@ -85192,7 +85199,8 @@
 		  <Move ID="34893" LearningLv="53"/>
 		  <Move ID="27495" LearningLv="57" Rec="1"/>
 		  <Move ID="34894" LearningLv="61" Rec="1"/>
-		  <SpMove ID="29019"/>
+		  <SpMove ID="29019" Rec="1" Tag="3"/>
+		  <SpMove ID="38461" Rec="1" Tag="1"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="34895" LearningLv="70"/>
@@ -85278,6 +85286,7 @@
 		  <Move ID="34904" LearningLv="53"/>
 		  <Move ID="27500" LearningLv="57" Rec="1"/>
 		  <Move ID="34905" LearningLv="61" Rec="1"/>
+		  <SpMove ID="29399" Rec="1" Tag="1"/>
 </LearnableMoves>
 <ExtraMoves>
 		  <Move ID="34906" LearningLv="76"/>
@@ -102780,7 +102789,53 @@
 		</ExtraMoves>
 	</Monster>
 
+	<Monster ID="4922" DefName="墟婆" Type="112" GrowthType="4" HP="168" Atk="70" Def="115" SpAtk="135" SpDef="115" Spd="132" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3583" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10001" LearningLv="1"/>
+			<Move ID="20168" LearningLv="5"/>
+			<Move ID="10003" LearningLv="9"/>
+			<Move ID="20618" LearningLv="13"/>
+			<Move ID="14290" LearningLv="17"/>
+			<Move ID="38457" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="20527" LearningLv="25"/>
+			<Move ID="10676" LearningLv="29"/>
+			<Move ID="24001" LearningLv="33"/>
+			<Move ID="33590" LearningLv="37"/>
+			<Move ID="26870" LearningLv="41"/>
+			<Move ID="33591" LearningLv="45"/>
+			<Move ID="29393" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="33592" LearningLv="53"/>
+			<Move ID="29394" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38458" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38459" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
+	<Monster ID="4923" DefName="莫缇" Type="37" GrowthType="4" HP="165" Atk="70" Def="120" SpAtk="145" SpDef="120" Spd="125" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3584" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="11141" LearningLv="1"/>
+			<Move ID="20276" LearningLv="5"/>
+			<Move ID="10705" LearningLv="9"/>
+			<Move ID="10703" LearningLv="13"/>
+			<Move ID="20565" LearningLv="17"/>
+			<Move ID="29395" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="11147" LearningLv="25"/>
+			<Move ID="20566" LearningLv="29"/>
+			<Move ID="11143" LearningLv="33"/>
+			<Move ID="10667" LearningLv="37"/>
+			<Move ID="20567" LearningLv="41"/>
+			<Move ID="11144" LearningLv="45"/>
+			<Move ID="29396" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="11145" LearningLv="53"/>
+			<Move ID="29397" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38460" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="29398" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
 
 
 
@@ -116147,6 +116202,10 @@
   <Monster ID="1400851" DefName="吉尼亚斯" RealId="147"/>
   <Monster ID="1400852" DefName="风起流沙·阿莱克托" RealId=""/>
   <Monster ID="1400853" DefName="珍珠泡泡·星礼" RealId=""/>
+  <Monster ID="1400854" DefName="龙渊镇座·乔特鲁德" RealId=""/>
+  <Monster ID="1400855" DefName="四合囚都·莫缇" RealId=""/>
+  <Monster ID="1400856" DefName="双仪极刃·卓尔布" RealId=""/>
+  <Monster ID="1400857" DefName="黄泉秘影·阴灵魂姬" RealId=""/>
 
 
 

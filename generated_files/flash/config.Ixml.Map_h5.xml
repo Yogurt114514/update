@@ -62,7 +62,7 @@
 	<item id="3047" name="影月林" Ename="Destination Reached" pic="1263" sound="BGM_426" GroupID="20904" PrimaryScene="0" PlayerXYZ="500,350" />
 	<item id="3048" name="莫问栈道" Ename="Destination Reached" pic="1264" sound="BGM_427" GroupID="20905" PrimaryScene="0" PlayerXYZ="500,350" />
 	<item id="3049" name="修罗大殿" Ename="Destination Reached" pic="1265" sound="BGM_428" GroupID="20906" PrimaryScene="0" PlayerXYZ="500,350" />
-	<item id="3050" name="灵龟之渊" Ename="Destination Reached" pic="1278" sound="BGM_438" GroupID="20115" PrimaryScene="1" PlayerXYZ="500,335" WildBossNum="3" WildBossPoint="224,312_192,348_320,392_400,439_531,443_682,389_769,333_597,291_464,336" WildBossLifeTime="8" WildBossID="3598" WildBossWeight="1" />
+	<item id="3050" name="灵龟之渊" Ename="Destination Reached" pic="1278" sound="BGM_438" GroupID="20113" PrimaryScene="1" PlayerXYZ="500,335" WildBossNum="3" WildBossPoint="224,312_192,348_320,392_400,439_531,443_682,389_769,333_597,291_464,336" WildBossLifeTime="8" WildBossID="3598" WildBossWeight="1" />
 	<item id="3051" name="暴风旋涡" Ename="Destination Reached" pic="1324" sound="BGM_477" GroupID="20114" PrimaryScene="1" PlayerXYZ="500,400" />
 	<item id="3052" name="黑白森林" Ename="Destination Reached" pic="407" sound="BGM_009C" GroupID="20106" PrimaryScene="0" PlayerXYZ="500,400" />
 	<item id="3053" name="冰雪之原" Ename="Destination Reached" pic="1220" sound="BGM_220A" GroupID="20108" PrimaryScene="0" PlayerXYZ="379,450" />
@@ -718,8 +718,9 @@
 	<item id="2173" name="至日广场" Ename="Destination Reached" pic="2173" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,260" WildBossNum="3" WildBossPoint="90,380_290,270_520,400_720,380_890,280_1070,330_1210,380_1570,290_1370,210" WildBossLifeTime="8" WildBossID="4910" WildBossWeight="1" MapRatio="1" />
 	<item id="2174" name="众星博物馆" Ename="Destination Reached" pic="2174" sound="APL_story3" GroupID="22005" GroupName="阿派罗尼亚" PlayerXYZ="240,880" MapRatio="1" />
 	<item id="2175" name="传送舱" notes="17周年庆" Ename="Destination Reached" pic="2175" sound="BGM_151A" GroupID="10103" PlayerXYZ="467,404" NPCID="28" NPCScale="1" NPCXYZ="145,404" MapRatio="1" />
-	<item id="2176" name="凯旋殿堂" Ename="Destination Reached" pic="2176" sound="1" PlayerXYZ="780,431" MapRatio="1" />
+	<item id="2176" name="凯旋殿堂" notes="剧情场景" Ename="Destination Reached" pic="2176" sound="1" PlayerXYZ="780,431" MapRatio="1" />
 	<item id="2177" name="0807场景占位" Ename="Destination Reached" pic="2177" sound="1" PlayerXYZ="650,440" MapRatio="1" />
 	<item id="2178" name="β场景占位" Ename="Destination Reached" pic="2178" sound="1" PlayerXYZ="467,404" MapRatio="1" />
-	<item id="2179" name="大墟泽" Ename="Destination Reached" pic="2179" sound="BGM_438" GroupID="20115" PlayerXYZ="820,370" MapRatio="1" />
+	<item id="2179" name="大墟泽" notes="剧情场景" Ename="Destination Reached" pic="2179" sound="BGM_438" PlayerXYZ="820,370" MapRatio="1" />
+	<item id="2180" name="大墟泽" notes="真实场景" Ename="Destination Reached" pic="2180" sound="BGM_438" GroupID="20113" PlayerXYZ="820,370" WildBossNum="3" WildBossPoint="60,410_130,390_170,430_230,400_360,380_450,430_560,400_650,390_770,410_830,400" WildBossLifeTime="8" WildBossID="3598" WildBossWeight="1" MapRatio="1" />
 </root>
