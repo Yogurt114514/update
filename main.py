@@ -2944,6 +2944,55 @@ def xml_to_json8(xml_file_path, output_json_path=None):
     print(f"转换完成，JSON文件已保存至: {output_json_path}")
     return result
 
+def xml_to_json9(xml_file_path, output_json_path=None):
+    """
+    将Monster XML文件转换为指定格式的JSON
+    
+    参数:
+        xml_file_path: XML文件路径
+        output_json_path: 输出JSON文件路径，若为None则在原目录生成
+    """
+    # 解析XML文件
+    tree = ET.parse(xml_file_path)
+    root = tree.getroot()
+    
+    # 构建目标JSON结构
+    result = {
+        "root": {
+            "Effect": []
+        }
+    }
+    
+    # 处理每个Monster元素
+    for monster in root.findall('Effect'):
+        # 基础属性字典
+        monster_data = {}
+        
+        # 处理Monster的所有属性
+        for attr in monster.attrib:
+            # 尝试将数值类型的属性转换为整数
+            try:
+                monster_data[attr] = int(monster.attrib[attr])
+            except (ValueError, TypeError):
+                # 无法转换为整数的保持字符串类型
+                monster_data[attr] = monster.attrib[attr]
+        
+        # 将处理好的怪物数据添加到结果中
+        result['root']['Effect'].append(monster_data)
+    
+    # 如果未指定输出路径，在原XML目录生成
+    if not output_json_path:
+        xml_dir = os.path.dirname(xml_file_path)
+        xml_filename = os.path.splitext(os.path.basename(xml_file_path))[0]
+        output_json_path = os.path.join(xml_dir, f"{xml_filename}.json")
+    
+    # 保存为JSON文件
+    with open(output_json_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False)
+    
+    print(f"转换完成，JSON文件已保存至: {output_json_path}")
+    return result
+
 def export_swf_to_svg(ffdec_jar_path, input_swf_path, export_type="frame"):
     root_dir_path = PLUGIN_BASE_DIR / "魂印"
     root_dir_path.mkdir(parents=True, exist_ok=True)
@@ -3575,6 +3624,9 @@ parse_and_dump_skill_effect(
     (data_path / "skill_effect.bytes"),
     (data_path / "skill_effect.json"),
 )
+xml_path = str(FLASH_DIR / "prexml/effectInfo.xml")
+json_path = (data_path / "effectInfo_f.json")
+xml_to_json9(xml_path, json_path)
 
 
 """属性"""
@@ -4159,138 +4211,138 @@ def export_rich_text(text: str, output_json_path: str = None, indent_unit: int =
 input_json_path = str(data_path / "petEffectIcon.json")
 output_json_path = str(data_path / "rich_text_tree.json")
 
-with open(input_json_path, "r", encoding="utf-8") as f:
-    data = json.load(f)
+# with open(input_json_path, "r", encoding="utf-8") as f:
+#     data = json.load(f)
 
-new_data = []
-for item in data["data"]:
-    if item["petid"] != 4447:
-        tree = export_rich_text(item["Desc"])
-    else:
-        tree = [
-            {
-                "level": 1,
-                "sprites": [
-                    0
-                ],
-                "segments": [
-                    {
-                        "text": "触发效果："
-                    }
-                ],
-                "children": [
-                    {
-                        "level": 2,
-                        "sprites": [
-                            3
-                        ],
-                        "segments": [
-                            {
-                                "text": "自身技能命中时"
-                            },
-                            {
-                                "text": "消除",
-                                "color": "#64F9FA"
-                            },
-                            {
-                                "text": "对手所有"
-                            },
-                            {
-                                "text": "护盾",
-                                "bold": True
-                            },
-                            {
-                                "text": "效果"
-                            }
-                        ],
-                        "children": [
-                            {
-                                "level": 3,
-                                "sprites": [
-                                    4
-                                ],
-                                "segments": [
-                                    {
-                                        "text": "消除成功则"
-                                    },
-                                    {
-                                        "text": "获得",
-                                        "color": "#64F9FA"
-                                    },
-                                    {
-                                        "text": "等量的"
-                                    },
-                                    {
-                                        "text": "护盾",
-                                        "bold": True
-                                    },
-                                    {
-                                        "text": "值并"
-                                    },
-                                    {
-                                        "text": "附加",
-                                        "color": "#64F9FA"
-                                    },
-                                    {
-                                        "text": "等量的"
-                                    },
-                                    {
-                                        "text": "固定伤害",
-                                        "bold": True
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "level": 1,
-                "sprites": [
-                    0
-                ],
-                "segments": [
-                    {
-                        "text": "战阶结束效果："
-                    }
-                ],
-                "children": [
-                    {
-                        "level": 2,
-                        "sprites": [
-                            3
-                        ],
-                        "segments": [
-                            {
-                                "text": "战斗阶段结束时"
-                            },
-                            {
-                                "text": "恢复",
-                                "color": "#64F9FA"
-                            },
-                            {
-                                "text": "等同于自身当前护盾值的"
-                            },
-                            {
-                                "text": "体力",
-                                "bold": True
-                            }
-                        ],
-                        "children": [
-                        ]
-                    }
-                ]
-            }
-        ]
-    temp = {}
-    temp["id"] = item["petid"]
-    temp["pve"] = item["affectedBoss"]
-    temp["text"] = tree
-    new_data.append(temp)
+# new_data = []
+# for item in data["data"]:
+#     if item["petid"] != 4447:
+#         tree = export_rich_text(item["Desc"])
+#     else:
+#         tree = [
+#             {
+#                 "level": 1,
+#                 "sprites": [
+#                     0
+#                 ],
+#                 "segments": [
+#                     {
+#                         "text": "触发效果："
+#                     }
+#                 ],
+#                 "children": [
+#                     {
+#                         "level": 2,
+#                         "sprites": [
+#                             3
+#                         ],
+#                         "segments": [
+#                             {
+#                                 "text": "自身技能命中时"
+#                             },
+#                             {
+#                                 "text": "消除",
+#                                 "color": "#64F9FA"
+#                             },
+#                             {
+#                                 "text": "对手所有"
+#                             },
+#                             {
+#                                 "text": "护盾",
+#                                 "bold": True
+#                             },
+#                             {
+#                                 "text": "效果"
+#                             }
+#                         ],
+#                         "children": [
+#                             {
+#                                 "level": 3,
+#                                 "sprites": [
+#                                     4
+#                                 ],
+#                                 "segments": [
+#                                     {
+#                                         "text": "消除成功则"
+#                                     },
+#                                     {
+#                                         "text": "获得",
+#                                         "color": "#64F9FA"
+#                                     },
+#                                     {
+#                                         "text": "等量的"
+#                                     },
+#                                     {
+#                                         "text": "护盾",
+#                                         "bold": True
+#                                     },
+#                                     {
+#                                         "text": "值并"
+#                                     },
+#                                     {
+#                                         "text": "附加",
+#                                         "color": "#64F9FA"
+#                                     },
+#                                     {
+#                                         "text": "等量的"
+#                                     },
+#                                     {
+#                                         "text": "固定伤害",
+#                                         "bold": True
+#                                     }
+#                                 ]
+#                             }
+#                         ]
+#                     }
+#                 ]
+#             },
+#             {
+#                 "level": 1,
+#                 "sprites": [
+#                     0
+#                 ],
+#                 "segments": [
+#                     {
+#                         "text": "战阶结束效果："
+#                     }
+#                 ],
+#                 "children": [
+#                     {
+#                         "level": 2,
+#                         "sprites": [
+#                             3
+#                         ],
+#                         "segments": [
+#                             {
+#                                 "text": "战斗阶段结束时"
+#                             },
+#                             {
+#                                 "text": "恢复",
+#                                 "color": "#64F9FA"
+#                             },
+#                             {
+#                                 "text": "等同于自身当前护盾值的"
+#                             },
+#                             {
+#                                 "text": "体力",
+#                                 "bold": True
+#                             }
+#                         ],
+#                         "children": [
+#                         ]
+#                     }
+#                 ]
+#             }
+#         ]
+#     temp = {}
+#     temp["id"] = item["petid"]
+#     temp["pve"] = item["affectedBoss"]
+#     temp["text"] = tree
+#     new_data.append(temp)
 
-os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
-with open(output_json_path, "w", encoding="utf-8") as f:
-    json.dump(new_data, f, ensure_ascii=False)
+# os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+# with open(output_json_path, "w", encoding="utf-8") as f:
+#     json.dump(new_data, f, ensure_ascii=False)
 
 
 
@@ -5053,6 +5105,12 @@ def db_effectInfo():
     temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用属性攻击则{3}%自身{1}等级+{4}"}
     root1.append(temp)
     root2 = data["root"]["param_type"]
+    with open(data_path / "effectInfo_f.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root3 = data["root"]["Effect"]
+    with open(data_path / "moves.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root4 = data["MovesTbl"]["Moves"]["Move"]
 
 
     def create_scheme_database(db_path):
@@ -5071,6 +5129,7 @@ def db_effectInfo():
                 dbid INTEGER PRIMARY KEY AUTOINCREMENT,
                 analyze TEXT NOT NULL,        -- 
                 info TEXT NOT NULL,        -- 
+                f_info TEXT NOT NULL,        -- 
                 param TEXT NOT NULL,        -- 
                 args_num INTEGER NOT NULL,        -- 
                 id INTEGER NOT NULL,        -- 
@@ -5115,15 +5174,32 @@ def db_effectInfo():
         try:
             analyze = i.get("analyze", "")
             info = i.get("info", "")
+            if analyze == "":
+                for j in root3:
+                    try:
+                        if j.get("id", 0) == i.get("id", 0):
+                            analyze = j.get("analyze", "")
+                            info = j.get("info", "")
+                            break
+                    except Exception as e:
+                        print(f"❌ 处理数据时出错：{e}，数据内容：{j}")
+            f_info = ""
+            for j in root4:
+                try:
+                    if j.get("ID", 0) == (i.get("id", 0) + 1000000):
+                        f_info = j.get("des", "")
+                        break
+                except Exception as e:
+                    print(f"❌ 处理数据时出错：{e}，数据内容：{j}")
             param = str(i.get("param", []))
             args_num = i.get("args_num", 0)
             id = i.get("id", 0)
             key = i.get("key", "")
             type = i.get("type", 0)
             cursor.execute("""
-                INSERT INTO effect (analyze, info, param, args_num, id, key, type)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-                """, (analyze, info, param, args_num, id, key, type)
+                INSERT INTO effect (analyze, info, f_info, param, args_num, id, key, type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """, (analyze, info, f_info, param, args_num, id, key, type)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
@@ -5753,6 +5829,70 @@ def db_new_moves():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_new_moves()
+def db_petEffectIcon():
+    with open(data_path / "petEffectIcon.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data["data"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS petEffectIcon (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER NOT NULL,        -- 
+                pve INTEGER NOT NULL,  -- 
+                text TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"petEffectIcon_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            id = i.get('petid', 0)
+            pve = i.get('affectedBoss', 0)
+            text = i.get('Desc', "")
+            cursor.execute("""
+                INSERT INTO petEffectIcon (id, pve, text)
+                VALUES (?, ?, ?)
+                """, (id, pve, text)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_petEffectIcon()
 def db_pet_skin():
     with open(data_path / "pet_skin.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -6127,70 +6267,6 @@ def db_pets():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_pets()
-def db_rich_text_tree():
-    with open(data_path / "rich_text_tree.json", 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    root = data
-
-
-    def create_scheme_database(db_path):
-        # 确保数据库所在目录存在
-        db_dir = os.path.dirname(db_path)
-        if db_dir and not os.path.exists(db_dir):
-            os.makedirs(db_dir)
-
-        try:
-            # 连接数据库（文件不存在则自动创建）
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
-
-            create_table_sql = """
-            CREATE TABLE IF NOT EXISTS rich_text_tree (
-                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
-                id INTEGER NOT NULL,        -- 
-                pve INTEGER NOT NULL,  -- 
-                text TEXT NOT NULL  -- 
-            );
-            """
-            cursor.execute(create_table_sql)
-            conn.commit()
-
-            print(f"✅ 数据库创建成功：{db_path}")
-
-        except sqlite3.Error as e:
-            print(f"❌ 数据库创建失败：{e}")
-        finally:
-            # 确保连接关闭
-            if conn:
-                conn.close()
-
-    DB_PATH = str(data_path / f"rich_text_tree_{version1}.db")  # CI 输出路径
-
-    try:
-        os.remove(DB_PATH)
-    except:
-        pass
-
-    create_scheme_database(DB_PATH)
-
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row  # 设置为字典格式
-    cursor = conn.cursor()
-
-    for i in root:
-        try:
-            id = i.get('id', 0)
-            pve = i.get('pve', 0)
-            text = str(i.get('text', []))
-            cursor.execute("""
-                INSERT INTO rich_text_tree (id, pve, text)
-                VALUES (?, ?, ?)
-                """, (id, pve, text)
-            )
-        except Exception as e:
-            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
-    conn.commit()
-db_rich_text_tree()
 def db_skill_effect():
     with open(data_path / "skill_effect.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
