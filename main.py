@@ -351,6 +351,7 @@ TARGET_TEXTASSET_NAMES = [
     "battlepass_shop",
     "sp_hide_moves_shop",
     "exchange_clt",
+    "Activity_TimeUpdateConfig",
 ]  # 只导出这些 TextAsset 名（导出为 moves.bytes 等）
 
 # === 可配置参数 ===
@@ -2834,6 +2835,34 @@ def parse_and_dump_exchange_clt(input_bytes_path, output_json_path):
 
     write_json(output_json_path, result)
 
+def parse_and_dump_Activity_TimeUpdateConfig(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    # r.read_bool()
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["beginning"] = r.ReadUTFBytesWithLength()
+            temp["ending"] = r.ReadUTFBytesWithLength()
+            temp["id"] = r.ReadSignedInt()
+            temp["name"] = r.ReadUTFBytesWithLength()
+            temp["parameters1"] = r.ReadSignedInt()
+            temp["parameters2"] = r.ReadSignedInt()
+            temp["parameters3"] = r.ReadSignedInt()
+            temp["parameters4"] = r.ReadSignedInt()
+            temp["parametersDesc"] = r.ReadUTFBytesWithLength()
+            result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
 def xml_to_json7(xml_file_path, output_json_path=None):
     """
     将Monster XML文件转换为指定格式的JSON
@@ -3742,6 +3771,10 @@ parse_and_dump_sp_hide_moves_shop(
 parse_and_dump_exchange_clt(
     (data_path / "exchange_clt.bytes"),
     (data_path / "exchange_clt.json"),
+)
+parse_and_dump_Activity_TimeUpdateConfig(
+    (data_path / "Activity_TimeUpdateConfig.bytes"),
+    (data_path / "Activity_TimeUpdateConfig.json"),
 )
 # export_all_pet_animations(
 # 	monsters_json_path=data_path / "monsters.json",
@@ -6571,6 +6604,82 @@ def db_te_xing():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_te_xing()
+def db_time():
+    with open(data_path / "Activity_TimeUpdateConfig.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS time (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                beginning TEXT NOT NULL,  -- 
+                ending TEXT NOT NULL,  -- 
+                id INTEGER NOT NULL,        -- 
+                name TEXT NOT NULL,  -- 
+                parameters1 INTEGER NOT NULL,        -- 
+                parameters2 INTEGER NOT NULL,  -- 
+                parameters3 INTEGER NOT NULL,        -- 
+                parameters4 INTEGER NOT NULL,        -- 
+                parametersDesc TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"time_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            beginning = i.get('beginning', 0)
+            ending = i.get('ending', 0)
+            id = i.get('id', 0)
+            name = i.get('name', "")
+            parameters1 = i.get('parameters1', 0)
+            parameters2 = i.get('parameters2', 0)
+            parameters3 = i.get('parameters3', 0)
+            parameters4 = i.get('parameters4', 0)
+            parametersDesc = i.get('parametersDesc', "")
+            cursor.execute("""
+                INSERT INTO time (beginning, ending, id, name, parameters1, parameters2, parameters3, parameters4, parametersDesc)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (beginning, ending, id, name, parameters1, parameters2, parameters3, parameters4, parametersDesc)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_time()
 def db_yin_zi():
     with open(data_path / "new_super_design.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
