@@ -6300,6 +6300,70 @@ def db_pets():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_pets()
+def db_rich_text_tree():
+    with open(data_path / "rich_text_tree.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS rich_text_tree (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER NOT NULL,        -- 
+                pve INTEGER NOT NULL,  -- 
+                text TEXT NOT NULL  -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"rich_text_tree_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            id = i.get('id', 0)
+            pve = i.get('pve', 0)
+            text = str(i.get('text', []))
+            cursor.execute("""
+                INSERT INTO rich_text_tree (id, pve, text)
+                VALUES (?, ?, ?)
+                """, (id, pve, text)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_rich_text_tree()
 def db_skill_effect():
     with open(data_path / "skill_effect.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
