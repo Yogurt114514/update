@@ -4244,138 +4244,138 @@ def export_rich_text(text: str, output_json_path: str = None, indent_unit: int =
 input_json_path = str(data_path / "petEffectIcon.json")
 output_json_path = str(data_path / "rich_text_tree.json")
 
-# with open(input_json_path, "r", encoding="utf-8") as f:
-#     data = json.load(f)
+with open(input_json_path, "r", encoding="utf-8") as f:
+    data = json.load(f)
 
-# new_data = []
-# for item in data["data"]:
-#     if item["petid"] != 4447:
-#         tree = export_rich_text(item["Desc"])
-#     else:
-#         tree = [
-#             {
-#                 "level": 1,
-#                 "sprites": [
-#                     0
-#                 ],
-#                 "segments": [
-#                     {
-#                         "text": "触发效果："
-#                     }
-#                 ],
-#                 "children": [
-#                     {
-#                         "level": 2,
-#                         "sprites": [
-#                             3
-#                         ],
-#                         "segments": [
-#                             {
-#                                 "text": "自身技能命中时"
-#                             },
-#                             {
-#                                 "text": "消除",
-#                                 "color": "#64F9FA"
-#                             },
-#                             {
-#                                 "text": "对手所有"
-#                             },
-#                             {
-#                                 "text": "护盾",
-#                                 "bold": True
-#                             },
-#                             {
-#                                 "text": "效果"
-#                             }
-#                         ],
-#                         "children": [
-#                             {
-#                                 "level": 3,
-#                                 "sprites": [
-#                                     4
-#                                 ],
-#                                 "segments": [
-#                                     {
-#                                         "text": "消除成功则"
-#                                     },
-#                                     {
-#                                         "text": "获得",
-#                                         "color": "#64F9FA"
-#                                     },
-#                                     {
-#                                         "text": "等量的"
-#                                     },
-#                                     {
-#                                         "text": "护盾",
-#                                         "bold": True
-#                                     },
-#                                     {
-#                                         "text": "值并"
-#                                     },
-#                                     {
-#                                         "text": "附加",
-#                                         "color": "#64F9FA"
-#                                     },
-#                                     {
-#                                         "text": "等量的"
-#                                     },
-#                                     {
-#                                         "text": "固定伤害",
-#                                         "bold": True
-#                                     }
-#                                 ]
-#                             }
-#                         ]
-#                     }
-#                 ]
-#             },
-#             {
-#                 "level": 1,
-#                 "sprites": [
-#                     0
-#                 ],
-#                 "segments": [
-#                     {
-#                         "text": "战阶结束效果："
-#                     }
-#                 ],
-#                 "children": [
-#                     {
-#                         "level": 2,
-#                         "sprites": [
-#                             3
-#                         ],
-#                         "segments": [
-#                             {
-#                                 "text": "战斗阶段结束时"
-#                             },
-#                             {
-#                                 "text": "恢复",
-#                                 "color": "#64F9FA"
-#                             },
-#                             {
-#                                 "text": "等同于自身当前护盾值的"
-#                             },
-#                             {
-#                                 "text": "体力",
-#                                 "bold": True
-#                             }
-#                         ],
-#                         "children": [
-#                         ]
-#                     }
-#                 ]
-#             }
-#         ]
-#     temp = {}
-#     temp["id"] = item["petid"]
-#     temp["pve"] = item["affectedBoss"]
-#     temp["text"] = tree
-#     new_data.append(temp)
+new_data = []
+for item in data["data"]:
+    if item["petid"] != 4447:
+        tree = export_rich_text(item["Desc"])
+    else:
+        tree = [
+            {
+                "level": 1,
+                "sprites": [
+                    0
+                ],
+                "segments": [
+                    {
+                        "text": "触发效果："
+                    }
+                ],
+                "children": [
+                    {
+                        "level": 2,
+                        "sprites": [
+                            3
+                        ],
+                        "segments": [
+                            {
+                                "text": "自身技能命中时"
+                            },
+                            {
+                                "text": "消除",
+                                "color": "#64F9FA"
+                            },
+                            {
+                                "text": "对手所有"
+                            },
+                            {
+                                "text": "护盾",
+                                "bold": True
+                            },
+                            {
+                                "text": "效果"
+                            }
+                        ],
+                        "children": [
+                            {
+                                "level": 3,
+                                "sprites": [
+                                    4
+                                ],
+                                "segments": [
+                                    {
+                                        "text": "消除成功则"
+                                    },
+                                    {
+                                        "text": "获得",
+                                        "color": "#64F9FA"
+                                    },
+                                    {
+                                        "text": "等量的"
+                                    },
+                                    {
+                                        "text": "护盾",
+                                        "bold": True
+                                    },
+                                    {
+                                        "text": "值并"
+                                    },
+                                    {
+                                        "text": "附加",
+                                        "color": "#64F9FA"
+                                    },
+                                    {
+                                        "text": "等量的"
+                                    },
+                                    {
+                                        "text": "固定伤害",
+                                        "bold": True
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "level": 1,
+                "sprites": [
+                    0
+                ],
+                "segments": [
+                    {
+                        "text": "战阶结束效果："
+                    }
+                ],
+                "children": [
+                    {
+                        "level": 2,
+                        "sprites": [
+                            3
+                        ],
+                        "segments": [
+                            {
+                                "text": "战斗阶段结束时"
+                            },
+                            {
+                                "text": "恢复",
+                                "color": "#64F9FA"
+                            },
+                            {
+                                "text": "等同于自身当前护盾值的"
+                            },
+                            {
+                                "text": "体力",
+                                "bold": True
+                            }
+                        ],
+                        "children": [
+                        ]
+                    }
+                ]
+            }
+        ]
+    temp = {}
+    temp["id"] = item["petid"]
+    temp["pve"] = item["affectedBoss"]
+    temp["text"] = tree
+    new_data.append(temp)
 
-# os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
-# with open(output_json_path, "w", encoding="utf-8") as f:
-#     json.dump(new_data, f, ensure_ascii=False)
+os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+with open(output_json_path, "w", encoding="utf-8") as f:
+    json.dump(new_data, f, ensure_ascii=False)
 
 
 
