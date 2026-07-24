@@ -588,5 +588,8 @@
     <Fragment ID="2400587" show="1" Name="墟婆因子" MonsterID="4922" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6419" effectId="2118" NewseConsume="200" MoveID="38459" MovesConsume="100" NeedmonID="0" NewMsglogId="2607160400" SeMsglog="2607160401" EffectMsglog="2607160402"/>
     <Fragment ID="2400588" show="1" Name="哀伤公爵·阿洛希尔因子" MonsterID="3813" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="3120" effectId="1088" NewseConsume="500" MoveID="33046" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
 	<Fragment ID="2400589" show="1" Name="鲜血女王·蔻缇雅因子" MonsterID="3815" Rarity="4" PetLimit="0" PetConsume="1000" NewSeIdx="3122" effectId="1090" NewseConsume="500" MoveID="33036" MovesConsume="200" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
-	
+	<Fragment ID="2400590" show="1" Name="米罗博士因子" MonsterID="4925" Rarity="3" PetLimit="1" PetConsume="540" NewSeIdx="6422" effectId="2120" NewseConsume="270" MoveID="29409" MovesConsume="108" NeedmonID="0" NewMsglogId="2607230400" SeMsglog="2607230401" EffectMsglog="2607230402"/>
+	<Fragment ID="2400591" show="1" Name="环·龙裔因子" MonsterID="4072" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5588" effectId="1317" NewseConsume="200" MoveID="34321" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+    <Fragment ID="2400592" show="1" Name="环·圣芒因子" MonsterID="4088" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="5601" effectId="1330" NewseConsume="200" MoveID="34402" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+    
 </Root>

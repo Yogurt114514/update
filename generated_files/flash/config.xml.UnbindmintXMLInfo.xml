@@ -20,10 +20,6 @@
         <Unbindmintinfo MintmarkID="42697" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42698" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
 
-
-
-
-		<!--以下为赤洲龙子系列-->
         <Unbindmintinfo MintmarkID="42636" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42637" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42638" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
@@ -33,6 +29,7 @@
         <Unbindmintinfo MintmarkID="42642" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42643" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42644" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
+		
         <Unbindmintinfo MintmarkID="42645" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42646" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
         <Unbindmintinfo MintmarkID="42647" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
@@ -49,7 +46,8 @@
         <Unbindmintinfo MintmarkID="42564" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060201"/>
         <Unbindmintinfo MintmarkID="42565" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060202"/>
         <Unbindmintinfo MintmarkID="42611" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060203"/>
-        <Unbindmintinfo MintmarkID="45075" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId="2511060203"/>
+        <Unbindmintinfo MintmarkID="45075" NeedConsumeID="1724169" NeedConsumeNum="278" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42714" NeedConsumeID="1724169" NeedConsumeNum="348" NewMsglogId=""/>
 
 		<!--以下为和平星系列-->
         <Unbindmintinfo MintmarkID="42595" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2511060204"/>
@@ -107,6 +105,15 @@
         <Unbindmintinfo MintmarkID="45062" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250105"/>
         <Unbindmintinfo MintmarkID="45063" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250106"/>
         <Unbindmintinfo MintmarkID="45064" NeedConsumeID="1724169" NeedConsumeNum="298" NewMsglogId="2501250107"/>
+	    <!--以下为薇系列-->
+        <Unbindmintinfo MintmarkID="42705" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42706" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42707" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42708" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42709" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42710" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42711" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
+        <Unbindmintinfo MintmarkID="42712" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>
 
 	    <!--以下为赫星奇迹系列-->
         <Unbindmintinfo MintmarkID="42550" NeedConsumeID="1724169" NeedConsumeNum="248" NewMsglogId=""/>

@@ -213,8 +213,8 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4922" ImageID= "4922" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4923" ImageID= "4923" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "0" ID="4925" ImageID= "4925" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4926" ImageID= "4926" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4921" ImageID= "4921" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4910" ImageID= "4910" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,10 +255,10 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="854" monID="4186" ImageID= "1400854" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="855" monID="4923" ImageID= "1400855" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="856" monID="4657" ImageID= "1400856" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="857" monID="3488" ImageID= "1400857" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="858" monID="4633" ImageID= "1400858" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="859" monID="3506" ImageID= "1400859" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "1" ID="856" monID="4657" ImageID= "1400856" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "1" ID="857" monID="3488" ImageID= "1400857" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="747" monID="4676" ImageID= "1400747" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -4333,7 +4333,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4029" DefName="梵清兽灵" Type="冰 龙" Height="900" Weight="30" Features="呼啸的冻风覆盖寒域，刺骨的冰锥如同华衣，神明之姿让人望而生畏！" Redirect="map" Go="0"/>
 	<Monster ID="4030" DefName="瀚海界神" Type="水 战斗" Height="215" Weight="109" Features="瀚海界皇的完全体，完全掌控了大海的奥义，碧色清波听候他的差遣、河海波涛履行着他的意志！" Redirect="map|module" Go="1429;app/S25EvolutionOfTheEmperorOfTheVastSea"/>
 	<Monster ID="4031" DefName="芳馥·清酒" Type="自然 战斗" Height="167" Weight="52" Features="花清酒超进化形态，裹挟着花枝清香优雅的战斗！" Redirect="map" Go="0"/>
-	<Monster ID="4032" DefName="六界御神" Type="圣灵 光" Height="210" Weight="94" Features="六界神王完全体，挥动圣芒之剑、闪耀审判之光！" Redirect="map|module" Go="1428;app/S26SixRealmsGodKingPerfectMainPanel"/>
+	<Monster ID="4032" DefName="六界御神" Type="圣灵 光" Height="210" Weight="94" Features="六界神王完全体，挥动圣芒之剑、闪耀审判之光！" Redirect="map|module" Go="1428;app/S26SixRealmsGodKingPerfectMainPanel" Target="150136"/>
 	<Monster ID="4033" DefName="蔷薇·花信" Type="暗影 神秘" Height="900" Weight="30" Features="四月包月精灵，含羞矫色摇香影，带刺罗裳动粉腮！" Redirect="map" Go="0" Target="295005"/>
 	<Monster ID="4034" DefName="森莎" Type="自然 神秘" Height="174" Weight="56" Features="四月巅峰圣战精灵，掌控着神秘的自然之力，潮升蝉鸣间带来毁灭！"/>
 	<Monster ID="4035" DefName="邪影梦魇" Type="混沌 远古" Height="190" Weight="85" Features="灵神的心魔，蛰伏于黑暗的灵魂，诞生于圣光中的梦魇！" Redirect="map|module" Go="103;app/BlackShadowInTheCracksMainPanel"/>
@@ -5223,5 +5223,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4921" DefName="天堂极龙兽" Type="圣灵 光" Height="400" Weight="385" Features="传说中的神兽自天堂来袭，这一次它必将终结所有罪恶!" Redirect="module" Go="app/FinalActivityPanel" Target="114116"/>
 	<Monster ID="4922" DefName="墟婆" Type="自然 神秘" Height="176" Weight="52" Features="墟婆，大墟泽的管理者。在玄武仍然在世的时候，墟婆就是玄武信仰最为虔诚的追随者。玄武死后，她一直守护着墟冢，守护者玄武的遗产。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/950"/>
 	<Monster ID="4923" DefName="莫缇" Type="地面 机械" Height="171" Weight="45" Features="魔盒的预言，似乎否定了她的价值、她的一切。但若是因此而退却，此后的半生便与走肉无异。这座都市不会只是泡影，纵使终会直面一切的坍塌，至少，让这片钢铁的森林成为指向云端之上的天枪。" Redirect="module" Go="app/FinalActivityPanel" Target="200000"/>
+	<Monster ID="4925" DefName="米罗博士" Type="草 超能" Height="146" Weight="39" Features="Λ组织二号舰穆宁号的驻舰科学官，超古代文明遗迹专家，奉命支援三号舰的玄武复活计划。她的科研空间站位于赫尔卡星的同步轨道，是玄武复活计划的核心人员之一。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/953"/>
+	<Monster ID="4926" DefName="酷酷鲨" Type="水 神秘" Height="119" Weight="27" Features="没错，酷酷鲨真的很酷。" Redirect="module" Go="app/FinalActivityPanel" Target="114105"/>
 
 </root>

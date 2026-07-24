@@ -2916,6 +2916,14 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>
 
+    <Skin ID="858" MonID="4633" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="深渊诡影·克劳里菲" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114108">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
+    <Skin ID="859" MonID="3506" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="波塞冬" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
+		<SkinKind ID="1" Type="2" LifeTime="0"/>
+	</Skin>
+
 	<!-- <Skin ID="000" MonID="000" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="复制模版"> -->
 	<!-- <SkinKind ID="1" Type="2" LifeTime="0"/> -->
 	<!-- </Skin>	 -->
