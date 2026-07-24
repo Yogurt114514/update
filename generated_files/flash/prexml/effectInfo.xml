@@ -48,7 +48,7 @@
 	<ParamType id="31" params="|白色|红色|蓝色|黄色|黑色" />
 	<ParamType id="32" params="|弱|中|强" />
 	<ParamType id="33" params="|一|二|三|四|五" />
-	<ParamType id="34" params="点固定伤害|%对手最大体力的百分比伤害" />
+	<ParamType id="34" params="点固定伤害，若自身体力低于对手则效果翻倍（boss有效）|%对手最大体力的百分比伤害，若自身体力低于对手则效果翻倍" />
 	
 	
 	<Effect id="1" argsNum="0" info="给予对方损伤的一半会回复自己的体力" analyze="[sprite name=iconHit]给予对方损伤的一半会回复自己的体力（boss有效）"/>
@@ -992,7 +992,7 @@
 	<Effect id="1151" argsNum="2" info="{0}回合内若对手使用攻击技能则自身全属性+{1}" analyze="[sprite name=iconHit]{0}回合内若对手使用攻击技能则自身[color=#52a5f2]全属性[/color]+{1}（boss有效）"/>
 	<Effect id="1152" argsNum="1" info="自身不处于能力提升状态则造成的伤害提升{0}%" analyze="[sprite name=iconHit]自身不处于能力提升状态则造成的伤害提升{0}%（boss有效）"/>
 	<Effect id="1153" argsNum="2" info="解除自身能力下降状态，解除成功则自身下{0}回合受到的伤害减少{1}点" analyze="[sprite name=iconHit]解除自身能力下降状态，解除成功则自身下{0}回合受到的伤害减少{1}点（boss有效）"/>
-	<Effect id="1154" argsNum="3" info="{0}回合内使用技能附加{1}{2}，若自身体力低于对手则效果翻倍" param="34,2,2" analyze="[sprite name=iconHit]{0}回合内使用技能附加{1}{2}，若自身体力低于对手则效果翻倍（boss有效）"/>
+	<Effect id="1154" argsNum="3" info="{0}回合内使用技能附加{1}{2}" param="34,2,2" analyze="[sprite name=iconHit]{0}回合内使用技能附加{1}{2}"/>
 	<Effect id="1155" argsNum="3" info="附加自身最大体力值{0}%的百分比伤害，连续使用每次增加{1}%，最高{2}%" analyze="[sprite name=iconHit]附加自身最大体力值{0}%的[color=#52a5f2]百分比伤害[/color]，连续使用每次增加{1}%，最高{2}%（boss有效）"/>
 	<Effect id="1156" argsNum="0" info="击败对手则恢复自身全部体力和所有技能PP值" analyze="[sprite name=iconHit][color=#57c975]击败[/color]对手则恢复自身全部体力和所有技能PP值（boss有效）"/>
 	<Effect id="1157" argsNum="1" info="消除双方能力提升、下降状态，消除任意一方成功则使对手下{0}次施放的技能无效（包括必中技能）" analyze="[sprite name=iconHit]消除双方能力提升、下降状态（boss有效），消除任意一方成功则使对手下{0}次施放的技能无效（包括必中技能）"/>
@@ -2385,14 +2385,14 @@
 	<Effect id="2543" argsNum="1" info="下次下场时，将上述护盾转移给下只精灵" analyze="[sprite name=iconHit]下次下场时，将上述护盾转移给下只精灵"/>
 	<Effect id="2544" argsNum="0" info="自身登场时，若己方精灵中存在索伦森，则将自身的信仰对象改为索伦森；自身位于场下时，为自身的信仰对象提供支援魂歌报丧" analyze="[sprite name=iconInherent]自身[color=#57c975]登场时[/color]，若[color=#52a5f2]己方[/color]精灵中存在索伦森，则将自身的[color=#57c975]信仰对象[/color]改为索伦森；自身位于场下时，为自身的[color=#57c975]信仰对象[/color]提供[color=#57c975]支援[/color][color=#f35555]魂歌报丧[/color]"/>
 	<Effect id="2545" argsNum="0" info="自身登场时，若自身携带了芳华寂灭则剥离自身的神秘系以获得冥妖之悼，若自身携带了幽冥鬼甲则剥离自身的邪灵系以获得幽迹之秘，同时携带时此效果失效" analyze="[sprite name=iconInherent]自身[color=#52a5f2]登场时[/color]，若自身携带了芳华寂灭则剥离自身的神秘系[color=#52a5f2]以[/color]获得[color=#f35555]冥妖之悼[/color]，若自身携带了幽冥鬼甲则剥离自身的邪灵系[color=#52a5f2]以[/color]获得[color=#f35555]幽迹之秘[/color]，同时携带时此效果失效"/>
-	<Effect id="2546" argsNum="1" info="消耗自身全部体力，自身下场时消逝自身并使己方场下首位阵亡精灵以{0}点体力复活" analyze="[sprite name=dot4]消耗自身全部体力，自身[color=#57c975]下场时[/color][color=#57c975]消逝[/color]自身并使[color=#52a5f2]己方[/color]场下首位阵亡精灵以{0}点体力复活"/>
-	<Effect id="2547" argsNum="2" info="若自身不处于回合类效果与能力提升状态则{0}%令对手{1}" param="1,1,1" analyze="[sprite name=dot4]若自身不处于[color=#52a5f2]回合类效果[/color]与能力提升状态则{0}%令对手[color=#57c975]{1}[/color]"/>
-	<Effect id="2548" argsNum="2" info="解除双方所处的异常状态，解除成功则附加对手双防值{0}%的真实伤害，若对手不处于异常状态则吸取对手双防值{1}%的体力" analyze="[sprite name=dot4]解除双方所处的异常状态，解除成功则附加对手双防值{0}%的[color=#52a5f2]真实伤害[/color]，若对手不处于异常状态则[color=#52a5f2]吸取[/color]对手双防值{1}%的体力"/>
-	<Effect id="2549" argsNum="3" info="先出手时{0}%令对手{1}，未触发则当回合受到的攻击伤害减少{2}%" param="1,1,1" analyze="[sprite name=dot4]先出手时{0}%令对手{1}，[color=#52a5f2]未触发[/color]则[color=#52a5f2]当回合[/color]受到的攻击伤害减少{2}%"/>
-	<Effect id="2550" argsNum="2" info="为对手附加{0}层荣光之裁，溢出时自身下{1}回合攻击必定打出致命一击" analyze="[sprite name=dot4]为对手附加{0}层[color=#f35555]荣光之裁[/color]，溢出时自身下{1}回合攻击必定打出[color=#57c975]致命一击[/color]"/>
-	<Effect id="2551" argsNum="0" info="击败对手时，自身获得1层神圣之霆，且直到自身的神圣之霆减少，对方下只精灵属性技能命中效果失效" analyze="[sprite name=dot4][color=#57c975]击败[/color]对手时，自身获得1层[color=#f35555]神圣之霆[/color]，且直到自身的[color=#f35555]神圣之霆[/color]减少，[color=#52a5f2]对方[/color]下只精灵属性技能命中效果失效"/>
-	<Effect id="2552" argsNum="1" info="未击败对手时，自身下次属性技能消耗对手的1层荣光之裁以使当次技能附加自身速度值{0}%的电·圣灵系伤害" analyze="[sprite name=dot4]未[color=#57c975]击败[/color]对手时，自身下次属性技能消耗对手的1层[color=#f35555]荣光之裁[/color][color=#52a5f2]以[/color]使当次技能附加自身速度值{0}%的电·圣灵系伤害"/>
-	<Effect id="2553" argsNum="1" info="此效果每场战斗限1次，消耗自身100%的体力且对手下1次技能无效，然后恢复己方不在场精灵王全部体力值与PP值，若自身与己方背包中未加入战斗的精灵王共计达到5只，额外使己方所有精灵王尽可能获得其专属特性首个提及的标记，若高于5只，则消耗体力改为消耗至1点" analyze="[sprite name=dot4]此效果每场战斗限1次，消耗自身100%的体力且对手下1次[color=#52a5f2]技能无效[/color]，[color=#52a5f2]然后[/color]恢复[color=#52a5f2]己方[/color]不在场精灵王全部体力值与PP值，若自身与[color=#52a5f2]己方[/color]背包中未加入战斗的精灵王共计[color=#52a5f2]达到[/color]5只，额外使[color=#52a5f2]己方[/color]所有精灵王尽可能获得其专属特性首个提及的标记，若高于5只，则消耗体力改为消耗至1点"/>
+	<Effect id="2546" argsNum="1" info="消耗自身全部体力，自身下场时消逝自身并使己方场下首位阵亡精灵以{0}点体力复活" analyze="[sprite name=iconHit]消耗自身全部体力，自身[color=#57c975]下场时[/color][color=#57c975]消逝[/color]自身并使[color=#52a5f2]己方[/color]场下首位阵亡精灵以{0}点体力复活"/>
+	<Effect id="2547" argsNum="2" info="若自身不处于回合类效果与能力提升状态则{0}%令对手{1}" param="1,1,1" analyze="[sprite name=iconHit]若自身不处于[color=#52a5f2]回合类效果[/color]与能力提升状态则{0}%令对手[color=#57c975]{1}[/color]"/>
+	<Effect id="2548" argsNum="2" info="解除双方所处的异常状态，解除成功则附加对手双防值{0}%的真实伤害，若对手不处于异常状态则吸取对手双防值{1}%的体力" analyze="[sprite name=iconHit]解除双方所处的异常状态，解除成功则附加对手双防值{0}%的[color=#52a5f2]真实伤害[/color]，若对手不处于异常状态则[color=#52a5f2]吸取[/color]对手双防值{1}%的体力"/>
+	<Effect id="2549" argsNum="3" info="先出手时{0}%令对手{1}，未触发则当回合受到的攻击伤害减少{2}%" param="1,1,1" analyze="[sprite name=iconHit]先出手时{0}%令对手{1}，[color=#52a5f2]未触发[/color]则[color=#52a5f2]当回合[/color]受到的攻击伤害减少{2}%"/>
+	<Effect id="2550" argsNum="2" info="为对手附加{0}层荣光之裁，溢出时自身下{1}回合攻击必定打出致命一击" analyze="[sprite name=iconHit]为对手附加{0}层[color=#f35555]荣光之裁[/color]，溢出时自身下{1}回合攻击必定打出[color=#57c975]致命一击[/color]"/>
+	<Effect id="2551" argsNum="0" info="击败对手时，自身获得1层神圣之霆，且直到自身的神圣之霆减少，对方下只精灵属性技能命中效果失效" analyze="[sprite name=iconHit][color=#57c975]击败[/color]对手时，自身获得1层[color=#f35555]神圣之霆[/color]，且直到自身的[color=#f35555]神圣之霆[/color]减少，[color=#52a5f2]对方[/color]下只精灵属性技能命中效果失效"/>
+	<Effect id="2552" argsNum="1" info="未击败对手时，自身下次属性技能消耗对手的1层荣光之裁以使当次技能附加自身速度值{0}%的电·圣灵系伤害" analyze="[sprite name=iconHit]未[color=#57c975]击败[/color]对手时，自身下次属性技能消耗对手的1层[color=#f35555]荣光之裁[/color][color=#52a5f2]以[/color]使当次技能附加自身速度值{0}%的电·圣灵系伤害"/>
+	<Effect id="2553" argsNum="0" info="此效果每场战斗限1次，消耗自身100%的体力且对手下1次技能无效，然后恢复己方不在场精灵王全部体力值与PP值，若自身与己方背包中未加入战斗的精灵王共计达到5只，额外使己方所有精灵王尽可能获得其专属特性首个提及的标记，若高于5只，则消耗体力改为消耗至1点" analyze="[sprite name=iconHit]此效果每场战斗限1次，消耗自身100%的体力且对手下1次[color=#52a5f2]技能无效[/color]，[color=#52a5f2]然后[/color]恢复[color=#52a5f2]己方[/color]不在场精灵王全部体力值与PP值，若自身与[color=#52a5f2]己方[/color]背包中未加入战斗的精灵王共计[color=#52a5f2]达到[/color]5只，额外使[color=#52a5f2]己方[/color]所有精灵王尽可能获得其专属特性首个提及的标记，若高于5只，则消耗体力改为消耗至1点"/>
 
 
 
