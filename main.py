@@ -3966,6 +3966,27 @@ def generate_skill_effects():
             if "atk_num" in move:
                 skill.n = move["atk_num"]
 
+            # 隐藏效果
+            for m in moves:
+                if m["ID"] == move_id:
+                    if "CritAtkFirst" in m:
+                        move["hide"] = 'CritAtkFirst'
+                    if "CritAtkSecond" in m:
+                        move["hide"] = 'CritAtkSecond'
+                    if "CritSelfHalfHp" in m:
+                        move["hide"] = 'CritSelfHalfHp'
+                    if "CritFoeHalfHp" in m:
+                        move["hide"] = 'CritFoeHalfHp'
+                    if "DmgBindLv" in m:
+                        move["hide"] = 'DmgBindLv'
+                    if "DmgBindHpDv" in m:
+                        move["hide"] = 'DmgBindHpDv'
+                    if "PwrBindDv" in m:
+                        move["hide"] = f'PwrBindDv{m["PwrBindDv"]}'
+                    if "PwrDouble" in m:
+                        move["hide"] = 'PwrDouble'
+                    break
+
             # 生成效果文本
             generate_skill_text(skill)
 
@@ -5673,6 +5694,7 @@ def db_moves():
                 type INTEGER NOT NULL,        -- 
                 info TEXT NOT NULL,        -- 
                 ordinary INTEGER NOT NULL,        -- 
+                hide TEXT NOT NULL,        -- 
                 EffectText TEXT NOT NULL        -- 
             );
             """
@@ -5722,11 +5744,12 @@ def db_moves():
             type = i.get("type", 0)
             info = i.get("info", '')
             ordinary = i.get("ordinary", 0)
+            hide = i.get("hide", '')
             EffectText = str(i.get("EffectText", []))
             cursor.execute("""
-                INSERT INTO moves (accuracy, atk_num, atk_type, category, crit_rate, friend_side_effect, friend_side_effect_arg, id, max_pp, mon_id, must_hit, name, power, priority, side_effect, side_effect_arg, type, info, ordinary, EffectText)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,(accuracy, atk_num, atk_type, category, crit_rate, friend_side_effect, friend_side_effect_arg, id, max_pp, mon_id, must_hit, name, power, priority, side_effect, side_effect_arg, type, info, ordinary, EffectText)
+                INSERT INTO moves (accuracy, atk_num, atk_type, category, crit_rate, friend_side_effect, friend_side_effect_arg, id, max_pp, mon_id, must_hit, name, power, priority, side_effect, side_effect_arg, type, info, ordinary, EffectText, hide)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,(accuracy, atk_num, atk_type, category, crit_rate, friend_side_effect, friend_side_effect_arg, id, max_pp, mon_id, must_hit, name, power, priority, side_effect, side_effect_arg, type, info, ordinary, EffectText, hide)
             )
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
