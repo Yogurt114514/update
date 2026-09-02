@@ -902,6 +902,8 @@
 				<Rule ID="13" Threshold="13" AchievementPoint="10" icon="1" achName="反抗之化身" proicon="1498" SpeNameBonus="595" title="反抗之化身" Desc="通关S-蕊沃尔【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="14" Threshold="14" AchievementPoint="10" icon="1" achName="创造之化身" proicon="1500" SpeNameBonus="597" title="创造之化身" Desc="通关S-西曼德妮【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 				<Rule ID="15" Threshold="15" AchievementPoint="10" icon="1" achName="虚空战士" proicon="1505" SpeNameBonus="599" title="虚空战士" Desc="通关S-卡鲁维德【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="16" Threshold="16" AchievementPoint="10" icon="1" achName="古文明专家" proicon="1510" SpeNameBonus="600" title="古文明专家" Desc="通关S-米罗博士【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
+				<Rule ID="17" Threshold="17" AchievementPoint="10" icon="1" achName="原型装甲" proicon="1512" SpeNameBonus="601" title="原型装甲" Desc="通关S-星光·雷纳多【地狱难度】关卡获得" titleColor="0xFFFFFF"/>
 			</Branch>
 			
 			<Branch ID="169" Desc="高难挑战系列" > 
@@ -1866,9 +1868,9 @@
 			    <Rule ID="12" Threshold="12" AchievementPoint="10" achName="圣诞礼遇" Desc="达成圣诞礼遇系列皮肤收集进度" proicon="1458" icon="1" />
 				<Rule ID="13" Threshold="13" AchievementPoint="10" achName="2026巅峰时装收集" Desc="达成2026巅峰圣战专属精灵皮肤收集进度" proicon="1468" icon="1" />
 				<Rule ID="14" Threshold="14" AchievementPoint="10" achName="运动无极限" Desc="达成运动时光系列皮肤收集进度" proicon="1474" icon="1" />
-				
-
 				<Rule ID="15" Threshold="15" AchievementPoint="10" achName="莱卡的守望" Desc="达成莱卡的守望系列皮肤收集进度" proicon="1491" icon="1" />
+				<Rule ID="16" Threshold="16" AchievementPoint="10" achName="深海之泪" Desc="达成深海绮境系列皮肤收集进度" proicon="1511" icon="1" />
+				
 			</Branch>
 			<Branch ID="176" Type="0" Desc="限定分类10" isShowPro="0">
 				<Rule ID="1" Threshold="1" AchievementPoint="5" icon="1" achName="果实品鉴家" proicon="1478" SpeNameBonus="580" title="品鉴达人" Desc="在化乐天林海完成探索解密" titleColor="0xFFFFFF"/>
