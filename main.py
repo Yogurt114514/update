@@ -2272,18 +2272,20 @@ def parse_and_dump_signIcon_fight(input_bytes_path, output_json_path):
                 temp["frame"] = [r.ReadUTFBytesWithLength() for _ in range(a)]
             temp["id"] = r.ReadSignedInt()
             temp["isShowNum"] = r.ReadSignedInt()
-            temp["showmonster"] = r.ReadSignedInt()
+            if r.read_bool():
+                b = r.ReadSignedInt()
+                temp["showmonster"] = [r.ReadUTFBytesWithLength() for _ in range(b)]
             temp["showtime"] = r.ReadSignedInt()
             temp["sort"] = r.ReadSignedInt()
             if r.read_bool():
-                b = r.ReadSignedInt()
-                temp["spDes"] = [r.ReadUTFBytesWithLength() for _ in range(b)]
-            if r.read_bool():
                 c = r.ReadSignedInt()
-                temp["spicon"] = [r.ReadUTFBytesWithLength() for _ in range(c)]
+                temp["spDes"] = [r.ReadUTFBytesWithLength() for _ in range(c)]
             if r.read_bool():
                 d = r.ReadSignedInt()
-                temp["sptips"] = [r.ReadUTFBytesWithLength() for _ in range(d)]
+                temp["spicon"] = [r.ReadUTFBytesWithLength() for _ in range(d)]
+            if r.read_bool():
+                e = r.ReadSignedInt()
+                temp["sptips"] = [r.ReadUTFBytesWithLength() for _ in range(e)]
             temp["tips"] = r.ReadUTFBytesWithLength()
             result["root"].append(temp)
 
