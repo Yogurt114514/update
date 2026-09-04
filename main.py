@@ -28,6 +28,7 @@ from typing_extensions import ParamSpec, override
 
 # 依赖的辅助模块在仓库根目录，不依赖 Windows 的 D:\Data 路径
 from _download_github_directory import DownloadTask
+from unity_json_adapt import adapt_official_json, output_filename_for
 from _swf_handle import (
 	AMF3Reader,
 	extract_binary_data,
@@ -352,7 +353,76 @@ TARGET_TEXTASSET_NAMES = [
     "sp_hide_moves_shop",
     "exchange_clt",
     "Activity_TimeUpdateConfig",
-]  # 只导出这些 TextAsset 名（导出为 moves.bytes 等）
+]  # 从服务器拉取这些配置的 JSON（不再本地解析 .bytes）
+
+# Windows 服务器挂载的官方 Parse JSON 根路径
+UNITY_JSON_SERVER = os.environ.get(
+    "UNITY_JSON_SERVER",
+    "http://124.222.51.165:7010/unity-json",
+).rstrip("/")
+
+
+def _http_get_json(url: str, timeout: int = 60) -> dict:
+    last_err: Exception | None = None
+    for attempt in range(4):
+        try:
+            res = requests.get(url, timeout=timeout)
+            res.raise_for_status()
+            return res.json()
+        except Exception as e:
+            last_err = e
+            time.sleep(1.5 * (attempt + 1))
+    raise RuntimeError(f"下载 JSON 失败: {url} ({last_err})")
+
+
+def fetch_and_adapt_unity_json(
+    name: str,
+    dest_path: Path | None = None,
+) -> dict:
+    """从服务器拉官方 JSON，适配为手册结构后落盘。"""
+    url = f"{UNITY_JSON_SERVER}/{name}.json"
+    official = _http_get_json(url)
+    adapted = adapt_official_json(name, official)
+    out = dest_path or (data_path / output_filename_for(name))
+    write_json(out, adapted)
+    print(f"已拉取并适配: {name} -> {out.name}")
+    return adapted
+
+
+def fetch_all_target_unity_jsons() -> None:
+    """按 TARGET 列表拉取；再按道具分类拉取 itemsOptimizeCatItems* / itemsTip。"""
+    ensure_dir(str(data_path))
+    for name in TARGET_TEXTASSET_NAMES:
+        if name in ("petbook", "addmoves"):
+            # petbook / addmoves 仍走 Flash 或其它路径，服务器有则顺带拉
+            try:
+                fetch_and_adapt_unity_json(name)
+            except Exception as e:
+                print(f"[skip] {name}: {e}")
+            continue
+        fetch_and_adapt_unity_json(name)
+
+    # 道具子表：依赖 itemsOptimizeCat 分类 ID
+    cat_path = data_path / "itemsOptimizeCat.json"
+    if cat_path.exists():
+        with open(cat_path, "r", encoding="utf-8") as f:
+            cats = json.load(f).get("root") or []
+        for cat in cats:
+            cid = cat.get("ID")
+            if cid is None:
+                continue
+            child = f"itemsOptimizeCatItems{cid}"
+            try:
+                fetch_and_adapt_unity_json(
+                    child, data_path / f"itemsOptimizeCatItems{cid}.json"
+                )
+            except Exception as e:
+                print(f"[warn] 拉取 {child} 失败: {e}")
+    try:
+        fetch_and_adapt_unity_json("itemsTip")
+    except Exception as e:
+        print(f"[warn] 拉取 itemsTip 失败: {e}")
+
 
 # === 可配置参数 ===
 IMG_REMOTE_BASE = "https://newseer.61.com/Assets/StandaloneWindows64/DefaultPackage/"
@@ -3372,16 +3442,6 @@ for name, platform in platforms:
     platform.save_remote_version()
     time_str = datetime.now(timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%SUTC%z")
 
-manifest_bytes = get_remote_manifest_bytes(version1)
-manifest = parse_package_manifest(manifest_bytes)
-bundle_ids = resolve_bundles_for_targets(manifest, TARGET_TEXTASSET_NAMES)
-for bid in bundle_ids:
-    b = manifest["BundleList"][bid]
-    data = download_bundle(b["FileHash"])
-    save_bundle(data, b["BundleName"])
-
-export_selected_textassets(TARGET_TEXTASSET_NAMES)
-
 manifest_bytes = img_get_remote_manifest_bytes(version2)
 manifest = parse_package_manifest(manifest_bytes)
 # 指定前缀列表
@@ -3398,20 +3458,12 @@ for bid in bundle_ids:
     img_save_bundle(data, b["BundleName"])
 export_all_png_filter(Path(os.path.join(LOCAL_BASE, "标签")))
 
+# Unity 配置：从服务器拉取官方 Parse JSON 并适配为手册结构（不再下载 ConfigBundle / 解析 .bytes）
+print(f"从服务器拉取 Unity JSON: {UNITY_JSON_SERVER}")
+fetch_all_target_unity_jsons()
 
 
 # """神谕/觉醒"""
-# url1 = "http://seerh5.61.com/resource/config/xml/"+xml["pet_advance.json"]
-# response = urllib.request.urlopen(url1)
-# data = json.load(response)
-parse_and_dump_pet_advance(
-    (data_path / "pet_advance.bytes"),
-    (data_path / "pet_advance.json"),
-)
-parse_and_dump_awakendetail(
-    (data_path / "awakendetail.bytes"),
-    (data_path / "awakendetail.json"),
-)
 with open((data_path / "awakendetail.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
@@ -3419,16 +3471,9 @@ Task = root["Task"]
 
 
 """精灵"""
-# url2 = "http://seerh5.61.com/resource/config/xml/"+xml["monsters.json"]
-# response = urllib.request.urlopen(url2)
-# data = json.load(response)
 xml_path = str(FLASH_DIR / "config.xml.PetBookXMLInfo.xml")
 json_path = (data_path / "petbook.json")
 xml_to_json7(xml_path, json_path)
-parse_and_dump_monsters(
-    (data_path / "monsters.bytes"),
-    (data_path / "monsters.json"),
-)
 with open((data_path / "monsters.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 Monsters = data["Monsters"]
@@ -3436,13 +3481,6 @@ Monster = Monsters["Monster"]
 
 
 """刻印"""
-# url3 = "http://seerh5.61.com/resource/config/xml/"+xml["mintmark.json"]
-# response = urllib.request.urlopen(url3)
-# data = json.load(response)
-parse_and_dump_mintmark(
-    (data_path / "mintmark.bytes"),
-    (data_path / "mintmark.json"),
-)
 with open((data_path / "mintmark.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 MintMarks = data["MintMarks"]
@@ -3524,17 +3562,6 @@ for i in MintMark:
 
 
 """魂印"""
-# url4 = "http://seerh5.61.com/resource/config/xml/"+xml["effectIcon.json"]
-# response = urllib.request.urlopen(url4)
-# data = json.load(response)
-parse_and_dump_pet_effect_icon(
-    (data_path / "petEffectIcon.bytes"),
-    (data_path / "petEffectIcon.json"),
-)
-parse_and_dump_effect_icon(
-    (data_path / "effectIcon.bytes"),
-    (data_path / "effectIcon.json"),
-)
 with open((data_path / "effectIcon.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
@@ -3545,30 +3572,12 @@ for i in effect:    # 导出魂印图标
         input_swf_path=i["icon_id"],  # SWF文件名（数字）
         export_type="sprite"  # 导出精灵（frame=导出帧，sprite=导出精灵）
     )
-parse_and_dump_effect_tag( # 魂印标签
-    (data_path / "effectag.bytes"),
-    (data_path / "effectag.json"),
-)
 """魂印buff"""
-# url5 = "http://seerh5.61.com/resource/config/xml/"+xml["effectbuff.json"]
-# response = urllib.request.urlopen(url5)
-# data = json.load(response)
-parse_and_dump_effect_buff(
-    (data_path / "effectbuff.bytes"),
-    (data_path / "effectbuff.json"),
-)
 with open((data_path / "effectbuff.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
 Buff = root["Buff"]
 """魂印标注"""
-# url6 = "http://seerh5.61.com/resource/config/xml/"+xml["effectDes.json"]
-# response = urllib.request.urlopen(url6)
-# data = json.load(response)
-parse_and_dump_effect_des(
-    (data_path / "effectDes.bytes"),
-    (data_path / "effectDes.json"),
-)
 with open((data_path / "effectDes.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
@@ -3606,13 +3615,6 @@ for i in buff:
 
 
 """技能效果"""
-# url7 = "http://seerh5.61.com/resource/config/xml/"+xml["moves.json"]
-# response = urllib.request.urlopen(url7)
-# data = json.load(response)
-parse_and_dump_moves(
-    (data_path / "moves.bytes"),
-    (data_path / "moves_unity.json"),
-)
 with open((data_path / "moves_unity.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 MovesTbl = data["root"]
@@ -3629,13 +3631,6 @@ Move = Moves["Move"]
 
 
 """技能代码"""
-# url8 = "http://seerh5.61.com/resource/config/xml/"+xml["effectInfo.json"]
-# response = urllib.request.urlopen(url8)
-# data = json.load(response)
-parse_and_dump_effect_info(
-    (data_path / "effectInfo.bytes"),
-    (data_path / "effectInfo.json"),
-)
 with open((data_path / "effectInfo.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 root = data["root"]
@@ -3651,142 +3646,18 @@ temp = {"id": 42, "args_num": 2, "info": "{0}回合自己使用电招式伤害×
 Effect.append(temp)
 temp = {"id": 174, "args_num": 5, "info": "{0}回合内，若对手使用属性攻击则{3}%自身{1}等级+{4}"}
 Effect.append(temp)
-parse_and_dump_skill_effect(
-    (data_path / "skill_effect.bytes"),
-    (data_path / "skill_effect.json"),
-)
 xml_path = str(FLASH_DIR / "prexml/effectInfo.xml")
 json_path = (data_path / "effectInfo_f.json")
 xml_to_json9(xml_path, json_path)
 
 
 """属性"""
-# url9 = "http://seerh5.61.com/resource/config/xml/"+xml["skillTypes.json"]
-# response = urllib.request.urlopen(url9)
-# data = json.load(response)
-parse_and_dump_skilltypes(
-    (data_path / "skillTypes.bytes"),
-    (data_path / "skillTypes.json"),
-)
 with open((data_path / "skillTypes.json"), 'r', encoding='utf-8') as f:
     data = json.load(f)
 stitem = data["root"]
 
 
-"""其他"""
-parse_and_dump_pet_skin(
-    (data_path / "pet_skin.bytes"),
-    (data_path / "pet_skin.json"),
-)
-# parse_and_dump_pvp_vote(
-#     (data_path / "pvp_vote.bytes"),
-#     (data_path / "pvp_vote.json"),
-# )
-# parse_and_dump_pvp_ban(
-#     (data_path / "pvp_ban.bytes"),
-#     (data_path / "pvp_ban.json"),
-# )
-# parse_and_dump_pvp_ban_expert(
-#     (data_path / "pvp_ban_expert.bytes"),
-#     (data_path / "pvp_ban_expert.json"),
-# )
-parse_and_dump_gem(
-    (data_path / "gems.bytes"),
-    (data_path / "gems.json"),
-)
-parse_and_dump_item(
-    (data_path / "itemsOptimizeCat.bytes"),
-    (data_path / "itemsOptimizeCat.json"),
-)
-parse_and_dump_sp_hide_moves(
-    (data_path / "sp_hide_moves.bytes"),
-    (data_path / "sp_hide_moves.json"),
-)
-parse_and_dump_achievements(
-    (data_path / "achievements.bytes"),
-    (data_path / "achievements.json"),
-)
-parse_and_dump_suit(
-    (data_path / "suit.bytes"),
-    (data_path / "suit.json"),
-)
-parse_and_dump_equip(
-    (data_path / "equip.bytes"),
-    (data_path / "equip.json"),
-)
-parse_and_dump_buff(
-    (data_path / "buff.bytes"),
-    (data_path / "buff.json"),
-)
-parse_and_dump_signIcon_fight(
-    (data_path / "signIcon_fight.bytes"),
-    (data_path / "signIcon_fight.json"),
-)
-parse_and_dump_battle_effects(
-    (data_path / "battle_effects.bytes"),
-    (data_path / "battle_effects.json"),
-)
-parse_and_dump_pet_skin_rewardtype(
-    (data_path / "pet_skin_rewardtype.bytes"),
-    (data_path / "pet_skin_rewardtype.json"),
-)
-parse_and_dump_new_se(
-    (data_path / "new_se.bytes"),
-    (data_path / "new_se.json"),
-)
-parse_and_dump_new_super_design(
-    (data_path / "new_super_design.bytes"),
-    (data_path / "new_super_design.json"),
-)
-parse_and_dump_archivesBook(
-    (data_path / "archivesBook.bytes"),
-    (data_path / "archivesBook.json"),
-)
-parse_and_dump_archivesStory(
-    (data_path / "archivesStory.bytes"),
-    (data_path / "archivesStory.json"),
-)
-parse_and_dump_move_stones(
-    (data_path / "move_stones.bytes"),
-    (data_path / "move_stones.json"),
-)
-parse_and_dump_fragment(
-    (data_path / "Fragment.bytes"),
-    (data_path / "Fragment.json"),
-)
-parse_and_dump_partner(
-    (data_path / "partner.bytes"),
-    (data_path / "partner.json"),
-)
-parse_and_dump_partnerEffectUpgrade(
-    (data_path / "partnerEffectUpgrade.bytes"),
-    (data_path / "partnerEffectUpgrade.json"),
-)
-parse_and_dump_battlepass_shop(
-    (data_path / "battlepass_shop.bytes"),
-    (data_path / "battlepass_shop.json"),
-)
-parse_and_dump_sp_hide_moves_shop(
-    (data_path / "sp_hide_moves_shop.bytes"),
-    (data_path / "sp_hide_moves_shop.json"),
-)
-parse_and_dump_exchange_clt(
-    (data_path / "exchange_clt.bytes"),
-    (data_path / "exchange_clt.json"),
-)
-parse_and_dump_Activity_TimeUpdateConfig(
-    (data_path / "Activity_TimeUpdateConfig.bytes"),
-    (data_path / "Activity_TimeUpdateConfig.json"),
-)
-# export_all_pet_animations(
-# 	monsters_json_path=data_path / "monsters.json",
-# 	plugin_base_dir=PLUGIN_BASE_DIR,
-# 	ffdec_jar_path=FFDEC_JAR_PATH,
-# 	extra_pet_ids=[4543],
-# )
-
-
-
+"""其他（Unity JSON 已由 fetch_all_target_unity_jsons 落盘）"""
 
 
 class Skill:
@@ -4475,7 +4346,7 @@ def db_achievements():
         bid = i.get("ID", 0)
         Branches = i.get("Branches", [])
         for j in Branches:
-            for k in j:
+            for k in j["Branch"]:
                 desc2 = k.get("Desc", '')
                 rid = k.get("ID", 0)
                 is_single = k.get("IsSingle", 0)
@@ -4504,7 +4375,9 @@ def db_achievements():
                     except Exception as e:
                         print(f"❌ 插入数据失败：{e}，数据内容：{l}")
     conn.commit()
+
 db_achievements()
+
 def db_archive():
     with open(data_path / "archivesBook.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -4599,7 +4472,7 @@ def db_archive():
             isrec = i.get("isrec", 0)
             monid = i.get("monid", 0)
             monname = i.get("monname", "")
-            samemonid = str(i.get("samemonid", []))
+            samemonid = str(i.get("samemonid") or [])
             storyid = i.get("storyid", 0)
             txt = i.get("txt", "")
             cursor.execute("""
@@ -4610,7 +4483,9 @@ def db_archive():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_archive()
+
 def db_buff():
     with open(data_path / "buff.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -4669,7 +4544,11 @@ def db_buff():
             desc = i.get("Desc", "")
             tag = i.get("Tag", "")
             desc_tag = i.get("desc_tag", "")
-            icon = i.get("icon", [0])[0]
+            icon = i.get("icon") or []
+            if len(icon) > 0:
+                icon = icon[0]
+            else:
+                icon = 0
             icontype = i.get("icontype", 0)
             id = i.get("id", 0)
             cursor.execute("""
@@ -4680,7 +4559,9 @@ def db_buff():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_buff()
+
 def db_cloth():
     with open(data_path / "suit.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -4936,7 +4817,7 @@ def db_effectDes():
     root1 = data["root"]["item"]
     with open(data_path / "battle_effects.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root2 = data["root"][0]["sub_effect"]
+    root2 = data["root"][0]["SubEffect"]
 
 
     def create_scheme_database(db_path):
@@ -5007,19 +4888,19 @@ def db_effectDes():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     for i in root2:
         try:
-            icon = i.get("id", 0)
-            kinddes = i.get("name", '')
+            icon = i.get("ID", 0)
+            kinddes = i.get("Name", '')
             desc = ''
             id = 0
             kind = 0
             link = ''
             monster = ''
-            res = i.get("efftype", 2)       # 0是控制抗性，1是弱化抗性
-            a1 = i.get("ctrl", 0)           # 控制类
-            a2 = i.get("weaken", 0)         # 弱化类
-            a3 = i.get("dependent", 0)      # 附属类
-            a4 = i.get("restriction", 0)    # 限制类
-            a5 = i.get("derivation", 0)     # 衍化类
+            res = i.get("Efftype", 2)       # 0是控制抗性，1是弱化抗性
+            a1 = i.get("Ctrl", 0)           # 控制类
+            a2 = i.get("Weaken", 0)         # 弱化类
+            a3 = i.get("Dependent", 0)      # 附属类
+            a4 = i.get("Restriction", 0)    # 限制类
+            a5 = i.get("Derivation", 0)     # 衍化类
             tab = - (res*100000 + a1*10000 + a2*1000 + a3*100 + a4*10 + a5)
             flag = True
             for j in root1:
@@ -5049,7 +4930,9 @@ def db_effectDes():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_effectDes()
+
 def db_effectIcon():
     with open(data_path / "effectIcon.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -5591,19 +5474,19 @@ def db_mintmark():
     for i in root1:
         try:
             AttriValue = [0, 0, 0, 0, 0, 0]
-            BaseAttriValue = i.get("BaseAttriValue", [])
+            BaseAttriValue = i.get("BaseAttriValue") or []
             Connect = i.get("Connect", 0)
             Des = i.get("Des", "")
             EffectDes = i.get("EffectDes", "")
-            ExtraAttriValue = i.get("ExtraAttriValue", [])
+            ExtraAttriValue = i.get("ExtraAttriValue") or []
             Grade = i.get("Grade", 0)
             Hide = i.get("Hide", 0)
             ID = i.get("ID", 0)
             Level = i.get("Level", 0)
             Max = i.get("Max", 0)
-            MaxAttriValue = i.get("MaxAttriValue", [])
+            MaxAttriValue = i.get("MaxAttriValue") or []
             MintmarkClass = i.get("MintmarkClass", 0)
-            MonsterID = str(i.get("MonsterID", []))
+            MonsterID = str(i.get("MonsterID") or [])
             Quality = i.get("Quality", 0)
             Rare = i.get("Rare", 0)
             Rarity = i.get("Rarity", 0)
@@ -5656,7 +5539,9 @@ def db_mintmark():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_mintmark()
+
 def db_moves():
     with open(data_path / "moves_done.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -5832,12 +5717,12 @@ def db_new_moves():
 
     for i in reversed(root1 + root2):
         try:
-            id = i.get("item", "")
+            id = i.get("item", 0)
             name = i.get("itemname", "")
             name = ''.join(name.split())
             if name == '完成精灵觉醒':
                 continue
-            number = i.get("itemnumber", "")
+            number = i.get("itemnumber", 0)
             monster = i.get("monster", 0)
             moves = i.get("moves", 0)
             movesname = i.get("movesname", "")
@@ -5863,7 +5748,7 @@ def db_new_moves():
                         break
             for j in root5:
                 if j.get("monID", 0) == monster:
-                    skill = j.get("skill", [])
+                    skill = j.get("skill") or []
                     if str(moves) in skill:
                         ps = '契约伙伴'
                         for k in root6:
@@ -5886,7 +5771,9 @@ def db_new_moves():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_new_moves()
+
 def db_petEffectIcon():
     with open(data_path / "petEffectIcon.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -6198,7 +6085,10 @@ def db_pets():
         data = json.load(f)
     root3 = data["root"]["Task"]
     pro = []
-    for i in root3 + root2:
+    for i in root3:
+        race = i["Advances"]["Race"]["NewRace"]
+        pro.append([i["Advances"]["MonsterId"], race])
+    for i in root2:
         race = i["Advances"]["Race"]["NewRace"]
         pro.append([i["Advances"]["MonsterId"], race])
 
@@ -6285,10 +6175,10 @@ def db_pets():
             SpDef = i.get("SpDef", 0)
             Spd = i.get("Spd", 0)
             HP = i.get("HP", 0)
-            LearnableMoves = str(i.get("LearnableMoves", {}))
-            ExtraMoves = str(i.get("ExtraMoves", {}))
-            SpExtraMoves = str(i.get("SpExtraMoves", {}))
-            ShowExtraMoves = str(i.get("ShowExtraMoves", {}))
+            LearnableMoves = str(i.get("LearnableMoves") or {})
+            ExtraMoves = str(i.get("ExtraMoves") or {})
+            SpExtraMoves = str(i.get("SpExtraMoves") or {})
+            ShowExtraMoves = str(i.get("ShowExtraMoves") or {})
             des = ''
             RealId = i.get("RealId", 0)
             if ID in book:
@@ -6324,7 +6214,9 @@ def db_pets():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
 db_pets()
+
 def db_rich_text_tree():
     with open(data_path / "rich_text_tree.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -6858,16 +6750,16 @@ def db_yin_zi():
             normal_battle = ""
             hard_battle = ""
             for i in root1:
-                if i["reward"]["item_id"] == reward_item:
-                    needmon = i["configure"]["needmon"]
-                    reward_mintmark = i["reward"]["mint_mark_id"]
-                    consume_mintmark = i["configure"]["exchange_mintmark"]
-                    a1 = i["achievement"]["branch_id"]
-                    a2 = i["achievement"]["rule_id"]
-                    rule = str(i["rules"]["rule"])
-                    easy_battle = str(i.get("easy_battle", "{}"))
-                    normal_battle = str(i.get("normal_battle", "{}"))
-                    hard_battle = str(i.get("hard_battle", "{}"))
+                if i["Reward"]["ItemID"] == reward_item:
+                    needmon = i["Configure"]["needmon"]
+                    reward_mintmark = i["Reward"]["MintMarkID"]
+                    consume_mintmark = i["Configure"]["Exchange_mintmark"]
+                    a1 = i["Achievement"]["BranchID"]
+                    a2 = i["Achievement"]["RuleID"]
+                    rule = str(i["Rules"]["Rule"])
+                    easy_battle = str(i.get("EasyBattle", "{}"))
+                    normal_battle = str(i.get("NormalBattle", "{}"))
+                    hard_battle = str(i.get("HardBattle", "{}"))
                     break
             cursor.execute("""
                 INSERT INTO yin_zi (monster_id, needmon, reward_item, consume_pet, reward_mintmark, consume_mintmark, reward_icon, consume_icon, reward_move, consume_move, rarity, pet_limit, a1, a2, rule, easy_battle, normal_battle, hard_battle)
@@ -6877,6 +6769,7 @@ def db_yin_zi():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{j}")
     conn.commit()
+
 db_yin_zi()
 
 
