@@ -416,6 +416,7 @@ _ADAPTERS = {
     "pvp_ban": _items_as_root,
     "pvp_ban_expert": _items_as_root,
     "pvp_vote": _items_as_root,
+    "pvpCostMode_cost": _items_as_root,
 }
 
 

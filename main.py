@@ -353,6 +353,9 @@ TARGET_TEXTASSET_NAMES = [
     "sp_hide_moves_shop",
     "exchange_clt",
     "Activity_TimeUpdateConfig",
+    "pvp_ban",
+    "pvp_ban_expert",
+    "pvpCostMode_cost",
 ]  # 从服务器拉取这些配置的 JSON（不再本地解析 .bytes）
 
 # Windows 服务器挂载的官方 Parse JSON 根路径
@@ -6769,8 +6772,104 @@ def db_yin_zi():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{j}")
     conn.commit()
-
 db_yin_zi()
+def db_pvp():
+    with open(data_path / "pvp_ban.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root1 = data["root"]
+    with open(data_path / "pvp_ban_expert.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root2 = data["root"]
+    with open(data_path / "pvpCostMode_cost.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root3 = data["root"]
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS pvp (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,  -- 
+                pet TEXT NOT NULL,  -- 
+                time TEXT NOT NULL        -- 
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"pvp_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root1:
+        try:
+            id = i.get('quantity') or 0
+            name = f"ban_{id}"
+            pet = str(i.get('name') or [])
+            time = ''
+            cursor.execute("""
+                INSERT INTO pvp (name, pet, time)
+                VALUES (?, ?, ?)
+                """, (name, pet, time)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root2:
+        try:
+            id = i.get('quantity') or 0
+            name = f"expert_{id}"
+            pet = str([int(p) for p in i.get("name").split(';') if p.strip()] if i.get("name") else [])
+            time = ''
+            cursor.execute("""
+                INSERT INTO pvp (name, pet, time)
+                VALUES (?, ?, ?)
+                """, (name, pet, time)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    for i in root3:
+        try:
+            id = i.get('cost') or 0
+            name = f"cost_{id}"
+            pet = str([int(p) for p in i.get("pet").split(';') if p.strip()] if i.get("pet") else [])
+            time = i.get('time') or ''
+            cursor.execute("""
+                INSERT INTO pvp (name, pet, time)
+                VALUES (?, ?, ?)
+                """, (name, pet, time)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_pvp()
 
 
 
