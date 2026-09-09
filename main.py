@@ -415,7 +415,7 @@ def resolve_unity_version1(
 
     避免「CDN 已升版 + 服务器旧 JSON」却用新 version1 落库的致命错位。
     """
-    max_wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", max_wait_sec or 1200))
+    max_wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", max_wait_sec or 600))
     poll_sec = int(os.environ.get("UNITY_JSON_POLL_SEC", poll_sec or 30))
     cdn_ver = get_remote_version()
     print(f"[version] CDN ConfigPackage = {cdn_ver}")
