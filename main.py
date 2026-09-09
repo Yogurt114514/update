@@ -363,6 +363,95 @@ UNITY_JSON_SERVER = os.environ.get(
     "UNITY_JSON_SERVER",
     "http://124.222.51.165:7010/unity-json",
 ).rstrip("/")
+# 推导 API 根（用于触发流水线）；可用 UNITY_JSON_API 覆盖
+UNITY_JSON_API = os.environ.get(
+    "UNITY_JSON_API",
+    UNITY_JSON_SERVER[: -len("/unity-json")] if UNITY_JSON_SERVER.endswith("/unity-json") else UNITY_JSON_SERVER,
+).rstrip("/")
+
+
+def _http_get_text(url: str, timeout: int = 30) -> str:
+    last_err: Exception | None = None
+    for attempt in range(4):
+        try:
+            res = requests.get(url, timeout=timeout)
+            res.raise_for_status()
+            return res.text.strip()
+        except Exception as e:
+            last_err = e
+            time.sleep(1.5 * (attempt + 1))
+    raise RuntimeError(f"下载文本失败: {url} ({last_err})")
+
+
+def get_server_unity_version() -> str:
+    """读取服务器产出的 ConfigPackage 版本戳。"""
+    return _http_get_text(f"{UNITY_JSON_SERVER}/version1.txt")
+
+
+def trigger_server_unity_pipeline() -> bool:
+    """尽量触发服务器重跑 JSON 流水线（无 token 或环境变量匹配时可用）。"""
+    url = f"{UNITY_JSON_API}/api/unity-json/trigger"
+    headers = {}
+    token = os.environ.get("UNITY_PIPELINE_TOKEN", "").strip()
+    if token:
+        headers["X-Trigger-Token"] = token
+    try:
+        res = requests.post(url, headers=headers, timeout=30)
+        if res.status_code in (200, 202, 409):
+            print(f"[version] 触发流水线: HTTP {res.status_code} {res.text[:200]}")
+            return True
+        print(f"[version] 触发流水线失败: HTTP {res.status_code} {res.text[:200]}")
+        return False
+    except Exception as e:
+        print(f"[version] 触发流水线异常: {e}")
+        return False
+
+
+def resolve_unity_version1(
+    max_wait_sec: int | None = None,
+    poll_sec: int | None = None,
+) -> str:
+    """以 CDN 为期望版本，等待服务器 unity-json 对齐后再返回 version1。
+
+    避免「CDN 已升版 + 服务器旧 JSON」却用新 version1 落库的致命错位。
+    """
+    max_wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", max_wait_sec or 1200))
+    poll_sec = int(os.environ.get("UNITY_JSON_POLL_SEC", poll_sec or 30))
+    cdn_ver = get_remote_version()
+    print(f"[version] CDN ConfigPackage = {cdn_ver}")
+
+    server_ver = ""
+    triggered = False
+    deadline = time.time() + max_wait_sec
+    attempt = 0
+    while True:
+        attempt += 1
+        try:
+            server_ver = get_server_unity_version()
+        except Exception as e:
+            server_ver = ""
+            print(f"[version] 读取服务器 version1 失败: {e}")
+        print(f"[version] 服务器 unity-json = {server_ver or '(空)'} (#{attempt})")
+        if server_ver and server_ver == cdn_ver:
+            print(f"[version] 已对齐，使用 version1={server_ver}")
+            return server_ver
+
+        remaining = deadline - time.time()
+        if remaining <= 0:
+            break
+
+        if not triggered:
+            triggered = True
+            trigger_server_unity_pipeline()
+
+        sleep_for = min(poll_sec, max(1, int(remaining)))
+        print(f"[version] 未对齐，{sleep_for}s 后重试（剩余约 {int(remaining)}s）")
+        time.sleep(sleep_for)
+
+    raise RuntimeError(
+        f"服务器 Unity JSON 版本未对齐 CDN：server={server_ver or '(空)'} cdn={cdn_ver}。"
+        "请确认 Windows 定时/手动流水线已成功写出 output/version1.txt。"
+    )
 
 
 def _http_get_json(url: str, timeout: int = 60) -> dict:
@@ -3431,7 +3520,8 @@ def export_swf_to_png(ffdec_jar_path):
 # 更新
 
 ensure_dir(LOCAL_BASE)
-version1 = get_remote_version()
+# version1 必须与服务器已产出的 Unity JSON 对齐（先对 CDN，再等服务器）
+version1 = resolve_unity_version1()
 
 ensure_dir(IMG_LOCAL_BASE)
 version2 = img_get_remote_version()
@@ -3461,8 +3551,8 @@ for bid in bundle_ids:
     img_save_bundle(data, b["BundleName"])
 export_all_png_filter(Path(os.path.join(LOCAL_BASE, "标签")))
 
-# Unity 配置：从服务器拉取官方 Parse JSON 并适配为手册结构（不再下载 ConfigBundle / 解析 .bytes）
-print(f"从服务器拉取 Unity JSON: {UNITY_JSON_SERVER}")
+# Unity 配置：版本已与服务器对齐，拉取官方 Parse JSON 并适配
+print(f"从服务器拉取 Unity JSON: {UNITY_JSON_SERVER} (version1={version1})")
 fetch_all_target_unity_jsons()
 
 
