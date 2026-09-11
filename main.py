@@ -15,6 +15,7 @@ import sys
 import time
 import zlib
 import subprocess
+import tempfile
 from abc import ABC, abstractmethod
 from collections.abc import Callable, Coroutine
 from datetime import datetime
@@ -3513,8 +3514,306 @@ def export_swf_to_png(ffdec_jar_path):
 
     conn.close()
 
+    # ---------- 座驾：cloth.type=mount → SymbolClass/帧标签 pet 的第一帧，200% PNG ----------
+    export_mount_pet_from_cloth_swf(ffdec_jar_path=ffdec_jar, prop_root=prop_root/"item/cloth/icon")
 
 
+def _resolve_cloth_db_path() -> Path | None:
+    """优先 cloth_{version1}.db，其次 cloth.db / 最新 cloth_*.db。"""
+    cands: list[Path] = []
+    ver = globals().get("version1")
+    if ver:
+        cands.append(data_path / f"cloth_{ver}.db")
+    cands.append(data_path / "cloth.db")
+    cands.extend(sorted(data_path.glob("cloth_*.db"), key=lambda p: p.stat().st_mtime, reverse=True))
+    seen: set[Path] = set()
+    for p in cands:
+        rp = p.resolve()
+        if rp in seen:
+            continue
+        seen.add(rp)
+        if p.is_file():
+            return p
+    return None
+
+
+def _find_pet_sprite_frame(xml_path: Path, symbols_csv: Path | None) -> tuple[int, int] | None:
+    """
+    定位要导出的 (spriteId, frame)：
+    1) 任意 sprite 上 FrameLabelTag name=pet 的起始帧；
+    2) 否则 SymbolClass 名为 pet 的 sprite 第 1 帧。
+    """
+    try:
+        root = ET.parse(xml_path).getroot()
+    except Exception:
+        return None
+
+    for sprite in root.iter("item"):
+        if sprite.get("type") != "DefineSpriteTag" or not sprite.get("spriteId"):
+            continue
+        sid = int(sprite.get("spriteId"))
+        subtags = sprite.find("subTags")
+        if subtags is None:
+            continue
+        frame = 0
+        for sub in subtags.findall("item"):
+            tag_type = sub.get("type")
+            if tag_type == "FrameLabelTag" and sub.get("name") == "pet":
+                return sid, frame + 1
+            if tag_type == "ShowFrameTag":
+                frame += 1
+
+    if symbols_csv is not None and symbols_csv.is_file():
+        with open(symbols_csv, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if not line or ";" not in line:
+                    continue
+                cid_s, name = line.split(";", 1)
+                name = name.strip().strip('"')
+                if name == "pet":
+                    try:
+                        return int(cid_s.strip()), 1
+                    except ValueError:
+                        return None
+    return None
+
+
+def export_mount_pet_from_cloth_swf(ffdec_jar_path, prop_root: Path, zoom: float = 2.0):
+    """从 cloth 表 type=mount 的道具 SWF 导出 pet 精灵首帧 PNG（默认 200%）到 prop_root/{id}.png。"""
+    ffdec_jar = str(ffdec_jar_path) if ffdec_jar_path else ""
+    if not ffdec_jar or not os.path.exists(ffdec_jar):
+        print(f"未找到 ffdec.jar：{ffdec_jar}，跳过座驾 pet 导出")
+        return
+
+    cloth_db = _resolve_cloth_db_path()
+    if cloth_db is None:
+        print("未找到 cloth.db，跳过座驾 pet 导出")
+        return
+
+    out_dir = Path(prop_root)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    # SWF 仍放在 道具/{id}/{id}.swf（与前面道具导出一致）
+    swf_base = PLUGIN_BASE_DIR / "道具"
+
+    conn = sqlite3.connect(str(cloth_db))
+    try:
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT DISTINCT item_id, name FROM cloth WHERE type=? AND item_id>0",
+            ("mount",),
+        )
+        mounts = [(int(r[0]), r[1]) for r in cur.fetchall()]
+    finally:
+        conn.close()
+
+    if not mounts:
+        print(f"cloth 无 mount 记录（{cloth_db.name}），跳过座驾 pet 导出")
+        return
+
+    missing = [(iid, n) for iid, n in mounts if not (out_dir / f"{iid}.png").is_file()]
+    print(f"座驾 pet 导出：缺失 {len(missing)}/{len(mounts)}（来自 {cloth_db.name}）→ {out_dir}")
+    if not missing:
+        return
+
+    for item_id, name in missing:
+        final_png = out_dir / f"{item_id}.png"
+
+        swf_dir = swf_base / str(item_id)
+        swf_file = swf_dir / f"{item_id}.swf"
+        swf_dir.mkdir(parents=True, exist_ok=True)
+
+        try:
+            if not swf_file.is_file() or swf_file.stat().st_size < 64:
+                swf_url = f"https://seer.61.com/resource/item/cloth/icon/{item_id}.swf"
+                r = requests.get(swf_url, timeout=30)
+                if r.status_code == 404 or len(r.content) < 64:
+                    print(f"座驾 {item_id}({name}) SWF 不存在，跳过")
+                    continue
+                swf_file.write_bytes(r.content)
+
+            work = Path(tempfile.mkdtemp(prefix=f"mount_pet_{item_id}_"))
+            try:
+                xml_path = work / f"{item_id}.xml"
+                sym_dir = work / "symbol"
+                export_tmp = work / "out"
+                sym_dir.mkdir(parents=True, exist_ok=True)
+                export_tmp.mkdir(parents=True, exist_ok=True)
+
+                subprocess.run(
+                    [
+                        "java", "-jar", ffdec_jar,
+                        "-swf2xml", str(swf_file), str(xml_path),
+                    ],
+                    check=False,
+                    capture_output=True,
+                    timeout=180,
+                )
+                if not xml_path.is_file():
+                    print(f"座驾 {item_id} swf2xml 失败，跳过")
+                    continue
+
+                subprocess.run(
+                    [
+                        "java", "-jar", ffdec_jar,
+                        "-onerror", "ignore",
+                        "-export", "symbolClass",
+                        str(sym_dir),
+                        str(swf_file),
+                    ],
+                    check=False,
+                    capture_output=True,
+                    timeout=120,
+                )
+                target = _find_pet_sprite_frame(xml_path, sym_dir / "symbols.csv")
+                if target is None:
+                    print(f"座驾 {item_id}({name}) 未找到 pet，跳过")
+                    continue
+                sprite_id, frame_no = target
+
+                subprocess.run(
+                    [
+                        "java", "-jar", ffdec_jar,
+                        "-onerror", "ignore",
+                        "-zoom", str(zoom),
+                        "-selectid", str(sprite_id),
+                        "-select", f"{sprite_id}:{frame_no}",
+                        "-format", "sprite:png",
+                        "-export", "sprite",
+                        str(export_tmp),
+                        str(swf_file),
+                    ],
+                    check=False,
+                    capture_output=True,
+                    timeout=180,
+                )
+                pngs = sorted(export_tmp.rglob("*.png"))
+                if not pngs:
+                    print(f"座驾 {item_id}({name}) pet 帧导出为空，跳过")
+                    continue
+                shutil.copy2(pngs[0], final_png)
+                print(f"座驾 pet 导出成功：{final_png.name} (sprite={sprite_id} frame={frame_no})")
+            finally:
+                shutil.rmtree(work, ignore_errors=True)
+        except Exception as e:
+            print(f"座驾 {item_id} pet 导出失败：{type(e).__name__} - {e}")
+
+
+def export_typef_from_ui_swf(type_ids, dest_dir, ffdec_jar_path, zoom=10):
+    """从 UI.swf 的 Icon_PetType_{id} 按钮导出属性大图到 dest_dir/{id}.png（默认 1000% = zoom 10）。"""
+    dest_dir = Path(dest_dir)
+    dest_dir.mkdir(parents=True, exist_ok=True)
+
+    missing = []
+    for tid in type_ids:
+        try:
+            tid_int = int(tid)
+        except (TypeError, ValueError):
+            continue
+        if not (dest_dir / f"{tid_int}.png").is_file():
+            missing.append(tid_int)
+    if not missing:
+        return
+
+    ffdec_jar = str(ffdec_jar_path) if ffdec_jar_path else ""
+    if not ffdec_jar or not os.path.exists(ffdec_jar):
+        print(f"未找到 ffdec.jar：{ffdec_jar}，跳过 typef（UI.swf）导出")
+        return
+
+    work_root = Path(tempfile.mkdtemp(prefix="ui_pettype_"))
+    swf_path = work_root / "UI.swf"
+    symbol_dir = work_root / "symbol"
+    export_dir = work_root / "buttons"
+    symbol_dir.mkdir(parents=True, exist_ok=True)
+    export_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        print(f"下载 UI.swf 以导出 {len(missing)} 个缺失 typef ...")
+        r = requests.get("https://seer.61.com/dll/UI.swf", timeout=120)
+        r.raise_for_status()
+        swf_path.write_bytes(r.content)
+
+        subprocess.run(
+            [
+                "java", "-jar", ffdec_jar,
+                "-onerror", "ignore",
+                "-export", "symbolClass",
+                str(symbol_dir),
+                str(swf_path),
+            ],
+            check=False,
+            capture_output=True,
+            timeout=180,
+        )
+        symbols_csv = symbol_dir / "symbols.csv"
+        if not symbols_csv.is_file():
+            print("UI.swf symbolClass 导出失败，跳过 typef")
+            return
+
+        # symbols.csv: characterId;"Icon_PetType_12"
+        tid_to_cid = {}
+        with open(symbols_csv, "r", encoding="utf-8", errors="replace") as f:
+            for line in f:
+                line = line.strip()
+                if not line or ";" not in line:
+                    continue
+                cid_s, name = line.split(";", 1)
+                name = name.strip().strip('"')
+                if not name.startswith("Icon_PetType_"):
+                    continue
+                suffix = name[len("Icon_PetType_") :]
+                if suffix.isdigit():
+                    tid_to_cid[int(suffix)] = int(cid_s.strip())
+
+        select_ids = []
+        for tid in missing:
+            cid = tid_to_cid.get(tid)
+            if cid is None:
+                print(f"UI.swf 无 Icon_PetType_{tid}，跳过 typef/{tid}.png")
+                continue
+            select_ids.append(cid)
+        if not select_ids:
+            return
+
+        # 一次批量导出缺失按钮（zoom=10 ≈ 1000%）
+        cmd = [
+            "java", "-jar", ffdec_jar,
+            "-onerror", "ignore",
+            "-zoom", str(zoom),
+            "-selectid", ",".join(str(c) for c in select_ids),
+            "-format", "button:png",
+            "-export", "button",
+            str(export_dir),
+            str(swf_path),
+        ]
+        subprocess.run(cmd, check=False, capture_output=True, timeout=600)
+
+        # 目录名形如 DefineButton2_1795_Icon_PetType_1_Icon_PetType_1/1_up.png
+        saved = 0
+        for folder in export_dir.iterdir():
+            if not folder.is_dir():
+                continue
+            m = re.search(r"Icon_PetType_(\d+)", folder.name)
+            if not m:
+                continue
+            tid = int(m.group(1))
+            if tid not in missing:
+                continue
+            up_png = folder / "1_up.png"
+            if not up_png.is_file():
+                pngs = sorted(folder.glob("*.png"))
+                if not pngs:
+                    continue
+                up_png = pngs[0]
+            target = dest_dir / f"{tid}.png"
+            shutil.copy2(up_png, target)
+            saved += 1
+            print(f"typef 导出成功：{target.name}")
+        print(f"typef 从 UI.swf 导出完成：{saved}/{len(missing)}")
+    except Exception as e:
+        print(f"typef(UI.swf) 导出失败：{type(e).__name__} - {e}")
+    finally:
+        shutil.rmtree(work_root, ignore_errors=True)
 
 
 # 更新
@@ -3751,6 +4050,33 @@ stitem = data["root"]
 
 
 """其他（Unity JSON 已由 fetch_all_target_unity_jsons 落盘）"""
+# 属性：typef 自大图按钮 Icon_PetType_{id}（UI.swf，1000%）；type 从小图标 CDN
+typef_path = Path(os.path.join(LOCAL_BASE, "typef"))
+type_path = Path(os.path.join(LOCAL_BASE, "type"))
+typef_path.mkdir(parents=True, exist_ok=True)
+type_path.mkdir(parents=True, exist_ok=True)
+export_typef_from_ui_swf(
+    type_ids=[i["id"] for i in stitem],
+    dest_dir=typef_path,
+    ffdec_jar_path=FFDEC_JAR_PATH,
+    zoom=10,
+)
+for i in stitem:
+    msg = str(i["id"]) + ".png"
+    if not os.path.exists(type_path / msg):
+        url = 'https://newseer.61.com/web/PetType/' + msg
+        r = requests.get(url)
+        if r.status_code != 404:
+            with open(type_path / msg, "wb") as file:
+                file.write(r.content)
+            print(f"下载属性成功：{msg}")
+        else:
+            url = f"https://cnb.cool/SeerAPI/seer-unity-assets/-/git/raw/main/newseer/assets/art/ui/assets/pettype/{msg}?download=true"
+            r = requests.get(url)
+            if r.status_code != 404:
+                with open(type_path / msg, "wb") as file:
+                    file.write(r.content)
+                print(f"下载属性成功：{msg}")
 
 
 class Skill:
