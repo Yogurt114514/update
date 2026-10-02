@@ -2964,7 +2964,7 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 	<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>	
 	
-	<Skin ID="870" MonID="4942" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="阿克希亚" >
+	<Skin ID="870" MonID="4942" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs=""  Name="阿克希亚" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0" />
 	</Skin>
 
@@ -2989,14 +2989,6 @@ Year：该皮肤所属的年份（当前仅面向巅峰时装）
 	</Skin>	
 
 	<Skin ID="876" MonID="4947" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="4" Name="宿命的对决·盖亚" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114137">
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
-	</Skin>	
-
-	<Skin ID="877" MonID="4373" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="万契之囹·龙焉" Go="app/FinalActivityPanel" GoType="module" Jumptarget="114149">
-		<SkinKind ID="1" Type="2" LifeTime="0"/>
-	</Skin>	
-
-	<Skin ID="878" MonID="4658" Target="0" Occasion="1" AddWay="1" Attribute="" SkinEffectID="" SkinEffectArgs="" Type="3" Name="百相傩戏·库比" Go="app/FinalActivityPanel" GoType="module" Jumptarget="2">
 		<SkinKind ID="1" Type="2" LifeTime="0"/>
 	</Skin>	
 
