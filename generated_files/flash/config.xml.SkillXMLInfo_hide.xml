@@ -2249,7 +2249,11 @@
 		<item moveId="38602" petId="4957" moveName1="拉卡伊" moveName2="呼唤"/>
 		<item moveId="38605" petId="4958" moveName1="瓶中海" moveName2=""/>
 		<item moveId="38608" petId="4959" moveName1="铭千古" moveName2=""/>
-
+		<item moveId="38611" petId="4960" moveName1="战翼" moveName2="天鳞裂"/>
+		<item moveId="38614" petId="4961" moveName1="踏焰来" moveName2=""/>
+		<item moveId="38617" petId="4962" moveName1="中原" moveName2="斩魔剑"/>
+		<item moveId="38620" petId="4963" moveName1="天门跃" moveName2=""/>
+		<item moveId="38623" petId="4924" moveName1="触手" moveName2="可及"/>
 
 
 

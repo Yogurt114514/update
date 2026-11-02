@@ -1883,6 +1883,7 @@
 				<Rule ID="14" Threshold="14" AchievementPoint="10" achName="运动无极限" Desc="达成运动时光系列皮肤收集进度" proicon="1474" icon="1" />
 				<Rule ID="15" Threshold="15" AchievementPoint="10" achName="莱卡的守望" Desc="达成莱卡的守望系列皮肤收集进度" proicon="1491" icon="1" />
 				<Rule ID="16" Threshold="16" AchievementPoint="10" achName="深海之泪" Desc="达成深海绮境系列皮肤收集进度" proicon="1511" icon="1" />
+				<Rule ID="17" Threshold="17" AchievementPoint="10" achName="器承千载" Desc="达成器承千载系列皮肤收集进度" proicon="1532" icon="1" />
 				
 			</Branch>
 			<Branch ID="176" Type="0" Desc="限定分类10" isShowPro="0">

@@ -213,11 +213,11 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4957" ImageID= "4957" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4958" ImageID= "4958" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4959" ImageID= "4959" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4954" ImageID= "4954" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "0" ID="4911" ImageID= "4911" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4924" ImageID= "4924" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4960" ImageID= "4960" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4961" ImageID= "4961" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4962" ImageID= "4962" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4963" ImageID= "4963" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4804" ImageID= "4804" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4805" ImageID= "4805" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="883" monID="4605" ImageID= "1400883" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="884" monID="4468" ImageID= "1400884" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="885" monID="4215" ImageID= "1400885" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="886" monID="4500" ImageID= "1400886" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="887" monID="4421" ImageID= "1400887" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+	  <!-- <place type= "1" ID="885" monID="4215" ImageID= "1400885" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="882" monID="4353" ImageID= "1400882" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3822,7 +3822,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3512" DefName="帝皇之御" Type="自然 战斗" Height="180" Weight="60" Features="瀚宇星皇的传奇伙伴，拥有着极强的防御力，守护着万物众生。" mapID="103" Label="0,1,4" Target="295009"/>
 	<Monster ID="3513" DefName="哈恩特" Type="地面 暗影" Height="120" Weight="50" Features="弑神猎皇身边的猎犬，凶猛无比，总是隐藏在暗影中，无形中给猎物造成致命一击！" mapID="1264"/>
 	<Monster ID="3514" DefName="弑神猎皇" Type="战斗 龙" Height="176" Weight="72" Features="五皇中的最后一位，嗜血冷酷，其手段十分残忍，最喜欢的事就是看着猎物被自己追杀且无路可逃的样子。" mapID="1264" Label="1,2" jumptarget="107" Target="150055"/>
-	<Monster ID="3515" DefName="玄冥魂者·奥斯兰" Type="神秘" Height="180" Weight="70" Features="奥兰的完全体形态，身体里沉睡的冥域之魂觉醒了。他发誓要守护自己的家园，绝不退缩！" mapID="1264"/>
+	<Monster ID="3515" DefName="玄冥魂者·奥斯兰" Type="神秘" Height="180" Weight="70" Features="奥兰的完全体形态，身体里沉睡的冥域之魂觉醒了。他发誓要守护自己的家园，绝不退缩！" mapID="1264" Target="150154"/>
 	<Monster ID="3516" DefName="混沌地王莱茵哈特" Type="混沌 地面" Height="179" Weight="72" Features="当生命之盾无法阻挡亡魂！当大地之心不再纯洁不染！黑暗中，一位巨人倒下了！混沌地王莱茵哈特登场！" mapID="1265" Target="150079"/>
 	<Monster ID="3517" DefName="霍夫曼" Type="光" Height="180" Weight="80" Features="来自遥远天际的一位勇士，随身携带的天堂圣锤是他战斗中最好的作战伙伴！" mapID="103"/>
 	<Monster ID="3518" DefName="斯摩亚蒂斯" Type="暗影 邪灵" Height="200" Weight="70" Features="斯摩亚蒂的超进化形态，是宇宙中作恶多端的大坏蛋，卷土重来打开了逝者巨樽，宇宙又将陷入一场浩劫！" mapID="1265"  Target="150129"/>
@@ -4541,7 +4541,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4237" DefName="乾古通兽" Type="火 暗影" Height="500" Weight="250" Features="由罡和煞融合而成的灵兽，拥有创造与毁灭的力量，是神迹万物的创造者！" Redirect="map|module" Go="1496;app/QianGuTongShouMergeMainPanel"/>
 	<Monster ID="4238" DefName="鬼面阎罗" Type="混沌 邪灵" Height="200" Weight="70" Features="由弑序神罗利用混沌之力从地狱召唤而来，他将宣告灾难的降临，末日的丧钟已经响起！" Redirect="map|module" Go="103;app/GetGuiMianYanLuoPanel" Target="295006"/>
 	<Monster ID="4239" DefName="浩渺之源·努恩" Type="水 龙" Height="195" Weight="82" Features="查理星系的前任守护者，启灵元神的老师，奔涌的沧龙之水润泽万物！" Redirect="map|module" Go="1495;app/S91NuEnMainPanel"/>
-	<Monster ID="4240" DefName="溯洄·拉伯克" Type="混沌 次元" Height="180" Weight="70" Features="拉伯克的进化形态，被混沌之力影响完成了觉醒，次元之力开始慢慢复苏！" Redirect="map|module" Go="1495;app/SuhuiLaBoKeMainPanel"/>
+	<Monster ID="4240" DefName="溯洄·拉伯克" Type="混沌 次元" Height="180" Weight="70" Features="拉伯克的进化形态，被混沌之力影响完成了觉醒，次元之力开始慢慢复苏！" Redirect="map|module" Go="1495;app/SuhuiLaBoKeMainPanel" Target="150155"/>
 	<Monster ID="4241" DefName="环·零" Type="机械 战斗" Height="185" Weight="62" Features="环小队的队长，被小队成员使用五个机械核心复活，战斗本能再次激活！" Redirect="map|module" Go="1147;app/PveRewardMallMainPanel" jumptarget="18/4_5" Target="164510"/>
 	<Monster ID="4242" DefName="凯凯西弗斯" Type="冰" Height="160" Weight="50" Features="凯凯西朴的进化形态，曾经的冰雪舞者变得更加优雅，冰雪华尔兹也愈发优美！" Redirect="map|module" Go="103;app/ExchangeDiamondMain2019Panel"/>
 	<Monster ID="4243" DefName="米拉克" Type="远古 火" Height="1000" Weight="1000" Features="神庙的守护者，有敌人踏入神庙时会苏醒进行迎击，外表燃烧的岩甲让人难以靠近！" Redirect="map|module" Go="1499;app/S92MiLaKeMainPanel"/>
@@ -4654,7 +4654,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4350" DefName="哈洛兰特" Type="光" Height="181" Weight="72" Features="霍莱终于展现出了自己的真实面目！热衷古神学的他究竟还潜藏了多少秘密呢......" Redirect="map|module" Go="1543;app/SpetHaLuoLanTePanel" jumptarget="151/68" Target="153201/68"/>
 	<Monster ID="4351" DefName="米欧" Type="飞行 龙" Height="76" Weight="29" Features="赛尔们在晶龙洞窟又发现了一只新的龙宝宝，这次它又会为我们带来什么有趣的故事呢？" Redirect="map|module" Go="1430;app/PeripheralExplorationMainPanel"/>
 	<Monster ID="4352" DefName="艾瑞丽尔" Type="水" Height="149" Weight="43" Features="2022年4月包月精灵，十二冠灵之一，能够掌控水之元素，沧流唤灵，碧浪圣冕！" Target="295007"/>
-	<Monster ID="4353" DefName="花寅" Type="圣灵 战斗" Height="156" Weight="46" Features="2022年4月巅峰圣战精灵，虎之一族的神秘女孩，可不要因为她长相甜美可爱就对她掉以轻心哦，她的战斗力可不容小觑！" Target="520012"/>
+	<Monster ID="4353" DefName="花寅" Type="圣灵 战斗" Height="156" Weight="46" Features="2022年4月巅峰圣战精灵，虎之一族的神秘女孩，可不要因为她长相甜美可爱就对她掉以轻心哦，她的战斗力可不容小觑！"/>
 	<Monster ID="4354" DefName="狂沙之主·萨特" Type="地面 神秘" Height="230" Weight="114" Features="盖伦星系的守护者，军队出身的他身经百战，拥有着深不可测的实力，面对黑夜的侵袭，萨特有着自己特别的计划和手段，但这一切都随着尘沙起舞，难以捉摸…" Redirect="map|module" Go="1544;app/S105SaTeMainPanel" Target="150112"/>
 	<Monster ID="4355" DefName="终末大天使" Type="光 暗影" Height="248" Weight="115" Features="当波拉克斯的光明之力与卡斯托尔的黑暗元素融合至极致，真正的终末之神将随着天使羽翼的盛放莅临于时之彼端，届时一切是非对错都将失去意义，化为神罚之下的齑粉......" Redirect="map|module" Go="103;app/DaantiaoHunDunDaTianShiMainPanel"/>
 	<Monster ID="4356" DefName="斯科尔" Type="草 战斗" Height="175" Weight="76" Features="在桑谷的申请下来到向阳村的稻草人，别看它长相乖巧，可是干农活的一把好手！" Redirect="map|module" Go="1545;app/SpetSiKeErPanel" jumptarget="151/69" Target="153201/69"/>
@@ -4674,7 +4674,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4370" DefName="僧行" Type="地面 暗影" Height="175" Weight="68" Features="静心定神，守境为念，一觉众生。有他守护在身边，不知不觉你也会平静下来。" Redirect="map|module" Go="1552;app/SpetSengXingPanel" jumptarget="151/76" Target="153201/76"/>
 	<Monster ID="4371" DefName="德拉莫斯" Type="混沌 龙" Height="975" Weight="668" Features="迪斯伯德使用从库莱姆斯身上提取的力量造出的堕恶之龙，拥有着恐怖的破坏力，所到之处都在它的龙怒之下化为了一片焦土！" Redirect="map|module" Go="1553;app/SpetDeLaMoSiPanel" jumptarget="151/77" Target="153201/77"/>
 	<Monster ID="4372" DefName="幻魅灵狐·苏璃" Type="火 超能" Height="171" Weight="53" Features="“千年以来因你失心之人数不胜数，可你却仍未迷失自己的本心，或许这便是修得九尾的答案吧，璃。”少年最后回头看了一眼那个救他性命的漂亮女孩，便转身走向了山林深处。" Redirect="map|module" Go="103;app/DaantiaoSuLiMainPanel"/>
-	<Monster ID="4373" DefName="龙焉" Type="战斗 龙" Height="178" Weight="59" Features="2022年6月巅峰圣战精灵，被剥夺了原本的名字，从此成为战争的祭品，至此以后，复仇成为了唯一让她选择活下去的理由。" Target="520013"/>
+	<Monster ID="4373" DefName="龙焉" Type="战斗 龙" Height="178" Weight="59" Features="2022年6月巅峰圣战精灵，被剥夺了原本的名字，从此成为战争的祭品，至此以后，复仇成为了唯一让她选择活下去的理由。"/>
 	<Monster ID="4374" DefName="普拉薇安" Type="草" Height="164" Weight="48" Features="2022年6月包月精灵，十二冠灵之一，能够掌控花之元素，绕藤穿叶，碧枝圣冕！" Target="295007"/>
 	<Monster ID="4375" DefName="小雏" Type="草 超能" Height="69" Weight="32" Features="在留风街巷子里孤立无援的小女孩，头戴着小雏菊的发饰，无助的眼神让岚想起了曾经的一些回忆......" Redirect="map|module" Go="1553;app/MainLineExchange_FalseCountry"/>
 	<Monster ID="4376" DefName="圣谕之风·岚" Type="圣灵 自然" Height="184" Weight="74" Features="岚通过仙境之忆觉醒了圣灵之力后再度自我突破的完全体形态，对战车和宝剑的力量运用都达到了至高的境界，他的实力已然再无敌手，冠绝天下！" Redirect="map|module" Go="1556;app/SpetSYZFLPanel" jumptarget="151/78" Target="153201/78"/>
@@ -5223,6 +5223,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4921" DefName="天堂极龙兽" Type="圣灵 光" Height="400" Weight="385" Features="传说中的神兽自天堂来袭，这一次它必将终结所有罪恶!" />
 	<Monster ID="4922" DefName="墟婆" Type="自然 神秘" Height="176" Weight="52" Features="墟婆，大墟泽的管理者。在玄武仍然在世的时候，墟婆就是玄武信仰最为虔诚的追随者。玄武死后，她一直守护着墟冢，守护者玄武的遗产。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/950"/>
 	<Monster ID="4923" DefName="莫缇" Type="地面 机械" Height="171" Weight="45" Features="魔盒的预言，似乎否定了她的价值、她的一切。但若是因此而退却，此后的半生便与走肉无异。这座都市不会只是泡影，纵使终会直面一切的坍塌，至少，让这片钢铁的森林成为指向云端之上的天枪。" />
+	<Monster ID="4924" DefName="瑟尼瑟斯" Type="暗影 飞行" Height="185" Weight="55" Features="2026年包月精灵，万象录之《匆匆忙忙之人》。他将阿派罗尼亚奉为自身的理想乡，将一生的勤奋都毫无保留地献给了阿派罗尼亚。。" Target="121000"/>
 	<Monster ID="4925" DefName="米罗博士" Type="草 超能" Height="146" Weight="39" Features="Λ组织二号舰穆宁号的驻舰科学官，超古代文明遗迹专家，奉命支援三号舰的玄武复活计划。她的科研空间站位于赫尔卡星的同步轨道，是玄武复活计划的核心人员之一。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/953"/>
 	<Monster ID="4926" DefName="酷酷鲨" Type="水 神秘" Height="119" Weight="27" Features="没错，酷酷鲨真的很酷。" />
 	<Monster ID="4927" DefName="超级噗纽" Type="草 机械" Height="156" Weight="97" Features="米罗博士自研的防卫型机器人，核心处理器由噗纽升级而来。" Redirect="module" Go="app/FinalActivityPanel" Target="153201/956"/>
@@ -5258,6 +5259,10 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4957" DefName="凯亚" Type="超能 光" Height="164" Weight="45" Features="凯亚来自拉卡伊的阿塔富岛。她自学成才，理想是成为一名真正的精灵召唤师，站上海瓦斗技场的舞台。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1018"/>
 	<Monster ID="4958" DefName="灵釉花口瓶" Type="水 超能" Height="64" Weight="3" Features="中原大地上彩瓷窑中瓷瓶所化形的精灵，富有灵气，对待它记得轻拿轻放哦。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
 	<Monster ID="4959" DefName="铸元正鼎" Type="远古 神秘" Height="76" Weight="100" Features="中原大地上圣鼎所化形的精灵，机灵古怪，可别被它的外貌给骗了哦。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
+	<Monster ID="4960" DefName="塔尼瓦" Type="战斗 龙" Height="290" Weight="130" Features="塔尼瓦接受伊娜的召唤而来。它有着凶恶残暴的一面，也有着守护家园的力量。塔尼瓦戍卫着一切不可接近的禁地，吞噬任何胆敢来犯之人。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1023"/>
+	<Monster ID="4961" DefName="赤彩焰驹" Type="火 超能" Height="216" Weight="112" Features="中原大地上驰骋的神奇马驹，它有着火焰般的鬃毛，有着使不完的力气。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
+	<Monster ID="4962" DefName="中原号" Type="远古 机械" Height="8000" Weight="100000" Features="飞出中原大地的神奇飞船，它航行在宇宙之间，寄予着中原人民心中最朴素的愿望。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
+	<Monster ID="4963" DefName="云舆瑞兽" Type="自然 龙" Height="311" Weight="152" Features="中原大地上栖息在潜龙山脉的神兽，它代表着祥瑞，可真正能够见到它的人少之又少。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
 	<Monster ID="4995" DefName="镇世神岳·玄武" Type="机械 地面" Height="380" Weight="1500" Features="玄武，帕诺的远古神兽、大地的守护者——他曾以伟岸之躯抵御世间最凶猛的灾厄，碎为戈拉后以钢铁新壳归来，仍在守护帕诺之夜。" Redirect="module" Go="app/FinalActivityPanel" Target="150145"/>
 
 </root>
