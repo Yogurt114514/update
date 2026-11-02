@@ -41,6 +41,17 @@ from pytz import timezone
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
+# CI/Docker 里 stdout 默认全缓冲，不 -u 时要等进程结束才看得到 print
+try:
+    sys.stdout.reconfigure(line_buffering=True)  # type: ignore[attr-defined]
+    sys.stderr.reconfigure(line_buffering=True)  # type: ignore[attr-defined]
+except Exception:
+    pass
+
+
+def _log(msg: str) -> None:
+    print(msg, flush=True)
+
 # === 路径配置（让脚本在 GitHub Actions/Linux 下也能跑）===
 REPO_ROOT = Path(__file__).resolve().parent
 OUTPUT_ROOT = Path(os.getenv("OUTPUT_ROOT", REPO_ROOT / "generated_files")).resolve()
@@ -385,12 +396,16 @@ def _http_get_text(url: str, timeout: int = 30) -> str:
 
 
 def get_server_unity_version() -> str:
-    """读取服务器产出的 ConfigPackage 版本戳。"""
+    """读取服务器产出的 ConfigPackage 版本戳。
+
+    约定：Windows 流水线只有在全部 JSON 写完后才更新/写出 version1.txt，
+    因此「version1 存在且等于 CDN」即可安全拉取，无需再等 status=success。
+    """
     return _http_get_text(f"{UNITY_JSON_SERVER}/version1.txt")
 
 
 def trigger_server_unity_pipeline() -> bool:
-    """尽量触发服务器重跑 JSON 流水线（无 token 或环境变量匹配时可用）。"""
+    """CDN 已升版而服务器尚无对应 version1 时，触发一次重跑。"""
     url = f"{UNITY_JSON_API}/api/unity-json/trigger"
     headers = {}
     token = os.environ.get("UNITY_PIPELINE_TOKEN", "").strip()
@@ -399,12 +414,12 @@ def trigger_server_unity_pipeline() -> bool:
     try:
         res = requests.post(url, headers=headers, timeout=30)
         if res.status_code in (200, 202, 409):
-            print(f"[version] 触发流水线: HTTP {res.status_code} {res.text[:200]}")
+            _log(f"[version] 触发流水线: HTTP {res.status_code} {res.text[:200]}")
             return True
-        print(f"[version] 触发流水线失败: HTTP {res.status_code} {res.text[:200]}")
+        _log(f"[version] 触发流水线失败: HTTP {res.status_code} {res.text[:200]}")
         return False
     except Exception as e:
-        print(f"[version] 触发流水线异常: {e}")
+        _log(f"[version] 触发流水线异常: {e}")
         return False
 
 
@@ -412,14 +427,16 @@ def resolve_unity_version1(
     max_wait_sec: int | None = None,
     poll_sec: int | None = None,
 ) -> str:
-    """以 CDN 为期望版本，等待服务器 unity-json 对齐后再返回 version1。
+    """只认 version1.txt == CDN。
 
-    避免「CDN 已升版 + 服务器旧 JSON」却用新 version1 落库的致命错位。
+    流水线保证：version1 仅在全部 JSON 就绪后才写出/更新。
+    已对齐时立即返回，不读 status、不空等。
+    仅当 CDN 已升版而服务器还没有该 version1 时才触发并短轮询等待。
     """
     max_wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", max_wait_sec or 600))
     poll_sec = int(os.environ.get("UNITY_JSON_POLL_SEC", poll_sec or 30))
     cdn_ver = get_remote_version()
-    print(f"[version] CDN ConfigPackage = {cdn_ver}")
+    _log(f"[version] CDN ConfigPackage = {cdn_ver}")
 
     server_ver = ""
     triggered = False
@@ -431,10 +448,10 @@ def resolve_unity_version1(
             server_ver = get_server_unity_version()
         except Exception as e:
             server_ver = ""
-            print(f"[version] 读取服务器 version1 失败: {e}")
-        print(f"[version] 服务器 unity-json = {server_ver or '(空)'} (#{attempt})")
+            _log(f"[version] 读取服务器 version1 失败: {e}")
+        _log(f"[version] 服务器 unity-json = {server_ver or '(空)'} (#{attempt})")
         if server_ver and server_ver == cdn_ver:
-            print(f"[version] 已对齐，使用 version1={server_ver}")
+            _log(f"[version] 已对齐，使用 version1={server_ver}")
             return server_ver
 
         remaining = deadline - time.time()
@@ -446,12 +463,43 @@ def resolve_unity_version1(
             trigger_server_unity_pipeline()
 
         sleep_for = min(poll_sec, max(1, int(remaining)))
-        print(f"[version] 未对齐，{sleep_for}s 后重试（剩余约 {int(remaining)}s）")
+        _log(f"[version] 未对齐，{sleep_for}s 后重试（剩余约 {int(remaining)}s）")
         time.sleep(sleep_for)
 
     raise RuntimeError(
         f"服务器 Unity JSON 版本未对齐 CDN：server={server_ver or '(空)'} cdn={cdn_ver}。"
-        "请确认 Windows 定时/手动流水线已成功写出 output/version1.txt。"
+        "请确认流水线已成功写出 output/version1.txt（应在全部 JSON 完成后才写入）。"
+    )
+
+
+def fetch_all_target_unity_jsons_guarded(expected_version1: str) -> str:
+    """拉完后再读一次 version1；变了说明拉的过程中服务器又发布了，重来。"""
+    max_rounds = int(os.environ.get("UNITY_JSON_FETCH_ROUNDS", "3"))
+    version1 = expected_version1
+    for round_i in range(1, max_rounds + 1):
+        _log(
+            f"从服务器拉取 Unity JSON: {UNITY_JSON_SERVER} "
+            f"(version1={version1}, round={round_i})"
+        )
+        fetch_all_target_unity_jsons()
+
+        try:
+            after = get_server_unity_version()
+        except Exception as e:
+            _log(f"[version] 拉取后复检 version1 失败: {e}")
+            after = ""
+
+        if after == version1:
+            _log(f"[version] 拉取后复检通过 version1={version1}")
+            return version1
+
+        _log(
+            f"[version] 拉取期间 version1 变化：expected={version1} after={after or '(空)'}，重对齐"
+        )
+        version1 = resolve_unity_version1()
+
+    raise RuntimeError(
+        f"拉取 Unity JSON 后 version1 仍不稳定（expected 起点={expected_version1}）。"
     )
 
 
@@ -2318,7 +2366,8 @@ def parse_and_dump_achievements(input_bytes_path, output_json_path):
                                 t["_text"] = r.ReadUTFBytesWithLength()
                                 t["isShowPro"] = r.ReadSignedInt()
                                 branch.append(t)
-                            branches.append(branch)
+                            # 与官方/适配 JSON 一致：Branches[].Branch[]
+                            branches.append({"Branch": branch})
                 temp["Branches"] = branches
                 temp["Desc"] = r.ReadUTFBytesWithLength()
                 temp["ID"] = r.ReadSignedInt()
@@ -2473,23 +2522,24 @@ def parse_and_dump_battle_effects(input_bytes_path, output_json_path):
             if r.read_bool():
                 a = r.ReadSignedInt()
                 for _ in range(a):
+                    # 字段名与官方 Parse / db_effectDes 一致（PascalCase）
                     t = {}
-                    t["ctrl"] = r.ReadSignedInt()
-                    t["dependent"] = r.ReadSignedInt()
-                    t["derivation"] = r.ReadSignedInt()
-                    t["efftype"] = r.ReadSignedInt()
-                    t["id"] = r.ReadSignedInt()
-                    t["name"] = r.ReadUTFBytesWithLength()
-                    t["restriction"] = r.ReadSignedInt()
-                    t["unctrl"] = r.ReadSignedInt()
-                    t["undependent"] = r.ReadSignedInt()
-                    t["underivation"] = r.ReadSignedInt()
-                    t["unrestriction"] = r.ReadSignedInt()
-                    t["unweaken"] = r.ReadSignedInt()
-                    t["weaken"] = r.ReadSignedInt()
+                    t["Ctrl"] = r.ReadSignedInt()
+                    t["Dependent"] = r.ReadSignedInt()
+                    t["Derivation"] = r.ReadSignedInt()
+                    t["Efftype"] = r.ReadSignedInt()
+                    t["ID"] = r.ReadSignedInt()
+                    t["Name"] = r.ReadUTFBytesWithLength()
+                    t["Restriction"] = r.ReadSignedInt()
+                    t["Unctrl"] = r.ReadSignedInt()
+                    t["Undependent"] = r.ReadSignedInt()
+                    t["Underivation"] = r.ReadSignedInt()
+                    t["Unrestriction"] = r.ReadSignedInt()
+                    t["Unweaken"] = r.ReadSignedInt()
+                    t["Weaken"] = r.ReadSignedInt()
                     tmp.append(t)
-            temp["sub_effect"] = tmp
-            temp["type"] = r.ReadSignedInt()
+            temp["SubEffect"] = tmp
+            temp["Type"] = r.ReadSignedInt()
             result["root"].append(temp)
 
     write_json(output_json_path, result)
@@ -3816,11 +3866,182 @@ def export_typef_from_ui_swf(type_ids, dest_dir, ffdec_jar_path, zoom=10):
         shutil.rmtree(work_root, ignore_errors=True)
 
 
+def parse_configs_from_official_bytes(version: str) -> None:
+    """从官方 CDN 拉 ConfigPackage bytes，用本地 parse_and_dump_* 写出 JSON。
+
+    必须全部 parse 成功才把 JSON 提交到 data_path；任一失败则抛错且不覆盖正式目录，
+    后续 DB 生成也不会继续（由 main 直接中止）。
+    """
+    global version1, data_path, EXPORT_DIR
+    version1 = version  # parse_and_dump_item 内会读全局 version1 再下子表
+
+    ensure_dir(str(data_path))
+    ensure_dir(EXPORT_DIR)
+    ensure_dir(BUNDLE_DIR)
+
+    # petbook/addmoves 走 Flash；pvpCostMode_cost 无对应 parse
+    skip = {"petbook", "addmoves", "pvpCostMode_cost", "itemsTip"}
+    targets = [n for n in TARGET_TEXTASSET_NAMES if n not in skip]
+    # itemsTip.bytes 由 parse_and_dump_item 末尾读取，需一并导出
+    export_names = list(targets) + ["itemsTip"]
+
+    _log(f"[fallback-bytes] 下载 ConfigPackage manifest version={version}")
+    manifest_bytes = get_remote_manifest_bytes(version)
+    manifest = parse_package_manifest(manifest_bytes)
+    bundle_ids = resolve_bundles_for_targets(manifest, export_names)
+    _log(f"[fallback-bytes] 需下载 bundle 数: {len(bundle_ids)}")
+    for bid in sorted(bundle_ids):
+        b = manifest["BundleList"][bid]
+        _log(f"[fallback-bytes] 下载 {b['BundleName']}")
+        data = download_bundle(b["FileHash"])
+        save_bundle(data, b["BundleName"])
+    export_selected_textassets(export_names)
+
+    # (TextAsset 名, parse 函数, 输出 json 文件名)
+    # moves 下游读的是 moves_unity.json
+    jobs: list[tuple[str, Any, str]] = [
+        ("awakendetail", parse_and_dump_awakendetail, "awakendetail.json"),
+        ("monsters", parse_and_dump_monsters, "monsters.json"),
+        ("mintmark", parse_and_dump_mintmark, "mintmark.json"),
+        ("petEffectIcon", parse_and_dump_pet_effect_icon, "petEffectIcon.json"),
+        ("effectIcon", parse_and_dump_effect_icon, "effectIcon.json"),
+        ("effectag", parse_and_dump_effect_tag, "effectag.json"),
+        ("effectbuff", parse_and_dump_effect_buff, "effectbuff.json"),
+        ("effectDes", parse_and_dump_effect_des, "effectDes.json"),
+        ("moves", parse_and_dump_moves, "moves_unity.json"),
+        ("effectInfo", parse_and_dump_effect_info, "effectInfo.json"),
+        ("skill_effect", parse_and_dump_skill_effect, "skill_effect.json"),
+        ("skillTypes", parse_and_dump_skilltypes, "skillTypes.json"),
+        ("sp_hide_moves", parse_and_dump_sp_hide_moves, "sp_hide_moves.json"),
+        ("pet_skin", parse_and_dump_pet_skin, "pet_skin.json"),
+        ("gems", parse_and_dump_gem, "gems.json"),
+        ("pet_advance", parse_and_dump_pet_advance, "pet_advance.json"),
+        ("achievements", parse_and_dump_achievements, "achievements.json"),
+        ("suit", parse_and_dump_suit, "suit.json"),
+        ("equip", parse_and_dump_equip, "equip.json"),
+        ("buff", parse_and_dump_buff, "buff.json"),
+        ("signIcon_fight", parse_and_dump_signIcon_fight, "signIcon_fight.json"),
+        ("battle_effects", parse_and_dump_battle_effects, "battle_effects.json"),
+        ("pet_skin_rewardtype", parse_and_dump_pet_skin_rewardtype, "pet_skin_rewardtype.json"),
+        ("new_se", parse_and_dump_new_se, "new_se.json"),
+        ("new_super_design", parse_and_dump_new_super_design, "new_super_design.json"),
+        ("archivesBook", parse_and_dump_archivesBook, "archivesBook.json"),
+        ("archivesStory", parse_and_dump_archivesStory, "archivesStory.json"),
+        ("move_stones", parse_and_dump_move_stones, "move_stones.json"),
+        ("Fragment", parse_and_dump_fragment, "Fragment.json"),
+        ("partner", parse_and_dump_partner, "partner.json"),
+        ("partnerEffectUpgrade", parse_and_dump_partnerEffectUpgrade, "partnerEffectUpgrade.json"),
+        ("battlepass_shop", parse_and_dump_battlepass_shop, "battlepass_shop.json"),
+        ("sp_hide_moves_shop", parse_and_dump_sp_hide_moves_shop, "sp_hide_moves_shop.json"),
+        ("exchange_clt", parse_and_dump_exchange_clt, "exchange_clt.json"),
+        ("Activity_TimeUpdateConfig", parse_and_dump_Activity_TimeUpdateConfig, "Activity_TimeUpdateConfig.json"),
+        ("pvp_ban", parse_and_dump_pvp_ban, "pvp_ban.json"),
+        ("pvp_ban_expert", parse_and_dump_pvp_ban_expert, "pvp_ban_expert.json"),
+        # 含 itemsOptimizeCatItems* + itemsTip
+        ("itemsOptimizeCat", parse_and_dump_item, "itemsOptimizeCat.json"),
+    ]
+
+    staging = data_path / f".fallback_staging_{version}"
+    if staging.exists():
+        shutil.rmtree(staging, ignore_errors=True)
+    staging.mkdir(parents=True, exist_ok=True)
+
+    # parse_and_dump_item 从 data_path 读 *.bytes；先把导出的 bytes 拷进 staging
+    for bp in Path(EXPORT_DIR).glob("*.bytes"):
+        shutil.copy2(bp, staging / bp.name)
+
+    errors: list[str] = []
+    real_data_path = data_path
+    real_export_dir = EXPORT_DIR
+    # parse 输出、item 子表 bytes/json 都进 staging；全部成功后再提交
+    data_path = staging
+    EXPORT_DIR = str(staging)
+    try:
+        for asset, fn, out_name in jobs:
+            bytes_path = staging / f"{asset}.bytes"
+            out_path = staging / out_name
+            if not bytes_path.is_file():
+                errors.append(f"缺少 {bytes_path.name}")
+                continue
+            try:
+                _log(f"[fallback-bytes] 解析 {asset} -> {out_name}")
+                fn(bytes_path, out_path)
+                if not out_path.is_file():
+                    errors.append(f"{asset}: 未生成 {out_name}")
+            except Exception as e:
+                errors.append(f"{asset}: {type(e).__name__}: {e}")
+
+        # itemsOptimizeCat 成功时还应产出 itemsTip.json
+        if not errors and not (staging / "itemsTip.json").is_file():
+            errors.append("itemsOptimizeCat: 未生成 itemsTip.json")
+
+        if errors:
+            raise RuntimeError(
+                "bytes 兜底未全部解析成功（不会提交 JSON / 不会继续写 DB）:\n  - "
+                + "\n  - ".join(errors)
+            )
+
+        # 全部成功：只提交 JSON 到正式 data_path
+        committed = 0
+        for src in staging.glob("*.json"):
+            dst = real_data_path / src.name
+            shutil.copy2(src, dst)
+            committed += 1
+        _log(
+            f"[fallback-bytes] 全部 {len(jobs)} 项 parse 成功，"
+            f"已提交 {committed} 个 JSON，可继续生成 DB"
+        )
+    finally:
+        data_path = real_data_path
+        EXPORT_DIR = real_export_dir
+        shutil.rmtree(staging, ignore_errors=True)
+
+
+def load_unity_config_jsons() -> str:
+    """优先拉 Windows unity-json；不可用时用官方 CDN bytes + 本地 parse 兜底。
+
+    兜底必须全部 parse 成功才返回；否则抛错，后续 DB 不会生成。
+
+    环境变量：
+    - UNITY_JSON_BYTES_FALLBACK=1（默认）启用兜底；=0 关闭
+    - UNITY_JSON_WAIT_SEC：等服务器对齐秒数（启用兜底时默认 90，否则 600）
+    """
+    cdn_ver = get_remote_version()
+    fallback = os.environ.get("UNITY_JSON_BYTES_FALLBACK", "1").strip().lower() not in (
+        "0",
+        "false",
+        "no",
+    )
+    default_wait = "90" if fallback else "600"
+    wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", default_wait))
+
+    server_err: Exception | None = None
+    try:
+        _log(f"[boot] 尝试 unity-json（最多等待 {wait_sec}s）")
+        ver = resolve_unity_version1(max_wait_sec=wait_sec)
+        ver = fetch_all_target_unity_jsons_guarded(ver)
+        _log(f"[boot] unity-json 成功 version1={ver}")
+        return ver
+    except Exception as e:
+        server_err = e
+        _log(f"[boot] unity-json 失败: {e}")
+
+    if not fallback:
+        assert server_err is not None
+        raise server_err
+
+    _log(f"[boot] 启用 bytes 兜底，CDN version1={cdn_ver}")
+    parse_configs_from_official_bytes(cdn_ver)
+    _log(f"[boot] bytes 兜底成功 version1={cdn_ver}")
+    return cdn_ver
+
+
 # 更新
 
 ensure_dir(LOCAL_BASE)
-# version1 必须与服务器已产出的 Unity JSON 对齐（先对 CDN，再等服务器）
-version1 = resolve_unity_version1()
+_log("[boot] main.py 开始加载 Unity 配置（CI 请用 python -u）")
+version1 = load_unity_config_jsons()
+_log(f"[boot] Unity 配置就绪 version1={version1}")
 
 ensure_dir(IMG_LOCAL_BASE)
 version2 = img_get_remote_version()
@@ -3849,10 +4070,6 @@ for bid in bundle_ids:
     data = img_download_bundle(b["FileHash"])
     img_save_bundle(data, b["BundleName"])
 export_all_png_filter(Path(os.path.join(LOCAL_BASE, "标签")))
-
-# Unity 配置：版本已与服务器对齐，拉取官方 Parse JSON 并适配
-print(f"从服务器拉取 Unity JSON: {UNITY_JSON_SERVER} (version1={version1})")
-fetch_all_target_unity_jsons()
 
 
 # """神谕/觉醒"""
@@ -4765,14 +4982,29 @@ def db_achievements():
         bid = i.get("ID", 0)
         Branches = i.get("Branches", [])
         for j in Branches:
-            for k in j["Branch"]:
+            # 官方/适配：{"Branch": [...]}；旧 bytes 兜底：直接是 [...]
+            if isinstance(j, dict):
+                branch_items = j.get("Branch", [])
+            elif isinstance(j, list):
+                branch_items = j
+            else:
+                continue
+            if not isinstance(branch_items, list):
+                continue
+            for k in branch_items:
+                if not isinstance(k, dict):
+                    continue
                 desc2 = k.get("Desc", '')
                 rid = k.get("ID", 0)
                 is_single = k.get("IsSingle", 0)
                 _text = k.get("_text", '')
                 is_show_pro = k.get("isShowPro", 0)
                 Rule = k.get("Rule", [])
+                if not isinstance(Rule, list):
+                    Rule = []
                 for l in Rule:
+                    if not isinstance(l, dict):
+                        continue
                     try:
                         ability_title = l.get("AbilityTitle", 0)
                         achievement_point = l.get("AchievementPoint", 0)
@@ -5233,10 +5465,22 @@ db_effectbuff()
 def db_effectDes():
     with open(data_path / "effectDes.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root1 = data["root"]["item"]
+    root_block = data.get("root") or {}
+    if isinstance(root_block, dict):
+        root1 = root_block.get("item") or []
+    else:
+        root1 = []
     with open(data_path / "battle_effects.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
-    root2 = data["root"][0]["SubEffect"]
+    # 官方：root[0].SubEffect；旧 bytes 兜底曾用 sub_effect
+    root2 = []
+    battle_root = data.get("root") or []
+    if isinstance(battle_root, list) and battle_root:
+        first = battle_root[0]
+        if isinstance(first, dict):
+            root2 = first.get("SubEffect") or first.get("sub_effect") or []
+    if not isinstance(root2, list):
+        root2 = []
 
 
     def create_scheme_database(db_path):
@@ -5306,20 +5550,23 @@ def db_effectDes():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     for i in root2:
+        if not isinstance(i, dict):
+            continue
         try:
-            icon = i.get("ID", 0)
-            kinddes = i.get("Name", '')
+            # 兼容 PascalCase（官方）与旧 lowercase（早期 bytes 解析）
+            icon = i.get("ID", i.get("id", 0))
+            kinddes = i.get("Name", i.get("name", ''))
             desc = ''
             id = 0
             kind = 0
             link = ''
             monster = ''
-            res = i.get("Efftype", 2)       # 0是控制抗性，1是弱化抗性
-            a1 = i.get("Ctrl", 0)           # 控制类
-            a2 = i.get("Weaken", 0)         # 弱化类
-            a3 = i.get("Dependent", 0)      # 附属类
-            a4 = i.get("Restriction", 0)    # 限制类
-            a5 = i.get("Derivation", 0)     # 衍化类
+            res = i.get("Efftype", i.get("efftype", 2))  # 0控制抗性，1弱化抗性
+            a1 = i.get("Ctrl", i.get("ctrl", 0))
+            a2 = i.get("Weaken", i.get("weaken", 0))
+            a3 = i.get("Dependent", i.get("dependent", 0))
+            a4 = i.get("Restriction", i.get("restriction", 0))
+            a5 = i.get("Derivation", i.get("derivation", 0))
             tab = - (res*100000 + a1*10000 + a2*1000 + a3*100 + a4*10 + a5)
             flag = True
             for j in root1:
@@ -7148,17 +7395,28 @@ def db_yin_zi():
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
 
+    def _pick(d: dict, *keys, default=None):
+        for k in keys:
+            if isinstance(d, dict) and k in d and d[k] is not None:
+                return d[k]
+        return default
+
+    def _as_dict(v):
+        return v if isinstance(v, dict) else {}
+
     for j in root2:
+        if not isinstance(j, dict):
+            continue
         try:
-            reward_item = j["ID"]
-            consume_pet = j["PetConsume"]
-            reward_icon = j["effectId"]
-            consume_icon = j["NewseConsume"]
-            reward_move = j["MoveID"]
-            consume_move = j["MovesConsume"]
-            rarity = j["Rarity"]
-            pet_limit = j["PetLimit"]
-            monster_id = j["MonsterID"]
+            reward_item = _pick(j, "ID", "id", default=0)
+            consume_pet = _pick(j, "PetConsume", "petConsume", default=0)
+            reward_icon = _pick(j, "effectId", "EffectId", default=0)
+            consume_icon = _pick(j, "NewseConsume", "newseConsume", default=0)
+            reward_move = _pick(j, "MoveID", "moveID", "MoveId", default=0)
+            consume_move = _pick(j, "MovesConsume", "movesConsume", default=0)
+            rarity = _pick(j, "Rarity", "rarity", default=0)
+            pet_limit = _pick(j, "PetLimit", "petLimit", default=0)
+            monster_id = _pick(j, "MonsterID", "monsterID", "MonsterId", default=0)
             needmon = 0
             reward_mintmark = 0
             consume_mintmark = 0
@@ -7169,17 +7427,40 @@ def db_yin_zi():
             normal_battle = ""
             hard_battle = ""
             for i in root1:
-                if i["Reward"]["ItemID"] == reward_item:
-                    needmon = i["Configure"]["needmon"]
-                    reward_mintmark = i["Reward"]["MintMarkID"]
-                    consume_mintmark = i["Configure"]["Exchange_mintmark"]
-                    a1 = i["Achievement"]["BranchID"]
-                    a2 = i["Achievement"]["RuleID"]
-                    rule = str(i["Rules"]["Rule"])
-                    easy_battle = str(i.get("EasyBattle", "{}"))
-                    normal_battle = str(i.get("NormalBattle", "{}"))
-                    hard_battle = str(i.get("HardBattle", "{}"))
-                    break
+                if not isinstance(i, dict):
+                    continue
+                # 官方：Reward.ItemID；bytes 兜底：reward.item_id
+                reward = _as_dict(_pick(i, "Reward", "reward", default={}))
+                item_id = _pick(reward, "ItemID", "item_id", "ItemId", default=None)
+                if item_id != reward_item:
+                    continue
+                configure = _as_dict(_pick(i, "Configure", "configure", default={}))
+                achievement = _as_dict(_pick(i, "Achievement", "achievement", default={}))
+                rules = _as_dict(_pick(i, "Rules", "rules", default={}))
+                needmon = _pick(configure, "needmon", "Needmon", default=0)
+                reward_mintmark = _pick(
+                    reward, "MintMarkID", "mint_mark_id", "MintMarkId", default=0
+                )
+                consume_mintmark = _pick(
+                    configure,
+                    "Exchange_mintmark",
+                    "exchange_mintmark",
+                    "ExchangeMintmark",
+                    default=0,
+                )
+                a1 = _pick(achievement, "BranchID", "branch_id", "BranchId", default=0)
+                a2 = _pick(achievement, "RuleID", "rule_id", "RuleId", default=0)
+                rule = str(_pick(rules, "Rule", "rule", default=[]))
+                easy_battle = str(
+                    _pick(i, "EasyBattle", "easy_battle", default={})
+                )
+                normal_battle = str(
+                    _pick(i, "NormalBattle", "normal_battle", default={})
+                )
+                hard_battle = str(
+                    _pick(i, "HardBattle", "hard_battle", default={})
+                )
+                break
             cursor.execute("""
                 INSERT INTO yin_zi (monster_id, needmon, reward_item, consume_pet, reward_mintmark, consume_mintmark, reward_icon, consume_icon, reward_move, consume_move, rarity, pet_limit, a1, a2, rule, easy_battle, normal_battle, hard_battle)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
