@@ -1572,6 +1572,7 @@ def parse_and_dump_moves(input_bytes_path, output_json_path):
                         "side_effect": [],
                         "side_effect_arg": [],
 
+                        "soercemove": 0,
                         "type": 0,
                         "info": "",
                         "ordinary": 0,
@@ -1607,6 +1608,7 @@ def parse_and_dump_moves(input_bytes_path, output_json_path):
                         move_item["side_effect_arg"] = [r.ReadSignedInt() for _ in range(n)]
 
                     # 剩余字段
+                    move_item["soercemove"] = r.ReadSignedInt()
                     move_item["type"] = r.ReadSignedInt()
                     move_item["info"] = r.ReadUTFBytesWithLength()
                     move_item["ordinary"] = r.ReadSignedInt()
