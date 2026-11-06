@@ -396,12 +396,31 @@ def _http_get_text(url: str, timeout: int = 30) -> str:
 
 
 def get_server_unity_version() -> str:
-    """读取服务器产出的 ConfigPackage 版本戳。
+    """读取服务器已发布的 version1。
 
-    约定：Windows 流水线只有在全部 JSON 写完后才更新/写出 version1.txt，
-    因此「version1 存在且等于 CDN」即可安全拉取，无需再等 status=success。
+    新接口 /api/version/version1.txt 返回 JSON（content 字段），
+    旧接口 /unity-json/version1.txt 返回纯文本；两个都试，避免接口迁移后一直 404。
     """
-    return _http_get_text(f"{UNITY_JSON_SERVER}/version1.txt")
+    urls = [
+        f"{UNITY_JSON_API}/api/version/version1.txt",
+        f"{UNITY_JSON_SERVER}/version1.txt",
+    ]
+    last_err: Exception | None = None
+    for url in urls:
+        try:
+            res = requests.get(url, timeout=30)
+            if res.status_code != 200:
+                last_err = RuntimeError(f"HTTP {res.status_code}: {url}")
+                continue
+            text = res.text.strip()
+            if text.startswith("{"):
+                text = str(json.loads(text).get("content", "")).strip()
+            if text:
+                return text
+            last_err = RuntimeError(f"version1 为空: {url}")
+        except Exception as e:
+            last_err = e
+    raise RuntimeError(f"读取服务器 version1 失败: {last_err}")
 
 
 def trigger_server_unity_pipeline() -> bool:
@@ -433,8 +452,16 @@ def resolve_unity_version1(
     已对齐时立即返回，不读 status、不空等。
     仅当 CDN 已升版而服务器还没有该 version1 时才触发并短轮询等待。
     """
-    max_wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", max_wait_sec or 600))
-    poll_sec = int(os.environ.get("UNITY_JSON_POLL_SEC", poll_sec or 30))
+    if max_wait_sec is None:
+        max_wait_sec = 600
+    env_wait = os.environ.get("UNITY_JSON_WAIT_SEC")
+    if env_wait not in (None, ""):
+        max_wait_sec = int(env_wait)
+    if poll_sec is None:
+        poll_sec = 30
+    env_poll = os.environ.get("UNITY_JSON_POLL_SEC")
+    if env_poll not in (None, ""):
+        poll_sec = int(env_poll)
     cdn_ver = get_remote_version()
     _log(f"[version] CDN ConfigPackage = {cdn_ver}")
 
@@ -4006,7 +4033,8 @@ def load_unity_config_jsons() -> str:
 
     环境变量：
     - UNITY_JSON_BYTES_FALLBACK=1（默认）启用兜底；=0 关闭
-    - UNITY_JSON_WAIT_SEC：等服务器对齐秒数（启用兜底时默认 90，否则 600）
+    - UNITY_JSON_WAIT_SEC：等服务器对齐秒数（默认 0，即直接走 CDN bytes；
+      服务器流水线正常、想优先用它的 JSON 时再设为 90 或更大）
     """
     cdn_ver = get_remote_version()
     fallback = os.environ.get("UNITY_JSON_BYTES_FALLBACK", "1").strip().lower() not in (
@@ -4014,22 +4042,26 @@ def load_unity_config_jsons() -> str:
         "false",
         "no",
     )
-    default_wait = "90" if fallback else "600"
+    default_wait = "0" if fallback else "600"
     wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", default_wait))
 
     server_err: Exception | None = None
-    try:
-        _log(f"[boot] 尝试 unity-json（最多等待 {wait_sec}s）")
-        ver = resolve_unity_version1(max_wait_sec=wait_sec)
-        ver = fetch_all_target_unity_jsons_guarded(ver)
-        _log(f"[boot] unity-json 成功 version1={ver}")
-        return ver
-    except Exception as e:
-        server_err = e
-        _log(f"[boot] unity-json 失败: {e}")
+    if wait_sec <= 0:
+        _log("[boot] 跳过 unity-json（等待 0s），直接使用官方 CDN bytes")
+    else:
+        try:
+            _log(f"[boot] 尝试 unity-json（最多等待 {wait_sec}s）")
+            ver = resolve_unity_version1(max_wait_sec=wait_sec)
+            ver = fetch_all_target_unity_jsons_guarded(ver)
+            _log(f"[boot] unity-json 成功 version1={ver}")
+            return ver
+        except Exception as e:
+            server_err = e
+            _log(f"[boot] unity-json 失败: {e}")
 
     if not fallback:
-        assert server_err is not None
+        if server_err is None:
+            raise RuntimeError("UNITY_JSON_WAIT_SEC=0 且未启用 bytes 兜底，没有任何数据来源")
         raise server_err
 
     _log(f"[boot] 启用 bytes 兜底，CDN version1={cdn_ver}")
