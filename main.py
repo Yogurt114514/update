@@ -1909,6 +1909,33 @@ def parse_and_dump_pvp_vote(input_bytes_path, output_json_path):
         result["root"] = data
     write_json(output_json_path, result)
 
+def parse_and_dump_pvp_cost_mode_cost(input_bytes_path, output_json_path):
+    # 结构（对齐 seer-unity-game-logic-dll 的 IPvpCostModeCostInfo）：
+    # root_exists: bool
+    # count: int32
+    # repeat count times:
+    #   cost:int32, id:int32, name:str(u16), pet:str(u16),
+    #   subkeyMonth:int32, subkeyTotal:int32, time:str(u16)
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    if r.read_bool():
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["cost"] = r.ReadSignedInt()
+            temp["id"] = r.ReadSignedInt()
+            temp["name"] = r.ReadUTFBytesWithLength()
+            temp["pet"] = r.ReadUTFBytesWithLength()
+            temp["subkeyMonth"] = r.ReadSignedInt()
+            temp["subkeyTotal"] = r.ReadSignedInt()
+            temp["time"] = r.ReadUTFBytesWithLength()
+            result["root"].append(temp)
+    write_json(output_json_path, result)
+
 def parse_and_dump_pet_skin(input_bytes_path, output_json_path):
     # 结构（根据样例十六进制推断）：
     # root_exists: bool
@@ -3908,8 +3935,8 @@ def parse_configs_from_official_bytes(version: str) -> None:
     ensure_dir(EXPORT_DIR)
     ensure_dir(BUNDLE_DIR)
 
-    # petbook/addmoves 走 Flash；pvpCostMode_cost 无对应 parse
-    skip = {"petbook", "addmoves", "pvpCostMode_cost", "itemsTip"}
+    # petbook/addmoves 走 Flash；itemsTip 由 parse_and_dump_item 顺带产出
+    skip = {"petbook", "addmoves", "itemsTip"}
     targets = [n for n in TARGET_TEXTASSET_NAMES if n not in skip]
     # itemsTip.bytes 由 parse_and_dump_item 末尾读取，需一并导出
     export_names = list(targets) + ["itemsTip"]
@@ -3966,6 +3993,7 @@ def parse_configs_from_official_bytes(version: str) -> None:
         ("Activity_TimeUpdateConfig", parse_and_dump_Activity_TimeUpdateConfig, "Activity_TimeUpdateConfig.json"),
         ("pvp_ban", parse_and_dump_pvp_ban, "pvp_ban.json"),
         ("pvp_ban_expert", parse_and_dump_pvp_ban_expert, "pvp_ban_expert.json"),
+        ("pvpCostMode_cost", parse_and_dump_pvp_cost_mode_cost, "pvpCostMode_cost.json"),
         # 含 itemsOptimizeCatItems* + itemsTip
         ("itemsOptimizeCat", parse_and_dump_item, "itemsOptimizeCat.json"),
     ]
