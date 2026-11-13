@@ -12160,344 +12160,344 @@ eg:
 	<Map ID="1145" Name="经验训练基地" InitX="479" InitY="373">
 		<Bosses>
 			<Boss Id="1" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5375" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15375" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="2" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5375" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15375" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="3" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5375" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15375" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="4" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5375" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15375" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="5" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5376" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15376" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="6" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5376" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15376" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="7" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5376" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15376" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="8" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5376" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15376" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="9" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5377" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15377" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="10" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5377" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15377" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="11" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5377" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15377" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="12" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5377" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15377" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="13" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5378" Hp="280" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15378" Hp="280" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="14" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5378" Hp="280" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15378" Hp="280" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="15" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5378" Hp="280" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15378" Hp="280" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="16" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5378" Hp="280" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15378" Hp="280" Lv="80" NewSeIdxs=""/>
 			</Boss>
 		</Bosses>
 	</Map>
 	<Map ID="1146" Name="学习力训练基地" InitX="479" InitY="373">
 		<Bosses>
 			<Boss Id="1" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5379" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15379" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="2" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5379" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15379" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="3" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5379" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15379" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="4" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5379" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15379" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="5" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5380" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15380" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="6" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5380" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15380" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="7" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5380" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15380" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="8" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5380" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15380" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="9" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5381" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15381" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="10" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5381" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15381" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="11" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5381" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15381" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="12" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5381" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15381" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="13" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5382" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15382" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="14" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5382" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15382" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="15" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5382" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15382" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="16" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5382" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15382" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="17" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5383" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15383" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="18" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5383" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15383" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="19" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5383" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15383" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="20" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5383" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15383" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="21" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5384" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15384" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="22" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5384" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15384" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="23" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5384" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15384" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="24" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5384" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15384" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="25" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5385" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15385" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="26" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5385" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15385" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="27" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5385" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15385" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="28" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5385" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15385" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="29" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5386" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15386" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="30" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5386" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15386" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="31" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5386" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15386" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="32" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5386" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15386" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="33" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5387" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15387" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="34" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5387" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15387" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="35" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5387" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15387" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="36" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5387" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15387" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="37" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5388" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15388" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="38" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5388" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15388" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="39" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5388" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15388" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="40" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5388" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15388" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="41" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5389" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15389" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="42" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5389" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15389" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="43" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5389" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15389" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="44" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5389" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15389" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="45" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5390" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15390" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="46" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5390" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15390" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="47" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5390" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15390" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="48" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5390" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15390" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="49" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5391" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15391" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="50" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5391" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15391" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="51" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5391" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15391" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="52" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5391" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15391" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="53" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5392" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15392" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="54" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5392" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15392" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="55" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5392" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15392" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="56" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5392" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15392" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="57" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5393" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15393" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="58" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5393" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15393" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="59" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5393" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15393" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="60" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5393" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15393" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="61" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5394" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15394" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="62" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5394" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15394" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="63" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5394" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15394" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="64" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5394" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15394" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="65" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5395" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15395" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="66" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5395" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15395" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="67" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5395" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15395" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="68" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5395" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15395" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="69" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5396" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15396" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="70" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5396" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15396" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="71" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5396" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15396" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="72" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5396" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15396" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="73" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5397" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15397" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="74" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5397" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15397" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="75" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5397" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15397" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="76" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5397" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15397" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="77" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5398" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15398" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="78" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5398" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15398" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="79" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5398" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15398" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="80" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5398" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15398" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="81" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5399" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15399" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="82" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5399" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15399" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="83" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5399" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15399" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="84" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5399" Hp="70" Lv="20" NewSeIdxs=""/>
+				<BossMon MonID="15399" Hp="70" Lv="20" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="85" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5400" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15400" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="86" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5400" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15400" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="87" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5400" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15400" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="88" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5400" Hp="110" Lv="40" NewSeIdxs=""/>
+				<BossMon MonID="15400" Hp="110" Lv="40" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="89" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5401" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15401" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="90" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5401" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15401" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="91" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5401" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15401" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="92" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5401" Hp="180" Lv="60" NewSeIdxs=""/>
+				<BossMon MonID="15401" Hp="180" Lv="60" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="93" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5402" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15402" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="94" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5402" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15402" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="95" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5402" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15402" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 			<Boss Id="96" AppearTime="0 23"  BossCatchable="0"  BossVisible="0" Name="">
-				<BossMon MonID="5402" Hp="300" Lv="80" NewSeIdxs=""/>
+				<BossMon MonID="15402" Hp="300" Lv="80" NewSeIdxs=""/>
 			</Boss>
 		</Bosses>
 	</Map>
@@ -18617,6 +18617,6 @@ eg:
 		<DefaultMap ID="3" RandMaps="1224" Desc="新手登录场景"/>
 	</DefaultMaps>
 	<VersionNumber>
-		<Version ID="20261030" Desc="每次发版需同步更新版本号"/>
+		<Version ID="20261113" Desc="每次发版需同步更新版本号"/>
 	</VersionNumber>
 </Maps>

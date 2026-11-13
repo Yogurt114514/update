@@ -2257,6 +2257,9 @@
 		<item moveId="38626" petId="13311" moveName1="神念" moveName2="净世斩"/>
 		<item moveId="38629" petId="4964" moveName1="阿卡伊" moveName2="守候"/>
 		<item moveId="38635" petId="3311" moveName1="神诏" moveName2="之诀别"/>
+		<item moveId="38640" petId="4965" moveName1="翻腾" moveName2="之震怒"/>
+		<item moveId="38643" petId="4966" moveName1="空盈" moveName2="幻光"/>
+		<item moveId="38646" petId="4967" moveName1="时间" moveName2="漫旅"/>
 
 
 
@@ -2268,23 +2271,18 @@
 
 
 		<item moveId="31143" petId="5000" moveName1="神灵" moveName2="救世光"/>
-
-
-
-
-
-		<item moveId="37946" petId="5818" moveName1="雷神" moveName2="天明闪"/>
-		<item moveId="37951" petId="5819" moveName1="战神" moveName2="破天闪"/>
-		<item moveId="37954" petId="5795" moveName1="雷神" moveName2="万霆闪"/>
-		<item moveId="37957" petId="5796" moveName1="天崩" moveName2="万界破"/>
-		<item moveId="19783" petId="5440"/>
-		<item moveId="35620" petId="5605"/>
-		<item moveId="37283" petId="5786"/>
-		<item moveId="37286" petId="5787"/>
-		<item moveId="37289" petId="5788"/>
-		<item moveId="33404" petId="5823"/>
-		<item moveId="40013" petId="5800"/>
-		<item moveId="37908" petId="5830" moveName1="雷神" moveName2="天明闪"/>
-		<item moveId="37911" petId="5831" moveName1="战神" moveName2="破天闪"/>
+		<item moveId="37946" petId="15818" moveName1="雷神" moveName2="天明闪"/>
+		<item moveId="37951" petId="15819" moveName1="战神" moveName2="破天闪"/>
+		<item moveId="37954" petId="15795" moveName1="雷神" moveName2="万霆闪"/>
+		<item moveId="37957" petId="15796" moveName1="天崩" moveName2="万界破"/>
+		<item moveId="19783" petId="15440"/>
+		<item moveId="35620" petId="15605"/>
+		<item moveId="37283" petId="15786"/>
+		<item moveId="37286" petId="15787"/>
+		<item moveId="37289" petId="15788"/>
+		<item moveId="33404" petId="15823"/>
+		<item moveId="40013" petId="15800"/>
+		<item moveId="37908" petId="15830" moveName1="雷神" moveName2="天明闪"/>
+		<item moveId="37911" petId="15831" moveName1="战神" moveName2="破天闪"/>
 
 </root>

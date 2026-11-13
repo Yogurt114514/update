@@ -609,5 +609,10 @@
 	<Fragment ID="2400609" show="1" Name="凯亚因子" MonsterID="4957" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6456" effectId="2154" NewseConsume="200" MoveID="38602" MovesConsume="100" NeedmonID="0" NewMsglogId="2610220900" SeMsglog="2610220901" EffectMsglog="2610220902"/>
 	<Fragment ID="2400610" show="1" Name="塔尼瓦因子" MonsterID="4960" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6460" effectId="2157" NewseConsume="200" MoveID="38611" MovesConsume="100" NeedmonID="0" NewMsglogId="2610290600" SeMsglog="2610290601" EffectMsglog="2610290602"/>
 	<Fragment ID="2400611" show="1" Name="伊娜因子" MonsterID="4964" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6464" effectId="2163" NewseConsume="200" MoveID="38629" MovesConsume="100" NeedmonID="0" NewMsglogId="2611050500" SeMsglog="2611050501" EffectMsglog="2611050502"/>
+	<Fragment ID="2400612" show="1" Name="沙罗摩奥因子" MonsterID="4965" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="6468" effectId="2164" NewseConsume="200" MoveID="38640" MovesConsume="100" NeedmonID="0" NewMsglogId="2611120500" SeMsglog="2611120501" EffectMsglog="2611120502"/>
+	<Fragment ID="2400613" show="1" Name="亚伦德因子" MonsterID="3874" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="3224" effectId="1144" NewseConsume="200" MoveID="33342" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	<Fragment ID="2400614" show="1" Name="牧魂祭司因子" MonsterID="3474" Rarity="2" PetLimit="1" PetConsume="400" NewSeIdx="2708" effectId="787" NewseConsume="200" MoveID="31313" MovesConsume="100" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	<Fragment ID="2400615" show="1" Name="普卡因子" MonsterID="4966" Rarity="1" PetLimit="1" PetConsume="200" NewSeIdx="6469" effectId="2165" NewseConsume="100" MoveID="38643" MovesConsume="50" NeedmonID="0" NewMsglogId="" SeMsglog="" EffectMsglog=""/>
+	
 	
 </Root>

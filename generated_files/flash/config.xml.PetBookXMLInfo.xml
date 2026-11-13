@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4964" ImageID= "4964" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4960" ImageID= "4960" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
-	  <!-- <place type= "0" ID="4961" ImageID= "4961" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4965" ImageID= "4965" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4966" ImageID= "4966" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4967" ImageID= "4967" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4962" ImageID= "4962" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4963" ImageID= "4963" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="888" monID="3311" ImageID= "1400888" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="889" monID="3311" ImageID= "1400889" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="890" monID="4663" ImageID= "1400890" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <place type= "1" ID="891" monID="4355" ImageID= "1400891" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <!-- <place type= "1" ID="889" monID="3311" ImageID= "1400889" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "1" ID="890" monID="4663" ImageID= "1400890" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="882" monID="4353" ImageID= "1400882" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3899,7 +3899,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3589" DefName="金榜灵童" Type="光 次元" Height="150" Weight="50" Features="金榜灵童穿越时空而来，为大家带来开学祝福！新学期即将开始！大家准备好了吗?" mapID="1"/>
 	<Monster ID="3590" DefName="炫彩山神·迪符特" Type="普通" Height="260" Weight="150" Features="怀特星的古老守护者！圣神禁地的忠诚护卫！如今炫彩山遭逢危机，迪符特再度挺身而出！" mapID="1284"/>
 	<Monster ID="3591" DefName="影黛" Type="暗影 战斗" Height="180" Weight="60" Features="神秘的暗夜杀手，善于在黑夜的伪装下给敌人造成致命一击！"/>
-	<Monster ID="3592" DefName="幽冥帝尊·修罗" Type="电 战斗" Height="200" Weight="80" Features="大暗黑天之命长老，幽幽冥界的至尊主宰！执掌命运的黑暗君王！暴力并不是他的一切，操纵命劫是他的乐趣！" mapID="1284"/>
+	<Monster ID="3592" DefName="幽冥帝尊·修罗" Type="电 战斗" Height="200" Weight="80" Features="大暗黑天之命长老，幽幽冥界的至尊主宰！执掌命运的黑暗君王！暴力并不是他的一切，操纵命劫是他的乐趣！" mapID="1284" Target="150157"/>
 	<Monster ID="3593" DefName="安特" Type="火" Height="30" Weight="20" Features="隶属于虫群部队之下的火蚁一族，可不要因为外貌而小瞧他们，他们团体作站起来一头大象都不是他们的对手！" mapID="0"/>
 	<Monster ID="3594" DefName="典韦" Type="火 战斗" Height="180" Weight="100" Features="功勋威武传天下，勇猛无双第一人！铁戟双提八十斤，威风凛凛镇乾坤！勇烈无双，典韦降临！" mapID="103"/>
 	<Monster ID="3595" DefName="泰拉图斯" Type="草 战斗" Height="150" Weight="80" Features="茂密的蕨齿密林，隐藏暴戾的杀气！变异的巨型独角仙，拥有着绝对的破坏力！" mapID="1286" Target="140001"/>
@@ -5264,6 +5264,11 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4962" DefName="中原号" Type="远古 机械" Height="8000" Weight="100000" Features="飞出中原大地的神奇飞船，它航行在宇宙之间，寄予着中原人民心中最朴素的愿望。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
 	<Monster ID="4963" DefName="云舆瑞兽" Type="自然 龙" Height="311" Weight="152" Features="中原大地上栖息在潜龙山脉的神兽，它代表着祥瑞，可真正能够见到它的人少之又少。"  Redirect="module" Go="app/FinalActivityPanel" Target="114151"/>
 	<Monster ID="4964" DefName="伊娜" Type="地面 超能" Height="166" Weight="46" Features="伊娜·帕旺来自拉卡伊的法卡洛亚。她的家族历代都是塔普娜的守卫者，她也将此视为她毕生的使命，至少很长一段时间内都是如此。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1031"/>
+	<Monster ID="4965" DefName="沙罗摩奥" Type="火 暗影" Height="156" Weight="96" Features="沙罗摩奥与瓦坎相依为命，他们俩如同形影不离的兄弟。这只蜥蜴的力量不容小觑，就和它的主人一样，隐藏着自己真正的实力。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1032"/>
+	<Monster ID="4966" DefName="普卡" Type="次元" Height="62" Weight="26" Features="神流的神秘小精灵，据说是用来特殊召唤赛尔的。普卡卷成了一个圈的样子，那个小圈似乎连通着另一个世界。"  Redirect="module" Go="app/FinalActivityPanel" Target="170000"/>
+	<Monster ID="4967" DefName="米铃" Type="飞行 神秘" Height="145" Weight="37" Features="星愿投递局里最忙碌的小信使，总是抱着比自己准备得还充分的邮包出发。虽然偶尔认错路、跑掉帽子，但每当有人等待来信，米铃都会认真地说：“请再等一下，我马上就到！”"  Redirect="module" Go="app/FinalActivityPanel" Target="114185"/>
+
+	
 	<Monster ID="4995" DefName="镇世神岳·玄武" Type="机械 地面" Height="380" Weight="1500" Features="玄武，帕诺的远古神兽、大地的守护者——他曾以伟岸之躯抵御世间最凶猛的灾厄，碎为戈拉后以钢铁新壳归来，仍在守护帕诺之夜。" Redirect="module" Go="app/FinalActivityPanel" Target="150145"/>
 
 
