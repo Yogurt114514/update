@@ -1776,45 +1776,64 @@ def parse_and_dump_skilltypes(input_bytes_path, output_json_path):
             result["root"] = item
     write_json(output_json_path, result)
 
-def parse_and_dump_sp_hide_moves(input_bytes_path, output_json_path):
-    with open(input_bytes_path, "rb") as f:
-        data = f.read()
+def _parse_sp_hide_moves(data, has_newse):
+    """按指定结构解析 sp_hide_moves.bytes。
 
+    has_newse=True 对应 2026-11-19 起的新版结构：``ISpMovesItem`` 在 ``movetype``
+    之后新增了 ``int newse`` 字段（只有新条目的值非 0，老条目为 0）。
+    旧版 bytes 没有该字段。解析后必须刚好消费完整个 buffer，否则视为结构不匹配。
+    """
     r = BytesReader(data)
     result = {"root": {"ShowMoves": [], "SpMoves": []}}
+
+    def read_items():
+        n = r.ReadSignedInt()
+        items = []
+        for _ in range(n):
+            temp = {}
+            temp["id"] = r.ReadSignedInt()
+            temp["item"] = r.ReadSignedInt()
+            temp["itemname"] = r.ReadUTFBytesWithLength()
+            temp["itemnumber"] = r.ReadSignedInt()
+            temp["monster"] = r.ReadSignedInt()
+            temp["moves"] = r.ReadSignedInt()
+            temp["movesname"] = r.ReadUTFBytesWithLength()
+            temp["movetype"] = r.ReadSignedInt()
+            if has_newse:
+                # ISpMovesItem.newse（movetype 之后，单个 int）
+                temp["newse"] = r.ReadSignedInt()
+            items.append(temp)
+        return items
 
     # 检查根布尔标志
     if r.read_bool():
         if r.read_bool():
-            n = r.ReadSignedInt()
-            showmoves = []
-            for _ in range(n):
-                temp = {}
-                temp["id"] = r.ReadSignedInt()
-                temp["item"] = r.ReadSignedInt()
-                temp["itemname"] = r.ReadUTFBytesWithLength()
-                temp["itemnumber"] = r.ReadSignedInt()
-                temp["monster"] = r.ReadSignedInt()
-                temp["moves"] = r.ReadSignedInt()
-                temp["movesname"] = r.ReadUTFBytesWithLength()
-                temp["movetype"] = r.ReadSignedInt()
-                showmoves.append(temp)
-            result["root"]["ShowMoves"] = showmoves
+            result["root"]["ShowMoves"] = read_items()
         if r.read_bool():
-            n = r.ReadSignedInt()
-            spmoves = []
-            for _ in range(n):
-                temp = {}
-                temp["id"] = r.ReadSignedInt()
-                temp["item"] = r.ReadSignedInt()
-                temp["itemname"] = r.ReadUTFBytesWithLength()
-                temp["itemnumber"] = r.ReadSignedInt()
-                temp["monster"] = r.ReadSignedInt()
-                temp["moves"] = r.ReadSignedInt()
-                temp["movesname"] = r.ReadUTFBytesWithLength()
-                temp["movetype"] = r.ReadSignedInt()
-                spmoves.append(temp)
-            result["root"]["SpMoves"] = spmoves
+            result["root"]["SpMoves"] = read_items()
+
+    pos = r.f.tell()
+    if pos != len(data):
+        raise ValueError(f"sp_hide_moves 结构不匹配：解析到 {pos}/{len(data)} 字节")
+    return result
+
+
+def parse_and_dump_sp_hide_moves(input_bytes_path, output_json_path):
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    # 新版每条多一个 int(newse)，旧版没有：先按新版解析，失败再回退旧版，
+    # 这样新旧两种 bytes 都能解析（本地缓存的旧 bytes 不会被卡住）。
+    last_err = None
+    for has_newse in (True, False):
+        try:
+            result = _parse_sp_hide_moves(data, has_newse)
+            break
+        except (EOFError, ValueError, struct.error) as e:
+            last_err = e
+    else:
+        raise ValueError(f"sp_hide_moves.bytes 解析失败（新旧结构均不匹配）: {last_err}")
+
     write_json(output_json_path, result)
 
 def parse_and_dump_pvp_ban(input_bytes_path, output_json_path):
