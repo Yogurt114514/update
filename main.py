@@ -4126,8 +4126,8 @@ def load_unity_config_jsons() -> str:
 
     环境变量：
     - UNITY_JSON_BYTES_FALLBACK=1（默认）启用兜底；=0 关闭
-    - UNITY_JSON_WAIT_SEC：等服务器对齐秒数（默认 0，即直接走 CDN bytes；
-      服务器流水线正常、想优先用它的 JSON 时再设为 90 或更大）
+    - UNITY_JSON_WAIT_SEC：等服务器对齐秒数（启用兜底时默认 90，否则 600；
+      设为 0 则跳过服务器、直接用 CDN bytes）
     """
     cdn_ver = get_remote_version()
     fallback = os.environ.get("UNITY_JSON_BYTES_FALLBACK", "1").strip().lower() not in (
@@ -4135,7 +4135,7 @@ def load_unity_config_jsons() -> str:
         "false",
         "no",
     )
-    default_wait = "0" if fallback else "600"
+    default_wait = "90" if fallback else "600"
     wait_sec = int(os.environ.get("UNITY_JSON_WAIT_SEC", default_wait))
 
     server_err: Exception | None = None
