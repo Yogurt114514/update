@@ -57,6 +57,7 @@ REPO_ROOT = Path(__file__).resolve().parent
 OUTPUT_ROOT = Path(os.getenv("OUTPUT_ROOT", REPO_ROOT / "generated_files")).resolve()
 PLUGIN_BASE_DIR = Path(os.getenv("PLUGIN_BASE_DIR", OUTPUT_ROOT / "plugins")).resolve()
 data_path = Path(os.getenv("DATA_PATH", PLUGIN_BASE_DIR / "新数据")).resolve()
+DB_DIR = Path(os.getenv("DB_DIR", OUTPUT_ROOT / "db")).resolve()
 FLASH_DIR = Path(os.getenv("FLASH_DIR", OUTPUT_ROOT / "flash")).resolve()
 FFDEC_JAR_PATH = Path(os.getenv("FFDEC_JAR_PATH", PLUGIN_BASE_DIR / "ffdec_26.2.1" / "ffdec.jar")).resolve()
 
@@ -66,6 +67,7 @@ IMG_LOCAL_BASE = LOCAL_BASE
 OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 PLUGIN_BASE_DIR.mkdir(parents=True, exist_ok=True)
 data_path.mkdir(parents=True, exist_ok=True)
+DB_DIR.mkdir(parents=True, exist_ok=True)
 FLASH_DIR.mkdir(parents=True, exist_ok=True)
 
 # 确保能导入仓库根目录下的辅助模块
@@ -355,6 +357,7 @@ TARGET_TEXTASSET_NAMES = [
     "battle_effects",
     "pet_skin_rewardtype",
     "pet_skin_poly",
+    "JackPotShop",
     "new_se",
     "new_super_design",
     "archivesBook",
@@ -2688,6 +2691,64 @@ def parse_and_dump_pet_skin_poly(input_bytes_path, output_json_path):
 
     write_json(output_json_path, result)
 
+def parse_and_dump_JackPotShop(input_bytes_path, output_json_path):
+    """解析 JackPotShop.bytes（「星河长明商店」：精灵 / 物品 / 因子三个页签）。
+
+    结构（core/config/JackPotShop/*.cs，共 3 层 bool 判断）：
+      IRootInterface: bool 是否有 root → IRoot
+      IRoot: bool 是否有 BlueChipShops → IBlueChipShops
+      IBlueChipShops:
+        bool + int32 count + count 条 IBulechipShopItem
+        Endday(string) / Endtime(string) / Openday(string)
+      IBulechipShopItem（字段顺序即 Parse 顺序）：
+        Endtime(int32) ID(int32) Opentime(int32) batch(int32) commodity(u16+utf8)
+        exchangeId(int32) forever(int32) petinfo(u16+utf8)
+        [bool + int32 count + count*int32] productID
+        productName(u16+utf8) productPrice(int32) shopkind(int32)
+    shopkind：1=精灵 / 2=物品 / 5=因子；batch=限兑次数；productName 用「名称*数量」编码。
+    """
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": {}}
+
+    if r.read_bool():  # IRootInterface
+        if r.read_bool():  # IRoot
+            shops = {"BulechipShop": [], "Endday": "", "Endtime": "", "Openday": ""}
+            if r.read_bool():  # IBlueChipShops
+                n = r.ReadSignedInt()
+                for _ in range(n):
+                    item = {}
+                    item["Endtime"] = r.ReadSignedInt()
+                    item["ID"] = r.ReadSignedInt()
+                    item["Opentime"] = r.ReadSignedInt()
+                    item["batch"] = r.ReadSignedInt()
+                    item["commodity"] = r.ReadUTFBytesWithLength()
+                    item["exchangeId"] = r.ReadSignedInt()
+                    item["forever"] = r.ReadSignedInt()
+                    item["petinfo"] = r.ReadUTFBytesWithLength()
+                    if r.read_bool():
+                        cnt = r.ReadSignedInt()
+                        item["productID"] = [r.ReadSignedInt() for _ in range(cnt)]
+                    else:
+                        item["productID"] = []
+                    item["productName"] = r.ReadUTFBytesWithLength()
+                    item["productPrice"] = r.ReadSignedInt()
+                    item["shopkind"] = r.ReadSignedInt()
+                    shops["BulechipShop"].append(item)
+            shops["Endday"] = r.ReadUTFBytesWithLength()
+            shops["Endtime"] = r.ReadUTFBytesWithLength()
+            shops["Openday"] = r.ReadUTFBytesWithLength()
+            result["root"]["BlueChipShops"] = shops
+
+    pos = r.f.tell()
+    if pos != len(data):
+        raise ValueError(f"JackPotShop 结构不匹配：解析到 {pos}/{len(data)} 字节")
+
+    write_json(output_json_path, result)
+
+
 def parse_and_dump_new_se(input_bytes_path, output_json_path):
     with open(input_bytes_path, "rb") as f:
         data = f.read()
@@ -4044,6 +4105,7 @@ def parse_configs_from_official_bytes(version: str) -> None:
         ("battle_effects", parse_and_dump_battle_effects, "battle_effects.json"),
         ("pet_skin_rewardtype", parse_and_dump_pet_skin_rewardtype, "pet_skin_rewardtype.json"),
         ("pet_skin_poly", parse_and_dump_pet_skin_poly, "pet_skin_poly.json"),
+        ("JackPotShop", parse_and_dump_JackPotShop, "JackPotShop.json"),
         ("new_se", parse_and_dump_new_se, "new_se.json"),
         ("new_super_design", parse_and_dump_new_super_design, "new_super_design.json"),
         ("archivesBook", parse_and_dump_archivesBook, "archivesBook.json"),
@@ -6842,6 +6904,153 @@ def db_pet_skin_poly():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_pet_skin_poly()
+
+
+def _xhcm_parse_date(value):
+    """把 '10/16' 或 '2026/11/27' 拆成 (year|None, month, day)；解析失败返回全 None。"""
+    s = str(value or "").strip().replace("-", "/")
+    parts = [p for p in s.split("/") if p]
+    if not parts or not all(p.isdigit() for p in parts):
+        return None, None, None
+    if len(parts) == 2:
+        return None, int(parts[0]), int(parts[1])
+    if len(parts) == 3:
+        return int(parts[0]), int(parts[1]), int(parts[2])
+    return None, None, None
+
+
+def _xhcm_cycle_range(shops):
+    """由 Openday / Endday / Endtime 推出本期的 (start_date, end_date)，格式 YYYY-MM-DD。"""
+    ey, em, ed = _xhcm_parse_date(shops.get("Endtime"))
+    if em is None:
+        _, em, ed = _xhcm_parse_date(shops.get("Endday"))
+    if em is None:
+        today = datetime.now()
+        ey, em, ed = today.year, today.month, today.day
+    _, sm, sd = _xhcm_parse_date(shops.get("Openday"))
+    if sm is None:
+        return None, None
+    # 起始年份取「不晚于结束日期的最近一年」
+    sy = ey if (sm, sd) <= (em, ed) else ey - 1
+    return f"{sy:04d}-{sm:02d}-{sd:02d}", f"{ey:04d}-{em:02d}-{ed:02d}"
+
+
+def db_xhcm():
+    """把 JackPotShop 的当期数据追加进 generated_files/db/xhcm.db（星河长明商店历史）。
+
+    表结构（一行一期，与 seer-docs/jackpot-timeline.md 同源）：
+      jl: id / start_date / end_date / seq_in_period / pet_count / pets
+          pets 是 [{"id","price","batch"}] 的 JSON
+      yz: id / start_date / end_date / seq_in_period / factor_count / factors
+          factors 是 [{"pet_id","item_id","price","batch","qty"}] 的 JSON
+    只有「与库里最后一期内容不同」时才追加；同一周期内多次调整用 seq_in_period 递增。
+    """
+    with open(data_path / "JackPotShop.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    shops = ((data.get("root") or {}).get("BlueChipShops") or {})
+    items = shops.get("BulechipShop") or []
+
+    pets, factors = [], []
+    for it in items:
+        kind = it.get("shopkind")
+        pid = it.get("productID") or []
+        if kind == 1:
+            pets.append({
+                "id": pid[0] if len(pid) > 0 else 0,
+                "price": it.get("productPrice", 0),
+                "batch": it.get("batch", 0),
+            })
+        elif kind == 5:
+            name = it.get("productName") or ""
+            qty = None
+            if "*" in name:
+                _, tail = name.rsplit("*", 1)
+                if tail.isdigit():
+                    qty = int(tail)
+            factors.append({
+                "pet_id": pid[1] if len(pid) > 1 else 0,
+                "item_id": pid[0] if len(pid) > 0 else 0,
+                "price": it.get("productPrice", 0),
+                "batch": it.get("batch", 0),
+                "qty": qty,
+            })
+
+    start_date, end_date = _xhcm_cycle_range(shops)
+    if not start_date:
+        print("[warn] JackPotShop 缺少 Openday/Endtime，跳过 xhcm.db 更新")
+        return
+
+    pets.sort(key=lambda p: (p["id"], p["price"]))
+    factors.sort(key=lambda x: (x["pet_id"], x["item_id"]))
+    pets_json = json.dumps(pets, ensure_ascii=False)
+    factors_json = json.dumps(factors, ensure_ascii=False)
+
+    DB_PATH = str(DB_DIR / "xhcm.db")
+    os.makedirs(DB_DIR, exist_ok=True)
+
+    def _sorted_sig(rows, key):
+        return json.dumps(sorted(rows, key=key), sort_keys=True, ensure_ascii=False)
+
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS jl (
+        id            INTEGER PRIMARY KEY,
+        start_date    TEXT NOT NULL,
+        end_date      TEXT NOT NULL,
+        seq_in_period INTEGER NOT NULL,
+        pet_count     INTEGER NOT NULL,
+        pets          TEXT NOT NULL
+    )
+    """)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS yz (
+        id            INTEGER PRIMARY KEY,
+        start_date    TEXT NOT NULL,
+        end_date      TEXT NOT NULL,
+        seq_in_period INTEGER NOT NULL,
+        factor_count  INTEGER NOT NULL,
+        factors       TEXT NOT NULL
+    )
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_jl_start ON jl(start_date)")
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_yz_start ON yz(start_date)")
+
+    last_id = cursor.execute("SELECT COALESCE(MAX(id), 0) FROM jl").fetchone()[0]
+    last = cursor.execute(
+        "SELECT start_date, end_date, seq_in_period, pets FROM jl WHERE id = ?", (last_id,)
+    ).fetchone()
+    last_factors = cursor.execute(
+        "SELECT factors FROM yz WHERE id = ?", (last_id,)
+    ).fetchone()
+
+    if last and last_factors:
+        same_pets = _sorted_sig(json.loads(last[3]), lambda p: (p.get("id", 0), p.get("price", 0))) == \
+            _sorted_sig(pets, lambda p: (p["id"], p["price"]))
+        same_factors = _sorted_sig(json.loads(last_factors[0]), lambda x: (x.get("pet_id", 0), x.get("item_id", 0))) == \
+            _sorted_sig(factors, lambda x: (x["pet_id"], x["item_id"]))
+        if same_pets and same_factors:
+            print(f"xhcm.db 已是最新（第 {last_id} 期 {last[0]} → {last[1]}），不新增")
+            conn.close()
+            return
+
+    seq = 1
+    if last and last[0] == start_date and last[1] == end_date:
+        seq = last[2] + 1
+    new_id = last_id + 1
+    cursor.execute(
+        "INSERT INTO jl VALUES (?, ?, ?, ?, ?, ?)",
+        (new_id, start_date, end_date, seq, len(pets), pets_json),
+    )
+    cursor.execute(
+        "INSERT INTO yz VALUES (?, ?, ?, ?, ?, ?)",
+        (new_id, start_date, end_date, seq, len(factors), factors_json),
+    )
+    conn.commit()
+    conn.close()
+    print(f"xhcm.db 新增第 {new_id} 期（{start_date} → {end_date}，同期第 {seq} 次）："
+          f"精灵 {len(pets)} 只 / 因子 {len(factors)} 条")
+db_xhcm()
 def db_pets():
     with open(data_path / "monsters.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
