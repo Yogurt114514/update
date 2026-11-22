@@ -7051,6 +7051,194 @@ def db_xhcm():
     print(f"xhcm.db 新增第 {new_id} 期（{start_date} → {end_date}，同期第 {seq} 次）："
           f"精灵 {len(pets)} 只 / 因子 {len(factors)} 条")
 db_xhcm()
+
+
+# ---- history.db（effectIcon / effectInfo / effectDes 的逐版本变更记录） ----
+# 口径与 _seer_probe/build_history_db.py 一致：
+#   只记录「同一个 id 的同一字段值变了」（value_changed），不收新增 id、不收新增字段（field_added）；
+#   每张表只看白名单字段；行按 (version, id) 升序写入。
+# 上一版基线存在 history.db 自己的 _snapshot 表里，所以不需要额外的 JSON 文件。
+HISTORY_SPEC = {
+    "effectIcon": ("analyze", "tips", "kind"),
+    "effectInfo": ("analyze", "info", "argsNum"),
+    "effectDes": ("kinddes", "desc"),
+}
+
+
+def _history_json_field(table, field):
+    # adapt 之后的 JSON 是 snake_case，历史库里沿用官方 camelCase 列名
+    if table == "effectInfo" and field == "argsNum":
+        return "args_num"
+    return field
+
+
+def _history_load_rows(table):
+    """读 data_path 下某个表，返回 {id: {字段: 值}}（只取白名单字段）。"""
+    with open(data_path / f"{table}.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    items = None
+    root = data.get("root")
+    if isinstance(root, list):
+        items = root
+    elif isinstance(root, dict):
+        for key in ("effect", "Effect", "item", "Item"):
+            if isinstance(root.get(key), list):
+                items = root[key]
+                break
+        if items is None:
+            for value in root.values():
+                if isinstance(value, list):
+                    items = value
+                    break
+    if items is None:
+        items = data.get("Items") or []
+
+    rows = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        key = item.get("id", item.get("Id"))
+        if key is None:
+            continue
+        row = {}
+        for field in HISTORY_SPEC[table]:
+            value = item.get(_history_json_field(table, field))
+            if isinstance(value, list):
+                row[field] = list(value)
+            elif value is None:
+                row[field] = ""
+            else:
+                row[field] = value
+        rows[int(key)] = row
+    return rows
+
+
+def _history_norm(value):
+    # 比对用：null / 空串 / 空列表视为同一状态，避免上游换个写法就报一堆假变更
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        return json.dumps(value, ensure_ascii=False)
+    return value
+
+
+def _history_encode(value):
+    # 入库用：list/dict 转 JSON 文本，bool 转 "0"/"1"，其余原样
+    if isinstance(value, (list, dict)):
+        return json.dumps(value, ensure_ascii=False)
+    if isinstance(value, bool):
+        return "1" if value else "0"
+    return value
+
+
+def _history_save_snapshot(cursor, current, version):
+    for table in HISTORY_SPEC:
+        cursor.execute("DELETE FROM _snapshot WHERE table_name = ?", (table,))
+        cursor.executemany(
+            "INSERT INTO _snapshot (table_name, id, payload) VALUES (?, ?, ?)",
+            [(table, rid, json.dumps(row, ensure_ascii=False, sort_keys=True))
+             for rid, row in sorted(current[table].items())],
+        )
+    cursor.execute("DELETE FROM _meta WHERE key = 'version'")
+    cursor.execute("INSERT INTO _meta (key, value) VALUES ('version', ?)", (version,))
+
+
+def db_history():
+    """版本号变化时，把三个表的「值变化」追加进 generated_files/db/history.db。
+
+    表：effectIcon / effectInfo / effectDes，列 version, id, field, "from", "to"；
+    内部表：_snapshot（上一版基线）、_meta（上次处理过的 version）。
+    """
+    DB_PATH = str(DB_DIR / "history.db")
+    os.makedirs(DB_DIR, exist_ok=True)
+
+    current = {table: _history_load_rows(table) for table in HISTORY_SPEC}
+    version = str(version1)
+
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    for table in HISTORY_SPEC:
+        cursor.execute(f"""
+        CREATE TABLE IF NOT EXISTS {table} (
+            version TEXT NOT NULL,
+            id      INTEGER NOT NULL,
+            field   TEXT NOT NULL,
+            "from"  TEXT,
+            "to"    TEXT
+        )
+        """)
+        cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{table}_version_id ON {table}(version, id)")
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS _snapshot (
+        table_name TEXT NOT NULL,
+        id         INTEGER NOT NULL,
+        payload    TEXT NOT NULL,
+        PRIMARY KEY (table_name, id)
+    )
+    """)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS _meta (
+        key   TEXT PRIMARY KEY,
+        value TEXT
+    )
+    """)
+
+    row = cursor.execute("SELECT value FROM _meta WHERE key = 'version'").fetchone()
+    last_version = row[0] if row else ""
+    has_snapshot = cursor.execute("SELECT COUNT(*) FROM _snapshot").fetchone()[0] > 0
+
+    if not has_snapshot:
+        # 老库（只有历史行、没有基线）或全新库：只记基线，不产生变更行
+        _history_save_snapshot(cursor, current, version)
+        conn.commit()
+        conn.close()
+        print(f"history.db 建立基线（版本 {version}）："
+              f"{' / '.join(f'{t} {len(current[t])} 条' for t in HISTORY_SPEC)}，未产生变更行")
+        return
+
+    if last_version == version:
+        # 版本号没变（例如同一次更新的第二次调用）：只刷新基线
+        _history_save_snapshot(cursor, current, version)
+        conn.commit()
+        conn.close()
+        print(f"history.db 版本未变化（{version}），只刷新基线")
+        return
+
+    total = 0
+    for table in HISTORY_SPEC:
+        fields = HISTORY_SPEC[table]
+        snapshot = {}
+        for rid, payload in cursor.execute(
+            "SELECT id, payload FROM _snapshot WHERE table_name = ?", (table,)
+        ):
+            try:
+                snapshot[int(rid)] = json.loads(payload)
+            except Exception as e:
+                print(f"[warn] history.db 基线解析失败（{table} id={rid}）：{e}")
+        changed = []
+        for rid in sorted(current[table]):
+            old = snapshot.get(rid)
+            if old is None:
+                continue  # 库里没有 = 新增 id，不属于「修改」
+            for field in fields:
+                old_value = old.get(field)
+                new_value = current[table][rid][field]
+                if _history_norm(old_value) != _history_norm(new_value):
+                    changed.append((rid, field, old_value, new_value))
+        for rid, field, old_value, new_value in changed:
+            cursor.execute(
+                f'INSERT INTO {table} (version, id, field, "from", "to") VALUES (?, ?, ?, ?, ?)',
+                (version, rid, field, _history_encode(old_value), _history_encode(new_value)),
+            )
+        total += len(changed)
+        print(f"  history.db {table}: {len(changed)} 处值变化")
+
+    _history_save_snapshot(cursor, current, version)
+    conn.commit()
+    conn.close()
+    print(f"history.db 追加版本 {version}：共 {total} 处值变化")
+db_history()
 def db_pets():
     with open(data_path / "monsters.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
