@@ -402,6 +402,7 @@ _ADAPTERS = {
     "signIcon_fight": adapt_sign_icon_fight,
     "battle_effects": adapt_battle_effects,
     "pet_skin_rewardtype": _items_as_root,
+    "pet_skin_poly": _items_as_root,
     "new_se": adapt_new_se,
     "new_super_design": adapt_new_super_design,
     "archivesBook": _items_as_root,

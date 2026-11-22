@@ -354,6 +354,7 @@ TARGET_TEXTASSET_NAMES = [
     "signIcon_fight",
     "battle_effects",
     "pet_skin_rewardtype",
+    "pet_skin_poly",
     "new_se",
     "new_super_design",
     "archivesBook",
@@ -1648,6 +1649,10 @@ def parse_and_dump_moves(input_bytes_path, output_json_path):
 
         result["root"] = moves_tbl
 
+    pos = r.f.tell()
+    if pos != len(data):
+        raise ValueError(f"moves 结构不匹配：解析到 {pos}/{len(data)} 字节")
+
     write_json(output_json_path, result)
 
 def parse_and_dump_effect_info(input_bytes_path, output_json_path):
@@ -2640,6 +2645,46 @@ def parse_and_dump_pet_skin_rewardtype(input_bytes_path, output_json_path):
             temp["subtypename"] = r.ReadUTFBytesWithLength()
             temp["type"] = r.ReadSignedInt()
             result["root"].append(temp)
+
+    write_json(output_json_path, result)
+
+
+def parse_and_dump_pet_skin_poly(input_bytes_path, output_json_path):
+    """解析 pet_skin_poly.bytes（精灵 / 皮肤的「多形态立绘」替换表）。
+
+    结构（core/config/IPetSkinPolyInfo.cs）：
+      root_exists: bool
+      count: int32
+      repeat count times:
+        id: int32          # 表内序号
+        petid: int32       # 精灵多形态时的精灵 id；皮肤行为 0
+        replaceid: string  # u16 长度 + utf8，多个替换立绘用 ';' 分隔
+        skinid: int32      # 皮肤 id - 1400000；精灵行为 0
+    立绘资源：Assets/Art/Ui/assets/pet/half/{立绘 id}.jpg
+    形态 0 用 petid（皮肤用 1400000 + skinid），形态 1..N 用 replaceid 依次取。
+    """
+    with open(input_bytes_path, "rb") as f:
+        data = f.read()
+
+    r = BytesReader(data)
+    result = {"root": []}
+
+    # 检查根布尔标志
+    if not r.read_bool():
+        pass
+    else:
+        n = r.ReadSignedInt()
+        for _ in range(n):
+            temp = {}
+            temp["id"] = r.ReadSignedInt()
+            temp["petid"] = r.ReadSignedInt()
+            temp["replaceid"] = r.ReadUTFBytesWithLength()
+            temp["skinid"] = r.ReadSignedInt()
+            result["root"].append(temp)
+
+    pos = r.f.tell()
+    if pos != len(data):
+        raise ValueError(f"pet_skin_poly 结构不匹配：解析到 {pos}/{len(data)} 字节")
 
     write_json(output_json_path, result)
 
@@ -3998,6 +4043,7 @@ def parse_configs_from_official_bytes(version: str) -> None:
         ("signIcon_fight", parse_and_dump_signIcon_fight, "signIcon_fight.json"),
         ("battle_effects", parse_and_dump_battle_effects, "battle_effects.json"),
         ("pet_skin_rewardtype", parse_and_dump_pet_skin_rewardtype, "pet_skin_rewardtype.json"),
+        ("pet_skin_poly", parse_and_dump_pet_skin_poly, "pet_skin_poly.json"),
         ("new_se", parse_and_dump_new_se, "new_se.json"),
         ("new_super_design", parse_and_dump_new_super_design, "new_super_design.json"),
         ("archivesBook", parse_and_dump_archivesBook, "archivesBook.json"),
@@ -6677,6 +6723,125 @@ def db_pet_skin():
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
 db_pet_skin()
+def db_pet_skin_poly():
+    with open(data_path / "pet_skin_poly.json", 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    root = data["root"]
+
+    # 精灵名（monsters.json）与皮肤名（pet_skin.json），用于把 id 补成可读信息
+    pet_names = {}
+    try:
+        with open(data_path / "monsters.json", 'r', encoding='utf-8') as f:
+            for p in json.load(f)["Monsters"]["Monster"]:
+                pet_names[p.get("ID", 0)] = p.get("DefName", '')
+    except Exception as e:
+        print(f"[warn] 读取 monsters.json 失败，pet_skin_poly 的精灵名留空：{e}")
+
+    skin_info = {}
+    try:
+        with open(data_path / "pet_skin.json", 'r', encoding='utf-8') as f:
+            skin_data = json.load(f)
+        # 适配后的格式是 {"root": [...]}；官方原始格式是 {"PetSkins": {"Skin": [...]}}
+            skin_rows = skin_data.get("root")
+            if skin_rows is None:
+                skin_rows = (skin_data.get("PetSkins") or {}).get("Skin") or []
+            for s in skin_rows:
+                skin_info[s.get("ID", 0)] = {
+                    "Name": s.get("Name", ''),
+                    "MonID": s.get("MonID", 0),
+                }
+    except Exception as e:
+        print(f"[warn] 读取 pet_skin.json 失败，pet_skin_poly 的皮肤名留空：{e}")
+
+
+    def create_scheme_database(db_path):
+        # 确保数据库所在目录存在
+        db_dir = os.path.dirname(db_path)
+        if db_dir and not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+
+        try:
+            # 连接数据库（文件不存在则自动创建）
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            create_table_sql = """
+            CREATE TABLE IF NOT EXISTS pet_skin_poly (
+                dbid INTEGER PRIMARY KEY AUTOINCREMENT,
+                ID INTEGER NOT NULL,            -- 表内序号
+                PetID INTEGER NOT NULL,         -- 精灵 id（皮肤行为 0）
+                SkinID INTEGER NOT NULL,        -- 皮肤 id - 1400000（精灵行为 0）
+                SkinFullID INTEGER NOT NULL,    -- 皮肤完整 id = 1400000 + skinid（精灵行为 0）
+                ObjectType TEXT NOT NULL,       -- pet / skin
+                ObjectName TEXT NOT NULL,       -- 精灵名 / 皮肤名
+                MonID INTEGER NOT NULL,         -- 所属精灵 id（皮肤取 pet_skin.MonID）
+                ReplaceID TEXT NOT NULL,        -- 原始 replaceid 串（';' 分隔）
+                ReplaceIDs TEXT NOT NULL,       -- replaceid 拆开后再用 ',' 连接
+                FormCount INTEGER NOT NULL,     -- 立绘形态数 = replaceid 个数 + 1
+                DisplayIDs TEXT NOT NULL,       -- 全部立绘 id：原立绘 + replaceid
+                IconPaths TEXT NOT NULL         -- 全部半身立绘路径（';' 分隔）
+            );
+            """
+            cursor.execute(create_table_sql)
+            conn.commit()
+
+            print(f"✅ 数据库创建成功：{db_path}")
+
+        except sqlite3.Error as e:
+            print(f"❌ 数据库创建失败：{e}")
+        finally:
+            # 确保连接关闭
+            if conn:
+                conn.close()
+
+    DB_PATH = str(data_path / f"pet_skin_poly_{version1}.db")  # CI 输出路径
+
+    try:
+        os.remove(DB_PATH)
+    except:
+        pass
+
+    create_scheme_database(DB_PATH)
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row  # 设置为字典格式
+    cursor = conn.cursor()
+
+    for i in root:
+        try:
+            ID = i.get("id", 0)
+            PetID = i.get("petid", 0)
+            SkinID = i.get("skinid", 0)
+            ReplaceID = i.get("replaceid", '') or ''
+            ReplaceIDs = [t.strip() for t in str(ReplaceID).split(';') if t.strip()]
+            IsSkin = SkinID > 0
+            SkinFullID = 1400000 + SkinID if IsSkin else 0
+            if IsSkin:
+                ObjectType = 'skin'
+                                # pet_skin.json 的 ID 是 512 这种；客户端运行时用 1400000 + skinid，两种都试
+                info = skin_info.get(SkinID) or skin_info.get(SkinFullID) or {}
+                ObjectName = info.get("Name", '')
+                MonID = info.get("MonID", 0)
+                BaseID = SkinFullID
+            else:
+                ObjectType = 'pet'
+                ObjectName = pet_names.get(PetID, '')
+                MonID = PetID
+                BaseID = PetID
+            DisplayIDs = [str(BaseID)] + ReplaceIDs
+            FormCount = len(DisplayIDs)
+            IconPaths = ';'.join(
+                f"Assets/Art/Ui/assets/pet/half/{x}.jpg" for x in DisplayIDs
+            )
+            cursor.execute("""
+                INSERT INTO pet_skin_poly (ID, PetID, SkinID, SkinFullID, ObjectType, ObjectName, MonID, ReplaceID, ReplaceIDs, FormCount, DisplayIDs, IconPaths)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,(ID, PetID, SkinID, SkinFullID, ObjectType, ObjectName, MonID, ReplaceID, ','.join(ReplaceIDs), FormCount, ','.join(DisplayIDs), IconPaths)
+            )
+        except Exception as e:
+            print(f"❌ 插入数据失败：{e}，数据内容：{i}")
+    conn.commit()
+db_pet_skin_poly()
 def db_pets():
     with open(data_path / "monsters.json", 'r', encoding='utf-8') as f:
         data = json.load(f)
