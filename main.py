@@ -7156,6 +7156,18 @@ def _history_save_snapshot(cursor, current, version):
     cursor.execute("INSERT INTO _meta (key, value) VALUES ('version', ?)", (version,))
 
 
+def _history_snapshot_same(cursor, current):
+    """基线内容是否与当前 JSON 完全一致（逐条比 payload 文本）。"""
+    stored = {}
+    for table, rid, payload in cursor.execute("SELECT table_name, id, payload FROM _snapshot"):
+        stored[(table, int(rid))] = payload
+    want = {}
+    for table in HISTORY_SPEC:
+        for rid, row in current[table].items():
+            want[(table, rid)] = json.dumps(row, ensure_ascii=False, sort_keys=True)
+    return stored == want
+
+
 def db_history():
     """版本号变化时，把三个表的「值变化」追加进 generated_files/db/history.db。
 
@@ -7210,7 +7222,13 @@ def db_history():
         return
 
     if last_version == version:
-        # 版本号没变（例如同一次更新的第二次调用）：只刷新基线
+        # 版本号没变（例如同一次更新的第二次调用）：内容也没变就什么都不写，
+        # 否则 SQLite 会因为 DELETE+INSERT 重排页面，让 git 看到一次「改了 0 行」的二进制提交。
+        if _history_snapshot_same(cursor, current):
+            conn.close()
+            print(f"history.db 版本与内容都未变化（{version}），跳过")
+            return
+        # 版本号没变但内容变了（同版本内补数据）：只刷新基线
         _history_save_snapshot(cursor, current, version)
         conn.commit()
         conn.close()
