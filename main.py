@@ -7068,11 +7068,12 @@ HISTORY_SPEC = {
 }
 
 
-def _history_json_field(table, field):
-    # adapt 之后的 JSON 是 snake_case，历史库里沿用官方 camelCase 列名
+def _history_json_fields(table, field):
+    # 同一个字段在两种导出里的写法不同：官方 JSON 是 camelCase，adapt 之后是 snake_case。
+    # 基线可能建立在任一种格式上，所以两个键名都要试（否则基线全读成空串 → 下一版整表“变了”）。
     if table == "effectInfo" and field == "argsNum":
-        return "args_num"
-    return field
+        return ("argsNum", "args_num")
+    return (field,)
 
 
 def _history_load_rows(table):
@@ -7106,7 +7107,11 @@ def _history_load_rows(table):
             continue
         row = {}
         for field in HISTORY_SPEC[table]:
-            value = item.get(_history_json_field(table, field))
+            value = None
+            for json_key in _history_json_fields(table, field):
+                if json_key in item:
+                    value = item[json_key]
+                    break
             if isinstance(value, list):
                 row[field] = list(value)
             elif value is None:
@@ -7118,11 +7123,15 @@ def _history_load_rows(table):
 
 
 def _history_norm(value):
-    # 比对用：null / 空串 / 空列表视为同一状态，避免上游换个写法就报一堆假变更
+    # 比对用：null / 空串 / "[]" / "{}" / 空列表 / 空字典都算同一状态。
+    # 官方 JSON 把空数组写成 null，adapt 之后写成 []，不归一就会天天报假变更。
     if value is None:
         return ""
-    if isinstance(value, list):
-        return json.dumps(value, ensure_ascii=False)
+    if isinstance(value, (list, dict)):
+        return json.dumps(value, ensure_ascii=False) if value else ""
+    if isinstance(value, str):
+        if value.strip().lower() in ("", "[]", "{}", "null"):
+            return ""
     return value
 
 
