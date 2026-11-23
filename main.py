@@ -236,13 +236,16 @@ class Flash(Platform):
     def get_remote_version(self) -> str:
         coredll_swf = self._get_coredll_swf()
         prexml_swf = self._get_prexml_swf()
-        file_hashs = frozenset(
+        file_hashs = sorted(
             (
                 get_file_hash(coredll_swf),
                 get_file_hash(prexml_swf)
             )
         )
-        return hashlib.sha256(str(file_hashs).encode()).hexdigest()
+        # 原来这里用 frozenset：str(frozenset) 的迭代顺序受 PYTHONHASHSEED 影响
+        # （每个 python 进程随机），同一份 SWF 会算出两个不同的版本号，
+        # 于是 CI 每半小时就多一个只改 .version 的空提交。排序后再拼串才是稳定的。
+        return hashlib.sha256("".join(file_hashs).encode()).hexdigest()
 
     def get_coredll_configs(self) -> None:
         import re
