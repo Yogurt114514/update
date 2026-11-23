@@ -104,7 +104,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<PetData id="69" pid="3291" TagA="3" TagB="0" Redirect="map|module" Go="103;app/TempleHeroAltarPrePanel"/>
 	<PetData id="70" pid="3788" TagA="3" TagB="0" Redirect="map|module" Go="103;app/TempleHeroAltarPrePanel"/>
 	<PetData id="71" pid="3512" TagA="3" TagB="5|6" Redirect="map|module" Go="103;app/TempleHeroAltarPrePanel"/>
-	<PetData id="72" pid="4338" TagA="3" TagB="3|1" Redirect="alarm" Go="新版作战实验室专属精灵，请前往《赛尔号巅峰之战》获得！"/>
+	<PetData id="72" pid="4338" TagA="3" TagB="3|1" Redirect="alarm" Go="新版作战实验室专属精灵，请前往《赛尔号》（微端）获得！"/>
 	<PetData id="73" pid="4442" TagA="3" TagB="2|1|3" Redirect="map|module" Go="1581;app/SpetMJMaTiNaMainPanel"/>
 	<PetData id="74" pid="4487" TagA="3" TagB="6|4|3" Redirect="map|module" Go="1601;app/SpetXiKeLuoMainPanel"/>
 	<PetData id="75" pid="3866" TagA="3" TagB="1|2" Redirect="map|module" Go="1367;app/YueZhaoXinghunMainPanel"/>
@@ -367,23 +367,23 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="31" hasSound="1" DefName="阿布" Type="水" Height="53" Weight="28.6" Foundin="--" Food="菌蟹高汤" Features="贝尔的进化形态，犄角长了出来，外壳也变得更加厚实坚硬，防御和特防都有了很大的进步。" mapID="20"/>
 	<Monster ID="32" hasSound="1" DefName="巴拉龟" Type="水" Height="79" Weight="55.8" Foundin="--" Food="菌蟹高汤" Features="阿布的进化形态，有着超强的防御力，能够抵抗大多数的攻击。凶横的特性展现出来了，特攻能力强。" mapID="20"/>
 	<Monster ID="33" hasSound="1" DefName="利牙鱼" Type="水" Height="46" Weight="8.3" Foundin="海洋星深水区" Food="银鱼刺身" Features="生活在很深海中，在水中有很高的行动力，不要被他可爱的外形所迷惑了，他的攻击力可是非常可怕的。" mapID="21"/>
-	<Monster ID="34" hasSound="1" DefName="钢牙鲨" Type="水" Height="64" Weight="40.6" Foundin="海洋星海底" Food="银鱼刺身" Features="利牙鱼的进化形态，它的牙齿有着极高的杀伤力。总是悄然伏在暗处，然后突然行动，猛烈攻击对手。" Redirect="map|alarm" Go="21;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="34" hasSound="1" DefName="钢牙鲨" Type="水" Height="64" Weight="40.6" Foundin="海洋星海底" Food="银鱼刺身" Features="利牙鱼的进化形态，它的牙齿有着极高的杀伤力。总是悄然伏在暗处，然后突然行动，猛烈攻击对手。" Redirect="map|alarm" Go="21;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="35" hasSound="1" DefName="吉尔" Type="火" Height="51" Weight="5.2" Foundin="火山星洞穴" Food="烟灰烧饼" Features="吉尔生活在火山洞穴中，全身的皮肤光洁富有弹性，蕴含了大量的降温物质，可以抵抗高温。" mapID="16"/>
 	<Monster ID="36" hasSound="1" DefName="里诺" Type="火" Height="70" Weight="19.3" Foundin="--" Food="烟灰烧饼" Features="吉尔的进化形态，背翼开始初现雏形，它的行动变得更加迅速，一改小时候蹦蹦跳跳的行为习惯，开始学习滑翔。" mapID="16"/>
 	<Monster ID="37" hasSound="1" DefName="洛吉拉斯" Type="火" Height="132" Weight="49.8" Foundin="--" Food="烟灰烧饼" Features="里诺的进化形态，身形变得更加适合飞行，速度迅猛，非常擅长使用火系的招式攻击对手。" mapID="16"/>
 	<Monster ID="38" hasSound="1" DefName="火炎贝" Type="火" Height="41" Weight="7.6" Foundin="火山星山脚下" Food="炎虫干锅" Features="在岩浆中浴火而生的火炎贝，全身被熔岩外壳覆盖，抗热能力极高。" mapID="15"/>
 	<Monster ID="39" hasSound="1" DefName="贝拉米" Type="火" Height="60" Weight="26" Foundin="--" Food="炎虫干锅" Features="火炎贝的进化形态，它有着可以喷射火焰的能力，外壳的形状发生变化，转变为可爱的栗子形。" mapID="15"/>
 	<Monster ID="40" hasSound="1" DefName="贝尔鲁斯" Type="火" Height="74" Weight="51" Foundin="--" Food="炎虫干锅" Features="贝拉米的进化形态，外壳沉积和利爪的生长，使它的的攻击力和防御力得到极大的提升。" mapID="15"/>
-	<Monster ID="41" hasSound="1" DefName="胡里亚" Type="火" Height="45" Weight="4.2" Foundin="--" Food="砰菇炒蛋" Features="全身被火焰包围，是极具攻击性的精灵。生活在满是岩浆的洞中，总是独自在岩石间跳跃、散步。" Redirect="map|alarm" Go="17;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="42" hasSound="1" DefName="里奥斯" Type="火" Height="80" Weight="43.6" Foundin="火山星山洞深处" Food="砰菇炒蛋" Features="胡里亚的进化形态，火焰是它最拿手的招式，掌握着各种强大而神奇的战斗技巧。" Redirect="map|alarm" Go="17;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="41" hasSound="1" DefName="胡里亚" Type="火" Height="45" Weight="4.2" Foundin="--" Food="砰菇炒蛋" Features="全身被火焰包围，是极具攻击性的精灵。生活在满是岩浆的洞中，总是独自在岩石间跳跃、散步。" Redirect="map|alarm" Go="17;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="42" hasSound="1" DefName="里奥斯" Type="火" Height="80" Weight="43.6" Foundin="火山星山洞深处" Food="砰菇炒蛋" Features="胡里亚的进化形态，火焰是它最拿手的招式，掌握着各种强大而神奇的战斗技巧。" Redirect="map|alarm" Go="17;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="43" hasSound="1" DefName="罗奇" Type="电" Height="48" Weight="4.4" Foundin="赫尔卡星遗迹" Food="秘银蛋糕" Features="罗奇是一种以金属为食的精灵，有着深不可测的潜力，喜欢把窝安在细小的夹缝中，勤恳地搬运金属碎屑去装饰自己的窝。" mapID="31"/>
 	<Monster ID="44" hasSound="1" DefName="基罗拉" Type="电" Height="61" Weight="16.6" Foundin="--" Food="秘银蛋糕" Features="罗奇的进化形态，它的潜力开始慢慢的发挥出来了，大量的电力以电容球的形式蕴藏在头顶，形成美丽的光环。" mapID="31"/>
 	<Monster ID="45" hasSound="1" DefName="西萨琉拉" Type="电" Height="80" Weight="36" Foundin="--" Food="秘银蛋糕" Features="基罗拉的进化形态，所有的潜力都爆发出来了，速度迅猛，特攻能力极强。" mapID="31"/>
-	<Monster ID="46" hasSound="1" DefName="小蘑菇" Type="草" Height="45" Weight="4.3" Foundin="--" Food="清炒地藻" Features="小蘑菇是由外星蘑菇繁衍而成的，身上携带着毒性，花纹和形态都具有迷惑人，会让人忽视它的危害。" Redirect="map|alarm" Go="12;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="47" hasSound="1" DefName="蘑菇怪" Type="草" Height="135" Weight="78.8" Foundin="--" Food="清炒地藻" Features="小蘑菇的进化形态，毒性极强，防御能力出色，霸道得盘踞在克洛斯星最富饶的地区。" Redirect="map|alarm" Go="12;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="48" hasSound="1" DefName="索拉" Type="冰" Height="49" Weight="4.6" Foundin="--" Food="冰镇仙草" Features="冰雪中美丽的精灵索拉，机灵聪颖，天真可爱，活泼调皮，数量非常稀少，特攻能力突出。" Redirect="map|alarm" Go="40;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="49" hasSound="1" DefName="赫拉丝" Type="冰" Height="66" Weight="18.2" Foundin="--" Food="冰镇仙草" Features="索拉的进化形态，温顺娇美，非常爱干净，不生气的时候是个恬静的美人，发起脾气来具有惊人的爆发力。" Redirect="map|alarm" Go="40;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="50" hasSound="1" DefName="阿克希亚" Type="冰" Height="110" Weight="45" Foundin="塞西利亚星" Food="冰镇仙草" Features="赫拉丝的进化形态，冰天雪地中的灵兽，身手矫健，姿态优美，攻击力极强。具有冰雪王国统治者的气度和风度。" Redirect="map|alarm" Go="40;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="46" hasSound="1" DefName="小蘑菇" Type="草" Height="45" Weight="4.3" Foundin="--" Food="清炒地藻" Features="小蘑菇是由外星蘑菇繁衍而成的，身上携带着毒性，花纹和形态都具有迷惑人，会让人忽视它的危害。" Redirect="map|alarm" Go="12;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="47" hasSound="1" DefName="蘑菇怪" Type="草" Height="135" Weight="78.8" Foundin="--" Food="清炒地藻" Features="小蘑菇的进化形态，毒性极强，防御能力出色，霸道得盘踞在克洛斯星最富饶的地区。" Redirect="map|alarm" Go="12;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="48" hasSound="1" DefName="索拉" Type="冰" Height="49" Weight="4.6" Foundin="--" Food="冰镇仙草" Features="冰雪中美丽的精灵索拉，机灵聪颖，天真可爱，活泼调皮，数量非常稀少，特攻能力突出。" Redirect="map|alarm" Go="40;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="49" hasSound="1" DefName="赫拉丝" Type="冰" Height="66" Weight="18.2" Foundin="--" Food="冰镇仙草" Features="索拉的进化形态，温顺娇美，非常爱干净，不生气的时候是个恬静的美人，发起脾气来具有惊人的爆发力。" Redirect="map|alarm" Go="40;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="50" hasSound="1" DefName="阿克希亚" Type="冰" Height="110" Weight="45" Foundin="塞西利亚星" Food="冰镇仙草" Features="赫拉丝的进化形态，冰天雪地中的灵兽，身手矫健，姿态优美，攻击力极强。具有冰雪王国统治者的气度和风度。" Redirect="map|alarm" Go="40;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="51" hasSound="1" DefName="玄冰兽" Type="冰" Height="50" Weight="9.8" Foundin="赫尔卡飞船" Food="玄冰能量" Features="生存在冰雪环境的精灵，具有攻击性,平时的活动区域为积雪下方的冰层，爱群居，砸穿冰层筑巢，以玄冰能量为食。" mapID="43"/>
 	<Monster ID="52" hasSound="1" DefName="急冻兽" Type="冰" Height="86" Weight="33.4" Foundin="--" Food="玄冰能量" Features="玄冰兽的进化形态，在冰湖当中移动速度极快，攻击力强，好斗；头部的玄冰结晶是非常好的能源物资。" mapID="43"/>
 	<Monster ID="53" hasSound="1" DefName="莫比" Type="地面" Height="48" Weight="7.3" Foundin="云霄星地面层" Food="山蚁炒肉" Features="憨态可掬的莫比是罕见的地面系精灵，为云宵星特产。力量型斗士，喜欢开凿特别坚硬的物体。" mapID="25"/>
@@ -401,8 +401,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="65" hasSound="1" DefName="林克" Type="冰" Height="46" Weight="6.7" Foundin="寒冰溶洞" Food="切味刃鱼" Features="聪明的林克，喜欢热闹，可是，胆小的它总是躲在幽暗的地方期待着有趣的事情在眼前发生，期待着被人关心。" mapID="41"/>
 	<Monster ID="66" hasSound="1" DefName="林斯奇" Type="冰" Height="72" Weight="24.8" Foundin="--" Food="切味刃鱼" Features="由林克进化而来，胸口颇具代表性的“红宝石”开始生长，这里孕育着大量的冰雪能量，为它进一步的成长奠定基础。" mapID="41"/>
 	<Monster ID="67" hasSound="1" DefName="布林克斯" Type="冰" Height="101" Weight="39.6" Foundin="--" Food="切味刃鱼" Features="由林斯奇进化而来，生活在寒冷阴暗环境中的它，坚强、果敢，作为攻击和防御工具的冰爪也已发育完成，因而变得更加强大。" mapID="41"/>
-	<Monster ID="68" hasSound="1" DefName="米拉美" Type="飞行" Height="45" Weight="4.8" Foundin="--" Food="未知" Features="翱翔在空中的米拉美，在云彩般轻柔的巢中长大，天生具有灵敏的身手。" Redirect="map|alarm" Go="27;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="69" hasSound="1" DefName="提亚斯" Type="飞行" Height="99" Weight="27.4" Foundin="云霄星最高层" Food="未知" Features="由米拉美进化而来，领地意识非常强，极具攻击性，只要靠近它身边5米范围内，都会遭到它猛烈的攻击。" Redirect="map|alarm" Go="27;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="68" hasSound="1" DefName="米拉美" Type="飞行" Height="45" Weight="4.8" Foundin="--" Food="未知" Features="翱翔在空中的米拉美，在云彩般轻柔的巢中长大，天生具有灵敏的身手。" Redirect="map|alarm" Go="27;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="69" hasSound="1" DefName="提亚斯" Type="飞行" Height="99" Weight="27.4" Foundin="云霄星最高层" Food="未知" Features="由米拉美进化而来，领地意识非常强，极具攻击性，只要靠近它身边5米范围内，都会遭到它猛烈的攻击。" Redirect="map|alarm" Go="27;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="70" hasSound="1" DefName="雷伊" Type="电" Height="129" Weight="35.8" Foundin="赫尔卡星荒地" Food="闪电能量" Features="雷伊是赫尔卡星的神秘精灵，只有当雷雨天才会出现，全身被电流所包围，尽显王者风范。" mapID="32" jumptarget="200/3" Target="400001"/>
 	<Monster ID="71" hasSound="1" DefName="派派" Type="机械" Height="47" Weight="8.5" Foundin="--" Food="3型电池" Features="派派是博士设计的新型机械系精灵，它具有丰富的情感，派派光线是它的成名绝技。" mapID="5"/>
 	<Monster ID="72" hasSound="1" DefName="派鲁克" Type="机械" Height="69" Weight="24.3" Foundin="--" Food="3型电池" Features="派派的强化模式，搭载了强攻部件，使得派鲁克在攻击力上有了突破。" mapID="5"/>
@@ -446,7 +446,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="110" hasSound="1" DefName="布鲁克克" Type="水" Height="59" Weight="9.8" Foundin="--" Food="红烧刺鳗" Features="布鲁布的进化形态，经过长期的锻炼体格变得非常强健有力，是传说中的游泳健将和潜水高手哦。" mapID="0"/>
 	<Monster ID="111" hasSound="1" DefName="雷格" Type="机械" Height="31" Weight="13.2" Foundin="--" Food="废铁火锅" Features="雷格是灵巧可爱的机械系精灵，喜欢在泥土间拨弄玩耍，诞生双子贝塔星这片神奇的土地上，蕴藏着强大的爆发力。" mapID="49"/>
 	<Monster ID="112" hasSound="1" DefName="雷顿塔" Type="机械" Height="48.5" Weight="23.8" Foundin="--" Food="废铁火锅" Features="雷格的进化形态，脱离了寄居蟹时代的稚嫩外型，开始训练自己的体魄，攻击和防御能力都稳步提升。" mapID="49"/>
-	<Monster ID="113" hasSound="1" DefName="雷纳多" Type="机械" Height="66" Weight="88.8" Foundin="贝塔星荒原" Food="废铁火锅" Features="彪悍的雷纳多盘踞在双子贝塔星上，和双子阿尔法星的是纳多雷遥相对应，守护着星球上所有的精灵。" Redirect="map|alarm" Go="49;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="113" hasSound="1" DefName="雷纳多" Type="机械" Height="66" Weight="88.8" Foundin="贝塔星荒原" Food="废铁火锅" Features="彪悍的雷纳多盘踞在双子贝塔星上，和双子阿尔法星的是纳多雷遥相对应，守护着星球上所有的精灵。" Redirect="map|alarm" Go="49;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="114" hasSound="1" DefName="小树精" Type="草" Height="62" Weight="5.3" Foundin="--" Food="绒草云吞" Features="可爱的小树精有点木讷，有点害羞，总是处于惊恐和不知所措的状态中，是需要被呵护、疼爱的胆小精灵。" mapID="0"/>
 	<Monster ID="115" hasSound="1" DefName="巨型树妖" Type="草" Height="130" Weight="51" Foundin="精灵召唤场" Food="绒草云吞" Features="强悍的树妖精灵，宇宙海盗的训练用精灵，不知道在哪里诞生，但是它生命力非常旺盛，只有用团队的力量才能战胜它。" mapID="501"/>
 	<Monster ID="116" hasSound="1" DefName="卡卡" Type="冰" Height="23" Weight="12.1" Foundin="寒冰溶洞" Food="红藻炖蛋" Features="不知在塞西利亚沉睡了多少年的卡卡身上藏着很多的秘密，它似乎是一只来自远古的精灵，内敛、含蓄，不会表达自己的想法。" mapID="40"/>
@@ -1411,8 +1411,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1081" hasSound="1" DefName="萨菲罗" Type="超能" Height="142" Weight="94" Foundin="诺可撒斯" Food="未知" Features="萨奇的进化形态，是诺可萨斯星上最强大的战士，希望通过元素之星来拯救自己的故乡。" mapID="699"/>
 	<Monster ID="1082" hasSound="1" DefName="LEK" Type="机械" Height="78" Weight="74" Foundin="训练师之门" Food="未知" Features="LEK是为了战争而特别设计的机器人，有着灵活的双臂和出色的格斗能力。" mapID="10082"/>
 	<Monster ID="1083" hasSound="1" DefName="LYN" Type="机械" Height="179" Weight="150" Foundin="训练师之门" Food="未知" Features="LYN是LEK的进化形态，在LEK的基础上进行了大规模的改良，是恐怖的战争机器，一直在寻找值得一战的对手。" mapID="10082"/>
-	<Monster ID="1084" hasSound="1" DefName="卡斯" Type="战斗 地面" Height="78" Weight="102" Foundin="巨石星" Food="未知" Features="卡斯是巨石岛的守护者，全身由岩石构成，可以使用巨石来攻击对手。" Redirect="map|alarm" Go="702;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1085" hasSound="1" DefName="兰斯特" Type="战斗 地面" Height="136" Weight="210" Foundin="巨石星" Food="未知" Features="卡斯的进化形态，传说中的神器“巨石之杖”的守护者，对于企图破坏巨石岛的人从不手软。" Redirect="map|alarm" Go="702;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1084" hasSound="1" DefName="卡斯" Type="战斗 地面" Height="78" Weight="102" Foundin="巨石星" Food="未知" Features="卡斯是巨石岛的守护者，全身由岩石构成，可以使用巨石来攻击对手。" Redirect="map|alarm" Go="702;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1085" hasSound="1" DefName="兰斯特" Type="战斗 地面" Height="136" Weight="210" Foundin="巨石星" Food="未知" Features="卡斯的进化形态，传说中的神器“巨石之杖”的守护者，对于企图破坏巨石岛的人从不手软。" Redirect="map|alarm" Go="702;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1086" hasSound="1" DefName="巴恩" Type="暗影" Height="43" Weight="39" Food="未知" Features="巴恩是习惯生活在黑暗之中的精灵，在黑暗之中能准确的识别出对手的位置。" mapID="0"/>
 	<Monster ID="1087" hasSound="1" DefName="巴恩那" Type="暗影" Height="118" Weight="142" Food="未知" Features="巴恩的进化形态，生活于黑暗世界的狩猎者，夜色下的它有着可怕的特殊能力，被誉为虚空夜魔。" mapID="0"/>
 	<Monster ID="1088" hasSound="1" DefName="法尔" Type="火" Height="34" Weight="27" Foundin="巨石星" Food="未知" Features="法尔是生活在石塔中的精灵，能使用火焰来攻击敌人，保护着石塔不被入侵。" mapID="0"/>
@@ -1435,8 +1435,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1105" hasSound="1" DefName="卜卜洛" Type="普通" Height="68" Weight="31" Foundin="--" Food="未知" Features="卜拉的进化形态，有着强大的食物寻找能力，是一只为了喜欢吃的东西可以不顾一切的精灵。" mapID="0"/>
 	<Monster ID="1106" hasSound="1" DefName="亨亨" Type="战斗" Height="22" Weight="25" Foundin="--" Food="未知" Features="亨亨是生活在极寒地带的战士，看似笨重的身躯下却有着灵活的身手。" mapID="111"/>
 	<Monster ID="1107" hasSound="1" DefName="亨诺尔" Type="战斗" Height="89" Weight="106" Foundin="--" Food="未知" Features="亨亨的进化形态，体格变得异常的魁梧，性格急躁的它经常会到处惹祸。" mapID="111"/>
-	<Monster ID="1108" hasSound="1" DefName="杰沃" Type="电 冰" Height="65" Weight="41" Foundin="巨石星" Food="未知" Features="杰沃同时掌控着闪电和冰的力量，也掌握着巨石星上最大的秘密。" Redirect="map|alarm" Go="708;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1109" hasSound="1" DefName="卡沃尔" Type="电 冰" Height="198" Weight="157" Foundin="巨石星" Food="未知" Features="杰沃的进化形态，曾经是麒麟的追随者，因阿洛比斯而沉睡，等待有缘人的到来。" Redirect="map|alarm" Go="708;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1108" hasSound="1" DefName="杰沃" Type="电 冰" Height="65" Weight="41" Foundin="巨石星" Food="未知" Features="杰沃同时掌控着闪电和冰的力量，也掌握着巨石星上最大的秘密。" Redirect="map|alarm" Go="708;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1109" hasSound="1" DefName="卡沃尔" Type="电 冰" Height="198" Weight="157" Foundin="巨石星" Food="未知" Features="杰沃的进化形态，曾经是麒麟的追随者，因阿洛比斯而沉睡，等待有缘人的到来。" Redirect="map|alarm" Go="708;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1110" hasSound="1" DefName="菲菲" Type="冰" Height="22" Weight="9" Foundin="训练师之门" Food="未知" Features="菲菲是吸取冰雪能量而成长的一只精灵，看似可爱的它却有着瞬间冻结一切的能力。" mapID="10090"/>
 	<Monster ID="1111" hasSound="1" DefName="菲尔洛" Type="冰" Height="65" Weight="34" Foundin="训练师之门" Food="未知" Features="菲菲的进化形态，冰系之门的守护着，调皮的它等待着能经受住极寒考验的对手的出现。" mapID="10090"/>
 	<Monster ID="1112" hasSound="1" DefName="森卡尔" Type="飞行" Height="12" Weight="4" Foundin="巨石星" Food="未知" Features="森卡尔是阿洛比斯忠实的信徒，有着一对坚硬的爪子，战斗起来非常凶猛。" mapID="708"/>
@@ -1457,8 +1457,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1127" hasSound="1" DefName="卡莱洛" Type="光" Height="78" Weight="12" Foundin="训练师之门" Food="未知" Features="莱斯的进化形态，头上出现了光能量聚集而成的光环，是光系之门的守护者，等待着训练师的挑战。" mapID="10095"/>
 	<Monster ID="1128" hasSound="1" DefName="塔塔" Type="水" Height="21" Weight="34" Foundin="艾伦星" Food="未知" Features="塔塔是天生兄弟同体的精灵，两兄弟永远也弄不清谁才是真正的哥哥" mapID="29"/>
 	<Monster ID="1129" hasSound="1" DefName="塔特尔" Type="水" Height="98" Weight="125" Foundin="艾伦星" Food="未知" Features="塔塔的进化形态，盲目而狂热的崇拜着帕罗狄亚，愿意为它搭上自己的一切。" mapID="29"/>
-	<Monster ID="1130" hasSound="1" DefName="凯尼" Type="水 超能" Height="42" Weight="34" Foundin="艾伦星" Food="未知" Features="凯尼长期居住在珊瑚海礁之中，那里的水给它提供了源源不断的能量。" Redirect="map|alarm" Go="710;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1131" hasSound="1" DefName="凯洛亚" Type="水 超能" Height="187" Weight="102" Foundin="艾伦星" Food="未知" Features="凯尼的进化形态，珊瑚海礁的守护者，通过超能力来操作水，给对手造成致命打击。" Redirect="map|alarm" Go="710;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1130" hasSound="1" DefName="凯尼" Type="水 超能" Height="42" Weight="34" Foundin="艾伦星" Food="未知" Features="凯尼长期居住在珊瑚海礁之中，那里的水给它提供了源源不断的能量。" Redirect="map|alarm" Go="710;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1131" hasSound="1" DefName="凯洛亚" Type="水 超能" Height="187" Weight="102" Foundin="艾伦星" Food="未知" Features="凯尼的进化形态，珊瑚海礁的守护者，通过超能力来操作水，给对手造成致命打击。" Redirect="map|alarm" Go="710;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1132" hasSound="1" DefName="可丽" Type="草" Height="22" Weight="8" Foundin="--" Food="未知" Features="可丽是迷之种长大后幻化出来的精灵，可爱的它经常会莫名其妙的害羞。" mapID="0"/>
 	<Monster ID="1133" hasSound="1" DefName="丽多尔" Type="草" Height="31" Weight="12" Foundin="--" Food="未知" Features="可丽的进化形态，比之前长高了一些，有了更强的防御能力，可是还是很害羞。" mapID="0"/>
 	<Monster ID="1134" hasSound="1" DefName="丽丽苗" Type="草" Height="68" Weight="30" Foundin="--" Food="未知" Features="丽多尔的进化形态，时常摆出一脸疑问模样的它，却是一个非常乐于助人的小精灵。" mapID="0"/>
@@ -1473,8 +1473,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1143" hasSound="1" DefName="鲁迪诺斯" Type="地面" Height="180" Weight="215" Foundin="--" Food="未知" Features="鲁迪诺斯是鲁加斯一族寻找已久的首领，因为对力量的追求而离开鲁加斯一族。" mapID="716"/>
 	<Monster ID="1144" hasSound="1" DefName="古古" Type="草" Height="56" Weight="11" Foundin="--" Food="未知" Features="古古是麦田村中生活的精灵，一心希望自己能成为麦田村的守卫者，来好好保护这个村庄。" mapID="38"/>
 	<Monster ID="1145" hasSound="1" DefName="麦古古" Type="草" Height="90" Weight="15" Foundin="--" Food="未知" Features="古古的进化形态，是麦田村的守护者，自己承担着守护整个麦田村的责任，不会被困难轻易打倒。" mapID="38"/>
-	<Monster ID="1146" hasSound="1" DefName="卡奇" Type="草 暗影" Height="32" Weight="12" Foundin="--" Food="未知" Features="卡奇是一个忽隐忽现的精灵，很少有人知道它从何而来，通过操纵来自异界的植物来攻击对手。" Redirect="map|alarm" Go="717;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1147" hasSound="1" DefName="卡伦尼" Type="草 暗影" Height="114" Weight="24" Foundin="--" Food="未知" Features="卡奇的进化形态，能将自己隐藏起来不让它人发现，是帕罗狄亚的追随者。" Redirect="map|alarm" Go="717;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1146" hasSound="1" DefName="卡奇" Type="草 暗影" Height="32" Weight="12" Foundin="--" Food="未知" Features="卡奇是一个忽隐忽现的精灵，很少有人知道它从何而来，通过操纵来自异界的植物来攻击对手。" Redirect="map|alarm" Go="717;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1147" hasSound="1" DefName="卡伦尼" Type="草 暗影" Height="114" Weight="24" Foundin="--" Food="未知" Features="卡奇的进化形态，能将自己隐藏起来不让它人发现，是帕罗狄亚的追随者。" Redirect="map|alarm" Go="717;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1148" hasSound="1" DefName="瓦卡" Type="普通" Height="35" Weight="14" Foundin="--" Food="未知" Features="瓦卡有着灵活的身手，尾巴上的巨刺是它攻击对手的强力武器。" mapID="10103"/>
 	<Monster ID="1149" hasSound="1" DefName="瓦尔普" Type="普通" Height="60" Weight="31" Foundin="--" Food="未知" Features="瓦卡的进化形态，能灵活使用巨刺来攻击对手，在训练师之门等待着能通过它考验的强者。" mapID="10103"/>
 	<Monster ID="1150" hasSound="1" DefName="努努" Type="火" Height="50" Weight="70" Foundin="艾伦星" Food="未知" Features="努努据说诞生于远古世纪时的一次超级火山大爆发，浑身上下冒着炙热的火焰。" mapID="718"/>
@@ -1517,8 +1517,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1187" hasSound="1" DefName="狂狮迪卡" Type="普通" Height="95" Weight="37" Foundin="暗黑武斗场" Food="未知" Features="狂狮迪卡是暗黑Ⅹ-Ⅲ门的守护者，有着傲人的魔眼，能看透一切，任何被盯上的猎物，没有一个可以逃出它的追猎。" mapID="10200"/>
 	<Monster ID="1188" hasSound="1" DefName="拉洛德" Type="暗影" Height="78" Weight="21" Foundin="--" Food="未知" Features="拉洛德是拥有非凡天赋的精灵，从小被视为圣地守护者的有力竞争者，但是性格狂躁，容易被蛊惑。" mapID="19"/>
 	<Monster ID="1189" hasSound="1" DefName="拉莫德斯" Type="暗影" Height="156" Weight="72" Foundin="--" Food="未知" Features="拉莫德斯曾试图夺取提尔瑞斯圣地守护者的位置，不惜一切代价地追求力量，最终误入歧途。" mapID="19"/>
-	<Monster ID="1190" hasSound="1" DefName="哈普" Type="草 超能" Height="22" Weight="12" Foundin="莱恩那星" Food="未知" Features="哈普是从小就生活在莱恩那星上的米娜村之中，据说有着和植物沟通交流的能力。" Redirect="map|alarm" Go="731;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1191" hasSound="1" DefName="普兰特" Type="草 超能" Height="80" Weight="38" Foundin="莱恩那星" Food="未知" Features="哈普的进化形态，米娜村的村长，使用着自己的能力保护着村庄不受侵害。" Redirect="map|alarm" Go="731;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1190" hasSound="1" DefName="哈普" Type="草 超能" Height="22" Weight="12" Foundin="莱恩那星" Food="未知" Features="哈普是从小就生活在莱恩那星上的米娜村之中，据说有着和植物沟通交流的能力。" Redirect="map|alarm" Go="731;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1191" hasSound="1" DefName="普兰特" Type="草 超能" Height="80" Weight="38" Foundin="莱恩那星" Food="未知" Features="哈普的进化形态，米娜村的村长，使用着自己的能力保护着村庄不受侵害。" Redirect="map|alarm" Go="731;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1192" hasSound="1" DefName="巨蘑怪" Type="草" Height="160" Weight="134" Foundin="--" Food="未知" Features="蘑菇怪在接触到黑石之力之后的超进化形态，有着庞大的身躯，力量比之前提升了很多。" mapID="709" jumptarget="56/3_1"/>
 	<Monster ID="1193" hasSound="1" DefName="小瑞" Type="地面" Height="25" Weight="22" Foundin="莱恩那星" Food="未知" Features="小瑞是一个快乐的精灵，生活在米娜村周围，喜欢吞食各种石头。" mapID="731"/>
 	<Monster ID="1194" hasSound="1" DefName="瑞多" Type="地面" Height="64" Weight="40" Foundin="莱恩那星" Food="未知" Features="小瑞的进化形态，平时脾气很好的精灵，但是如果一不小心惹它生气了，也会变得很可怕哦。" mapID="731"/>
@@ -1547,8 +1547,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1217" hasSound="1" DefName="木木" Type="暗影" Height="45" Weight="28" Foundin="--" Food="棒棒糖" Features="木木是布莱克一族的大祭司，拥有预知未来的能力，但是永远无法长大。" mapID="10" jumptarget="110/3_3/1" Target="111111"/>
 	<Monster ID="1218" hasSound="1" DefName="奇纳" Type="水" Height="26" Weight="15" Foundin="北斗七星殿" Food="未知" Features="奇纳是琳诺的好朋友，拥有控制海浪的能力，担负着守护巨门封印的使命。" mapID="733"/>
 	<Monster ID="1219" hasSound="1" DefName="亚奇" Type="水" Height="52" Weight="37" Foundin="北斗七星殿" Food="未知" Features="奇纳的进化形态，巨门封印的守护精灵，有着和其它守护星灵一起封印星灵王的使命。" mapID="733"/>
-	<Monster ID="1220" hasSound="1" DefName="博杰斯" Type="机械" Height="40" Weight="35" Foundin="莱恩那星" Food="未知" Features="海盗研制的强力机械精灵，拥有厚实的外壳,物理防御能力非常出众。" Redirect="map|alarm" Go="735;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1221" hasSound="1" DefName="博卡特" Type="机械" Height="186" Weight="120" Foundin="莱恩那星" Food="未知" Features="博杰斯的改良形态，在防御机甲的基础上，装备了强大的攻击性武器，拥有恐怖的火力。" Redirect="map|alarm" Go="735;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1220" hasSound="1" DefName="博杰斯" Type="机械" Height="40" Weight="35" Foundin="莱恩那星" Food="未知" Features="海盗研制的强力机械精灵，拥有厚实的外壳,物理防御能力非常出众。" Redirect="map|alarm" Go="735;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1221" hasSound="1" DefName="博卡特" Type="机械" Height="186" Weight="120" Foundin="莱恩那星" Food="未知" Features="博杰斯的改良形态，在防御机甲的基础上，装备了强大的攻击性武器，拥有恐怖的火力。" Redirect="map|alarm" Go="735;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1222" hasSound="1" DefName="斯尔" Type="光" Height="18" Weight="2" Foundin="--" Food="未知" Features="斯尔是在宇宙中飘荡的光精灵，一直为追寻传说中的能量而努力。"/>
 	<Monster ID="1223" hasSound="1" DefName="斯洛塔" Type="光" Height="58" Weight="5" Foundin="--" Food="未知" Features="斯尔的进化形态，全身散发着强烈的光芒，为了追寻传说中的能量不惜付出一切。"/>
 	<Monster ID="1224" hasSound="1" DefName="阿佐" Type="超能" Height="88" Weight="100" Foundin="--" Food="未知" Features="阿佐曾经被邪恶的精灵攻击，全靠迈尔斯施以援手才幸免于难。" mapID="736"/>
@@ -1566,8 +1566,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1236" hasSound="1" DefName="朗耐克" Type="地面" Height="256" Weight="215" Foundin="--" Food="未知" Features="小朗的进化形态，圣灵守护使团的一员，它掌管着要接近迈尔斯的人必经的第二重考验：正义考验。" mapID="738"/>
 	<Monster ID="1237" hasSound="1" DefName="洛拉托兹" Type="火" Height="157" Weight="65" Foundin="--" Food="未知" Features="洛吉拉斯进化形态，吸收火焰精华的它终于继承了天幕火龙的能力！" mapID="15"/>
 	<Monster ID="1238" hasSound="1" DefName="炽翼火龙" Type="火" Height="208" Weight="105" Foundin="--" Food="未知" Features="洛拉托兹的进化形态，完美吸收火焰精华的它已经青出于蓝而胜于蓝，散发着让人惊叹的火焰之力。" mapID="15"/>
-	<Monster ID="1239" hasSound="1" DefName="克拉曼" Type="超能" Height="45" Weight="28" Foundin="幻影迷阵" Food="未知" Features="克拉曼曾经是迈尔斯的玩伴，有着不可思议的超能力，能操纵幻影迷阵。" Redirect="map|alarm" Go="738;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1240" hasSound="1" DefName="克伦曼尔" Type="超能" Height="164" Weight="67" Foundin="幻影迷阵" Food="未知" Features="克拉曼的进化形态，幻影迷阵的操纵者，原本是迈尔斯最信任的伙伴，但受到了海盗芯片的控制。" Redirect="map|alarm" Go="738;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1239" hasSound="1" DefName="克拉曼" Type="超能" Height="45" Weight="28" Foundin="幻影迷阵" Food="未知" Features="克拉曼曾经是迈尔斯的玩伴，有着不可思议的超能力，能操纵幻影迷阵。" Redirect="map|alarm" Go="738;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1240" hasSound="1" DefName="克伦曼尔" Type="超能" Height="164" Weight="67" Foundin="幻影迷阵" Food="未知" Features="克拉曼的进化形态，幻影迷阵的操纵者，原本是迈尔斯最信任的伙伴，但受到了海盗芯片的控制。" Redirect="map|alarm" Go="738;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1241" hasSound="1" DefName="凯利" Type="普通" Height="87" Weight="67" Foundin="幻影星" Food="未知" Features="凯利有着锋利的爪子，身上的翅膀虽然已经退化但是在危急之下依旧有着短距离飞行的能力。" mapID="739"/>
 	<Monster ID="1242" hasSound="1" DefName="凯米拉" Type="普通" Height="201" Weight="190" Foundin="幻影星" Food="未知" Features="凯米拉是上古神兽奇美拉一族的后裔，为了报答粽子精灵的恩情它守护了叹息之壁一千年。" mapID="739"/>
 	<Monster ID="1243" hasSound="1" DefName="杰特" Type="超能" Height="17" Weight="8" Foundin="--" Food="未知" Features="杰特是飘荡在幻影星中的神秘小精灵，生气时能发出巨大的能量。" mapID="736"/>
@@ -1612,8 +1612,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1282" hasSound="1" DefName="棉花泡泡糖" Type="超能" Height="32" Weight="0.9" Foundin="--" Food="未知" Features="棉花泡的进化形态，平时看起来像棉花糖的它，一旦到了紧急时刻就会变化为强大的泡泡糖，散发出各种各样奇妙的泡泡。" mapID="749"/>
 	<Monster ID="1283" hasSound="1" DefName="小库" Type="水" Height="39" Weight="19" Foundin="恶魔星" Food="水草" Features="因缺水而石化的小库来自恶魔星，只要有水，小库就能从石化状态恢复生机，爆发能量。" mapID="40"/>
 	<Monster ID="1284" hasSound="1" DefName="库兮兮" Type="水" Height="74" Weight="37" Foundin="恶魔星" Food="水草" Features="小库的进化形态，丑陋的外表下是一颗依旧善良的心，拥有更强大的能力，为寻找家园而努力。" mapID="40"/>
-	<Monster ID="1285" hasSound="1" DefName="卡莱拉" Type="电 火" Height="31" Weight="35" Foundin="恶魔星" Food="未知" Features="自小就拥有火电两种属性能量，作为火鹿王最忠实的仰慕者，长大后励志成为火鹿王一样强大的存在。" Redirect="map|alarm" Go="753;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1286" hasSound="1" DefName="卡罗特利" Type="电 火" Height="88" Weight="124" Foundin="恶魔星" Food="未知" Features="卡莱特的进化形态，电流和火焰成为它最擅长的攻击手段，如果你在火焰山脊遇到它，那么你的恶梦就此开始！" Redirect="map|alarm" Go="753;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1285" hasSound="1" DefName="卡莱拉" Type="电 火" Height="31" Weight="35" Foundin="恶魔星" Food="未知" Features="自小就拥有火电两种属性能量，作为火鹿王最忠实的仰慕者，长大后励志成为火鹿王一样强大的存在。" Redirect="map|alarm" Go="753;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1286" hasSound="1" DefName="卡罗特利" Type="电 火" Height="88" Weight="124" Foundin="恶魔星" Food="未知" Features="卡莱特的进化形态，电流和火焰成为它最擅长的攻击手段，如果你在火焰山脊遇到它，那么你的恶梦就此开始！" Redirect="map|alarm" Go="753;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1287" hasSound="1" DefName="卡萨" Type="暗影" Height="49" Weight="23" Foundin="--" Food="未知" Features="卡萨从小就是一个不安分的孩子，在追寻力量的道路上误入歧途，被邪念所控制。" mapID="756"/>
 	<Monster ID="1288" hasSound="1" DefName="卡斯托尔" Type="暗影" Height="177" Weight="97" Foundin="--" Food="未知" Features="卡萨的进化形态，化身为可怕的恶魔，天生拥有抵抗害怕状态的能力，面对再强的对手也毫无畏惧。" mapID="756"/>
 	<Monster ID="1289" hasSound="1" DefName="波萨" Type="光" Height="52" Weight="25" Foundin="--" Food="未知" Features="波萨从小充满正义感，为了保护他人而不断提升自己的力量，最终受到了圣光的祝福。" mapID="756"/>
@@ -1630,8 +1630,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1300" hasSound="1" DefName="格莫" Type="草" Height="45" Weight="17" Foundin="--" Food="未知" Features="小格的进化形态，廉贞封印的守护精灵，有着和其它守护星灵一起封印星灵王的使命。" mapID="733"/>
 	<Monster ID="1301" hasSound="1" DefName="菲洛" Type="普通" Height="34" Weight="20" Foundin="--" Food="未知" Features="菲洛出身于运动世家，从小就展现出了不凡的运动天赋。" mapID="0"/>
 	<Monster ID="1302" hasSound="1" DefName="菲普斯" Type="普通" Height="157" Weight="76" Foundin="--" Food="未知" Features="菲洛的进化形态，菲普斯是个运动高手，敢于挑战极限，继承了师父库克桀骜不驯的性格！" mapID="0"/>
-	<Monster ID="1303" hasSound="1" DefName="帕特" Type="水 暗影" Height="75" Weight="47" Foundin="恶魔星" Food="未知" Features="帕特从小就梦想可以成为兽中之神，经常在兽神瀑布欺负其它小精灵！" Redirect="map|alarm" Go="762;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1304" hasSound="1" DefName="帕里斯" Type="水 暗影" Height="187" Weight="120" Foundin="恶魔星" Food="未知" Features="帕里斯长年雄踞恶魔星第五领域，自称兽神的它目空一切，脾气暴烈，一直希望有个手下。" Redirect="map|alarm" Go="762;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1303" hasSound="1" DefName="帕特" Type="水 暗影" Height="75" Weight="47" Foundin="恶魔星" Food="未知" Features="帕特从小就梦想可以成为兽中之神，经常在兽神瀑布欺负其它小精灵！" Redirect="map|alarm" Go="762;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1304" hasSound="1" DefName="帕里斯" Type="水 暗影" Height="187" Weight="120" Foundin="恶魔星" Food="未知" Features="帕里斯长年雄踞恶魔星第五领域，自称兽神的它目空一切，脾气暴烈，一直希望有个手下。" Redirect="map|alarm" Go="762;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1305" hasSound="1" DefName="利文" Type="飞行 超能" Height="23" Weight="14" Foundin="--" Food="未知" Features="利文由宇宙混沌孕育而生,性格多变，时而脆弱，时而调皮。" mapID="763"/>
 	<Monster ID="1306" hasSound="1" DefName="利亚斯" Type="飞行 超能" Height="68" Weight="29" Foundin="--" Food="未知" Features="利文的进化形态，受到宇宙的祝福，拥有着强大的实力，被誉为星空之子。" mapID="763"/>
 	<Monster ID="1307" hasSound="1" DefName="袋袋" Type="地面 战斗" Height="67" Weight="58" Foundin="--" Food="未知" Features="袋袋是裂空杯精灵王争霸赛的使者，外表可爱憨厚，有着不服输的性格。" mapID="751"/>
@@ -1667,8 +1667,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1337" hasSound="1" DefName="机械塔克林" Type="机械 龙" Height="360" Weight="1000" Foundin="--" Food="未知" Features="机械塔克林，海盗通过模仿塔克林外形制造的复制品，拥有超凡的实力和独特的外观。" mapID="48"/>
 	<Monster ID="1338" hasSound="1" DefName="基拉" Type="水" Height="87" Weight="45" Foundin="--" Food="未知" Features="基拉从小拥有过人的智慧，能很快学会各种各样新的知识。" mapID="0"/>
 	<Monster ID="1339" hasSound="1" DefName="阿基米德" Type="水" Height="188" Weight="125" Foundin="--" Food="未知" Features="小谋士阿基米德——运动王者库克的大徒弟，精通很多精灵的语言，擅长各种智力型竞赛。" mapID="0"/>
-	<Monster ID="1340" hasSound="1" DefName="洛菲斯" Type="地面 暗影" Height="75" Weight="32" Foundin="--" Food="未知" Features="洛菲斯有着守卫魔神星的光荣使命，从小就立志成为最合格的守护者！" Redirect="map|alarm" Go="775;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1341" hasSound="1" DefName="洛拉菲德" Type="地面 暗影" Height="147" Weight="80" Foundin="--" Food="未知" Features="洛菲斯的进化形态，洛拉菲德可以吸取魔神星的力量幻化出两个和自己一模一样的守卫，是魔神星的守护者。" Redirect="map|alarm" Go="775;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1340" hasSound="1" DefName="洛菲斯" Type="地面 暗影" Height="75" Weight="32" Foundin="--" Food="未知" Features="洛菲斯有着守卫魔神星的光荣使命，从小就立志成为最合格的守护者！" Redirect="map|alarm" Go="775;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1341" hasSound="1" DefName="洛拉菲德" Type="地面 暗影" Height="147" Weight="80" Foundin="--" Food="未知" Features="洛菲斯的进化形态，洛拉菲德可以吸取魔神星的力量幻化出两个和自己一模一样的守卫，是魔神星的守护者。" Redirect="map|alarm" Go="775;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1342" hasSound="1" DefName="凯拉利" Type="冰" Height="15" Weight="9" Foundin="--" Food="未知" Features="凯拉利有着超凡的耐心和毅力，为了追随自己心目中的目标而不断努力。" mapID="0"/>
 	<Monster ID="1343" hasSound="1" DefName="凯斯尔" Type="冰" Height="24" Weight="19" Foundin="--" Food="未知" Features="凯斯尔是巨蟹宫的守护着，拥有超凡的寒冰能量，是可信赖的战士。" mapID="0"/>
 	<Monster ID="1344" hasSound="1" DefName="小咕" Type="草" Height="22" Weight="19" Foundin="--" Food="未知" Features="小咕是个渴望安全感的孩子，喜欢把自己埋在重重的壳中。" mapID="103"/>
@@ -1680,8 +1680,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1350" hasSound="1" DefName="卡梅隆" Type="地面" Height="210" Weight="201" Foundin="--" Food="未知" Features="卡隆的进化形态，长大的卡梅隆注重艺术气质的培养，复古的发型，背着小火山，独自穿行在漫漫黄沙中。" mapID="779"/>
 	<Monster ID="1351" hasSound="1" DefName="库尼" Type="战斗" Height="60" Weight="34" Foundin="--" Food="未知" Features="库尼从小就非常热爱运动，渴望成为一名出色的运动健将。" mapID="0"/>
 	<Monster ID="1352" hasSound="1" DefName="库克" Type="战斗" Height="198" Weight="97" Foundin="--" Food="未知" Features="库尼的进化形态，有着出众的力量、速度、智慧、勇气，对各种星际运动有着极深的造诣，被誉为星际运动王者。" mapID="0"/>
-	<Monster ID="1353" hasSound="1" DefName="哈鲁" Type="冰" Height="48" Weight="50" Foundin="--" Food="未知" Features="斯克天生具有出众的力量，凡是让它讨厌的东西他都会毫不犹豫的挥拳挑战！" Redirect="map|alarm" Go="780;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1354" hasSound="1" DefName="斯克鲁" Type="冰" Height="215" Weight="198" Foundin="--" Food="未知" Features="哈鲁的进化形态，曾是魔神艾里克的忠实的手下，在艾里克被封印后，它也在魔神星忠实的陪伴着它。" Redirect="map|alarm" Go="780;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1353" hasSound="1" DefName="哈鲁" Type="冰" Height="48" Weight="50" Foundin="--" Food="未知" Features="斯克天生具有出众的力量，凡是让它讨厌的东西他都会毫不犹豫的挥拳挑战！" Redirect="map|alarm" Go="780;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1354" hasSound="1" DefName="斯克鲁" Type="冰" Height="215" Weight="198" Foundin="--" Food="未知" Features="哈鲁的进化形态，曾是魔神艾里克的忠实的手下，在艾里克被封印后，它也在魔神星忠实的陪伴着它。" Redirect="map|alarm" Go="780;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1355" hasSound="1" DefName="阿昂" Type="电" Height="76" Weight="42" Foundin="狮子宫" Food="未知" Features="阿昂平常是一只非常温和的精灵，但是一旦生气，全身的毛发都会竖起来。" mapID="0"/>
 	<Monster ID="1356" hasSound="1" DefName="利昂斯" Type="电" Height="135" Weight="86" Foundin="狮子宫" Food="未知" Features="利昂斯是黄金十二宫中狮子宫的守护精灵，威严高傲的它是极为出色的战士，从不轻易言败！" mapID="0"/>
 	<Monster ID="1357" hasSound="1" DefName="阿莱杰" Type="暗影" Height="68" Weight="36" Foundin="--" Food="未知" Features="阿莱杰从小加入了月影军团，接受严格的训练，希望成为军团的主要战将。" mapID="411"/>
@@ -1717,8 +1717,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1387" hasSound="1" DefName="加里斯" Type="火" Height="21" Weight="8" Foundin="南瓜星" Food="未知" Features="加里长大之后成为了一名拳击手，看似呆板的它，出拳起来却毫不含糊。" mapID="787"/>
 	<Monster ID="1388" hasSound="1" DefName="罗迪" Type="机械" Height="65" Weight="102" Foundin="--" Food="未知" Features="喜欢糖果的罗迪最期盼万圣节，因为它可以大展拳脚。普通的笑脸糖纸，被它的机械手臂扭一扭，就能成为神奇的万圣鬼脸糖。" mapID="789"/>
 	<Monster ID="1389" hasSound="1" DefName="罗斯克" Type="机械" Height="148" Weight="185" Foundin="--" Food="未知" Features="罗迪的进化形态。每年它都要制作很多的鬼脸糖，总是处于用力扭鬼脸糖的状态，它的眼睛也因此变得一大一小。" mapID="789"/>
-	<Monster ID="1390" hasSound="1" DefName="斯图拉" Type="超能" Height="61" Weight="38" Foundin="南瓜星" Food="未知" Features="身为幽灵一族的黄金家族接班人，斯图拉从小就表现出了优秀的战斗天赋和领导能力。" Redirect="map|alarm" Go="789;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1391" hasSound="1" DefName="斯图尔特" Type="超能" Height="125" Weight="69" Foundin="南瓜星" Food="未知" Features="斯图尔特是幽灵一族黄金家族的最强战力，它帮助万圣将军镇守着它的藏宝密室。" Redirect="map|alarm" Go="789;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1390" hasSound="1" DefName="斯图拉" Type="超能" Height="61" Weight="38" Foundin="南瓜星" Food="未知" Features="身为幽灵一族的黄金家族接班人，斯图拉从小就表现出了优秀的战斗天赋和领导能力。" Redirect="map|alarm" Go="789;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1391" hasSound="1" DefName="斯图尔特" Type="超能" Height="125" Weight="69" Foundin="南瓜星" Food="未知" Features="斯图尔特是幽灵一族黄金家族的最强战力，它帮助万圣将军镇守着它的藏宝密室。" Redirect="map|alarm" Go="789;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1392" hasSound="1" DefName="莱奇斯" Type="机械" Height="30" Weight="25" Foundin="--" Food="未知" Features="莱奇斯是为了进行公平审判而设计出来的智能机器人，是绝对正义的象征。" mapID="10257"/>
 	<Monster ID="1393" hasSound="1" DefName="莱伯拉" Type="机械" Height="75" Weight="50" Foundin="--" Food="未知" Features="天秤宫守护者莱伯拉，天生就是正义的使者，正直而不傲慢，是正义的审判者。" mapID="10257"/>
 	<Monster ID="1394" hasSound="1" DefName="魔化瑞诺" Type="地面 战斗" Height="50" Weight="100" Foundin="--" Food="未知" Features="瑞诺体内的邪恶能量被激活后的状态，迷失了自己的内心。" mapID="0"/>
@@ -1744,8 +1744,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1414" hasSound="1" DefName="斯卡普" Type="暗影" Height="26" Weight="11" Foundin="天蝎宫" Food="未知" Features="天蝎宫守护者斯卡普，外表凶悍而威严，天蝎宫的守护者，能够洞察一切潜在的危险，是心怀恐惧者的克星。" mapID="702"/>
 	<Monster ID="1415" hasSound="1" DefName="珊奇" Type="水" Height="32" Weight="15" Food="未知" Features="成长于厨师世家的珊奇，长大后的梦想是成为像老爸和叔叔一样的大厨。现在的它只能帮老爸洗碗，因为它好像不会点火。" mapID="77"/>
 	<Monster ID="1416" hasSound="1" DefName="珊克斯" Type="水" Height="68" Weight="36" Food="未知" Features="珊奇的进化形态。没有家族烹饪天赋的它在老爸的建议下，成为了专门照料枞树的园艺家，但它一直没有放弃儿时的厨师梦想。" mapID="77"/>
-	<Monster ID="1417" hasSound="1" DefName="里尔" Type="普通" Height="80" Weight="39" Foundin="浮空仙岛" Food="未知" Features="里尔从小就努力踏实，一直渴望成为天马一族中最出色的战士。" Redirect="map|alarm" Go="795;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1418" hasSound="1" DefName="库里" Type="普通" Height="176" Weight="75" Foundin="浮空仙岛" Food="未知" Features="里尔的进化形态，身为天马一族的大长老，库里非常好战，虽然年事已高，但是一旦遇到强者仍然跃跃欲试。" Redirect="map|alarm" Go="795;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1417" hasSound="1" DefName="里尔" Type="普通" Height="80" Weight="39" Foundin="浮空仙岛" Food="未知" Features="里尔从小就努力踏实，一直渴望成为天马一族中最出色的战士。" Redirect="map|alarm" Go="795;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1418" hasSound="1" DefName="库里" Type="普通" Height="176" Weight="75" Foundin="浮空仙岛" Food="未知" Features="里尔的进化形态，身为天马一族的大长老，库里非常好战，虽然年事已高，但是一旦遇到强者仍然跃跃欲试。" Redirect="map|alarm" Go="795;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1419" hasSound="1" DefName="布尼" Type="战斗 暗影" Height="90" Weight="58" Food="未知" Features="布尼从小就非常刻苦，一直努力锻炼自己的战斗技巧。" mapID="666"/>
 	<Monster ID="1420" hasSound="1" DefName="布奥尼" Type="战斗 暗影" Height="190" Weight="100" Food="未知" Features="神斧魔牛布奥尼，手持兽灵神斧，实力强悍，力大无比！他拥有与生俱来的战斗天性，使他擅长挑战BOSS，可以造成群体伤害，大杀四方！" mapID="666"/>
 	<Monster ID="1421" hasSound="1" DefName="阿莱耶" Type="机械 超能" Height="58cm" Weight="29kg" Food="未知" Features="阿赖耶从小就被善恶观熏习，熟悉因果律的他，相信冥冥之中只有主宰。" mapID="798"/>
@@ -1757,8 +1757,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1427" hasSound="1" DefName="格维恩" Type="火" Height="48cm" Weight="35kg" Food="未知" Features="维恩尼的进化形态，只有在感恩节当天出现。烹饪是格维恩家族的天赋，它也不负众望，成为了鼎鼎大名的星际神厨。" mapID="797"/>
 	<Monster ID="1428" hasSound="1" DefName="哈德罗卡" Type="草 暗影" Height="68" Weight="22" Foundin="--" Food="未知" Features="哈德萨吸收了神秘露晶的力量之后的草暗影系形态，认为自己才是真正的超进化。" mapID="497"/>
 	<Monster ID="1429" hasSound="1" DefName="哈德莱斯" Type="草 战斗" Height="96" Weight="31" Foundin="--" Food="未知" Features="哈德萨吸收了神秘露晶的力量之后的草战斗系形态，认为自己才是真正的超进化。" mapID="497"/>
-	<Monster ID="1430" hasSound="1" DefName="洛达尔" Type="地面" Height="95" Weight="105" Foundin="--" Food="未知" Features="洛达尔是黑色天马克利萨从小玩到大的好朋友，它的梦想是和克利萨一起成为天马星双雄！" Redirect="map|alarm" Go="799;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1431" hasSound="1" DefName="洛拉斯克" Type="地面" Height="196" Weight="298" Foundin="--" Food="未知" Features="洛拉斯克能力全开时的力量甚至可以和黑天马比美，只是它的巅峰状态的保留时间总是非常短。" Redirect="map|alarm" Go="799;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1430" hasSound="1" DefName="洛达尔" Type="地面" Height="95" Weight="105" Foundin="--" Food="未知" Features="洛达尔是黑色天马克利萨从小玩到大的好朋友，它的梦想是和克利萨一起成为天马星双雄！" Redirect="map|alarm" Go="799;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1431" hasSound="1" DefName="洛拉斯克" Type="地面" Height="196" Weight="298" Foundin="--" Food="未知" Features="洛拉斯克能力全开时的力量甚至可以和黑天马比美，只是它的巅峰状态的保留时间总是非常短。" Redirect="map|alarm" Go="799;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1432" hasSound="1" DefName="登登" Type="冰" Height="54" Weight="39" Foundin="--" Food="未知" Features="生活在天马星上的冰系精灵，爱好收集，是住在水晶岩洞里的收藏家，善良单纯，甚至愿意给与敌人足够的信任。" mapID="18"/>
 	<Monster ID="1433" hasSound="1" DefName="约兰登" Type="冰" Height="90" Weight="102" Foundin="--" Food="未知" Features="登登的进化形态。天马星的宜人气候在它看来依旧炎热不堪，它亟需赎回自己的家，所以经常能看到它寻找咯噔水晶的身影。" mapID="18"/>
 	<Monster ID="1434" hasSound="1" DefName="普普" Type="超能" Height="29" Weight="10" Foundin="--" Food="未知" Features="普普拥有高傲的眼光，只会认同有实力的强者，守护者破军封印。" mapID="733"/>
@@ -1779,8 +1779,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1449" hasSound="1" DefName="瑞德尔" Type="电 火" Height="170" Weight="105" Features="瑞普的进化形态，强大的电流充满全身，火红色的外表正为着他的威胁性，电与火完美的组合。" mapID="691"/>
 	<Monster ID="1450" hasSound="1" DefName="沃安" Type="光" Height="40" Weight="62" Features="长得可爱，并不意味着不能拥有一颗做坏蛋的雄心。沃安跟随恶灵兽，就是为了成为最具黑暗气质的灯泡。" mapID="804"/>
 	<Monster ID="1451" hasSound="1" DefName="沃力昂" Type="光" Height="120" Weight="91" Features="沃安的进化形态。生于黑暗之地，却依赖光明隐藏行踪。“我亮，我亮，沃力昂很亮”是它的口头禅。" mapID="804"/>
-	<Monster ID="1452" hasSound="1" DefName="伊索" Type="战斗" Height="60" Weight="30" Features="伊索天生神力，并且从小就在战斗中成长，积累了丰富的格斗经验。" Redirect="map|alarm" Go="803;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1453" hasSound="1" DefName="伊索里" Type="战斗" Height="180" Weight="126" Features="作为盖亚一族的家臣，伊索里一直在冰晶奇宫中默默的守护着一个秘密，它等待着盖亚一族中那个传说的天才的到来！" Redirect="map|alarm" Go="803;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1452" hasSound="1" DefName="伊索" Type="战斗" Height="60" Weight="30" Features="伊索天生神力，并且从小就在战斗中成长，积累了丰富的格斗经验。" Redirect="map|alarm" Go="803;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1453" hasSound="1" DefName="伊索里" Type="战斗" Height="180" Weight="126" Features="作为盖亚一族的家臣，伊索里一直在冰晶奇宫中默默的守护着一个秘密，它等待着盖亚一族中那个传说的天才的到来！" Redirect="map|alarm" Go="803;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1454" hasSound="1" DefName="朵纳特" Type="火 超能" Height="51" Weight="37" Features="朵纳特从小就有着不平凡的能力，它尽然可以操控龙族的力量，灵蛇一族将它视为未来的希望。" mapID="24"/>
 	<Monster ID="1455" hasSound="1" DefName="朵格尔" Type="火 超能" Height="79" Weight="69" Features="朵格尔一直在学习如何操控龙族的力量，为了肩负起灵蛇一族的使命而不断努力着。" mapID="24"/>
 	<Monster ID="1456" hasSound="1" DefName="朵格纳特" Type="火 超能" Height="191" Weight="123" Features="朵格纳特是灵蛇一族的火蛇首领，是能够融合龙族力量和灵蛇一族力量的奇才，它始终为守卫灵蛇一族的荣耀而奋战！" mapID="24"/>
@@ -1803,8 +1803,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1473" hasSound="1" DefName="亚梅迪丝" Type="超能" Height="95" Weight="40" Features="亚梅丝的超进化形态，经过祖系魂魄的洗礼，再次重生的亚梅迪丝拥有比之前更强大的力量，他所拥有的重生之力绝对让对手望尘莫及！" mapID="44"/>
 	<Monster ID="1474" hasSound="1" DefName="祖梅" Type="超能" Height="70.5" Weight="23" Features="祖系一族的新伙伴，长期生活在圣地之门中，多彩的外形是她的特点之一！" mapID="44"/>
 	<Monster ID="1475" hasSound="1" DefName="梅诺西" Type="超能" Height="82" Weight="31" Features="祖梅的进化形态，祖系一族的新成员，看守圣地之门的使者，多彩的外形显得高贵无比，千万别惹怒她哦！她的星之利刃绝对可以在无形中将对方瞬间击倒！" mapID="44"/>
-	<Monster ID="1476" hasSound="1" DefName="弗西" Type="草 暗影" Height="37" Weight="29" Features="弗西是神树精华凝聚而成的树灵，在神树之巅它的力量可以达到最巅峰！" Redirect="map|alarm" Go="810;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1477" hasSound="1" DefName="弗希斯" Type="草 暗影" Height="97" Weight="39" Features="作为神树的树灵，弗希斯同时也担负起了守护神树的职责，它和麒麟的守卫金角大魔王、银角大魔王兄弟还是好朋友！" Redirect="map|alarm" Go="810;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1476" hasSound="1" DefName="弗西" Type="草 暗影" Height="37" Weight="29" Features="弗西是神树精华凝聚而成的树灵，在神树之巅它的力量可以达到最巅峰！" Redirect="map|alarm" Go="810;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1477" hasSound="1" DefName="弗希斯" Type="草 暗影" Height="97" Weight="39" Features="作为神树的树灵，弗希斯同时也担负起了守护神树的职责，它和麒麟的守卫金角大魔王、银角大魔王兄弟还是好朋友！" Redirect="map|alarm" Go="810;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1478" hasSound="1" DefName="纳琪" Type="水 超能" Height="42" Weight="30" Features="纳琪：纳琪原本是大海中一直善良的小乌贼，在她小时候她差点死于一次污染事故，从那之后她就憎恨着这个世界！" mapID="790"/>
 	<Monster ID="1479" hasSound="1" DefName="纳琪尔" Type="水 超能" Height="79" Weight="58" Features="纳琪尔很想报复这个世界，但是苦于没有方向，在这个时候恶灵兽出现了，纳琪尔从此开始了她的追随！" mapID="790"/>
 	<Monster ID="1480" hasSound="1" DefName="纳斯琪" Type="水 超能" Height="151" Weight="84" Features="凭借着狡猾多端的诡计和强大的毒雾，纳斯琪成为恶灵兽最得力的手下，并自称：百变将军！" mapID="790"/>
@@ -1847,8 +1847,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1517" hasSound="1" DefName="比德尔" Type="超能" Height="118" Weight="59" Features="比德尔经常感到非常忧郁，因为它不会飞。但是它从未放弃飞翔的梦想！" mapID="66"/>
 	<Monster ID="1518" hasSound="1" DefName="派尔" Type="普通" Height="40" Weight="28" Features="派尔是从小喜欢玩神秘，“猜猜我是谁”是它和朋友们打招呼的不二选择。" mapID="68"/>
 	<Monster ID="1519" hasSound="1" DefName="派尔高" Type="普通" Height="67" Weight="36" Features="神秘的面罩、闪耀的耳环、玲珑的身影，派尔高是穿梭在阴影中的快乐幽灵！" mapID="68"/>
-	<Monster ID="1520" hasSound="1" DefName="鲁尔加" Type="飞行" Height="78" Weight="54" Features="鲁尔加拥有尖利的长嘴，长嘴就是它的尖刀，长嘴就是它的佩剑！" Redirect="map|alarm" Go="57;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1521" hasSound="1" DefName="克鲁斯" Type="飞行" Height="113" Weight="77" Features="克鲁斯非常的正义，路见不平，拔嘴相助是它的人生格言！" Redirect="map|alarm" Go="57;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1520" hasSound="1" DefName="鲁尔加" Type="飞行" Height="78" Weight="54" Features="鲁尔加拥有尖利的长嘴，长嘴就是它的尖刀，长嘴就是它的佩剑！" Redirect="map|alarm" Go="57;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1521" hasSound="1" DefName="克鲁斯" Type="飞行" Height="113" Weight="77" Features="克鲁斯非常的正义，路见不平，拔嘴相助是它的人生格言！" Redirect="map|alarm" Go="57;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1522" hasSound="1" DefName="瑞西" Type="水" Height="71" Weight="45" Features="瑞西天生就拥有非常大的食量，不过在它小时候它可没想到有一天这将会成为它独特的能力！" mapID="414"/>
 	<Monster ID="1523" hasSound="1" DefName="特雷西" Type="水" Height="139" Weight="72" Features="特雷西一只神秘的贪吃精灵！据说只要它靠近其它精灵就会自动吞噬它们的属性！" mapID="414"/>
 	<Monster ID="1524" hasSound="1" DefName="罗根" Type="战斗 暗影" Height="106" Weight="80" Features="罗根是狼族的天之骄子，它一出生就拥有一对削铁如泥的利爪，就连它自己都没少吃这爪子的苦头！" mapID="0"/>
@@ -1893,8 +1893,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1565" hasSound="1" DefName="狂暴电击兔" Type="电" Height="165" Weight="61" Features="电击兔的超进化形态。当电流汇聚双拳，无人敢轻视狂暴电击兔的威严。小心了，被它电到可没有任何挽回的余地哦。" mapID="815"/>
 	<Monster ID="1566" hasSound="1" DefName="火炎龙" Type="火 龙" Height="154" Weight="72" Features="火炎龙的羽翼尚未丰满，尖牙也并不能让它看起来更威严。但周身环绕的烈焰，和从不离身的法球，注定了它非同凡响的未来。" mapID="0"/>
 	<Monster ID="1567" hasSound="1" DefName="圣者炎龙" Type="火 龙" Height="289" Weight="168" Features="体内强大的火焰神力，让圣者炎龙的能力如恒星一般。掌握炽焰法球的炎龙，借助火的毁灭之力和龙的无上气场，面对敌手，一切尽在掌握。" mapID="0"/>
-	<Monster ID="1568" hasSound="1" DefName="达蒙" Type="暗影" Height="44" Weight="19" Features="生活在天蛇星的精灵达蒙，空有看似阴暗的外表，呆滞的眼神却出卖了它单纯善良的内心。它盼望长大，这样它就能肩负起时间赋予的艰巨使命——守护时间。" Redirect="map|alarm" Go="74;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1569" hasSound="1" DefName="达蒙特" Type="暗影" Height="71" Weight="32" Features="冷寂的谜域之门，沉默的古老雕像…行迹难觅，喜怒无常。守护时间秘密的达蒙特，一直在这里，等待宿命的勇者将它唤醒。" Redirect="map|alarm" Go="74;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1568" hasSound="1" DefName="达蒙" Type="暗影" Height="44" Weight="19" Features="生活在天蛇星的精灵达蒙，空有看似阴暗的外表，呆滞的眼神却出卖了它单纯善良的内心。它盼望长大，这样它就能肩负起时间赋予的艰巨使命——守护时间。" Redirect="map|alarm" Go="74;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1569" hasSound="1" DefName="达蒙特" Type="暗影" Height="71" Weight="32" Features="冷寂的谜域之门，沉默的古老雕像…行迹难觅，喜怒无常。守护时间秘密的达蒙特，一直在这里，等待宿命的勇者将它唤醒。" Redirect="map|alarm" Go="74;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1570" hasSound="1" DefName="小梦龙" Type="机械 龙" Height="76" Weight="85" Features="小梦龙活泼可爱，对世界充满好奇，全身散发着未知的力量。" mapID="674"/>
 	<Monster ID="1571" hasSound="1" DefName="梦龙" Type="机械 龙" Height="139" Weight="112" Features="小梦龙的进化形态，从未见过的强大精灵，梦魇一般的存在。" mapID="674" nature="保守"/>
 	<Monster ID="1572" hasSound="1" DefName="数码梦龙" Type="机械 龙" Height="215" Weight="197" Features="守护龙族的孤傲战神，掌握数码的力量，并能制造虚拟幻境，在战斗中寻找生存的意义，与龙族同生共死。" mapID="674" nature="保守"/>
@@ -1924,8 +1924,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1594" hasSound="1" DefName="科洛迪" Type="机械" Height="136" Weight="70" Features="始终保持捣蛋鬼笑容的科洛迪，性格超级忠厚老实哦。自从变成精灵后，它就想张开双臂拥抱所有遇见的赛尔和精灵。它十分感谢泽拉斯的授业解惑，它也在默默感谢曾经不怀好意的兰帕德。" mapID="0"/>
 	<Monster ID="1595" hasSound="1" DefName="凯瑞" Type="草 战斗" Height="43" Weight="20" Features="凯瑞头上的真的不是假发！从小就拥有一头彩虹色头发的凯瑞，是马戏团里最臭美的精灵。但其它伙伴总说它戴着假发。看，都把凯瑞的脸气绿了。" mapID="77"/>
 	<Monster ID="1596" hasSound="1" DefName="辛凯瑞" Type="草 战斗" Height="79" Weight="38" Features="自从脸色变成绿色以后，辛凯瑞就爱上收集面具了。它给自己取了个响亮的名号：面具怪杰。作为奇幻马戏团的首席小丑，它拥有最帅气的背带裤和最精彩的抛接球表演，不过表演道具是面具哦。" mapID="77"/>
-	<Monster ID="1597" hasSound="1" DefName="弗斯" Type="水 暗影" Height="80" Weight="61" Features="坚硬的外壳是弗斯的天然盾牌，它拥有着强大的防御能力，小小的外形下却蕴含着勇猛的潮汐之力！" Redirect="map|alarm" Go="79;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1598" hasSound="1" DefName="里弗斯" Type="水 暗影" Height="172" Weight="87" Features="里弗斯是弗斯的进化形态，它的生命力得到了极大的提升，见证了无数的风起云涌，能够娴熟的运用海洋之力来进行攻击和防御。" Redirect="map|alarm" Go="79;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1597" hasSound="1" DefName="弗斯" Type="水 暗影" Height="80" Weight="61" Features="坚硬的外壳是弗斯的天然盾牌，它拥有着强大的防御能力，小小的外形下却蕴含着勇猛的潮汐之力！" Redirect="map|alarm" Go="79;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1598" hasSound="1" DefName="里弗斯" Type="水 暗影" Height="172" Weight="87" Features="里弗斯是弗斯的进化形态，它的生命力得到了极大的提升，见证了无数的风起云涌，能够娴熟的运用海洋之力来进行攻击和防御。" Redirect="map|alarm" Go="79;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1599" hasSound="1" DefName="斯科" Type="战斗" Height="42" Weight="20" Features="世世代代生活在谜域之门，神秘却单纯，可爱的样貌背后却隐藏的巨大的爆发力。" mapID="74"/>
 	<Monster ID="1600" hasSound="1" DefName="斯科瑞" Type="战斗" Height="68" Weight="29" Features="性格温顺，爱护朋友。厚重的手掌力大无穷。巨大的爆发力让他成为战斗系精灵中的佼佼者。" mapID="74"/>
 	<Monster ID="1601" hasSound="1" DefName="希尔娜" Type="超能 冰" Height="53" Weight="19" Features="散发神秘气息的幽蓝肤色，蕴含无穷潜能的气场，人小鬼大的希尔娜，正在默默积蓄力量，等待属于自己的时代到来。"/>
@@ -1991,8 +1991,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1661" hasSound="1" DefName="迪蒙" Type="暗影" Height="157" Weight="71" Features="诡计多端的阴谋家，宇宙中潜行的危险人物，不俗的实力让赛尔们时刻警惕着他的威胁，却也无法完全预知他的下一次来袭。" mapID="0"/>
 	<Monster ID="1662" hasSound="1" DefName="斯拉克" Type="水" Height="52" Weight="30" Features="生活在蔚蓝的大海中，出没于皎洁的月光下，不要轻易被美好的假象欺骗，当你沉醉在她动人的歌声中时，也许正是她在对你发动致命一击。" mapID="29"/>
 	<Monster ID="1663" hasSound="1" DefName="斯拉达" Type="水" Height="134" Weight="69" Features="水生的鲛人一族拥有传说中神秘的能力，大海赐予了她们未知的能力。当母爱燃烧时，还会爆发出惊人的力量！" mapID="29"/>
-	<Monster ID="1666" hasSound="1" DefName="奥普斯" Type="电 火" Height="84" Weight="53" Features="灵敏的身手可以快速地躲避攻击，迅速地出招让对手无从设防。电与火赐予他的天赋丝毫没有浪费，弹指之间爆发出的惊人力量足以让万物灰飞烟灭。" Redirect="map|alarm" Go="88;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1667" hasSound="1" DefName="奥德斯" Type="电 火" Height="179" Weight="70" Features="掌握雷电与火焰力量的神秘精灵，高傲的外表下流动着一颗不羁的心灵，只有真正的强者才能得到他的尊重和认可。" Redirect="map|alarm" Go="88;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1666" hasSound="1" DefName="奥普斯" Type="电 火" Height="84" Weight="53" Features="灵敏的身手可以快速地躲避攻击，迅速地出招让对手无从设防。电与火赐予他的天赋丝毫没有浪费，弹指之间爆发出的惊人力量足以让万物灰飞烟灭。" Redirect="map|alarm" Go="88;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1667" hasSound="1" DefName="奥德斯" Type="电 火" Height="179" Weight="70" Features="掌握雷电与火焰力量的神秘精灵，高傲的外表下流动着一颗不羁的心灵，只有真正的强者才能得到他的尊重和认可。" Redirect="map|alarm" Go="88;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1668" hasSound="1" DefName="布恩" Type="暗影" Height="36" Weight="15" Features="黑夜给了他黑色的皮肤，是为了让他便于在黑夜中潜行。敏捷的速度，果断的出手，在最不易被发觉的时候，他已经让对手倒下。" mapID="5"/>
 	<Monster ID="1669" hasSound="1" DefName="布鲁斯" Type="暗影" Height="147" Weight="59" Features="夜空中飘逸的舞者，修长的双翼在夜空中画出华美的舞步，追击着每一个敌人，扬善除恶，维护正义，他从未忘记自己的使命。" mapID="5"/>
 	<Monster ID="1670" hasSound="1" DefName="沃克" Type="地面" Height="60" Weight="46" Features="岩石一般坚强的外表，严峻地审视着这世界的一切，大地赐予他生命和力量，他也将用尽一生守护他生活的这片大地。" mapID="102"/>
@@ -2046,8 +2046,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1719" hasSound="1" DefName="艾伯希娜" Type="龙" Height="197" Weight="109" Features="暗黑之神第四神使，龙系的血统赐予了她与生俱来的高贵气息，力量与敏捷也完美地结合在她身上，一身坚甲和利爪告诉别人，她无坚不摧而又不容侵犯。" mapID="92"/>
 	<Monster ID="1720" hasSound="1" DefName="沃尔" Type="地面 战斗" Height="43" Weight="26" Features="四周年庆典吉祥物精灵，他的意外出现给庆典增添了许多欢乐的气息，可爱的外形让他集万千宠爱于一身，大家的照料和关爱都让他快速地成长着。" mapID="0"/>
 	<Monster ID="1721" hasSound="1" DefName="沃尔德" Type="地面 战斗" Height="133" Weight="58" Features="不断的成长终于让人认清他并非单纯是一个喜庆的玩物，彪悍的外形，强健的四肢都是他强大战力的体现，但是时间并不能改变本性，他将一直感恩大家的关爱。" mapID="0"/>
-	<Monster ID="1722" hasSound="1" DefName="奈美" Type="火" Height="51" Weight="20" Features="麦兹星的小天使，无忧无虑地和小熊一起生活，直到一天海盗的出现打破了这种平静，海盗的无情和残忍终于激发出她内心的能力，战魔之女从此诞生。" Redirect="map|alarm" Go="494;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1723" hasSound="1" DefName="安奈美" Type="火" Height="146" Weight="75" Features="强悍的战魔之女，心爱的小熊玩偶幻化成为了她最忠实的战友，二者亲密无间的配合,能够爆发出更强大的战力。" Redirect="map|alarm" Go="494;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1722" hasSound="1" DefName="奈美" Type="火" Height="51" Weight="20" Features="麦兹星的小天使，无忧无虑地和小熊一起生活，直到一天海盗的出现打破了这种平静，海盗的无情和残忍终于激发出她内心的能力，战魔之女从此诞生。" Redirect="map|alarm" Go="494;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1723" hasSound="1" DefName="安奈美" Type="火" Height="146" Weight="75" Features="强悍的战魔之女，心爱的小熊玩偶幻化成为了她最忠实的战友，二者亲密无间的配合,能够爆发出更强大的战力。" Redirect="map|alarm" Go="494;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1724" hasSound="1" DefName="弗艾尔" Type="火" Height="21" Weight="8.5" Features="火系的能力为周年庆典增添了喜庆，精彩的表演吸引了所有人的目光，一个活泼可爱的使者，可以把欢乐的气息带到庆典的每一个角落。" mapID="77"/>
 	<Monster ID="1725" hasSound="1" DefName="弗莱尔" Type="火" Height="49" Weight="18" Features="游走在庆典的盛会，感受着庆典的欢乐，燃烧的火焰点燃庆典的激情，大红的形象昭示着喜庆的气息，快乐的表情真诚地让你不能怀疑。" mapID="77"/>
 	<Monster ID="1726" hasSound="1" DefName="凯尔" Type="普通" Height="26" Weight="5" Features="凯特斯的第一形态，美丽的小蛋糕头上还点缀着尚未绽放的樱桃，蛋糕的甜美可以吸引所有人的目光，但不是所有人都可以获得她的眷顾。" mapID="77"/>
@@ -2132,8 +2132,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1802" hasSound="1" DefName="厄齐尔" Type="水 超能" Height="115" Weight="37" Features="地球守护兽，来自太阳系的行星守护兽迷失在破碎的时空中，同时还受到了黑暗的污染，在小赛尔们的帮助下，厄齐尔终于摆脱了黑暗的污染和控制，重新成为英姿飒爽的地球守护者。" mapID="0"/>
 	<Monster ID="1805" hasSound="1" DefName="艾格诺斯" Type="超能" Height="110" Weight="45" Features="艾斯菲格超进化最终形态——艾格诺斯，艾格诺斯的精神力已经达到了巅峰，控制对手的心神对他而言已经只是雕虫小技。" mapID="103"/>
 	<Monster ID="1806" hasSound="1" DefName="克萨雷恩" Type="暗影" Height="99" Weight="106" Features="黑天马的超进化形态，瑰丽的双翼、矫健的四肢，浑身上下散发着王者的威严，实力丝毫不逊色于圣光天马。" mapID="14"/>
-	<Monster ID="1807" hasSound="1" DefName="加安" Type="火 超能" Height="79" Weight="35" Features="加蒂安的初级形态，鬃毛上的超能之火是他作为神灵守护者的象征，与生俱来的高贵血统赋予了他强大的力量。" Redirect="map|alarm" Go="938;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1808" hasSound="1" DefName="加蒂安" Type="火 超能" Height="173" Weight="91" Features="神灵之巅的上古时代守卫者加蒂安，强壮的躯体蕴含着无与伦比的能量，镇守着普罗特星一方的安宁。" Redirect="map|alarm" Go="938;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1807" hasSound="1" DefName="加安" Type="火 超能" Height="79" Weight="35" Features="加蒂安的初级形态，鬃毛上的超能之火是他作为神灵守护者的象征，与生俱来的高贵血统赋予了他强大的力量。" Redirect="map|alarm" Go="938;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1808" hasSound="1" DefName="加蒂安" Type="火 超能" Height="173" Weight="91" Features="神灵之巅的上古时代守卫者加蒂安，强壮的躯体蕴含着无与伦比的能量，镇守着普罗特星一方的安宁。" Redirect="map|alarm" Go="938;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1809" hasSound="1" DefName="迪文" Type="光" Height="110" Weight="46" Features="迪文的身世一直是一个迷，以前没有人知道，以后也不会有人知道。" mapID="939"/>
 	<Monster ID="1810" hasSound="1" DefName="迈迪文" Type="光" Height="170" Weight="69" Features="神秘的光之守护者，来自异世界的先知。" mapID="939"/>
 	<Monster ID="1811" hasSound="1" DefName="小蛛" Type="战斗 暗影" Height="31" Weight="27" Features="地狱魔蛛的初始形态，小蛛还没有受到黑暗之力的污染，只是一只普普通通的蜘蛛。"/>
@@ -2177,8 +2177,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1849" hasSound="1" DefName="雷米勒" Type="飞行 超能" Height="76" Weight="29" Features="灵兽祖师的秘传弟子雷米勒，相比佩特，他的能力更加高超，但由于性格的原因，他并不喜欢和其他精灵呆在一起，是一直十分孤单的精灵。" mapID="0"/>
 	<Monster ID="1850" hasSound="1" DefName="伊兰迪" Type="电" Height="135" Weight="32" Features="来自异世界的暗黑战神联盟，是雷伊的对应黑暗面，和雷伊一样，在暗黑战神联盟中拥有最强的实力。" mapID="819"/>
 	<Monster ID="1851" hasSound="1" DefName="格莱奥" Type="地面 暗影" Height="99" Weight="28" Features="来自异世界的暗黑战神联盟，是卡修斯的对应黑暗面，原本充满正直的外表和眼神现在变得只有无边的黑暗和邪恶" mapID="819"/>
-	<Monster ID="1852" hasSound="1" DefName="哈耶" Type="普通" Height="99" Weight="23" Features="哈耶克的第一形态，全身缠裹着的绷带隐藏的秘密没有任何人知道，但是可以确定的是他是一个不折不扣的旅行爱好者，宇宙的各个角落都有过他的足迹。" Redirect="map|alarm" Go="461;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1853" hasSound="1" DefName="哈耶克" Type="普通" Height="171" Weight="51" Features="格莱奥的强劲对手，自由者哈耶克，曾被格莱奥用卑鄙伎俩击败后困在菲尔纳星的赫鲁卡城。他一心向往着自由，灵魂是永远无法被束缚的。" Redirect="map|alarm" Go="461;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1852" hasSound="1" DefName="哈耶" Type="普通" Height="99" Weight="23" Features="哈耶克的第一形态，全身缠裹着的绷带隐藏的秘密没有任何人知道，但是可以确定的是他是一个不折不扣的旅行爱好者，宇宙的各个角落都有过他的足迹。" Redirect="map|alarm" Go="461;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1853" hasSound="1" DefName="哈耶克" Type="普通" Height="171" Weight="51" Features="格莱奥的强劲对手，自由者哈耶克，曾被格莱奥用卑鄙伎俩击败后困在菲尔纳星的赫鲁卡城。他一心向往着自由，灵魂是永远无法被束缚的。" Redirect="map|alarm" Go="461;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1854" hasSound="1" DefName="斯坦" Type="飞行 龙" Height="105" Weight="41" Features="黄金飞龙斯坦利的第一形态，年幼时他就被龙族认定是在飞行方面最有才华，最优天赋的幼龙之一，身体的结构无疑是为了超高速飞行而构造的。" mapID="0"/>
 	<Monster ID="1855" hasSound="1" DefName="斯坦利" Type="飞行 龙" Height="340" Weight="111" Features="黄金飞龙斯坦利，龙王子哈克萨斯超进化前的秘密贴身护卫，深受着哈克萨斯的信任，他的能力也是如同他所得到的一样强劲无比。" mapID="0"/>
 	<Monster ID="1856" hasSound="1" DefName="科雷" Type="机械 超能" Height="87" Weight="41" Features="科雷傲的第一形态，科雷，在他的身上可以看到这个宇宙中一切最尖端的科学技术，核能军刀，磁振粒子炮，这一切装备都能让他在战斗中如虎添翼。" mapID="0"/>
@@ -2218,8 +2218,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1888" hasSound="1" DefName="阿尔扎" Type="暗影" Height="176" Weight="77" Features="月影军团的老大阿尔扎，他是月英军团的幕后操控人，屡次的失败使他忍无可，终于在今年的月光之战亲自上阵，妄图抢走月光一族的宝物。" mapID="950"/>
 	<Monster ID="1889" hasSound="1" DefName="维尔" Type="暗影" Height="59" Weight="17" Features="维尔和泰兰德同样来自月影战士组织，不同的是她从小就没有任何的亲人、朋友，孤僻的性格使她在组织的培养下逐渐变为一个残酷无情的冷血猎手。" mapID="0"/>
 	<Monster ID="1890" hasSound="1" DefName="玛维" Type="暗影" Height="145" Weight="35" Features="玛维隶属于月影战士组织，她的任务是追杀那些欺负弱小的邪恶精灵，即使是在月圆之夜，性格孤僻的她也很少出现任何人的眼前，在人们的背后默默奉献是她唯一的信条。" mapID="0"/>
-	<Monster ID="1891" hasSound="1" DefName="阿索克" Type="电" Height="78" Weight="22" Features="阿索克是电系的精灵，和快速的闪电一样，他的脾气也是十分的暴躁，一遇到什么不开心的事情就会大发雷霆、大打出手。" Redirect="map|alarm" Go="411;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1892" hasSound="1" DefName="阿索卡" Type="电" Height="135" Weight="48" Features="脾气暴躁的阿索卡本性并不坏，他在被盖亚击败后虚心承认了自己内在性格的缺陷，决心接受所有人的挑战来锻炼自己的心神性格以使自身达的新的高度。" Redirect="map|alarm" Go="411;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1891" hasSound="1" DefName="阿索克" Type="电" Height="78" Weight="22" Features="阿索克是电系的精灵，和快速的闪电一样，他的脾气也是十分的暴躁，一遇到什么不开心的事情就会大发雷霆、大打出手。" Redirect="map|alarm" Go="411;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1892" hasSound="1" DefName="阿索卡" Type="电" Height="135" Weight="48" Features="脾气暴躁的阿索卡本性并不坏，他在被盖亚击败后虚心承认了自己内在性格的缺陷，决心接受所有人的挑战来锻炼自己的心神性格以使自身达的新的高度。" Redirect="map|alarm" Go="411;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1893" hasSound="1" DefName="加雷" Type="火 超能" Height="65" Weight="48" Features="加雷斯的第一形态加雷，加雷是住在岩浆内的奇特精灵，沐浴在岩浆之中的生活使得他练就了一副坚不可摧的熔岩外壳，从不畏惧高温是他的最大特点。" mapID="103"/>
 	<Monster ID="1894" hasSound="1" DefName="加雷斯" Type="火 超能" Height="134" Weight="109" Features="火山星原本一片祥和、安宁，但是在不久之前一阵异动引发了火山星火山的喷发，火山星的守护者——加雷斯逐渐苏醒，誓要查明事情的真相！" mapID="103"/>
 	<Monster ID="1895" hasSound="1" DefName="阿莫" Type="光" Height="25" Weight="8" Features="莫可可的第一形态，可爱的她最喜欢恶作剧了，常常有一些令人意想不到的鬼点子。" mapID="77"/>
@@ -2249,8 +2249,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1919" hasSound="1" DefName="肯莱" Type="草 暗影" Height="35" Weight="15" Features="肯巴莱塔的第一形态，为了肩负起保护双子星精灵的重担，他决定来到逆界之门寻找玛法里奥锻炼自己的实力，获得超强的能量。" mapID="949"/>
 	<Monster ID="1920" hasSound="1" DefName="肯莱克" Type="草 暗影" Height="87" Weight="27" Features="肯巴莱塔的第二形态，玛法里奥的教导逐渐起到了效果，肯莱进化成为了肯来克，能量还再不断的聚集，他一定能成为足够强大能保护双子星精灵的超强高手！" mapID="949"/>
 	<Monster ID="1921" hasSound="1" DefName="肯巴莱塔" Type="草 暗影" Height="143" Weight="57" Features="双子星兄弟——肯迪特和肯扎德的守护者，肯巴莱塔，兼备有草系和暗影系能量的他无疑是一个比肯迪特和肯扎德更加强大的存在。" mapID="949"/>
-	<Monster ID="1922" hasSound="1" DefName="雅库" Type="机械" Height="88" Weight="61" Features="雅库布的第一形态雅库，海盗的制造品，但是由于海盗技术不精，常常会出现一些小问题。" Redirect="map|alarm" Go="948;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1923" hasSound="1" DefName="雅库布" Type="机械" Height="164" Weight="89" Features="海盗创造的机械体雅库布，被暗黑魔君灌注了黑暗能量后成为了索伦森星的守卫者，但仍然是一个讲道理的精灵，被击败后会承认对手的强大。" Redirect="map|alarm" Go="948;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1922" hasSound="1" DefName="雅库" Type="机械" Height="88" Weight="61" Features="雅库布的第一形态雅库，海盗的制造品，但是由于海盗技术不精，常常会出现一些小问题。" Redirect="map|alarm" Go="948;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1923" hasSound="1" DefName="雅库布" Type="机械" Height="164" Weight="89" Features="海盗创造的机械体雅库布，被暗黑魔君灌注了黑暗能量后成为了索伦森星的守卫者，但仍然是一个讲道理的精灵，被击败后会承认对手的强大。" Redirect="map|alarm" Go="948;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1924" hasSound="1" DefName="泽瑞" Type="冰" Height="43" Weight="21" Features="泽瑞拉的第一形态泽瑞，小泽瑞出生在只有冬天的冰雪之城，由于环境的影响，泽瑞熟悉了各种寒冰的力量并练就了强大了力量，成为了冰雪之城的守护者。" mapID="695"/>
 	<Monster ID="1925" hasSound="1" DefName="泽瑞拉" Type="冰" Height="86" Weight="34" Features="千年冰兽泽瑞拉，千年冰魄的守护者，他是一只不会轻易服输的精灵，只有通过各种方式战胜他才能得到他的认可，并得到千年冰魄。" mapID="695"/>
 	<Monster ID="1926" hasSound="1" DefName="凯利斯" Type="地面 暗影" Height="81" Weight="41" Features="地狱魔牛凯利斯的第一形态，他与阿宝从小就生活在一起，是一对好朋友，也是好对手，他们相互挑战，相互提升着他们的力量，他们最终的目标都是成为一位实力高超的武斗家。" mapID="0"/>
@@ -2290,8 +2290,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1960" hasSound="1" DefName="黄金天马" Type="飞行 光" Height="220" Weight="115" Features="苍穹巨变！神威如狱，一切都在等待黄金天马去终结！伴着黄金战甲的降临，天马一族皇者——黄金天马震撼降临，四神兽同时现时赐予祝福之力，你就是未来的明星！" mapID="960" Target="150088"/>
 	<Monster ID="1961" hasSound="1" DefName="加西" Type="水" Height="14" Weight="0.5" Features="小小水母无忧无虑，每天都在星球的海洋中遨游，过着自由自在的生活！" mapID="0"/>
 	<Monster ID="1962" hasSound="1" DefName="加非西" Type="水" Height="58" Weight="2.8" Features="加非西是一个神秘的海洋精灵，只要到有海洋的地方加非西的力量就会变得无比强大，而代价就是如果长时间的脱水就会让加非西变得十分虚弱无力！" mapID="0"/>
-	<Monster ID="1963" hasSound="1" DefName="拉蒙" Type="地面" Height="25" Weight="7" Features="德拉蒙的第一形态，鼹鼠的天性就是在自己的居住地四处打洞，洞越多就越难以被天敌消灭，练就了多年钻洞技巧的拉蒙一定会成为一个钻头明星！" Redirect="map|alarm" Go="459;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1964" hasSound="1" DefName="德拉蒙" Type="地面" Height="45" Weight="14" Features="菲尔纳星的土著居民，暴躁的鼹鼠——德拉蒙。德拉蒙是一位钻洞好手，一生都在追求最高的钻洞技巧，至于这种钻洞技巧到底有什么用，我们也不知道！" Redirect="map|alarm" Go="459;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1963" hasSound="1" DefName="拉蒙" Type="地面" Height="25" Weight="7" Features="德拉蒙的第一形态，鼹鼠的天性就是在自己的居住地四处打洞，洞越多就越难以被天敌消灭，练就了多年钻洞技巧的拉蒙一定会成为一个钻头明星！" Redirect="map|alarm" Go="459;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1964" hasSound="1" DefName="德拉蒙" Type="地面" Height="45" Weight="14" Features="菲尔纳星的土著居民，暴躁的鼹鼠——德拉蒙。德拉蒙是一位钻洞好手，一生都在追求最高的钻洞技巧，至于这种钻洞技巧到底有什么用，我们也不知道！" Redirect="map|alarm" Go="459;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1965" hasSound="1" DefName="诺迪" Type="普通" Height="77" Weight="41" Features="来自第六星系的上古魔枭，魔枭体内含有各种元素和属性的力量，这就是第六星系的神秘来客！第六星系的神秘面纱即将揭开！" mapID="730"/>
 	<Monster ID="1966" hasSound="1" DefName="诺狄拉" Type="冰" Height="143" Weight="69" Features="激活了冰系能量的魔枭分身，是获得魔枭真身的必备精灵之一，冰的力量在它身上体现的淋漓尽致。" mapID="730"/>
 	<Monster ID="1967" hasSound="1" DefName="诺克斯" Type="地面" Height="141" Weight="78" Features="激活了冰系能量的魔枭分身，是获得魔枭真身的必备精灵之一，地面的力量在它身上体现的淋漓尽致。" mapID="730"/>
@@ -2321,8 +2321,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="1991" hasSound="1" DefName="泽尼森" Type="光" Height="87" Weight="41" Features="来自第六星系的光系精灵——泽尼森，泽尼森会使用创世之神所创造的技能幻化之术，可以变成其他精灵的样子，想要击败它真的是难上加难！" mapID="951"/>
 	<Monster ID="1992" hasSound="1" DefName="艾西娅" Type="草 超能" Height="55" Weight="15" Features="草超能系训练师之门的通关奖励，它象征着草超能系训练师的最高荣誉！" mapID="503"/>
 	<Monster ID="1993" hasSound="1" DefName="艾米西娅" Type="草 超能" Height="102" Weight="34" Features="草超能系训练师之门的通关奖励，它象征着草超能系训练师的最高荣誉！" mapID="503"/>
-	<Monster ID="1994" hasSound="1" DefName="克扎" Type="机械 超能" Height="49" Weight="21" Foundin="巴斯星" Features="小弹簧克扎，因为是被制造出来的机械体，克扎从来都不知道自己的父母是谁，但它一直坚信着他们有一天一顶会回来。" Redirect="map|alarm" Go="721;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="1995" hasSound="1" DefName="克雷扎" Type="机械 超能" Height="133" Weight="52" Foundin="巴斯星" Features="争强好胜的弹簧人克雷扎，成为大家的偶像是它的梦想，克雷扎一直坚信等当自己成为了大家的偶像后爸爸妈妈就会回来看它！而且它也在一直在为自己的梦想而努力奋斗！" Redirect="map|alarm" Go="721;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="1994" hasSound="1" DefName="克扎" Type="机械 超能" Height="49" Weight="21" Foundin="巴斯星" Features="小弹簧克扎，因为是被制造出来的机械体，克扎从来都不知道自己的父母是谁，但它一直坚信着他们有一天一顶会回来。" Redirect="map|alarm" Go="721;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="1995" hasSound="1" DefName="克雷扎" Type="机械 超能" Height="133" Weight="52" Foundin="巴斯星" Features="争强好胜的弹簧人克雷扎，成为大家的偶像是它的梦想，克雷扎一直坚信等当自己成为了大家的偶像后爸爸妈妈就会回来看它！而且它也在一直在为自己的梦想而努力奋斗！" Redirect="map|alarm" Go="721;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="1996" hasSound="1" DefName="小佩" Type="飞行" Height="38" Weight="8" Features="佩佩的第一形态，小佩在长大之前身体还是非常匀称的，身材娇小，可以快速的飞行。" mapID="0"/>
 	<Monster ID="1997" hasSound="1" DefName="佩佩" Type="飞行" Height="88" Weight="32" Features="佩佩的翅膀非常小，想要飞起来会很吃力，但是这并不影响它骄傲的心，因为它一直有一个成为凤凰的梦想！" mapID="0"/>
 	<Monster ID="1998" hasSound="1" DefName="雷尔" Type="次元" Height="67" Weight="18" Features="雷利的第一形态，手中的次元之刃是它的代表，也是它一生追求正义信念的证据。" mapID="0"/>
@@ -2588,8 +2588,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2259" hasSound="1" DefName="卡维特" Type="电 冰" Height="188" Weight="112" Features="卡维特是一只全身布满雷电的冰霜巨兽，生活在寒冷地带的卡维特可以使用寒冰的力量保护自己，同时使用雷电的力量攻击敌人。" mapID="0"/>
 	<Monster ID="2260" hasSound="1" DefName="阿超" Type="飞行 超能" Height="88" Weight="32" Features="阿超是马超的第一形态，具有了飞行能力的阿超在于其他猛将对决时占尽了绝对优势，在速度上他无以伦比，在攻击力上他也能力出众。" mapID="97"/>
 	<Monster ID="2261" hasSound="1" DefName="马超" Type="飞行 超能" Height="181" Weight="68" Features="神兵天降——马超！最快，最强是他毕生的目标，长矛和银盔是他最喜爱的武器和披挂，在战斗中他总是那颗最耀眼的明星！" mapID="97"/>
-	<Monster ID="2262" hasSound="1" DefName="伊特" Type="电" Height="54" Weight="24" Features="伊特是伊森特的第一形态，浑身带电的伊特在生活中总是要找到补充能量的地方，他最喜欢呆在有重组电能的空间站上。" Redirect="map|alarm" Go="424;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="2263" hasSound="1" DefName="伊森特" Type="电" Height="143" Weight="74" Foundin="空间补给站" Features="伊森特是一只雷电系的猛兽，因为空间补给站有强大的电能泄露，伊森特经常会在电量充足的地方睡懒觉以补充自己的电能。" Redirect="map|alarm" Go="424;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2262" hasSound="1" DefName="伊特" Type="电" Height="54" Weight="24" Features="伊特是伊森特的第一形态，浑身带电的伊特在生活中总是要找到补充能量的地方，他最喜欢呆在有重组电能的空间站上。" Redirect="map|alarm" Go="424;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="2263" hasSound="1" DefName="伊森特" Type="电" Height="143" Weight="74" Foundin="空间补给站" Features="伊森特是一只雷电系的猛兽，因为空间补给站有强大的电能泄露，伊森特经常会在电量充足的地方睡懒觉以补充自己的电能。" Redirect="map|alarm" Go="424;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2264" hasSound="1" DefName="防御史莱姆" Type="战斗" Height="54" Weight="10.6" Features="史莱姆王国中的防御之王，坚实的身躯和强大的盾牌让他成为历史上防御最高最高的史莱姆，同时也是防御最高最高的精灵！" mapID="983"/>
 	<Monster ID="2265" hasSound="1" DefName="比博" Type="光" Height="90" Weight="32" Features="比博是博比特的第一形态，和所有的北斗神将一样，天生力大无穷，拥有较高的神性，对各种攻击的低于能力较强。" mapID="0"/>
 	<Monster ID="2266" hasSound="1" DefName="博比特" Type="光" Height="143" Weight="81" Features="北斗七神将中的第二位——天璇星守护博比特，博比特是一位争强好胜的斗士，无论在多强大的对手面前都会跃跃欲试，想要上前挑战一番。" mapID="0"/>
@@ -2778,8 +2778,8 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2451" DefName="尤尼瑞斯" Type="战斗 暗影" Height="175" Weight="75" Features="尤尼萨获得邪灵光环之后的形态，光光靠气场就能使敌人退避三舍。" mapID="68"/>
 	<Monster ID="2452" DefName="拉姆" Type="战斗 火" Height="100" Weight="50" Features="拉姆塞的小形态，有着与生俱来的领袖气质！" mapID="0"/>
 	<Monster ID="2453" DefName="拉姆塞" Type="战斗 火" Height="190" Weight="99" Features="魔界大陆的守护者之一，见到他的人就如同见到了末日！" mapID="0"/>
-	<Monster ID="2454" DefName="鲁鲁" Type="冰" Height="75" Weight="10" Features="从小就有着卓越的音乐天赋，非常喜欢和异性打交道" Redirect="map|alarm" Go="967;挑战《赛尔号巅峰之战》SPT副本获得！"/>
-	<Monster ID="2455" DefName="布鲁克" Type="冰" Height="175" Weight="50" Features="宇宙闻名的音乐才子，不知道是不是外表的关系，他现在还是单身" Redirect="map|alarm" Go="967;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2454" DefName="鲁鲁" Type="冰" Height="75" Weight="10" Features="从小就有着卓越的音乐天赋，非常喜欢和异性打交道" Redirect="map|alarm" Go="967;挑战《赛尔号》（微端）SPT副本获得！"/>
+	<Monster ID="2455" DefName="布鲁克" Type="冰" Height="175" Weight="50" Features="宇宙闻名的音乐才子，不知道是不是外表的关系，他现在还是单身" Redirect="map|alarm" Go="967;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2456" DefName="寂灭小神" Type="电 冰" Height="83" Weight="45" Features="寂灭魔神的小形态，从小就在魔界进行严酷修行的他有着同龄人无法比拟的实力" mapID="0"/>
 	<Monster ID="2457" DefName="寂灭魔神" Type="电 冰" Height="183" Weight="75" Features="魔界四魔神之一，其强悍的实力连其他三位魔神也对他畏惧三分" mapID="0"/>
 	<Monster ID="2458" DefName="艾妮" Type="冰 龙" Height="63" Weight="49" Features="艾尼维亚的小形态，被冰晶环绕的躯体使得周围的环境温度即使在夏天也会非常的凉爽" mapID="0"/>
@@ -2830,7 +2830,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2504" DefName="月月" Type="超能 冰" Height="80" Weight="33" Features="苍白之瀑下凝聚千年的冰晶精灵，具有极强的魔力。" mapID="1028" Target="150156"/>
 	<Monster ID="2505" DefName="冥王·苍月" Type="超能 冰" Height="178" Weight="45" Features="冰晶精灵经过冥界的变迁逐渐学习了更加高强的魔法，成为第四位冥王—苍月！" mapID="1028"/>
 	<Monster ID="2506" DefName="小斗斗" Type="草 战斗" Height="87" Weight="125" Features="从小生活在蛮荒之地的他极为顽强的生命力，看他的大大的肚子就是很好地证明" mapID="1006"/>
-	<Monster ID="2507" DefName="斗魔旺乔" Type="草 战斗" Height="150" Weight="550" Features="随着时间的推移，这只小胖子已经慢慢长大，不但实力上升了许多，肚子貌似也大了不少" Redirect="map|alarm" Go="1006;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2507" DefName="斗魔旺乔" Type="草 战斗" Height="150" Weight="550" Features="随着时间的推移，这只小胖子已经慢慢长大，不但实力上升了许多，肚子貌似也大了不少" Redirect="map|alarm" Go="1006;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2508" DefName="焱武圣尊" Type="光 战斗" Height="201" Weight="102" Features="两位天尊终于合体召唤出了仅存在于传说之中的焱武圣尊，似乎已经没有什么精灵能够打败他了" mapID="1011" jumptarget="18/4_1/1" Target="164110"/>
 	<Monster ID="2509" DefName="诺伊尔顿" Type="暗影" Height="190" Weight="101" Features="诺伊尔的超进化形态，得到黑暗之力的他变得更加的邪恶，有着和夜魔之神布莱克平起平坐的实力" mapID="1020"/>
 	<Monster ID="2510" DefName="创世圣甲" Type="机械" Height="150" Weight="150" Features="圣甲之灵的超进化形态，身为创世神兵中一员的它，有着令人咋舌的特防以及乐于助人的性格" mapID="1023"/>
@@ -2925,7 +2925,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2599" DefName="冰影天骑" Type="超能 冰" Height="175" Weight="96" Features="圣诞节专属精灵！据说圣诞期间会藏匿在各大场景当中，机灵的小赛尔们找到他就可以获得这只实力雄厚的圣诞专属精灵哦!" mapID="103"/>
 	<Monster ID="2600" DefName="小阳" Type="草 超能" Height="165" Weight="48" Features="新年新气象！新年专属精灵阳阳会给大家带来新的一年最美好的祝福！" mapID="1"/>
 	<Monster ID="2601" DefName="攻击型TOH" Type="机械" Height="178" Weight="78" Features="神宠超进化之TOH超进化！进化后的TOH拥有更加令精灵们威慑的攻击力，被称作攻击性TOH" mapID="54" Target="140001"/>
-	<Monster ID="2602" DefName="暗黑球球" Type="火" Height="50" Weight="30" Features="宇宙神宠武道大会的吉祥物球球变身为SPT最新boss，暗黑后的球球拥有威力更猛的火系魔法，是新一代的SPT王者" Redirect="map|alarm" Go="481;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2602" DefName="暗黑球球" Type="火" Height="50" Weight="30" Features="宇宙神宠武道大会的吉祥物球球变身为SPT最新boss，暗黑后的球球拥有威力更猛的火系魔法，是新一代的SPT王者" Redirect="map|alarm" Go="481;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2603" DefName="布鲁克林" Type="水 战斗" Height="143" Weight="52" Features="布鲁的双属性进化形态！为了解决星球上的危机，三只小伙伴中的第二只进化了！进化后的布鲁不仅拥有超强的水系魔法，同时还拥有了战斗系的能力！" mapID="10774"/>
 	<Monster ID="2605" DefName="绝影•无邪" Type="光 神秘" Height="178" Weight="98" Features="绝影系列第三只王者精灵诞生了，拥有着超强的光 神秘系魔法，似乎前两只联手都不是他的对手！" mapID="1049"/>
 	<Monster ID="2606" DefName="天火•烈焰号" Type="战斗 火" Height="251" Weight="235" Features="看着昔日的劲敌勇气号超进化后，烈焰号也开启了超进化！进化后的烈焰号喷射出的烈焰威力更加强劲，能将一切化为灰烬！" mapID="103"/>
@@ -2963,7 +2963,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2638" DefName="丘比特" Type="飞行 光" Height="165" Weight="48" Features="VIP包月专属精灵，不知道哪位幸运的赛尔将会被它的爱心之箭射中呢！" mapID="103" Target="295001"/>
 	<Monster ID="2639" DefName="光辉·米瑞斯" Type="光 战斗" Height="175" Weight="78" Features="米咔的双属性超进化形态，在得到了战斗系的能量之后，他的能力似乎比米瑞斯还要强大！" mapID="1"/>
 	<Monster ID="2640" DefName="炎龙圣皇" Type="火 龙" Height="289" Weight="168" Features="圣者炎龙的超进化形态，超进化后的炎龙圣皇可以随心所欲操控任何火系魔法，杀伤力之大无法想象！" mapID="103"/>
-	<Monster ID="2641" DefName="乱斗" Type="战斗" Height="175" Weight="168" Features="拥有着不死之躯的SPT王者精灵，能战胜它的据说已经屈指可数！" Redirect="map|alarm" Go="736;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2641" DefName="乱斗" Type="战斗" Height="175" Weight="168" Features="拥有着不死之躯的SPT王者精灵，能战胜它的据说已经屈指可数！" Redirect="map|alarm" Go="736;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2642" DefName="乱斗骑士" Type="战斗" Height="185" Weight="169" Features="乱斗骑士拥有着更坚韧的不灭身躯，无法战胜他的只会让他变得更加强大！" Redirect="map|module" Go="103;app/MysteriousTreasureHouseMainPanel"/>
 	<Monster ID="2643" DefName="青小龙" Type="水 龙" Height="136" Weight="48" Features="四大神兽之青龙的萌系形态，喜欢在水里游走！" mapID="10802"/>
 	<Monster ID="2644" DefName="烈焰炽魂" Type="火 超能" Height="165" Weight="56" Features="时光守护者，同时又掌握着火系魔法的奥秘！" mapID="7"/>
@@ -2978,7 +2978,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2653" DefName="白小虎" Type="电 战斗" Height="138" Weight="58" Features="四大神兽之白虎的萌系形态，好动的不安分子！" mapID="10812"/>
 	<Monster ID="2654" DefName="喵奇" Type="地面" Height="136" Weight="38" Features="超萌的人气精灵喵奇是小赛尔们人手必备的一只精灵！"/>
 	<Monster ID="2655" DefName="神谕军师" Type="超能" Height="158" Weight="66" Features="神谕军团幕后运筹帷幄的军师，是神谕军团必不可少的成员！" mapID="1"/>
-	<Monster ID="2656" DefName="蚀日" Type="火" Height="156" Weight="88" Features="新的SPTboss，吞天蚀日无所不能，一不小心就会葬身于它的火海之中！" Redirect="map|alarm" Go="796;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2656" DefName="蚀日" Type="火" Height="156" Weight="88" Features="新的SPTboss，吞天蚀日无所不能，一不小心就会葬身于它的火海之中！" Redirect="map|alarm" Go="796;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2657" DefName="暗夜邪龙" Type="邪灵 龙" Height="148" Weight="48" Features="暗夜之中涌现的令人不安的因素，即使是小形态的邪龙已经显示出无比强大的邪恶之力！" mapID="1"/>
 	<Monster ID="2658" DefName="克雷" Type="光" Height="148" Weight="38" Features="克洛伊的弟弟，与克洛伊一样是正义的象征！" mapID="1054"/>
 	<Monster ID="2659" DefName="克雷斯" Type="光" Height="171" Weight="68" Features="长大后的克雷斯继承了克洛伊的光之神力，是一切罪恶势力忌惮的正义力量！" mapID="1054"/>
@@ -3084,7 +3084,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2760" DefName="加百利" Type="光 战斗" Height="176" Weight="118" Features="天界一人之下万人之上的存在，最至高无上的天使。掌握天界刑法典狱，是至高天权的代表!" mapID="103"/>
 	<Monster ID="2761" DefName="镇魂·猛虎王" Type="地面" Height="160" Weight="600" Features="冥界的镇魂猛兽，看守者无数魂灵不让他们逃出冥界，是幽冥和人间和保卫者。能够轻易让敌人魂飞魄散!" mapID="1"/>
 	<Monster ID="2762" DefName="卡尔纳" Type="火" Height="168" Weight="120" Features="善于使用火元素，一旦被它的火焰包围就无法逃脱出来!" mapID="0"/>
-	<Monster ID="2763" DefName="黑暗三角兽" Type="草 暗影" Height="156" Weight="66" Features="从黑暗中孕育出来的怪兽！力大无穷却又熟知自然的特性，让人难以捉摸，是SPT小分队面临的难的题!" Redirect="map|alarm" Go="451;挑战《赛尔号巅峰之战》SPT副本获得！"/>
+	<Monster ID="2763" DefName="黑暗三角兽" Type="草 暗影" Height="156" Weight="66" Features="从黑暗中孕育出来的怪兽！力大无穷却又熟知自然的特性，让人难以捉摸，是SPT小分队面临的难的题!" Redirect="map|alarm" Go="451;挑战《赛尔号》（微端）SPT副本获得！"/>
 	<Monster ID="2765" DefName="八尺琼狐" Type="自然" Height="154" Weight="58" Features="汲天地日月灵气孕育出来的美丽灵兽。周身的羽毛幻彩流光，十分美丽。力量更是强大到难以预测，每次失败都会使它更加强大!" mapID="1"/>
 	<Monster ID="2766" DefName="天狐·勾玉" Type="自然" Height="164" Weight="78" Features="八尺琼狐的究极形态，带有神器勾玉作为更强大力量的来源。让自身的力量变得更加无穷无尽!" mapID="1"/>
 	<Monster ID="2767" DefName="兰蒂斯" Type="邪灵 龙" Height="152" Weight="48" Features="妖族中的佼佼者，从小就是家族的骄傲。然而暴戾的本性和强大的力量也让他变得人人畏惧!" mapID="1087"/>
@@ -4418,7 +4418,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4114" DefName="科罗丽娜" Type="暗影 神秘" Height="172" Weight="50" Features="科罗克娜的超进化，隐匿于黑暗之中，暗影之镰等待着时机给人致命一击！" Redirect="map|module" Go="103;app/KoroknaSuperEvolutionMainPanel"/>
 	<Monster ID="4115" DefName="马格纳" Type="电 龙" Height="185" Weight="70" Features="龙族强大的战士马格纳，挥舞着雷霆之枪，贯穿阻碍！" Redirect="map|module" Go="103;app/ExchangeDiamondMain2019Panel"/>
 	<Monster ID="4116" DefName="核天使" Type="机械 战斗" Height="200" Weight="150" Features="被制造出来用于侵略的战争机器人，充足的能源使它拥有强大的破坏力，所到之处寸草不生！" Redirect="map|module" Go="1453;app/S52HeTianShiMainPanel"/>
-	<Monster ID="4117" DefName="克莱芬斯" Type="火" Height="190" Weight="150" Features="克莱芬的进化，对酒还是依然痴迷，在醉酒的状态下战斗力反而更加惊人！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4117" DefName="克莱芬斯" Type="火" Height="190" Weight="150" Features="克莱芬的进化，对酒还是依然痴迷，在醉酒的状态下战斗力反而更加惊人！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4118" DefName="桑德克" Type="电" Height="185" Weight="70" Features="凝聚雷电之力，挥舞狂暴双拳，尽显豪放不羁！" Redirect="map|module" Go="1453;app/S53SangDeKeMainPanel"/>
 	<Monster ID="4119" DefName="查梅洛" Type="超能" Height="189" Weight="80" Features="神秘的变色龙人，总是背着一个小腰包，实力高深莫测！" Redirect="map|module" Go="1454;app/S54ChaMeiLuoMainPanel"/>
 	<Monster ID="4120" DefName="涧溪水灵" Type="水" Height="187" Weight="75" Features="水中灵的进化，涧溪水灵在水中孕育出了更加强大的水之神力，力量之中似乎还多了一丝冰的气息..." Redirect="map|module" Go="103;app/ExchangeDiamondMain2019Panel"/>
@@ -4446,7 +4446,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4142" DefName="阿枫" Type="火 战斗" Height="180" Weight="50" Features="阿枫天生好斗，是枫曳擂台上的常客，想要获得他的认可就必须战胜他！" Redirect="map" Go="1"/>
 	<Monster ID="4143" DefName="布莱德曼" Type="神秘" Height="190" Weight="60" Features="一个失明的神秘人，把自己隐藏在厚重的斗篷下让人难以知晓他的身份，看上去似乎在逃离着什么..." Redirect="map|module" Go="1147;app/PveRewardMallMainPanel" jumptarget="18/4_5" Target="164510"/>
 	<Monster ID="4144" DefName="麻普" Type="远古" Height="140" Weight="41" Features="枫曳镇的村民，善良淳朴，一年中最期待的事就是镇里的节日庆典！" Redirect="map" Go="1462"/>
-	<Monster ID="4145" DefName="克鲁斯汀" Type="飞行" Height="140" Weight="45" Features="克鲁斯的进化形态，长嘴变得更加锋利，克鲁斯汀继续用他的长嘴作为武器来维护正义！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4145" DefName="克鲁斯汀" Type="飞行" Height="140" Weight="45" Features="克鲁斯的进化形态，长嘴变得更加锋利，克鲁斯汀继续用他的长嘴作为武器来维护正义！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4146" DefName="潜隐灵蛇" Type="神秘 超能" Height="200" Weight="150" Features="灵蛇一族的至强合体，潜隐灵蛇可以在四个形态间灵活转换，让人很难摸清它的实力！" Redirect="map|module" Go="1463;app/SiLingSheSyncytiumMainPanel"/>
 	<Monster ID="4147" DefName="月冕" Type="冰 光" Height="190" Weight="65" Features="月小队的队长，无情的侵略者，腰间的月光之剑每一次出鞘都能爆发出恐怖的寒月剑气！" Redirect="map|module" Go="1463;app/S62YueMianMainPanel"/>
 	<Monster ID="4148" DefName="FAY" Type="光 飞行" Height="60" Weight="20" Features="FAY从小就喜欢吃蛋糕，梦想是能住在一个蛋糕做的房子里，如今她正在努力实现这个梦想！" Redirect="module" Go="app/SeerBookScoreRewardPanel"/>
@@ -4502,7 +4502,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4198" DefName="魔花仙灵" Type="草" Height="177" Weight="55" Features="魔花仙子的完全体，进化后的魔花仙灵有了人的形态，散发出优雅迷人的气息！" Redirect="map" Go="1"/>
 	<Monster ID="4199" DefName="K·锁魂" Type="暗影" Height="170" Weight="70" Features="锁魂领主经过邪影实验第二阶段改造后的产物，比第一代实验品更加邪恶强大！" Redirect="map" Go="0"/>
 	<Monster ID="4200" DefName="阿莱克托" Type="混沌 战斗" Height="180" Weight="55" Features="黑夜三女神之一，被弑序神罗召唤后帮助拥护黑夜，手中的长鞭毁灭一切光明！" Redirect="map|module" Go="1483;app/S80ALaiKeTuoMainPanel" Target="150138"/>
-	<Monster ID="4201" DefName="米诺迪斯" Type="战斗" Height="300" Weight="200" Features="米诺斯的进化形态，在邪能的影响下变得更加暴虐，战斗力也有了很大提升！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4201" DefName="米诺迪斯" Type="战斗" Height="300" Weight="200" Features="米诺斯的进化形态，在邪能的影响下变得更加暴虐，战斗力也有了很大提升！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4202" DefName="纳西斯" Type="飞行 超能" Height="171" Weight="45" Features="纳西斯来自遥远的天鹅座，她从星光中苏醒，力量正在逐渐汇聚..." Redirect="map|module" Go="1;app/SignInInAprilOfQingmingFestivalMainPanel"/>
 	<Monster ID="4203" DefName="卞玉儿" Type="冰 电" Height="174" Weight="50" Features="三国时期魏国的皇后卞氏，灿如春华，皎如秋月！" Redirect="map" Go="103"/>
 	<Monster ID="4204" DefName="玛格" Type="远古" Height="30" Weight="8" Features="在长夜星河上常见的野生小精灵，外表稚嫩可爱，喜欢结伴而行！" Redirect="map" Go="1484"/>
@@ -4566,7 +4566,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4262" DefName="龙伽" Type="远古 龙" Height="179" Weight="54" Features="古老的龙族少女，精通驯龙术，目标是驯服世界上所有的巨龙！" Redirect="map|module" Go="103;app/ExchangeDiamondMain2019Panel"/>
 	<Monster ID="4263" DefName="绯婉" Type="火 神秘" Height="165" Weight="44" Features="好战的格斗少女，能通过火之戒操控火焰，与自身的武技组合成完美的火焰拳法！" Redirect="map|module" Go="103;app/VIPDiscountByArticle20210806MainPanel"/>
 	<Monster ID="4264" DefName="库莱姆斯" Type="邪灵 龙" Height="1000" Weight="800" Features="被囚禁在长夜星河的罪恶之龙，关于她的过去有很多传说，那不为人知的往事等待着好奇的人们去慢慢揭开！" Redirect="map|module" Go="1507;app/SpetKuLaiMuSiPanel" jumptarget="151/42" Target="153201/42"/>
-	<Monster ID="4265" DefName="阿索德" Type="电" Height="180" Weight="75" Features="阿索卡的超进化形态，在经历了长久的磨炼以后，阿索德已经练就了心神合一的境界，性格也不再如过去一般暴躁，能够稳健的展现自己惊人的雷电力量！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4265" DefName="阿索德" Type="电" Height="180" Weight="75" Features="阿索卡的超进化形态，在经历了长久的磨炼以后，阿索德已经练就了心神合一的境界，性格也不再如过去一般暴躁，能够稳健的展现自己惊人的雷电力量！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4266" DefName="厄难·刑天" Type="火 超能" Height="170" Weight="90" Features="天刑厄神的超进化形态，不灭的烽火燎过大地，厄难·刑天带着他无畏的盾斧强势归来！" Redirect="map|module" Go="103;app/ExchangeDiamondMain2019Panel"/>
 	<Monster ID="4267" DefName="古索" Type="超能" Height="50" Weight="25" Features="古索一族是生存在盖伦星系边境古岩砂窟的小精灵，他们一同避难在砂窟中，对周遭的一切都充满了警惕！" Redirect="map" Go="1508"/>
 	<Monster ID="4268" DefName="古索迪尔" Type="地面 超能" Height="176" Weight="68" Features="古索一族的首领，能够以念力操纵沙石发动强力的攻击，是小古索们最可靠的守护者！" Redirect="map|module" Go="1508;app/S95GuSuoDiErMainPanel"/>
@@ -4598,7 +4598,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4294" DefName="霍莱" Type="普通" Height="168" Weight="78" Features="一位现身在岩岭古穴研究壁画的神秘老者，似乎知道很多不为人知的秘密......" Redirect="map|module" Go="1519;app/SPetHuoLaiPanel" jumptarget="151/50" Target="153201/50"/>
 	<Monster ID="4295" DefName="吕蒙" Type="电 战斗" Height="183" Weight="74" Features="三国时期的东吴名将，穿越时空降临到赛尔号的世界，至于今者，学识英博，非复吴下阿蒙！" Redirect="map|module" Go="103;app/HelpingGodPetLvMengMianPanel"/>
 	<Monster ID="4296" DefName="沃卡奥拉" Type="光 火" Height="947" Weight="3885" Features="灵格星系三大上古神兽之一，传说中在赤熔山脉的岩浆中活动的巨蛛，好食岩浆，八足十分坚韧，可以轻松击碎巨岩！" Redirect="map|module" Go="1519;app/S99OKaAoLaMainPanel"/>
-	<Monster ID="4297" DefName="雅库布雷" Type="机械" Height="210" Weight="109" Features="雅库布的超进化形态，体内的黑暗能量得到了进一步的提升，强大的机械铁爪可以轻松撕碎对手，实力非常恐怖！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4297" DefName="雅库布雷" Type="机械" Height="210" Weight="109" Features="雅库布的超进化形态，体内的黑暗能量得到了进一步的提升，强大的机械铁爪可以轻松撕碎对手，实力非常恐怖！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4298" DefName="卡罗加" Type="超能" Height="176" Weight="68" Features="十一月包月精灵，十二影卫之一，手中的光轮蕴含着神秘的能量，是一位强大的念力操控师！" Target="295006"/>
 	<Monster ID="4299" DefName="塔威尔" Type="地面 机械" Height="174" Weight="67" Features="晶灵之渊的守护者，实力异常强大，邪魅的笑容下似乎还暗藏了更多秘密，能够熟练掌握塔罗牌“塔”的力量，所有试图走进深渊的闯入者都已湮灭在了他召唤出的尘沙中......" Redirect="map|module" Go="1520;app/SPetTaWeiErPanel" jumptarget="151/51" Target="153201/51"/>
 	<Monster ID="4300" DefName="宛白" Type="电 次元" Height="168" Weight="51" Features="十一月巅峰圣战精灵，外表高冷飒气的她内心却很温柔，拥有从异空间召唤雷电法术的能力！"/>
@@ -4614,7 +4614,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4310" DefName="特罗斯" Type="战斗 龙" Height="174" Weight="58" Features="一位神秘的少女，能够汇聚龙之力量在手中释放，故乡在盖伦星系的她似乎身上还有着其他的秘密等待被揭开......" Redirect="map|module" Go="1524;app/SpetTeLuoSiPanel" jumptarget="151/55" Target="153201/55"/>
 	<Monster ID="4311" DefName="图托尔斯" Type="冰 暗影" Height="758" Weight="3484" Features="灵格星系三大上古神兽之一，远古巨龟，背上有巨大的冰山，口中可以吹出极寒之气，每一次践踏都会造成巨大的雪崩，被世人称之为“移动的冰川”！" Redirect="map|module" Go="1525;app/SpetTuTuoErSiPanel" jumptarget="151/56" Target="153201/56"/>
 	<Monster ID="4312" DefName="玛提斯特" Type="邪灵 暗影" Height="169" Weight="64" Features="盖伦星系的侦察兵，长有双翅的他行动非常迅捷，常常负责通风报信的工作！" Redirect="map|module" Go="1526;app/SpetMaTiSiTePanel" jumptarget="151/57" Target="153201/57"/>
-	<Monster ID="4313" DefName="灼日之蚀" Type="火" Height="218" Weight="95" Features="蚀日的超进化形态，对火焰力量的运用已经出神入化，吞天蚀日的烈火势必焚烬一切来犯之敌！" Redirect="alarm" Go="挑战《赛尔号巅峰之战》SPT副本获得！" jumptarget="56/3_1"/>
+	<Monster ID="4313" DefName="灼日之蚀" Type="火" Height="218" Weight="95" Features="蚀日的超进化形态，对火焰力量的运用已经出神入化，吞天蚀日的烈火势必焚烬一切来犯之敌！" Redirect="alarm" Go="挑战《赛尔号》（微端）SPT副本获得！" jumptarget="56/3_1"/>
 	<Monster ID="4314" DefName="绿棘球" Type="草" Height="45" Weight="22" Features="长满针刺的小球，十分柔弱可爱，同族群的伙伴们似乎遭遇了危险！" Redirect="map" Go="1527"/>
 	<Monster ID="4315" DefName="翡翠棘球" Type="草 暗影" Height="52" Weight="26" Features="绿棘球族群中稀有的变异种，融合了暗影元素的它有着特殊的能力！" Redirect="map|module" Go="1527;app/RescueGreenBallMainPanel"/>
 	<Monster ID="4316" DefName="沙狱使者" Type="地面 战斗" Height="180" Weight="72" Features="负责看守监狱的士兵，对自己的守卫工作尽职尽责，能够将身体化为沙尘融入地面快速移动，拥有特殊的抓捕技巧！" Redirect="map|module" Go="1527;app/S100ShaYuShiMainPanel"/>
@@ -4627,7 +4627,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4323" DefName="绿棘巨魔" Type="草 暗影" Height="344" Weight="482" Features="由无数绿棘球合体变成的巨大魔物，苏醒后开始四处破坏，拥有着可怕的战斗力！" Redirect="map|module" Go="1531;app/SpetLvJiJuMoPanel" jumptarget="151/58" Target="153201/58"/>
 	<Monster ID="4324" DefName="卡托娜" Type="圣灵 地面" Height="167" Weight="48" Features="卡卡托斯一族的圣女，是古索迪尔的老朋友，娇小可爱的身体内蕴藏着不可小觑的能量！" Redirect="map|module" Go="1532;app/SpetKaTuoNaPanel" jumptarget="151/59" Target="153201/59"/>
 	<Monster ID="4325" DefName="坎普瑞亚" Type="地面 龙" Height="865" Weight="744" Features="盖伦星系的古龙，生前能掌控大地之力，可惜她的命运终究也未能逃过气候灾变的浩劫......" Redirect="map|module" Go="1533;app/SpetKanPuRuiYaPanel" jumptarget="151/60" Target="153201/60"/>
-	<Monster ID="4326" DefName="辛辛子" Type="虫" Height="171" Weight="50" Features="辛辛子曾是茉茉子最好的朋友，与她一同悉心守护着古树之岛，直到后来的那场变故......" Redirect="alarm" Go="前往《赛尔号巅峰之战》签到获得！"/>
+	<Monster ID="4326" DefName="辛辛子" Type="虫" Height="171" Weight="50" Features="辛辛子曾是茉茉子最好的朋友，与她一同悉心守护着古树之岛，直到后来的那场变故......" Redirect="alarm" Go="前往《赛尔号》（微端）签到获得！"/>
 	<Monster ID="4327" DefName="极战·阿尔斯兰" Type="战斗" Height="188" Weight="75" Features="面对深陷混沌的莱茵哈特，愤怒的阿尔斯兰开启了自我突破，出神入化的战斗之力势必神威贯宇，八方拜服！" Redirect="map|module" Go="1534;app/SpetAErSiLanEvoPanel" jumptarget="151/61" Target="153201/61"/>
 	<Monster ID="4328" DefName="娜奥米亚" Type="火" Height="174" Weight="53" Features="2022年2月包月精灵，十二冠灵之一，能够掌控火焰元素，落红烟起，剑随焰光！" Target="295007"/>
 	<Monster ID="4329" DefName="倪克斯" Type="神秘 超能" Height="170" Weight="48" Features="传说中的黑夜女神终于现身，作为拥有强大力量的可怕神灵，她所操纵的至暗魔法对凡人和神祇都有着不可抗拒的约束力！" Redirect="map|module" Go="103;app/DaAnTiaoNiKeSiMainPanel"/>
@@ -4639,7 +4639,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4335" DefName="特朗" Type="邪灵" Height="86" Weight="33" Features="库特朗的小弟，对老大忠心耿耿，虽然身材娇小，但打起架来毫不含糊！" Redirect="map" Go="1538"/>
 	<Monster ID="4336" DefName="卡诺" Type="地面" Height="77" Weight="29" Features="卡卡托斯一族的住民，他们勤劳勇敢，对卡卡托斯之柱怀着真诚的信仰！"/>
 	<Monster ID="4337" DefName="卡斯珀" Type="光 超能" Height="172" Weight="68" Features="卡托娜的哥哥，身为长兄的他却没有获得通神力量的祝福，但他仍然悉心照顾自己的妹妹，希望成为卡卡托斯的守护者。" Redirect="map|module" Go="1539;app/SpetKaSiBoPanel" jumptarget="151/64" Target="153201/64"/>
-	<Monster ID="4338" DefName="星礼" Type="自然 战斗" Height="161" Weight="50" Features="作战实验室中现身的神秘精灵，天性活泼的她掌握着各种各样的对战技巧，据说只要能够完成她的重重考验，就有机会与她成为伙伴哦！" Redirect="alarm" Go="新版作战实验室专属精灵，请前往《赛尔号巅峰之战》获得！" jumptarget="139" Target="150069"/>
+	<Monster ID="4338" DefName="星礼" Type="自然 战斗" Height="161" Weight="50" Features="作战实验室中现身的神秘精灵，天性活泼的她掌握着各种各样的对战技巧，据说只要能够完成她的重重考验，就有机会与她成为伙伴哦！" Redirect="alarm" Go="新版作战实验室专属精灵，请前往《赛尔号》（微端）获得！" jumptarget="139" Target="150069"/>
 	<Monster ID="4339" DefName="麦格姆" Type="远古 火" Height="677" Weight="926" Features="赤熔之泉现身的异变熔钳蟹，有着坚硬的甲壳和巨大的体魄，背部还能喷发岩浆！" Redirect="map|module" Go="1540;app/SpetMaiGeMuPanel" jumptarget="151/65" Target="153201/65"/>
 	<Monster ID="4340" DefName="凝绝" Type="冰 光" Height="174" Weight="56" Features="2022年3月巅峰圣战精灵，冰泉冷涩弦凝绝，凝绝不通声暂歇！"/>
 	<Monster ID="4341" DefName="熔钳蟹" Type="火" Height="69" Weight="24" Features="钳上汇聚了熔岩之力的小螃蟹，喜欢在赤熔之泉活动！" Redirect="map" Go="1540"/>
@@ -4692,7 +4692,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4388" DefName="阿琳" Type="机械 邪灵" Height="176" Weight="64" Features="2022年7月巅峰圣战精灵。被血肉所束缚的傀儡啊，抛弃荒唐的尊严随我进化吧！你不应被蒙蔽，你不能被限制，没有谁有资格止步无知。"/>
 	<Monster ID="4389" DefName="莎尔索斯" Type="地面" Height="166" Weight="51" Features="2022年7月包月精灵，十二冠灵之一，能够掌控地之元素，青山不改，磐岩圣冕！" Target="295007"/>
 	<Monster ID="4390" DefName="玖莉娜" Type="水 超能" Height="164" Weight="48" Features="晶能基站的研究员，性格温和，在尤莉米特的安排下帮助开展对跃迁计划的研究工作~" Redirect="map|module" Go="1560;app/SpetJiuLiNaPanel" jumptarget="151/95" Target="153201/95"/>
-	<Monster ID="4391" DefName="西斯里" Type="地面 战斗" Height="167" Weight="50" Features="2022年H5暑假月签精灵，相传她代表了某种沙漠之神的信仰！" Redirect="alarm" Go="前往《赛尔号巅峰之战》签到获得！"/>
+	<Monster ID="4391" DefName="西斯里" Type="地面 战斗" Height="167" Weight="50" Features="2022年H5暑假月签精灵，相传她代表了某种沙漠之神的信仰！" Redirect="alarm" Go="前往《赛尔号》（微端）签到获得！"/>
 	<Monster ID="4392" DefName="斯凯普" Type="混沌 超能" Height="168" Weight="90" Features="锢灵·舞觉醒得到的“恶魔”塔罗牌之力，拥有着强大的锁链之力与精细的缝合及切割能力，能够击溃任何来犯之敌！" Redirect="map|module" Go="1561;app/SpetSiKaiPuPanel" jumptarget="151/96" Target="153201/96"/>
 	<Monster ID="4393" DefName="酱丸号" Type="火 超能" Height="126" Weight="28" Features="长相可爱的船型精灵，船中载满了章鱼小丸子，在仲夏火焰节四处传播着欢乐与祝福！" Redirect="map|module" Go="1;app/MidsummerFestivalThemeSpriteMainPanel"/>
 	<Monster ID="4394" DefName="祭空墟祖" Type="远古" Height="193" Weight="80" Features="神秘的魔盒主人终于展现出了自己真正的姿态，它知晓着关于莱达宇宙的许多秘密......" Redirect="map|module" Go="1562;app/SpetJiKongXuZuPanel" jumptarget="151/97" Target="153201/97"/>
@@ -4762,7 +4762,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4459" DefName="恶鬼·图伽" Type="混沌 战斗" Height="218" Weight="92" Features="「灰爵」的成员之一，恶鬼斗技场的霸主，拥有着强大且独特的战斗能力，任何事情都喜欢用拳头说话。" Redirect="map|module" Go="1589;app/SpetEGTuJiaMainPanel" jumptarget="151/110" Target="153201/110"/>
 	<Monster ID="4460" DefName="兹拉特" Type="电 战斗" Height="123" Weight="37" Features="游荡于恶鬼斗技场的混混，性格如同脸上的表情一样并不好惹，最热衷的事情莫过于在八角笼外喝彩助威。" Redirect="map" Go="1589"/>
 	<Monster ID="4461" DefName="追光·兰可" Type="机械 龙" Height="166" Weight="57" Features="白金执法队的新晋成员，年龄尚小的他已经能够独立解决处理许多任务，而这一切的关键是他尾巴后特制的充能狙击枪。" Redirect="map|module" Go="1591;app/SpetZGLanKeMainPanel" jumptarget="151/113" Target="153201/113"/>
-	<Monster ID="4462" DefName="月华" Type="光 神秘" Height="165" Weight="50" Features="神秘的月光使者，相传能够获得她的小赛尔都会得到月光的指引，在未来的游戏旅程中一帆风顺！" Redirect="alarm" Go="请前往《赛尔号巅峰之战》参与活动获得！" Target="113018"/>
+	<Monster ID="4462" DefName="月华" Type="光 神秘" Height="165" Weight="50" Features="神秘的月光使者，相传能够获得她的小赛尔都会得到月光的指引，在未来的游戏旅程中一帆风顺！" Redirect="alarm" Go="请前往《赛尔号》（微端）参与活动获得！" Target="113018"/>
 	<Monster ID="4463" DefName="斯克鲁恩" Type="冰" Height="244" Weight="257" Features="斯克鲁的超进化形态，霜寒之力已经融入他的身躯，任何伤害到他的敌人都无法逃离他的封印！" Redirect="alarm" Go="精灵已绝版！" Target="114074"/>
 	<Monster ID="4464" DefName="小丝" Type="邪灵" Height="124" Weight="39" Features="邪灵系精灵王的小形态，从小便觉醒了未知的力量，展现出沉稳的姿态。" Redirect="map|module" Go="1591;app/XieLingWangOfLaiLiMainPanel"/>
 	<Monster ID="4465" DefName="格塔丝" Type="邪灵" Height="175" Weight="56" Features="邪灵系精灵王的中形态，能够熟练掌握灵魂的力量，也正因为这种能量的存在，她被亡灵所眷顾。" Redirect="map|module" Go="1592;app/MainLineAdventureOverview"/>
@@ -4905,7 +4905,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4603" DefName="贾斯" Type="自然 神秘" Height="169" Weight="49" Features="文森特的伴侣，温柔知性，机敏开朗，最喜欢做的事情是在后院中欣赏花朵的摇曳。但她的生命也如花一般脆弱。" Redirect="map|module" Go="1662;app/SpetJiaSiMainPanel" jumptarget="151/193" Target="153201/193"/>
 	<Monster ID="4604" DefName="萨芙凯特" Type="次元 水" Height="176" Weight="52" Features="第二位序外执行者，坐落在远离都市的海面上负责应急响应，她性格外向，活泼爽朗，经常利用海洋的温度来进行自我冷却。" />
 	<Monster ID="4605" DefName="无限·欧根尼克" Type="圣灵 次元" Height="171" Weight="49" Features="「启明星」之孤星，欧根尼克的研究范围从浩瀚星辰覆盖到微观粒子。她认为宏观宇宙和微观世界都蕴含着无限的力量，而她要做的，就是将它们完全绽放。" Redirect="map|module" Go="1663;app/SpetWuXianMainPanel" jumptarget="151/194" Target="153201/194"/>
-	<Monster ID="4606" DefName="加尔鲁特" Type="草" Height="107" Weight="86" Features="加尔鲁什的进化形态，获得现任草系精灵王的认可后实力进一步提升，已经能熟练采用站立姿态进入战斗！" Redirect="alarm" Go="请前往《赛尔号巅峰之战》参与SPT限时活动获得！" Target="114074"/>
+	<Monster ID="4606" DefName="加尔鲁特" Type="草" Height="107" Weight="86" Features="加尔鲁什的进化形态，获得现任草系精灵王的认可后实力进一步提升，已经能熟练采用站立姿态进入战斗！" Redirect="alarm" Go="请前往《赛尔号》（微端）参与SPT限时活动获得！" Target="114074"/>
 	<Monster ID="4607" DefName="小灯龙" Type="光 超能" Height="57" Weight="28" Features="元宵时节遇到的精灵，喜欢藏在密集的人群中和大家一起闹腾！"/>
 	<Monster ID="4608" DefName="尘息巨像" Type="远古 地面" Height="2800" Weight="1800" Features="在创世古迹的沙丘上突然出现的巨大石像，手中的巨锤可以汇聚尘沙释放山岳之力。他们和尘息游龙一样，被击破后会化为尘沙融入土地，然后再次汇聚成形。" Redirect="map|module" Go="1664;app/SpetChenXiJuXiangMainPanel" jumptarget="151/195" Target="153201/195"/>
 	<Monster ID="4609" DefName="克罗恩" Type="光" Height="171" Weight="49" Features="2024年包月精灵，十二诗灵之三月的皇冠，知识的光辉带来指引，在无知的黑夜里。" />
