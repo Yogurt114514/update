@@ -5826,8 +5826,9 @@ def db_effectDes():
             print(f"✅ effectDes.signbuff 已沿用旧库 {_restored} 行")
 
     # ---- signbuff：按 signIcon_fight 把图标 id 补进 effectDes（只更新能匹配到的行）----
-    # 规则：① dec == kinddes → 存该行 id；② spicon 非空时用 sptips 的「层数_名字」匹配
-    #       → 存 "{id}_{图标号}"（图标号由 spicon 的「层数_图号」映射，缺省用层数）。
+    # 规则：① spicon 非空时用 sptips 的「层数_名字」匹配 → 存 "{id}_{图标号}"
+    #       （图标号由 spicon 的「层数_图号」映射，缺省用层数），优先级最高；
+    #       ② dec == kinddes → 存该行 id，但当该 id 已被 _N 覆盖时丢弃（只留 "163_1"）。
     # 默认只填空值，避免覆盖手工微调；SIGNBUFF_REFRESH=1 时全部按配置重刷。
     try:
         with open(data_path / "signIcon_fight.json", 'r', encoding='utf-8') as f:
@@ -5869,7 +5870,12 @@ def db_effectDes():
             _key = (_kdes or "").strip()
             if not _key:
                 continue
-            _val = sign_by_dec.get(_key) or sign_by_sptips.get(_key) or []
+            # sptips（带 _N 后缀）优先：同名时只保留 "163_1"，不再保留 "163"
+            _val = list(sign_by_sptips.get(_key) or [])
+            _covered = {_v.split("_")[0] for _v in _val if "_" in _v}
+            for _v in (sign_by_dec.get(_key) or []):
+                if _v not in _covered and _v not in _val:
+                    _val.append(_v)
             if not _val:
                 continue
             if (not _refresh) and _cur_val not in ("", "[]"):
