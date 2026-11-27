@@ -5696,7 +5696,8 @@ def db_effectDes():
                 kinddes TEXT NOT NULL,        -- 
                 link TEXT NOT NULL,        -- 
                 monster TEXT NOT NULL,        -- 
-                tab INTEGER NOT NULL  -- 
+                tab INTEGER NOT NULL,  -- 
+                signbuff TEXT NOT NULL DEFAULT '[]'  -- 对应 signIcon_fight 的图标 id，JSON 数组字符串，如 ["223_1"]
             );
             """
             cursor.execute(create_table_sql)
@@ -5713,6 +5714,22 @@ def db_effectDes():
 
     DB_PATH = str(data_path / f"effectDes_{version1}.db")  # CI 输出路径
 
+    # 重建前先读旧的 signbuff，避免把手工微调冲掉
+    _prev_signbuff = {}
+    try:
+        if os.path.exists(DB_PATH):
+            _old_conn = sqlite3.connect(DB_PATH)
+            _old_cols = [r[1] for r in _old_conn.execute("PRAGMA table_info(effectDes)").fetchall()]
+            if "signbuff" in _old_cols:
+                for _old_id, _old_kd, _old_val in _old_conn.execute(
+                        "SELECT id, kinddes, signbuff FROM effectDes").fetchall():
+                    if _old_val and _old_val not in ("", "[]"):
+                        _prev_signbuff[(int(_old_id), _old_kd or "")] = _old_val
+            _old_conn.close()
+    except Exception as e:
+        print(f"⚠ 读取旧 signbuff 失败：{e}")
+
+
     try:
         os.remove(DB_PATH)
     except:
@@ -5723,6 +5740,12 @@ def db_effectDes():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row  # 设置为字典格式
     cursor = conn.cursor()
+
+    # 老库没有 signbuff 列时补上（CREATE TABLE IF NOT EXISTS 不会改已存在的表）
+    _cols = [r[1] for r in cursor.execute("PRAGMA table_info(effectDes)").fetchall()]
+    if "signbuff" not in _cols:
+        cursor.execute("ALTER TABLE effectDes ADD COLUMN signbuff TEXT NOT NULL DEFAULT '[]'")
+        conn.commit()
 
     for i in root1:
         try:
@@ -5788,6 +5811,77 @@ def db_effectDes():
         except Exception as e:
             print(f"❌ 插入数据失败：{e}，数据内容：{i}")
     conn.commit()
+
+    # 把旧库里的 signbuff 值搬回来（手工微调优先于自动映射）
+    if _prev_signbuff:
+        _restored = 0
+        for _rid, _row_id, _row_kd in cursor.execute(
+                "SELECT rowid, id, kinddes FROM effectDes").fetchall():
+            _keep = _prev_signbuff.get((int(_row_id), _row_kd or ""))
+            if _keep:
+                cursor.execute("UPDATE effectDes SET signbuff = ? WHERE rowid = ?", (_keep, _rid))
+                _restored += 1
+        conn.commit()
+        if _restored:
+            print(f"✅ effectDes.signbuff 已沿用旧库 {_restored} 行")
+
+    # ---- signbuff：按 signIcon_fight 把图标 id 补进 effectDes（只更新能匹配到的行）----
+    # 规则：① dec == kinddes → 存该行 id；② spicon 非空时用 sptips 的「层数_名字」匹配
+    #       → 存 "{id}_{图标号}"（图标号由 spicon 的「层数_图号」映射，缺省用层数）。
+    # 默认只填空值，避免覆盖手工微调；SIGNBUFF_REFRESH=1 时全部按配置重刷。
+    try:
+        with open(data_path / "signIcon_fight.json", 'r', encoding='utf-8') as f:
+            sign_data = json.load(f)
+        sign_root = sign_data.get("root") or []
+        if isinstance(sign_root, dict):
+            sign_root = sign_root.get("item") or []
+        sign_by_dec, sign_by_sptips = {}, {}
+        for _it in sign_root:
+            if not isinstance(_it, dict):
+                continue
+            _sid = _it.get("id")
+            if _sid is None:
+                continue
+            _dec = (_it.get("dec") or "").strip()
+            if _dec:
+                sign_by_dec.setdefault(_dec, []).append(str(_sid))
+            _spicon = [x for x in (_it.get("spicon") or []) if isinstance(x, str) and x]
+            _sptips = [x for x in (_it.get("sptips") or []) if isinstance(x, str) and x]
+            if not _spicon or not _sptips:
+                continue
+            _icon_of_lv = {}
+            for _s in _spicon:
+                _p = _s.split("_")
+                if len(_p) == 2 and _p[0].strip().isdigit():
+                    _icon_of_lv[_p[0].strip()] = _p[1].strip()
+            for _s in _sptips:
+                if "_" not in _s:
+                    continue
+                _lv, _name = _s.split("_", 1)
+                _lv, _name = _lv.strip(), _name.strip()
+                if not _name:
+                    continue
+                sign_by_sptips.setdefault(_name, []).append(f"{_sid}_{_icon_of_lv.get(_lv, _lv)}")
+        _refresh = os.getenv("SIGNBUFF_REFRESH", "0") not in ("0", "", "false", "False")
+        _updated = 0
+        for _rowid, _kdes, _cur_val in cursor.execute(
+                "SELECT rowid, kinddes, COALESCE(signbuff, '[]') FROM effectDes").fetchall():
+            _key = (_kdes or "").strip()
+            if not _key:
+                continue
+            _val = sign_by_dec.get(_key) or sign_by_sptips.get(_key) or []
+            if not _val:
+                continue
+            if (not _refresh) and _cur_val not in ("", "[]"):
+                continue
+            cursor.execute("UPDATE effectDes SET signbuff = ? WHERE rowid = ?",
+                           (json.dumps(_val, ensure_ascii=False), _rowid))
+            _updated += 1
+        conn.commit()
+        if _updated:
+            print(f"✅ effectDes.signbuff 已映射 {_updated} 行（signIcon_fight {len(sign_root)} 条）")
+    except Exception as e:
+        print(f"❌ effectDes.signbuff 映射失败：{e}")
 
 db_effectDes()
 
