@@ -3839,6 +3839,7 @@
 	<MintMark ID="42740" Type="3" Rare="5" Quality="3" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 6 0 6 0 10" MaxAttriValue="0 60 0 60 0 100" MintmarkClass="98" Level="100" Max="99" Des="圣光·庇佑" EffectDes="防御6/60,特防6/60,体力10/100"/>
 	<MintMark ID="42741" Type="3" Rare="5" Quality="3" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 7 0 7 4 0" MaxAttriValue="0 70 0 70 41 0" MintmarkClass="98" Level="100" Max="99" Des="圣光·领域" EffectDes="防御7/70,特防7/70,速度4/41"/>
     <MintMark ID="42742" Type="3" Rare="5" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="7 3 0 3 3 10" MaxAttriValue="75 37 0 37 37 94" MintmarkClass="11" Level="100" Max="99" Des="V17·圣光" EffectDes="攻击7/75,防御3/37,特防3/37,速度3/37,体力9/94"/>
+    <MintMark ID="42743" Type="3" Rare="1" Quality="5" MintmarkLevel="5" Grade="5" BaseHoleNum="1" BaseAttriValue="0 2 4 2 3 9" MaxAttriValue="0 25 45 25 35 90" MonsterID="4971" Level="100" Max="99" Des="黄月英专属全能刻印" EffectDes="防御2/25,特攻4/45,特防2/25,速度3/35,体力9/90"/>
 
 
 

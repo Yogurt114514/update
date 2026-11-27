@@ -53104,7 +53104,7 @@
 </ExtraMoves>
 </Monster>
 
-<Monster ID="2947" DefName="利刃之主鲁斯王" Type="2" GrowthType="5" HP="140" Atk="130" Def="105" SpAtk="72" SpDef="105" Spd="118" YieldingExp="130" CatchRate="0" YieldingEV="0 1 0 0 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="1634" FormParam="1" CharacterAttrParam="0" GradeParam="3" AddSeParam="1" Resist="1">
+<Monster ID="2947" DefName="利刃之主·鲁斯王" Type="2" GrowthType="5" HP="140" Atk="130" Def="105" SpAtk="72" SpDef="105" Spd="118" YieldingExp="130" CatchRate="0" YieldingEV="0 1 0 0 0 1" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="1634" FormParam="1" CharacterAttrParam="0" GradeParam="3" AddSeParam="1" Resist="1">
 <LearnableMoves>
 	      <Move ID="11008" LearningLv="1"/>
 	      <Move ID="20003" LearningLv="6"/>
@@ -103881,6 +103881,78 @@
 		</LearnableMoves>
 		<ExtraMoves>
 			<Move ID="38658" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+	
+	<Monster ID="4970" DefName="托罗阿" Type="4" GrowthType="4" HP="166" Atk="141" Def="110" SpAtk="70" SpDef="110" Spd="138" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="1" PetClass="3631" FormParam="0" CharacterAttrParam="0" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10018" LearningLv="1"/>
+			<Move ID="20016" LearningLv="5"/>
+			<Move ID="10054" LearningLv="9"/>
+			<Move ID="20207" LearningLv="13"/>
+			<Move ID="10242" LearningLv="17"/>
+			<Move ID="38659" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="20489" LearningLv="25"/>
+			<Move ID="10164" LearningLv="29"/>
+			<Move ID="23643" LearningLv="33"/>
+			<Move ID="14980" LearningLv="37"/>
+			<Move ID="23644" LearningLv="41"/>
+			<Move ID="16604" LearningLv="45"/>
+			<Move ID="29526" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="23645" LearningLv="53"/>
+			<Move ID="29527" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38660" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38661" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+	
+	<Monster ID="4971" DefName="黄月英" Type="13" GrowthType="4" HP="169" Atk="70" Def="113" SpAtk="142" SpDef="113" Spd="138" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="2" PetClass="3632" FormParam="0" CharacterAttrParam="4" GradeParam="4" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="10250" LearningLv="1"/>
+			<Move ID="20270" LearningLv="5"/>
+			<Move ID="10120" LearningLv="9"/>
+			<Move ID="10396" LearningLv="13"/>
+			<Move ID="20816" LearningLv="17"/>
+			<Move ID="38662" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="13300" LearningLv="25"/>
+			<Move ID="27523" LearningLv="29"/>
+			<Move ID="10784" LearningLv="33"/>
+			<Move ID="12836" LearningLv="37"/>
+			<Move ID="23267" LearningLv="41"/>
+			<Move ID="12488" LearningLv="45"/>
+			<Move ID="29528" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="12837" LearningLv="53"/>
+			<Move ID="29529" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38663" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38664" LearningLv="76"/>
+		</ExtraMoves>
+	</Monster>
+	
+	<Monster ID="4972" DefName="菲姆梅德" Type="50" GrowthType="4" HP="120" Atk="120" Def="120" SpAtk="120" SpDef="120" Spd="120" YieldingExp="140" CatchRate="0" YieldingEV="0 0 0 0 0 0" FreeForbidden="1" FuseMaster="0" FuseSub="0" Gender="0" PetClass="3633" FormParam="0" CharacterAttrParam="4" GradeParam="3" AddSeParam="1" Resist="1">
+		<LearnableMoves>
+			<Move ID="12258" LearningLv="1"/>
+			<Move ID="22408" LearningLv="5"/>
+			<Move ID="11027" LearningLv="9"/>
+			<Move ID="21173" LearningLv="13"/>
+			<Move ID="11599" LearningLv="17"/>
+			<Move ID="38665" LearningLv="21" Rec="1" Tag="1"/>
+			<Move ID="20521" LearningLv="25"/>
+			<Move ID="13564" LearningLv="29"/>
+			<Move ID="23188" LearningLv="33"/>
+			<Move ID="11032" LearningLv="37"/>
+			<Move ID="23189" LearningLv="41"/>
+			<Move ID="15791" LearningLv="45"/>
+			<Move ID="29530" LearningLv="49" Rec="1" Tag="2"/>
+			<Move ID="23190" LearningLv="53"/>
+			<Move ID="29531" LearningLv="57" Rec="1" Tag="3"/>
+			<Move ID="38666" LearningLv="61" Rec="1" Tag="4"/>
+		</LearnableMoves>
+		<ExtraMoves>
+			<Move ID="38667" LearningLv="76"/>
 		</ExtraMoves>
 	</Monster>
 	

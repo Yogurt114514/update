@@ -213,9 +213,9 @@ Desc:    刻印信息  tips的获得途径文字
 
 <Hotspot><!-- 本周热点 -->
 <item intro="全新精灵上线，快来看看吧！">
-      <place type= "0" ID="4968" ImageID= "4968" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "0" ID="4969" ImageID= "4969" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
-	  <!-- <place type= "0" ID="4967" ImageID= "4967" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <place type= "0" ID="4970" ImageID= "4970" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4971" ImageID= "4971" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
+	  <place type= "0" ID="4972" ImageID= "4972" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/>
 	  <!-- <place type= "0" ID="4962" ImageID= "4962" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4963" ImageID= "4963" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "0" ID="4806" ImageID= "4806" Label= "0"  Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -255,9 +255,9 @@ Desc:    刻印信息  tips的获得途径文字
       <place type= "0" ID="4641" ImageID= "4641" Label= "0"  Redirect="map|module" Go="1679;app/ValleyExpeditionHatchMainPanel"/>-->
 
 
-      <place type= "1" ID="892" monID="4969" ImageID= "1400892" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-      <place type= "1" ID="893" monID="3396" ImageID= "1400893" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
-	  <place type= "1" ID="894" monID="3613" ImageID= "1400894" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/>
+      <!-- <place type= "1" ID="892" monID="4969" ImageID= "1400892" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+      <!-- <place type= "1" ID="893" monID="3396" ImageID= "1400893" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
+	  <!-- <place type= "1" ID="894" monID="3613" ImageID= "1400894" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="882" monID="4353" ImageID= "1400882" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
       <!-- <place type= "1" ID="847" monID="4911" ImageID= "1400846" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
 	  <!-- <place type= "1" ID="842" monID="4909" ImageID= "1400842" Label= "0" Redirect="module" Go="app/FinalActivityPanel"/> -->
@@ -3191,7 +3191,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="2870" DefName="雷锘" Type="电 战斗" Height="182" Weight="122" Features="雷伊的哥哥！雷神一族的直系血脉传承。没有人知道雷神一族的使命，但所有精灵都将见证他们创造的伟大时代!" mapID="10938"/>
 	<Monster ID="2871" DefName="雷魂·雷锘" Type="电 战斗" Height="185" Weight="142" Features="雷锘超进化形态！雷神之翼带来的天威之力，是雷神一族最强大的标志。天威雷霆之力，创造出毁灭所有阴影的雷霆之魂!" mapID="10938"/>
 	<Monster ID="2872" DefName="圣能·生命" Type="飞行 光" Height="156" Weight="55" Features="生命圣殿守卫！在长期圣灵能量的浸染之下，感悟到生命的起源能流动的神奇精灵!" mapID="1109"/>
-	<Monster ID="2873" DefName="圣光灵皇" Type="圣灵 远古" Height="182" Weight="74" Features="2015年年费精灵圣光灵王的超进化形态，所有的力量全部得到了惊人的提升！斩魔神，驱暗影，他就是圣光的最强审判者!" mapID="1" Target="114156"/>
+	<Monster ID="2873" DefName="圣光灵皇" Type="圣灵 远古" Height="182" Weight="74" Features="2015年年费精灵圣光灵王的超进化形态，所有的力量全部得到了惊人的提升！斩魔神，驱暗影，他就是圣光的最强审判者!" mapID="1" Target="295001"/>
 	<Monster ID="2874" DefName="花皮" Type="普通" Height="124" Weight="25" Features="流氓狗狗！叼着一只玫瑰，喜欢漂亮的猫咪!" mapID="1099"/>
 	<Monster ID="2875" DefName="圣能·轮回" Type="远古" Height="162" Weight="43" Features="轮回圣殿的守卫！领悟万物轮回循环，天地大道。帮助谱尼继续觉醒!" mapID="1111"/>
 	<Monster ID="2876" DefName="镰翼金乌" Type="飞行" Height="128" Weight="80" Features="巨镰鸟超进化形态！高空塔的神奇电流造成了进化的开启!"/>
@@ -4295,7 +4295,7 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="3991" DefName="欧维帕德" Type="次元 战斗" Height="900" Weight="30" Features="命运嘲弄的小丑，挣扎在自我与族群中的扭曲灵魂，牺牲生命提升战斗力的战争机器！" mapID="1416" Redirect="map|module" Go="1416;app/S14OuWeiPaDeMainPanel"/>
 	<Monster ID="3992" DefName="欣欣" Type="光" Height="900" Weight="30" Features="寒假签到精灵，俏皮可爱的外表闪着熠熠的光，完成签到即可获得萌宠！" mapID="1416" Redirect="map|module" Go="1416;app/WinterVacationSignIn2019Panel"/>
 	<Monster ID="3993" DefName="狇罚" Type="邪灵" Height="900" Weight="30" Features="陷入狂热的魔界精兵，体内的力量似乎无穷无尽！" mapID="1416" Redirect="map|module" Go="1416;app/MainLineTask_3335"/>
-	<Monster ID="3994" DefName="暴乱·格劳瑞" Type="电 战斗" Height="187" Weight="78" Features="陷入暴乱状态的格劳瑞，心智不受控制，战斗力却得到了极致的提升！" mapID="1417" Redirect="map|module" Go="1417;app/S15KingOfElectricityRiotForm"/>
+	<Monster ID="3994" DefName="暴乱·格劳瑞" Type="电 战斗" Height="187" Weight="78" Features="陷入暴乱状态的格劳瑞，心智不受控制，战斗力却得到了极致的提升！" mapID="1417" Redirect="map|module" Go="1417;app/S15KingOfElectricityRiotForm" Target="150159"/>
 	<Monster ID="3995" DefName="雪兔拉比" Type="冰 电" Height="900" Weight="30" Features="冬令营专属精灵，积极向上的生活态度让他总是很欢乐！" mapID="11801" Redirect="map|module" Go="11801;app/WinterCampThemeEventMainPanel"/>
 	<Monster ID="3996" DefName="阴雨云" Type="暗影" Height="900" Weight="30" Features="不知发生了什么事，这团小云朵总是闷闷不乐，阴雨绵绵。" mapID="1417" Redirect="map" Go="1417"/>
 	<Monster ID="3997" DefName="咔莫莫" Type="地面 暗影" Height="900" Weight="30" Features="新春限定萌宠，祥瑞降临！" Redirect="map|module" Go="1418;app/SpringFes2020CollectionMainPanel"/>
@@ -5269,6 +5269,9 @@ Desc:    刻印信息  tips的获得途径文字
 	<Monster ID="4967" DefName="米铃" Type="飞行 神秘" Height="145" Weight="37" Features="星愿投递局里最忙碌的小信使，总是抱着比自己准备得还充分的邮包出发。虽然偶尔认错路、跑掉帽子，但每当有人等待来信，米铃都会认真地说：“请再等一下，我马上就到！”"  Redirect="module" Go="app/FinalActivityPanel" Target="114185"/>
 	<Monster ID="4968" DefName="瓦坎" Type="神秘 战斗" Height="185" Weight="67" Features="瓦坎是马努湾海瓦斗技的明星斗士，为人散漫，嘴上没个正经，但实力却深不见底。他的过去，鲜为人知。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1035"/>
 	<Monster ID="4969" DefName="米铃娜" Type="飞行 神秘" Height="165" Weight="46" Features="穿行于星际邮路的可靠信使，熟悉不同星球的方向，也记得每一份托付的重量。当米铃娜带着邮宠出现在约定的地方，那句温和的“久等了”，总能让等待的人放下心来。"  Redirect="module" Go="app/FinalActivityPanel" Target="114187"/>
+	<Monster ID="4970" DefName="托罗阿" Type="飞行" Height="239" Weight="76" Features="托罗阿是师澜的秘密精灵，据说很少有人见过它的样貌。很难想象那个彬彬有礼的祭司师澜拥有着这样一只杀手般的精灵。"  Redirect="module" Go="app/FinalActivityPanel" Target="153201/1040"/>
+	<Monster ID="4971" DefName="黄月英" Type="暗影" Height="166" Weight="43" Features="才女黄月英，诸葛亮之妻，博览群书，集智于心，遍观天象，洞观玄机。"  Redirect="module" Go="app/FinalActivityPanel" Target="114191"/>
+	<Monster ID="4972" DefName="菲姆梅德" Type="暗影 神秘" Height="185" Weight="66" Features="2026年包月精灵，万象录之《剪接灵魂之人》。他是过去阿派罗尼亚的著名导演，对摄影有着独到的艺术造诣，只可惜没能导演出属于自己的结局。"  Redirect="module" Go="app/FinalActivityPanel" Target="121000"/>
 
 	
 	<Monster ID="4995" DefName="镇世神岳·玄武" Type="机械 地面" Height="380" Weight="1500" Features="玄武，帕诺的远古神兽、大地的守护者——他曾以伟岸之躯抵御世间最凶猛的灾厄，碎为戈拉后以钢铁新壳归来，仍在守护帕诺之夜。" Redirect="module" Go="app/FinalActivityPanel" Target="150145"/>
